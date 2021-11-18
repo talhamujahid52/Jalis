@@ -25,12 +25,13 @@ const carouselOptions = {
     },
     1200: {
       perView: 3,
+      gap: 10,
     },
-    991: {
+    1100: {
       perView: 2,
       gap: 15,
     },
-    667: {
+    750: {
       perView: 1,
       gap: 20,
     },
@@ -48,7 +49,7 @@ const LocationGrid = () => {
     <LocationWrapper>
       <Container fluid={true}>
         <SectionTitle
-          title={<Heading content="Explore Destinations" />}
+          title={<Heading content="Announcements" />}
           link={<TextLink link={LISTING_POSTS_PAGE} content="Show all" />}
         />
 

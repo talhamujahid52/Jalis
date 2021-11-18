@@ -1,19 +1,19 @@
-import React from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import { MdEmail } from 'react-icons/md';
-import { Input, Button } from 'antd';
-import Logo from 'components/UI/Logo/Logo';
-import FormControl from 'components/UI/FormControl/FormControl';
+import React from "react";
+import { useForm, Controller } from "react-hook-form";
+import { MdEmail } from "react-icons/md";
+import { Input, Button } from "antd";
+import Logo from "components/UI/Logo/Logo";
+import FormControl from "components/UI/FormControl/FormControl";
 import Wrapper, {
   Title,
   TitleInfo,
   FormWrapper,
   BannerWrapper,
-} from './Auth.style';
+} from "./Auth.style";
 
 export default function ForgetPassWord() {
   const { control, errors, handleSubmit } = useForm({
-    mode: 'onChange',
+    mode: "onChange",
   });
   const onSubmit = (data) => {
     console.log(data);
@@ -22,12 +22,15 @@ export default function ForgetPassWord() {
   return (
     <Wrapper>
       <FormWrapper>
-        <Logo
-          withLink
-          linkTo="/"
-          src="/images/logo-alt.svg"
-          title="TripFinder."
-        />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Logo
+            withLink
+            linkTo="/"
+            // src="/images/logo-alt.svg"
+            src="/images/jalis-logo.svg"
+            // title="TripFinder."
+          />
+        </div>
         <Title>Welcome Back</Title>
         <TitleInfo>Enter your email to recover your account</TitleInfo>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -37,10 +40,10 @@ export default function ForgetPassWord() {
             error={
               errors.email && (
                 <>
-                  {errors.email?.type === 'required' && (
+                  {errors.email?.type === "required" && (
                     <span>This field is required!</span>
                   )}
-                  {errors.email?.type === 'pattern' && (
+                  {errors.email?.type === "pattern" && (
                     <span>Please enter a valid email address!</span>
                   )}
                 </>
@@ -65,7 +68,7 @@ export default function ForgetPassWord() {
             type="primary"
             htmlType="submit"
             size="large"
-            style={{ width: '100%' }}
+            style={{ width: "100%" }}
           >
             <MdEmail />
             Send email
