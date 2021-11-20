@@ -31,7 +31,7 @@ const SignUpForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <FormControl
+      {/* <FormControl
         label="Username"
         htmlFor="username"
         error={
@@ -54,7 +54,7 @@ const SignUpForm = () => {
             required: true,
           }}
         />
-      </FormControl>
+      </FormControl> */}
       <FormControl
         label="Email"
         htmlFor="email"
