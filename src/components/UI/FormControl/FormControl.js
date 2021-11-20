@@ -1,9 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import HtmlLabel from '../HtmlLabel/HtmlLabel';
-import Wrapper from './FormControl.style';
+import React from "react";
+import PropTypes from "prop-types";
+import HtmlLabel from "../HtmlLabel/HtmlLabel";
+import Wrapper, { IconandLabelWrapper } from "./FormControl.style";
 
 const FormControl = ({
+  leftIcon,
   className,
   label,
   labelTag,
@@ -11,24 +12,34 @@ const FormControl = ({
   children,
   error,
 }) => {
-  const addAllClasses = ['form-control'];
+  const addAllClasses = ["form-control"];
   if (error) {
-    addAllClasses.push('has-error');
+    addAllClasses.push("has-error");
   }
   if (className) {
     addAllClasses.push(className);
   }
 
   return (
-    <Wrapper className={addAllClasses.join(' ')}>
-      {label && (
-        <HtmlLabel
-          className="field-label"
-          as={labelTag}
-          htmlFor={htmlFor}
-          content={label}
-        />
-      )}
+    <Wrapper className={addAllClasses.join(" ")}>
+      <IconandLabelWrapper>
+        {
+          <img
+            style={{
+              marginRight: "5px",
+            }}
+            src={leftIcon}
+          ></img>
+        }
+        {label && (
+          <HtmlLabel
+            className="field-label"
+            as={labelTag}
+            htmlFor={htmlFor}
+            content={label}
+          />
+        )}
+      </IconandLabelWrapper>
       {children}
       {error && <div className="feedback">{error}</div>}
     </Wrapper>

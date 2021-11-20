@@ -1,16 +1,16 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 const Wrapper = styled.div`
   margin-bottom: 24px;
 
   .field-label {
     display: block;
-    color: ${themeGet('text.0', '#2C2C2C')};
+    color: ${themeGet("text.0", "#2C2C2C")};
     font-size: 15px;
     line-height: 18px;
     font-weight: 600;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
   }
 
   .ant-input,
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     width: 100%;
     min-height: 48px;
     border-radius: 3px;
-    border-color: ${themeGet('border.3', '#E6E6E6')};
+    border-color: ${themeGet("border.3", "#E6E6E6")};
     &:focus,
     &.ant-input-focused,
     &.ant-picker-focused,
@@ -35,17 +35,17 @@ const Wrapper = styled.div`
       + span {
         font-size: 15px;
         font-weight: 700;
-        color: ${themeGet('text.0', '#2C2C2C')};
+        color: ${themeGet("text.0", "#2C2C2C")};
         line-height: 1;
       }
       .ant-checkbox-inner {
         border-radius: 0;
-        border-color: ${themeGet('text.1', '#909090')};
+        border-color: ${themeGet("text.1", "#909090")};
       }
       &.ant-checkbox-checked {
         .ant-checkbox-inner {
-          border-color: ${themeGet('primary.0', '#008489')};
-          background-color: ${themeGet('primary.0', '#008489')};
+          border-color: ${themeGet("primary.0", "#008489")};
+          background-color: ${themeGet("primary.0", "#008489")};
         }
       }
     }
@@ -57,19 +57,19 @@ const Wrapper = styled.div`
       min-height: 48px;
     }
     &:hover {
-      border-color: ${themeGet('border.3', '#E6E6E6')};
+      border-color: ${themeGet("border.3", "#E6E6E6")};
     }
   }
   .ant-input-number-handler:hover {
     .ant-input-number-handler-up-inner,
     .ant-input-number-handler-down-inner {
-      color: ${themeGet('primary.0', '#008489')};
+      color: ${themeGet("primary.0", "#008489")};
     }
   }
 
   .ant-picker {
     &:hover {
-      border-color: ${themeGet('border.3', '#E6E6E6')};
+      border-color: ${themeGet("border.3", "#E6E6E6")};
     }
   }
 
@@ -78,7 +78,7 @@ const Wrapper = styled.div`
       width: 100%;
       .ant-select-selector {
         border-radius: 3px;
-        border-color: ${themeGet('border.3', '#E6E6E6')};
+        border-color: ${themeGet("border.3", "#E6E6E6")};
         min-height: 48px;
         .ant-select-selection-search-input {
           min-height: 48px;
@@ -101,10 +101,10 @@ const Wrapper = styled.div`
   &.has-error {
     .ant-input,
     .ant-input-password {
-      border-color: ${themeGet('error.0', '#F9503D')};
+      border-color: ${themeGet("error.0", "#F9503D")};
     }
     .feedback {
-      color: ${themeGet('error.0', '#F9503D')};
+      color: ${themeGet("error.0", "#F9503D")};
     }
     .ant-input-password {
       .ant-input {
@@ -126,8 +126,8 @@ const Wrapper = styled.div`
 
   .ant-radio-group-solid {
     .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-      border-color: ${themeGet('primary.0', '#008489')};
-      background-color: ${themeGet('primary.0', '#008489')};
+      border-color: ${themeGet("primary.0", "#008489")};
+      background-color: ${themeGet("primary.0", "#008489")};
       &::before {
         content: none;
       }
@@ -140,16 +140,16 @@ const Wrapper = styled.div`
     }
     .ant-radio-button-wrapper {
       &:hover {
-        color: ${themeGet('primary.0', '#008489')};
+        color: ${themeGet("primary.0", "#008489")};
       }
     }
   }
 
-  button[type='submit'] {
+  button[type="submit"] {
     border-radius: 3px;
     height: 47px;
-    border-color: ${themeGet('primary.0', '#008489')};
-    background-color: ${themeGet('primary.0', '#008489')};
+    border-color: ${themeGet("primary.0", "#008489")};
+    background-color: ${themeGet("primary.0", "#008489")};
     font-size: 15px;
     font-weight: 700;
     text-transform: capitalize;
@@ -161,6 +161,14 @@ const Wrapper = styled.div`
       content: none;
     }
   }
+`;
+
+export const IconandLabelWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  // border: 1px solid red;
+  padding: 0px;
+  padding-bottom: 15px;
 `;
 
 export default Wrapper;

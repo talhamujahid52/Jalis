@@ -4,6 +4,10 @@ import { useForm, Controller } from "react-hook-form";
 import { MdLockOpen } from "react-icons/md";
 import { Input, Switch, Button } from "antd";
 import FormControl from "components/UI/FormControl/FormControl";
+// import emailIcon from "../../../../public/images/EmailIcon.svg";
+// import PasswordIcon from "../../../../public/images/PasswordIcon.svg";
+// import PhoneIcon from "../../../../public/images/PhoneIcon.svg";
+
 import { AuthContext } from "context/AuthProvider";
 import {
   FieldWrapper,
@@ -56,6 +60,7 @@ const SignUpForm = () => {
         />
       </FormControl> */}
       <FormControl
+        leftIcon="/images/EmailIcon.svg"
         label="Email"
         htmlFor="email"
         error={
@@ -85,6 +90,7 @@ const SignUpForm = () => {
         />
       </FormControl>
       <FormControl
+        leftIcon="/images/PhoneIcon.svg"
         label="Phone number"
         htmlFor="phone"
         error={
@@ -114,6 +120,7 @@ const SignUpForm = () => {
         />
       </FormControl>
       <FormControl
+        leftIcon="/images/PasswordIcon.svg"
         label="Password"
         htmlFor="password"
         error={
@@ -142,6 +149,7 @@ const SignUpForm = () => {
         />
       </FormControl>
       <FormControl
+        leftIcon="/images/PasswordIcon.svg"
         label="Confirm password"
         htmlFor="confirmPassword"
         error={
