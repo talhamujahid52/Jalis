@@ -167,6 +167,17 @@ const SignUpForm = () => {
           name="confirmPassword"
         />
       </FormControl>
+      <p
+        style={{
+          fontSize: "15px",
+          lineHeight: "18px",
+          fontWeight: "600",
+          display: "block",
+          marginBottom: "15px",
+        }}
+      >
+        Role
+      </p>
       <RoleButtonWrapper>
         <RoleButton
           type="button"
