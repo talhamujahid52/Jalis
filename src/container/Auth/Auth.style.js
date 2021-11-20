@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
+import { Input, Switch, Button } from "antd";
 
 const Wrapper = styled.div`
   display: flex;
@@ -36,8 +37,8 @@ export const FormWrapper = styled.div`
     height: 57px;
     font-size: 17px;
     font-weight: 700;
-    border-color: ${themeGet('primary.0', '#008489')};
-    background-color: ${themeGet('primary.0', '#008489')};
+    border-color: ${themeGet("primary.0", "#008489")};
+    background-color: ${themeGet("primary.0", "#008489")};
     svg {
       width: 18px;
       height: 18px;
@@ -48,8 +49,8 @@ export const FormWrapper = styled.div`
     }
     &:hover,
     &:focus {
-      border-color: ${themeGet('primary.2', '#008489')};
-    background-color: ${themeGet('primary.2', '#008489')};
+      border-color: ${themeGet("primary.2", "#008489")};
+      background-color: ${themeGet("primary.2", "#008489")};
     }
   }
 
@@ -58,7 +59,7 @@ export const FormWrapper = styled.div`
     .ant-divider-inner-text {
       font-size: 15px;
       font-weight: 700;
-      color: ${themeGet('text.2', '#777777')};
+      color: ${themeGet("text.2", "#777777")};
     }
   }
 
@@ -76,20 +77,20 @@ export const FormWrapper = styled.div`
       }
     }
     &.facebook-btn {
-      border-color: ${themeGet('color.7', '#3b5998')};
-      background-color: ${themeGet('color.7', '#3b5998')};
+      border-color: ${themeGet("color.7", "#3b5998")};
+      background-color: ${themeGet("color.7", "#3b5998")};
     }
     &.github-btn {
-      border-color: ${themeGet('color.14', '#00ACEE')};
-      background-color: ${themeGet('color.14', '#00ACEE')};
+      border-color: ${themeGet("color.14", "#00ACEE")};
+      background-color: ${themeGet("color.14", "#00ACEE")};
     }
     &.firebase-btn {
-      border-color: ${themeGet('color', '#FFCB2B')};
-      background-color: ${themeGet('color', '#FFCB2B')};
+      border-color: ${themeGet("color", "#FFCB2B")};
+      background-color: ${themeGet("color", "#FFCB2B")};
     }
     &.google-btn {
-      border-color: ${themeGet('color.10', '#dd4b39')};
-      background-color: ${themeGet('color.10', '#dd4b39')};
+      border-color: ${themeGet("color.10", "#dd4b39")};
+      background-color: ${themeGet("color.10", "#dd4b39")};
     }
   }
 `;
@@ -101,14 +102,14 @@ export const FieldWrapper = styled.div`
   margin-top: 40px;
   margin-bottom: 40px;
   > a {
-    color: ${themeGet('primary.0', '#008489')};
+    color: ${themeGet("primary.0", "#008489")};
     font-size: 15px;
     font-weight: 700;
     line-height: 1;
     &:hover,
     &:focus {
       outline: none;
-      color: ${themeGet('primary.2', '#008489')};
+      color: ${themeGet("primary.2", "#008489")};
       text-decoration: none;
     }
   }
@@ -129,7 +130,7 @@ export const SwitchWrapper = styled.div`
     min-width: 36px;
     height: 21px;
     &.ant-switch-checked {
-      background-color: ${themeGet('primary.0', '#008489')};
+      background-color: ${themeGet("primary.0", "#008489")};
     }
     &::after {
       width: 17px;
@@ -148,12 +149,12 @@ export const Label = styled.span`
   font-size: 15px;
   line-height: 1;
   font-weight: 700;
-  color: ${themeGet('text.0', '#2C2C2C')};
+  color: ${themeGet("text.0", "#2C2C2C")};
   padding: 0 8px;
 `;
 
 export const Title = styled.h2`
-  color: ${themeGet('text.0', '#2C2C2C')};
+  color: ${themeGet("text.0", "#2C2C2C")};
   font-size: 45px;
   line-height: 54px;
   font-weight: 700;
@@ -174,7 +175,7 @@ export const Title = styled.h2`
 `;
 
 export const TitleInfo = styled.p`
-  color: ${themeGet('text.2', '#777777')};
+  color: ${themeGet("text.2", "#777777")};
   font-size: 25px;
   line-height: 30px;
   margin-bottom: 45px;
@@ -194,15 +195,15 @@ export const Text = styled.p`
   text-align: center;
   font-size: 15px;
   font-weight: 700;
-  color: ${themeGet('text.2', '#777777')};
+  color: ${themeGet("text.2", "#777777")};
   line-height: 1;
   a {
-    color: ${themeGet('primary.0', '#008489')};
+    color: ${themeGet("primary.0", "#008489")};
     &:hover,
     &:focus {
       outline: none;
       // color: #008489d1;
-      color: ${themeGet('primary.2', '#008489')};
+      color: ${themeGet("primary.2", "#008489")};
       text-decoration: none;
     }
   }
@@ -228,6 +229,33 @@ export const BannerWrapper = styled.div`
     height: 100%;
     object-fit: cover;
   }
+`;
+export const RoleButtonWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 25px;
+
+  // border: 1px solid red;
+`;
+export const RoleButton = styled.button`
+  border-radius: 5px;
+  color: #adadad;
+  background: white;
+  border: 1px solid #e3e3e3;
+  padding: 5px 10px;
+  &:hover,
+  &:focus {
+    background: #ed702d28;
+    color: #ed702d;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+`;
+export const BankDetails = styled.div`
+  padding: 20px;
+  box-shadow: 0px 2px 8px #00000014;
+  margin-bottom: 50px;
 `;
 
 export default Wrapper;

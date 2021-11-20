@@ -1,13 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 import { MdLockOpen } from "react-icons/md";
 import { Input, Switch, Button } from "antd";
 import FormControl from "components/UI/FormControl/FormControl";
 import { AuthContext } from "context/AuthProvider";
-import { FieldWrapper, SwitchWrapper, Label } from "../Auth.style";
+import {
+  FieldWrapper,
+  SwitchWrapper,
+  Label,
+  RoleButtonWrapper,
+  RoleButton,
+  BankDetails,
+} from "../Auth.style";
 
 const SignUpForm = () => {
+  const [role, setRole] = useState("");
   const { signUp, loggedIn } = useContext(AuthContext);
   const { control, watch, errors, handleSubmit } = useForm({
     mode: "onChange",
@@ -151,7 +159,86 @@ const SignUpForm = () => {
           name="confirmPassword"
         />
       </FormControl>
-      <FieldWrapper>
+      <RoleButtonWrapper>
+        <RoleButton
+          type="button"
+          onClick={() => {
+            setRole("Customer");
+          }}
+        >
+          Customer
+        </RoleButton>
+        <RoleButton
+          type="button"
+          onClick={() => {
+            setRole("ResortOwner");
+          }}
+        >
+          Resort Owner
+        </RoleButton>
+        <RoleButton
+          type="button"
+          onClick={() => {
+            setRole("ServiceProvider");
+          }}
+        >
+          Service Provider
+        </RoleButton>
+      </RoleButtonWrapper>
+      {role === "ResortOwner" && (
+        <BankDetails>
+          <FormControl
+            label="Bank Name"
+            htmlFor="bankname"
+            error={
+              errors.bankname && (
+                <>
+                  {errors.username?.type === "required" && (
+                    <span>This field is required!</span>
+                  )}
+                </>
+              )
+            }
+          >
+            <Controller
+              as={<Input />}
+              id="bankname"
+              name="bankname"
+              defaultValue=""
+              control={control}
+              rules={{
+                required: true,
+              }}
+            />
+          </FormControl>
+          <FormControl
+            label="Bank Account Number"
+            htmlFor="bankaccountnumber"
+            error={
+              errors.bankaccountnumber && (
+                <>
+                  {errors.bankaccountnumber?.type === "required" && (
+                    <span>This field is required!</span>
+                  )}
+                </>
+              )
+            }
+          >
+            <Controller
+              as={<Input />}
+              id="bankaccountnumber"
+              name="bankaccountnumber"
+              defaultValue=""
+              control={control}
+              rules={{
+                required: true,
+              }}
+            />
+          </FormControl>
+        </BankDetails>
+      )}
+
+      {/* <FieldWrapper>
         <SwitchWrapper>
           <Controller
             as={<Switch />}
@@ -172,7 +259,7 @@ const SignUpForm = () => {
           />
           <Label>I agree with terms and conditions</Label>
         </SwitchWrapper>
-      </FieldWrapper>
+      </FieldWrapper> */}
       <Button
         className="signin-btn"
         type="primary"
