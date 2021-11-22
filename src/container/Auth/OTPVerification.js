@@ -6,6 +6,9 @@ import { Modal } from "antd";
 import { Radio } from "antd";
 import Logo from "components/UI/Logo/Logo";
 import FormControl from "components/UI/FormControl/FormControl";
+import { useHistory } from "react-router-dom";
+import { ENTER_NEW_PASSWORD } from "settings/constant";
+
 import Wrapper, {
   Title,
   TitleInfo,
@@ -15,6 +18,8 @@ import Wrapper, {
 } from "./Auth.style";
 
 export default function OTPVerification() {
+  const history = useHistory();
+
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -111,7 +116,9 @@ export default function OTPVerification() {
           htmlType="submit"
           size="large"
           style={{ width: "100%" }}
-          onClick={showModal}
+          onClick={() => {
+            history.push(ENTER_NEW_PASSWORD);
+          }}
         >
           verify
         </Button>
