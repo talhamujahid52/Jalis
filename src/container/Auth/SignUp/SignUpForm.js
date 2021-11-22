@@ -4,6 +4,9 @@ import { useForm, Controller } from "react-hook-form";
 import { MdLockOpen } from "react-icons/md";
 import { Input, Switch, Button } from "antd";
 import FormControl from "components/UI/FormControl/FormControl";
+import { Link } from "react-router-dom";
+import { OTP_VERIFICATION } from "settings/constant";
+import { useHistory } from "react-router-dom";
 // import emailIcon from "../../../../public/images/EmailIcon.svg";
 // import PasswordIcon from "../../../../public/images/PasswordIcon.svg";
 // import PhoneIcon from "../../../../public/images/PhoneIcon.svg";
@@ -19,6 +22,7 @@ import {
 } from "../Auth.style";
 
 const SignUpForm = () => {
+  const history = useHistory();
   const [role, setRole] = useState("");
   const { signUp, loggedIn } = useContext(AuthContext);
   const { control, watch, errors, handleSubmit } = useForm({
@@ -27,10 +31,13 @@ const SignUpForm = () => {
   const password = watch("password");
   const confirmPassword = watch("confirmPassword");
   const onSubmit = (data) => {
-    signUp(data);
+    history.push(OTP_VERIFICATION);
+    // <Link to={OTP_VERIFICATION} />;
+    // signUp(data);
   };
   if (loggedIn) {
     return <Redirect to={{ pathname: "/" }} />;
+    // return <Redirect to={{ pathname: OTP_VERIFICATION }} />;
   }
 
   return (

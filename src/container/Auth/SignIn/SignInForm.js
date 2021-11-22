@@ -1,12 +1,17 @@
-import React, { useContext } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { useForm, Controller } from 'react-hook-form';
-import { MdLockOpen } from 'react-icons/md';
-import { Input, Switch, Button } from 'antd';
-import FormControl from 'components/UI/FormControl/FormControl';
-import { AuthContext } from 'context/AuthProvider';
-import { FORGET_PASSWORD_PAGE } from 'settings/constant';
-import { FieldWrapper, SwitchWrapper, Label } from '../Auth.style';
+import React, { useContext } from "react";
+import { Link, Redirect } from "react-router-dom";
+import { useForm, Controller } from "react-hook-form";
+import { MdLockOpen } from "react-icons/md";
+import { Input, Switch, Button } from "antd";
+import FormControl from "components/UI/FormControl/FormControl";
+import { AuthContext } from "context/AuthProvider";
+import {
+  FORGET_PASSWORD_PAGE,
+  OTP_VERIFICATION,
+  ENTER_NEW_PASSWORD,
+} from "settings/constant";
+import { FieldWrapper, SwitchWrapper, Label } from "../Auth.style";
+import { NavLink } from "react-router-dom";
 
 const SignInForm = () => {
   const { signIn, loggedIn } = useContext(AuthContext);
@@ -15,7 +20,7 @@ const SignInForm = () => {
     signIn(data);
   };
   if (loggedIn) {
-    return <Redirect to={{ pathname: '/' }} />;
+    return <Redirect to={{ pathname: "/" }} />;
   }
 
   return (
@@ -26,10 +31,10 @@ const SignInForm = () => {
         error={
           errors.email && (
             <>
-              {errors.email?.type === 'required' && (
+              {errors.email?.type === "required" && (
                 <span>This field is required!</span>
               )}
-              {errors.email?.type === 'pattern' && (
+              {errors.email?.type === "pattern" && (
                 <span>Please enter a valid email address!</span>
               )}
             </>
@@ -55,13 +60,13 @@ const SignInForm = () => {
         error={
           errors.password && (
             <>
-              {errors.password?.type === 'required' && (
+              {errors.password?.type === "required" && (
                 <span>This field is required!</span>
               )}
-              {errors.password?.type === 'minLength' && (
+              {errors.password?.type === "minLength" && (
                 <span>Password must be at lest 6 characters!</span>
               )}
-              {errors.password?.type === 'maxLength' && (
+              {errors.password?.type === "maxLength" && (
                 <span>Password must not be longer than 20 characters!</span>
               )}
             </>
@@ -89,13 +94,15 @@ const SignInForm = () => {
           <Label>Remember Me</Label>
         </SwitchWrapper>
         <Link to={FORGET_PASSWORD_PAGE}>Forget Password ?</Link>
+        {/* <Link to={OTP_VERIFICATION}>Forget Password ?</Link> */}
+        {/* <Link to={ENTER_NEW_PASSWORD}>Forget Password ?</Link> */}
       </FieldWrapper>
       <Button
         className="signin-btn"
         type="primary"
         htmlType="submit"
         size="large"
-        style={{ width: '100%' }}
+        style={{ width: "100%" }}
       >
         <MdLockOpen />
         Login

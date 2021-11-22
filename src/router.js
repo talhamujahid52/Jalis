@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
-import { Route, Redirect, Switch } from 'react-router-dom';
-import Loadable from 'react-loadable';
-import { AuthContext } from './context/AuthProvider';
-import Layout from './container/Layout/Layout';
+import React, { useContext } from "react";
+import { Route, Redirect, Switch } from "react-router-dom";
+import Loadable from "react-loadable";
+import { AuthContext } from "./context/AuthProvider";
+import Layout from "./container/Layout/Layout";
 import {
   LOGIN_PAGE,
   REGISTRATION_PAGE,
   FORGET_PASSWORD_PAGE,
+  OTP_VERIFICATION,
+  ENTER_NEW_PASSWORD,
   HOME_PAGE,
   LISTING_POSTS_PAGE,
   SINGLE_POST_PAGE,
@@ -15,7 +17,7 @@ import {
   AGENT_ACCOUNT_SETTINGS_PAGE,
   PRIVACY_PAGE,
   PRICING_PLAN_PAGE,
-} from './settings/constant';
+} from "./settings/constant";
 
 /**
  *
@@ -29,9 +31,9 @@ const routes = [
     path: HOME_PAGE,
     component: Loadable({
       loader: () =>
-        import(/* webpackChunkName: "Home" */ './container/Home/Home'),
+        import(/* webpackChunkName: "Home" */ "./container/Home/Home"),
       loading: Loading,
-      modules: ['Home'],
+      modules: ["Home"],
     }),
     exact: true,
   },
@@ -40,10 +42,10 @@ const routes = [
     component: Loadable({
       loader: () =>
         import(
-          /* webpackChunkName: "SignIn" */ './container/Auth/SignIn/SignIn'
+          /* webpackChunkName: "SignIn" */ "./container/Auth/SignIn/SignIn"
         ),
       loading: Loading,
-      modules: ['SignIn'],
+      modules: ["SignIn"],
     }),
   },
   {
@@ -51,10 +53,10 @@ const routes = [
     component: Loadable({
       loader: () =>
         import(
-          /* webpackChunkName: "SignUp" */ './container/Auth/SignUp/SignUp'
+          /* webpackChunkName: "SignUp" */ "./container/Auth/SignUp/SignUp"
         ),
       loading: Loading,
-      modules: ['SignUp'],
+      modules: ["SignUp"],
     }),
   },
   {
@@ -62,10 +64,32 @@ const routes = [
     component: Loadable({
       loader: () =>
         import(
-          /* webpackChunkName: "ForgetPassword" */ './container/Auth/ForgetPassword'
+          /* webpackChunkName: "ForgetPassword" */ "./container/Auth/ForgetPassword"
         ),
       loading: Loading,
-      modules: ['ForgetPassword'],
+      modules: ["ForgetPassword"],
+    }),
+  },
+  {
+    path: ENTER_NEW_PASSWORD,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "ForgetPassword" */ "./container/Auth/EnterNewPassword"
+        ),
+      loading: Loading,
+      modules: ["EnterNewPassword"],
+    }),
+  },
+  {
+    path: OTP_VERIFICATION,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "ForgetPassword" */ "./container/Auth/OTPVerification"
+        ),
+      loading: Loading,
+      modules: ["OTPVerification"],
     }),
   },
   {
@@ -73,19 +97,19 @@ const routes = [
     component: Loadable({
       loader: () =>
         import(
-          /* webpackChunkName: "SinglePageView" */ './container/SinglePage/SinglePageView'
+          /* webpackChunkName: "SinglePageView" */ "./container/SinglePage/SinglePageView"
         ),
       loading: Loading,
-      modules: ['SinglePageView'],
+      modules: ["SinglePageView"],
     }),
   },
   {
     path: LISTING_POSTS_PAGE,
     component: Loadable({
       loader: () =>
-        import(/* webpackChunkName: "Listing" */ './container/Listing/Listing'),
+        import(/* webpackChunkName: "Listing" */ "./container/Listing/Listing"),
       loading: Loading,
-      modules: ['Listing'],
+      modules: ["Listing"],
     }),
   },
   {
@@ -93,28 +117,28 @@ const routes = [
     component: Loadable({
       loader: () =>
         import(
-          /* webpackChunkName: "AgentDetailsViewPage" */ './container/Agent/AccountDetails/AgentDetailsViewPage'
+          /* webpackChunkName: "AgentDetailsViewPage" */ "./container/Agent/AccountDetails/AgentDetailsViewPage"
         ),
       loading: Loading,
-      modules: ['AgentDetailsViewPage'],
+      modules: ["AgentDetailsViewPage"],
     }),
   },
   {
     path: PRIVACY_PAGE,
     component: Loadable({
       loader: () =>
-        import(/* webpackChunkName: "privacy" */ './container/Privacy/Privacy'),
+        import(/* webpackChunkName: "privacy" */ "./container/Privacy/Privacy"),
       loading: Loading,
-      modules: ['Privacy'],
+      modules: ["Privacy"],
     }),
   },
   {
     path: PRICING_PLAN_PAGE,
     component: Loadable({
       loader: () =>
-        import(/* webpackChunkName: "Pricing" */ './container/Pricing/Pricing'),
+        import(/* webpackChunkName: "Pricing" */ "./container/Pricing/Pricing"),
       loading: Loading,
-      modules: ['Pricing'],
+      modules: ["Pricing"],
     }),
   },
 ];
@@ -127,19 +151,19 @@ const routes = [
 const AddListing = Loadable({
   loader: () =>
     import(
-      /* webpackChunkName: "AddListing" */ './container/AddListing/AddListing'
+      /* webpackChunkName: "AddListing" */ "./container/AddListing/AddListing"
     ),
   loading: Loading,
-  modules: ['AddListing'],
+  modules: ["AddListing"],
 });
 
 const AgentAccountSettingsPage = Loadable({
   loader: () =>
     import(
-      /* webpackChunkName: "AgentAccountSettingsPage" */ './container/Agent/AccountSettings/AgentAccountSettingsPage'
+      /* webpackChunkName: "AgentAccountSettingsPage" */ "./container/Agent/AccountSettings/AgentAccountSettingsPage"
     ),
   loading: Loading,
-  modules: ['AgentAccountSettingsPage'],
+  modules: ["AgentAccountSettingsPage"],
 });
 
 /**
@@ -150,9 +174,9 @@ const AgentAccountSettingsPage = Loadable({
 
 const NotFound = Loadable({
   loader: () =>
-    import(/* webpackChunkName: "NotFound" */ './container/404/404'),
+    import(/* webpackChunkName: "NotFound" */ "./container/404/404"),
   loading: Loading,
-  modules: ['NotFound'],
+  modules: ["NotFound"],
 });
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {

@@ -3,6 +3,8 @@ import { themeGet } from "@styled-system/theme-get";
 
 const Wrapper = styled.div`
   margin-bottom: 24px;
+  // border: 1px solid teal;
+  // width: 100%;
 
   .field-label {
     display: block;
@@ -168,6 +170,7 @@ export const IconandLabelWrapper = styled.div`
   align-items: center;
   // border: 1px solid red;
   padding: 0px;
+  // width: 100%;
   padding-bottom: 15px;
 `;
 

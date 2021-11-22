@@ -191,6 +191,22 @@ export const TitleInfo = styled.p`
   }
 `;
 
+export const ToChangePassword = styled.p`
+  color: ${themeGet("text.2", "#777777")};
+  font-size: 16px;
+  // line-height: 30px;
+  margin-top: 10px;
+  @media (max-width: 1600px) {
+    font-size: 16px;
+  }
+  @media (max-width: 1440px) {
+    font-size: 16px;
+  }
+  @media (max-width: 1440px) {
+    font-size: 16px;
+  }
+`;
+
 export const Text = styled.p`
   text-align: center;
   font-size: 15px;
