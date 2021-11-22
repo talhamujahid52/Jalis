@@ -7,7 +7,7 @@ import { Radio } from "antd";
 import Logo from "components/UI/Logo/Logo";
 import FormControl from "components/UI/FormControl/FormControl";
 import { useHistory } from "react-router-dom";
-import { ENTER_NEW_PASSWORD } from "settings/constant";
+import { ENTER_NEW_PASSWORD, HOME_PAGE } from "settings/constant";
 
 import Wrapper, {
   Title,
@@ -117,7 +117,7 @@ export default function OTPVerification() {
           size="large"
           style={{ width: "100%" }}
           onClick={() => {
-            history.push(ENTER_NEW_PASSWORD);
+            history.push(HOME_PAGE);
           }}
         >
           verify

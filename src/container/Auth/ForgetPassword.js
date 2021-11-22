@@ -5,6 +5,9 @@ import { Input, Button } from "antd";
 import { Radio } from "antd";
 import Logo from "components/UI/Logo/Logo";
 import FormControl from "components/UI/FormControl/FormControl";
+import { useHistory } from "react-router-dom";
+import { ENTER_NEW_PASSWORD } from "settings/constant";
+
 import Wrapper, {
   Title,
   TitleInfo,
@@ -14,6 +17,7 @@ import Wrapper, {
 import { set } from "lodash";
 
 export default function ForgetPassWord() {
+  const history = useHistory();
   const [value, setValue] = React.useState(1);
   const [emailRequired, setEmailRequired] = React.useState(false);
   const [input1, setInput1] = React.useState(false);
@@ -39,6 +43,9 @@ export default function ForgetPassWord() {
   const onSubmit = (data) => {
     console.log(value);
     console.log(data);
+    if (value === 2) {
+      history.push(ENTER_NEW_PASSWORD);
+    }
   };
 
   return (
