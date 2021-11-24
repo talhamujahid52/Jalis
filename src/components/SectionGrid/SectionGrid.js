@@ -1,9 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Button } from 'antd';
-import Box from 'components/UI/Box/Box';
-import Text from 'components/UI/Text/Text';
-import ProductCard from '../ProductCard/ProductCard';
+import React from "react";
+import PropTypes from "prop-types";
+import { Button } from "antd";
+import Box from "components/UI/Box/Box";
+import Text from "components/UI/Text/Text";
+import ProductCard from "../ProductCard/ProductCard";
+
 const LoadMore = ({
   handleLoadMore,
   showButton,
@@ -19,7 +20,7 @@ const LoadMore = ({
           loadMoreComponent
         ) : (
           <Button loading={loading} onClick={handleLoadMore}>
-            {buttonText || 'Load More'}
+            {buttonText || "Load More"}
           </Button>
         )}
       </Box>
@@ -119,17 +120,17 @@ SectionGrid.propTypes = {
 SectionGrid.defaultProps = {
   rowStyle: {
     flexBox: true,
-    flexWrap: 'wrap',
-    mr: ['-10px', '-10px', '-10px', '-10px', '-10px', '-15px'],
-    ml: ['-10px', '-10px', '-10px', '-10px', '-10px', '-15px'],
+    flexWrap: "wrap",
+    mr: ["-10px", "-10px", "-10px", "-10px", "-10px", "-15px"],
+    ml: ["-10px", "-10px", "-10px", "-10px", "-10px", "-15px"],
   },
   columnStyle: {
-    pr: ['10px', '10px', '10px', '10px', '10px', '15px'],
-    pl: ['10px', '10px', '10px', '10px', '10px', '15px'],
+    pr: ["10px", "10px", "10px", "10px", "10px", "15px"],
+    pl: ["10px", "10px", "10px", "10px", "10px", "15px"],
   },
   loadMoreStyle: {
     flexBox: true,
-    justifyContent: 'center',
-    mt: '1rem',
+    justifyContent: "center",
+    mt: "1rem",
   },
 };

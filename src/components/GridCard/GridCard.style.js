@@ -1,11 +1,16 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 const GridCardWrapper = styled.div`
+  // padding: 10px;
+  // over-flow: hidden;
+  // border: 2px solid red;
+  box-shadow: 0px 3px 35px #0000000f;
   position: relative;
-  border-radius: 6px;
+  border-radius: 20px;
   overflow: hidden;
   margin-bottom: 30px;
+  // min-width: 400px;
 
   @media (max-width: 480px) {
     margin-bottom: 20px;
@@ -22,7 +27,7 @@ const GridCardWrapper = styled.div`
   }
 
   &:hover {
-    box-shadow: 0 6px 12px ${themeGet('boxShadow.2', 'rgba(0, 0, 0, 0.16)')};
+    box-shadow: 0 6px 12px ${themeGet("boxShadow.2", "rgba(0, 0, 0, 0.16)")};
 
     .content_wrapper {
       border-color: transparent;
@@ -59,18 +64,28 @@ const GridCardWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  // border: 2px solid blue;
+  padding: 15px;
+  border-radius: 20px;
+
   > img {
     max-width: 100%;
     height: auto;
   }
 
   .react-multi-carousel-list {
+    // border: 2px solid green;
+    border-radius: 20px;
+    over-flow: hidden;
     min-height: 150px;
     background-color: #e9e8ec;
   }
 
   .react-multi-carousel-item {
-    height: 170px;
+    height: 150px;
+    // border: 2px solid blue;
+    // border-radius: 20px;
+    // over-flow: hidden;
   }
 
   .react-multiple-carousel__arrow {
@@ -145,7 +160,7 @@ export const ImageWrapper = styled.div`
       width: 6px;
       height: 6px;
       border: 0;
-      background-color: ${themeGet('color.3', '#E9E8E8')};
+      background-color: ${themeGet("color.3", "#E9E8E8")};
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease;
     }
@@ -155,46 +170,47 @@ export const ImageWrapper = styled.div`
     button {
       width: 8px;
       height: 8px;
-      background-color: ${themeGet('color.1', '#ffffff')};
+      background-color: ${themeGet("color.1", "#ffffff")};
     }
   }
 `;
 
 export const FavoriteIcon = styled.div`
   position: absolute;
-  top: 10px;
-  right: 8px;
+  top: 15px;
+  right: 15px;
   z-index: 9;
 `;
 
 export const ContentWrapper = styled.div`
+  margin: 3px;
   padding: 15px;
-  border-width: 1px;
-  border-style: solid;
-  border-top-width: 0;
+  // border-width: 2px;
+  // border-style: solid;
+  // border-top-width: 0;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  border-color: ${themeGet('border.3', '#E6E6E6')};
+  border-color: ${themeGet("border.3", "#E6E6E6")};
   transition: border-color 0.2s ease;
 `;
 
 export const LocationArea = styled.div`
-  color: ${themeGet('text.1', '#909090')};
+  color: ${themeGet("text.1", "#909090")};
   font-size: 13px;
   font-weight: 400;
   white-space: nowrap;
-  width: 100%;
+  width: 50%;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
 
 export const TitleArea = styled.div`
-  color: ${themeGet('text.0', '#2C2C2C')};
+  color: ${themeGet("text.0", "#2C2C2C")};
   font-size: 17px;
   font-weight: 700;
   margin-bottom: 2px;
   white-space: nowrap;
-  width: 100%;
+  width: 50%;
   overflow: hidden;
   text-overflow: ellipsis;
   @media (max-width: 480px) {
@@ -203,7 +219,7 @@ export const TitleArea = styled.div`
   }
 
   a {
-    color: ${themeGet('text.0', '#2C2C2C')};
+    color: ${themeGet("text.0", "#2C2C2C")};
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 2px;
@@ -212,26 +228,28 @@ export const TitleArea = styled.div`
       margin: 4px 0 5px;
     }
     &:hover {
-      color: ${themeGet('primary.0', '#008489')};
+      color: ${themeGet("primary.0", "#008489")};
     }
   }
 `;
 
 export const PriceArea = styled.div`
-  color: ${themeGet('text.0', '#2C2C2C')};
+  text-align: right;
+  color: ${themeGet("text.0", "#2C2C2C")};
   font-size: 13px;
   font-weight: 400;
   margin-top: 1px;
   white-space: nowrap;
-  width: 100%;
+  width: 50%;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
 
 export const RatingArea = styled.div`
+  // border: 1px solid red;
   display: flex;
   align-items: center;
-  color: ${themeGet('text.0', '#2C2C2C')};
+  color: ${themeGet("text.0", "#2C2C2C")};
   font-size: 13px;
   margin-top: 4px;
   /* @media   (max-width: 480px) {
@@ -245,11 +263,11 @@ export const RatingArea = styled.div`
   }
 
   i {
-    color: ${themeGet('primary.0', '#008489')};
+    color: ${themeGet("primary.0", "#008489")};
   }
 
   svg {
-    fill: ${themeGet('primary.0', '#008489')};
+    fill: ${themeGet("primary.0", "#008489")};
   }
 
   strong {
@@ -289,13 +307,13 @@ export const ButtonGroup = styled.div`
     justify-content: center;
     font-size: 14px;
     font-weight: 700;
-    color: ${themeGet('primary.0', '#008489')};
+    color: ${themeGet("primary.0", "#008489")};
     transition: all 0.3s ease;
     &:hover,
     &:focus {
       outline: 0;
       text-decoration: none;
-      color: ${themeGet('primary.1', '#399C9F')};
+      color: ${themeGet("primary.1", "#399C9F")};
     }
 
     svg {

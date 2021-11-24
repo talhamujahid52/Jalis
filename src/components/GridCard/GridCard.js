@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import GridCardWrapper, {
   ImageWrapper,
   FavoriteIcon,
@@ -10,7 +10,7 @@ import GridCardWrapper, {
   RatingArea,
   MetaWrapper,
   ButtonGroup,
-} from './GridCard.style';
+} from "./GridCard.style";
 
 const GridCard = ({
   className,
@@ -28,9 +28,28 @@ const GridCard = ({
     <GridCardWrapper className={`grid_card ${classes}`.trim()}>
       <ImageWrapper className="media_wrapper">{children}</ImageWrapper>
       <ContentWrapper className="content_wrapper">
-        {location && <LocationArea>{location}</LocationArea>}
-        {title && <TitleArea>{title}</TitleArea>}
-        <MetaWrapper className="meta_wrapper">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          {location && <LocationArea>{location}</LocationArea>}
+          {rating && <RatingArea className="rating">{rating}</RatingArea>}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          {title && <TitleArea>{title}</TitleArea>}
+          {price && <PriceArea className="price">{price}</PriceArea>}
+        </div>
+
+        {/* <MetaWrapper className="meta_wrapper">
           {price && <PriceArea className="price">{price}</PriceArea>}
           {rating && <RatingArea className="rating">{rating}</RatingArea>}
           {viewDetailsBtn || editBtn ? (
@@ -39,7 +58,7 @@ const GridCard = ({
               {editBtn}
             </ButtonGroup>
           ) : null}
-        </MetaWrapper>
+        </MetaWrapper> */}
       </ContentWrapper>
 
       {favorite && <FavoriteIcon>{favorite}</FavoriteIcon>}
