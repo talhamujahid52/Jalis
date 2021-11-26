@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { IoIosArrowBack } from 'react-icons/io';
-import { useStateMachine } from 'little-state-machine';
-import { useForm, Controller } from 'react-hook-form';
-import { Row, Col, Input, Button } from 'antd';
-import FormControl from 'components/UI/FormControl/FormControl';
-import MapWithSearchBox from 'components/Map/MapSearchBox';
-import { mapDataHelper } from 'components/Map/mapDataHelper';
-import AddListingAction from './AddListingAction';
-import { FormHeader, Title, FormContent, FormAction } from './AddListing.style';
+import React, { useState, useEffect } from "react";
+import { IoIosArrowBack } from "react-icons/io";
+import { useStateMachine } from "little-state-machine";
+import { useForm, Controller } from "react-hook-form";
+import { Row, Col, Input, Button } from "antd";
+import FormControl from "components/UI/FormControl/FormControl";
+import MapWithSearchBox from "components/Map/MapSearchBox";
+import { mapDataHelper } from "components/Map/mapDataHelper";
+import AddListingAction from "./AddListingAction";
+import { FormHeader, Title, FormContent, FormAction } from "./AddListing.style";
 
 const HotelLocation = ({ setStep }) => {
   let tempLocationData = [];
   const [location, setLocation] = useState([]);
   const { control, register, errors, setValue, handleSubmit } = useForm({
-    mode: 'onChange',
+    mode: "onChange",
   });
   const { action, state } = useStateMachine(AddListingAction);
 
   useEffect(() => {
-    register({ name: 'locationData' }, { required: true });
+    register({ name: "locationData" }, { required: true });
   }, [register]);
 
   const onSubmit = (data) => {
-    action(data);
+    // action(data);
     setStep(4);
   };
 
@@ -40,10 +40,10 @@ const HotelLocation = ({ setStep }) => {
               error={
                 errors.contactNumber && (
                   <>
-                    {errors.contactNumber?.type === 'required' && (
+                    {errors.contactNumber?.type === "required" && (
                       <span>This field is required!</span>
                     )}
-                    {errors.contactNumber?.type === 'pattern' && (
+                    {errors.contactNumber?.type === "pattern" && (
                       <span>Please enter your valid number!</span>
                     )}
                   </>
@@ -84,7 +84,7 @@ const HotelLocation = ({ setStep }) => {
             }}
           />
         </FormControl>
-        <FormControl
+        {/* <FormControl
           error={errors.locationData && <span>This field is required!</span>}
         >
           <MapWithSearchBox
@@ -95,7 +95,7 @@ const HotelLocation = ({ setStep }) => {
               setLocation(value);
             }}
           />
-        </FormControl>
+        </FormControl> */}
       </FormContent>
       <FormAction>
         <div className="inner-wrapper">

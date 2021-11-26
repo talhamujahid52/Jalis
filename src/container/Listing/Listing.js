@@ -1,19 +1,19 @@
-import React, { useState, Fragment } from 'react';
-import Sticky from 'react-stickynode';
-import Toolbar from 'components/UI/Toolbar/Toolbar';
-import { Checkbox } from 'antd';
-import CategorySearch from 'components/Search/CategorySearch/CategotySearch';
-import { PostPlaceholder } from 'components/UI/ContentLoader/ContentLoader';
-import SectionGrid from 'components/SectionGrid/SectionGrid';
-import ListingMap from './ListingMap';
-import FilterDrawer from 'components/Search/MobileSearchView';
-import useWindowSize from 'library/hooks/useWindowSize';
-import useDataApi from 'library/hooks/useDataApi';
-import { SINGLE_POST_PAGE } from 'settings/constant';
-import ListingWrapper, { PostsWrapper, ShowMapCheckbox } from './Listing.style';
+import React, { useState, Fragment } from "react";
+import Sticky from "react-stickynode";
+import Toolbar from "components/UI/Toolbar/Toolbar";
+import { Checkbox } from "antd";
+import CategorySearch from "components/Search/CategorySearch/CategotySearch";
+import { PostPlaceholder } from "components/UI/ContentLoader/ContentLoader";
+import SectionGrid from "components/SectionGrid/SectionGrid";
+import ListingMap from "./ListingMap";
+import FilterDrawer from "components/Search/MobileSearchView";
+import useWindowSize from "library/hooks/useWindowSize";
+import useDataApi from "library/hooks/useDataApi";
+import { SINGLE_POST_PAGE } from "settings/constant";
+import ListingWrapper, { PostsWrapper, ShowMapCheckbox } from "./Listing.style";
 
-export default function Listing({ location, history }) {
-  let url = '/data/hotel.json';
+export default function Listing({ location, history, title }) {
+  let url = "/data/hotel.json";
   const { width } = useWindowSize();
   const [showMap, setShowMap] = useState(false);
   const { data, loading, loadMoreData, total, limit } = useDataApi(url);
@@ -48,9 +48,10 @@ export default function Listing({ location, history }) {
           }
         />
       </Sticky>
+      <p>{title}</p>
 
       <Fragment>
-        <PostsWrapper className={width > 767 && showMap ? 'col-12' : 'col-24'}>
+        <PostsWrapper className={width > 767 && showMap ? "col-12" : "col-24"}>
           <SectionGrid
             link={SINGLE_POST_PAGE}
             columnWidth={columnWidth}

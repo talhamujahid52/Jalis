@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useStateMachine } from 'little-state-machine';
-import { useForm, Controller } from 'react-hook-form';
-import { Row, Col, Input, InputNumber, Button } from 'antd';
-import InputIncDec from 'components/UI/InputIncDec/InputIncDec';
-import FormControl from 'components/UI/FormControl/FormControl';
-import AddListingAction from './AddListingAction';
-import { FormHeader, Title, FormContent, FormAction } from './AddListing.style';
+import React, { useState, useEffect } from "react";
+import { useStateMachine } from "little-state-machine";
+import { useForm, Controller } from "react-hook-form";
+import { Row, Col, Input, InputNumber, Button } from "antd";
+import InputIncDec from "components/UI/InputIncDec/InputIncDec";
+import FormControl from "components/UI/FormControl/FormControl";
+import AddListingAction from "./AddListingAction";
+import { FormHeader, Title, FormContent, FormAction } from "./AddListing.style";
 
 const BasicInformation = ({ setStep }) => {
   const { action, state } = useStateMachine(AddListingAction);
@@ -15,8 +15,8 @@ const BasicInformation = ({ setStep }) => {
     bed: 0,
   });
   useEffect(() => {
-    register({ name: 'guest' }, { required: true });
-    register({ name: 'bed' }, { required: true });
+    register({ name: "guest" }, { required: true });
+    register({ name: "bed" }, { required: true });
   }, [register]);
 
   const handleOnChange = (key) => (event) => {
@@ -60,14 +60,14 @@ const BasicInformation = ({ setStep }) => {
         <Row gutter={30}>
           <Col sm={12}>
             <FormControl
-              label="Hotel Name"
-              htmlFor="hotelName"
+              label="Resort Name"
+              htmlFor="resortName"
               error={errors.hotelName && <span>This field is required!</span>}
             >
               <Controller
                 as={<Input />}
-                id="hotelName"
-                name="hotelName"
+                id="resortName"
+                name="resortName"
                 defaultValue={state.data.hotelName}
                 control={control}
                 placeholder="Write your hotel name here"
@@ -77,17 +77,17 @@ const BasicInformation = ({ setStep }) => {
               />
             </FormControl>
           </Col>
-          <Col sm={12}>
+          {/* <Col sm={12}>
             <FormControl
               label="Price Per Night (USD)"
               htmlFor="pricePerNight"
               error={
                 errors.pricePerNight && (
                   <>
-                    {errors.pricePerNight?.type === 'required' && (
+                    {errors.pricePerNight?.type === "required" && (
                       <span>This field is required!</span>
                     )}
-                    {errors.pricePerNight?.type === 'pattern' && (
+                    {errors.pricePerNight?.type === "pattern" && (
                       <span>Please enter only number!</span>
                     )}
                   </>
@@ -107,7 +107,7 @@ const BasicInformation = ({ setStep }) => {
                 }}
               />
             </FormControl>
-          </Col>
+          </Col> */}
         </Row>
         <FormControl
           label="Hotel Description"
@@ -135,9 +135,9 @@ const BasicInformation = ({ setStep }) => {
           <InputIncDec
             name="guest"
             value={quantity.guest}
-            onChange={handleOnChange('guest')}
-            increment={() => handleIncrement('guest')}
-            decrement={() => handleDecrement('guest')}
+            onChange={handleOnChange("guest")}
+            increment={() => handleIncrement("guest")}
+            decrement={() => handleDecrement("guest")}
           />
         </FormControl>
         <FormControl
@@ -147,9 +147,9 @@ const BasicInformation = ({ setStep }) => {
           <InputIncDec
             name="bed"
             value={quantity.bed}
-            onChange={handleOnChange('bed')}
-            increment={() => handleIncrement('bed')}
-            decrement={() => handleDecrement('bed')}
+            onChange={handleOnChange("bed")}
+            increment={() => handleIncrement("bed")}
+            decrement={() => handleDecrement("bed")}
           />
         </FormControl>
       </FormContent>

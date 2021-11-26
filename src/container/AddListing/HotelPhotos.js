@@ -1,37 +1,34 @@
-import React, { useEffect } from 'react';
-import { IoIosArrowBack } from 'react-icons/io';
-import { useStateMachine } from 'little-state-machine';
-import { useForm } from 'react-hook-form';
-import { Button } from 'antd';
-import DragAndDropUploader from 'components/UI/ImageUploader/DragAndDropUploader';
-import FormControl from 'components/UI/FormControl/FormControl';
-import AddListingAction from './AddListingAction';
-import { FormHeader, Title, FormContent, FormAction } from './AddListing.style';
+import React, { useEffect } from "react";
+import { IoIosArrowBack } from "react-icons/io";
+import { useStateMachine } from "little-state-machine";
+import { useForm } from "react-hook-form";
+import { Button } from "antd";
+import DragAndDropUploader from "components/UI/ImageUploader/DragAndDropUploader";
+import FormControl from "components/UI/FormControl/FormControl";
+import AddListingAction from "./AddListingAction";
+import { FormHeader, Title, FormContent, FormAction } from "./AddListing.style";
 
 const HotelPhotos = ({ setStep }) => {
   const { register, errors, setValue, handleSubmit } = useForm({
     defaultValues: {
       hotelPhotos: [
         {
-          uid: '1',
-          name: 'hotel-1.png',
-          status: 'done',
-          url:
-            'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+          uid: "1",
+          name: "hotel-1.png",
+          status: "done",
+          url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
         },
         {
-          uid: '2',
-          name: 'hotel-2.png',
-          status: 'done',
-          url:
-            'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+          uid: "2",
+          name: "hotel-2.png",
+          status: "done",
+          url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
         },
         {
-          uid: '3',
-          name: 'hotel-3.png',
-          status: 'done',
-          url:
-            'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+          uid: "3",
+          name: "hotel-3.png",
+          status: "done",
+          url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
         },
       ],
     },
@@ -39,12 +36,12 @@ const HotelPhotos = ({ setStep }) => {
 
   const { action, state } = useStateMachine(AddListingAction);
   useEffect(() => {
-    register({ name: 'hotelPhotos' }, { required: true });
+    register({ name: "hotelPhotos" }, { required: true });
   }, [register]);
 
   const onSubmit = (data) => {
     action(data);
-    setStep(3);
+    setStep(4);
   };
 
   return (
@@ -59,7 +56,7 @@ const HotelPhotos = ({ setStep }) => {
           <DragAndDropUploader
             name="hotelPhotos"
             value={state.data.hotelPhotos}
-            onUploadChange={(data) => setValue('hotelPhotos', data)}
+            onUploadChange={(data) => setValue("hotelPhotos", data)}
           />
         </FormControl>
       </FormContent>

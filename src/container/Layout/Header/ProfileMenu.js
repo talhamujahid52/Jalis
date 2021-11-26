@@ -1,13 +1,14 @@
-import React, { useContext, useState, useRef } from 'react';
-import { Menu } from 'antd';
-import useOnClickOutside from 'library/hooks/useOnClickOutside';
-import { NavLink, withRouter } from 'react-router-dom';
-import { AuthContext } from 'context/AuthProvider';
+import React, { useContext, useState, useRef } from "react";
+import { Menu } from "antd";
+import useOnClickOutside from "library/hooks/useOnClickOutside";
+import { NavLink, withRouter } from "react-router-dom";
+import { AuthContext } from "context/AuthProvider";
 import {
   AGENT_PROFILE_PAGE,
   AGENT_ACCOUNT_SETTINGS_PAGE,
   ADD_HOTEL_PAGE,
-} from 'settings/constant';
+  ADD_RESORT_PAGE,
+} from "settings/constant";
 
 const ProfileMenu = ({ avatar, history }) => {
   const { logOut } = useContext(AuthContext);
@@ -22,7 +23,7 @@ const ProfileMenu = ({ avatar, history }) => {
   useOnClickOutside(dropdownRef, () => setState(false));
   function handleLogout() {
     logOut();
-    history.push('/');
+    history.push("/");
   }
 
   return (
@@ -31,12 +32,12 @@ const ProfileMenu = ({ avatar, history }) => {
         {avatar}
       </div>
 
-      <Menu className={`dropdown-menu ${state ? 'active' : 'hide'}`}>
+      <Menu className={`dropdown-menu ${state ? "active" : "hide"}`}>
         <Menu.Item onClick={closeDropdown} key="0">
           <NavLink to={AGENT_PROFILE_PAGE}>View Profile</NavLink>
         </Menu.Item>
         <Menu.Item onClick={closeDropdown} key="1">
-          <NavLink to={ADD_HOTEL_PAGE}>Add Hotel</NavLink>
+          <NavLink to={ADD_RESORT_PAGE}>Add Hotel</NavLink>
         </Menu.Item>
         <Menu.Item onClick={closeDropdown} key="2">
           <NavLink to={AGENT_ACCOUNT_SETTINGS_PAGE}>Account Settings</NavLink>

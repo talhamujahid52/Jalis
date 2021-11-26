@@ -17,6 +17,7 @@ import {
   AGENT_ACCOUNT_SETTINGS_PAGE,
   PRIVACY_PAGE,
   PRICING_PLAN_PAGE,
+  ADD_RESORT_PAGE,
 } from "./settings/constant";
 
 /**
@@ -90,6 +91,17 @@ const routes = [
         ),
       loading: Loading,
       modules: ["OTPVerification"],
+    }),
+  },
+  {
+    path: ADD_RESORT_PAGE,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "ForgetPassword" */ "./container/AddResort/AddResort"
+        ),
+      loading: Loading,
+      modules: ["AddResort"],
     }),
   },
   {
