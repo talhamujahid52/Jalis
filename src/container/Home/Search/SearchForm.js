@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom';
-import isEmpty from 'lodash/isEmpty';
-import { FaMapMarkerAlt, FaRegCalendar, FaUserFriends } from 'react-icons/fa';
-import { Button } from 'antd';
-import DateRangePickerBox from 'components/UI/DatePicker/ReactDates';
-import MapAutoComplete from 'components/Map/MapAutoComplete';
-import { mapDataHelper } from 'components/Map/mapDataHelper';
-import ViewWithPopup from 'components/UI/ViewWithPopup/ViewWithPopup';
-import InputIncDec from 'components/UI/InputIncDec/InputIncDec';
-import { setStateToUrl } from 'library/helpers/url_handler';
-import { LISTING_POSTS_PAGE } from 'settings/constant';
+import React, { useState } from "react";
+import { withRouter } from "react-router-dom";
+import isEmpty from "lodash/isEmpty";
+import { FaMapMarkerAlt, FaRegCalendar, FaUserFriends } from "react-icons/fa";
+import { Button } from "antd";
+import DateRangePickerBox from "components/UI/DatePicker/ReactDates";
+import MapAutoComplete from "components/Map/MapAutoComplete";
+import { mapDataHelper } from "components/Map/mapDataHelper";
+import ViewWithPopup from "components/UI/ViewWithPopup/ViewWithPopup";
+import InputIncDec from "components/UI/InputIncDec/InputIncDec";
+import { setStateToUrl } from "library/helpers/url_handler";
+import { LISTING_POSTS_PAGE } from "settings/constant";
 import {
   FormWrapper,
   ComponentWrapper,
   RoomGuestWrapper,
   ItemWrapper,
-} from './Search.style';
+} from "./Search.style";
 
 const calendarItem = {
-  separator: '-',
-  format: 'MM-DD-YYYY',
-  locale: 'en',
+  separator: "-",
+  format: "MM-DD-YYYY",
+  locale: "en",
 };
 
 const SearchForm = ({ history }) => {
@@ -76,7 +76,7 @@ const SearchForm = ({ history }) => {
     mapData &&
       mapData.map((singleMapData, i) => {
         return tempLocation.push({
-          formattedAddress: singleMapData ? singleMapData.formattedAddress : '',
+          formattedAddress: singleMapData ? singleMapData.formattedAddress : "",
           lat: singleMapData ? singleMapData.lat.toFixed(3) : null,
           lng: singleMapData ? singleMapData.lng.toFixed(3) : null,
         });
@@ -175,7 +175,7 @@ const SearchForm = ({ history }) => {
         size="large"
         onClick={goToSearchPage}
       >
-        Find Hotels
+        Find Resorts
       </Button>
     </FormWrapper>
   );

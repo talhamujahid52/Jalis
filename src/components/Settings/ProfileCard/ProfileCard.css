@@ -1,0 +1,138 @@
+.outerdiv {
+  background: white;
+  height: 170px;
+  width: 100%;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.roundedImage {
+  height: 90px;
+  width: 90px;
+  border-radius: 100px;
+  background: teal;
+  margin-right: 10px;
+}
+.nameText {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0px;
+  margin-right: 20px;
+}
+.jobStatusText {
+  color: #60d3f1;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0px;
+}
+.middledivchild1 {
+  display: flex;
+  /* border: 1px solid red; */
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+.middledivchild2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+}
+.addressAndEmailStyles {
+  font-size: 14px;
+  margin: 0px;
+}
+.locationIconStyle {
+  height: 18px;
+  width: 20px;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+/* .details {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+  .username {
+    display: flex;
+    border: solid blue; 
+  }
+  .address {
+    margin-top: 1rem;
+    display: flex;
+    color: #a5a5a5;
+    border-bottom: red;
+    border-width: 100%;
+    border: solid green; 
+  } */
+
+.notLoggedInDiv {
+  width: 500px;
+}
+
+.emptyDivWidth {
+  width: 250px;
+}
+
+@media screen and (max-width: 1400px) {
+  .emptyDivWidth {
+    /* display: none; */
+    width: 150px;
+  }
+  .notLoggedInDiv {
+    width: 400px;
+  }
+}
+.editLogo {
+  height: 40px;
+  width: 40px;
+}
+@media screen and (max-width: 900px) {
+  .emptyDivWidth {
+    display: none;
+    /* width: 50px; */
+  }
+  .notLoggedInDiv {
+    width: 150px;
+  }
+  .middledivchild2 {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    /* height: 40px; */
+    /* border: 1px solid blue; */
+    /* justify-content: space-around; */
+  }
+  .roundedImage {
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    background: teal;
+    margin-right: 10px;
+  }
+  .nameText {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px;
+    margin-right: 10px;
+  }
+  .jobStatusText {
+    color: #60d3f1;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0px;
+  }
+  .editLogo {
+    height: 30px;
+    width: 30px;
+  }
+  .locationIconStyle {
+    margin-left: -5px;
+  }
+}
+
+.editLogo:hover {
+  cursor: pointer;
+}

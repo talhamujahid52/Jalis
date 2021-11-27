@@ -19,6 +19,24 @@ export const HeadingWrapper = styled.p`
   margin-bottom: 10px;
   margin-top: 20px;
 `;
+export const AdditionalServicesWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+`;
+export const AdditionalServicesInput = styled.input`
+  width: 400px;
+  border-radius: 40px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid white;
+  padding: 8px 16px;
+  /* background: green; */
+  color: #a5a5a5;
+  &:focus {
+    border: 2px solid#ccc;
+  }
+`;
 export const AddPhotoTextAndButtonWrapper = styled.div`
   width: 120px;
   display: flex;

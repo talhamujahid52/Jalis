@@ -1,0 +1,11 @@
+.maindiv {
+  background: white;
+  height: 150px;
+  width: 300px;
+  border-radius: 20px;
+  /* border: 1px solid red; */
+  padding: 15px 15px;
+}
+.maindiv:hover {
+  cursor: pointer;
+}

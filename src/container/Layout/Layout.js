@@ -9,6 +9,7 @@ import {
   REGISTRATION_PAGE,
   AGENT_PROFILE_PAGE,
   AGENT_ACCOUNT_SETTINGS_PAGE,
+  ACCOUNT_SETTINGS_PAGE,
   ADD_HOTEL_PAGE,
   PRICING_PLAN_PAGE,
   SINGLE_POST_PAGE,
@@ -50,6 +51,7 @@ export default withRouter(function Layout({ children, location }) {
           location.pathname === FORGET_PASSWORD_PAGE ||
           location.pathname === ENTER_NEW_PASSWORD ||
           location.pathname === OTP_VERIFICATION ||
+          location.pathname === ACCOUNT_SETTINGS_PAGE ||
           location.pathname === PRIVACY_PAGE ||
           location.pathname ===
             `${AGENT_ACCOUNT_SETTINGS_PAGE + AGENT_IMAGE_EDIT_PAGE}` ||

@@ -15,9 +15,11 @@ import {
   ADD_HOTEL_PAGE,
   AGENT_PROFILE_PAGE,
   AGENT_ACCOUNT_SETTINGS_PAGE,
+  ACCOUNT_SETTINGS_PAGE,
   PRIVACY_PAGE,
   PRICING_PLAN_PAGE,
   ADD_RESORT_PAGE,
+  MANAGE_RESORT_PAGE,
 } from "./settings/constant";
 
 /**
@@ -105,6 +107,17 @@ const routes = [
     }),
   },
   {
+    path: MANAGE_RESORT_PAGE,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "ForgetPassword" */ "./container/ManageResort/ManageResort"
+        ),
+      loading: Loading,
+      modules: ["ManageResort"],
+    }),
+  },
+  {
     path: `${SINGLE_POST_PAGE}/:slug`,
     component: Loadable({
       loader: () =>
@@ -178,6 +191,15 @@ const AgentAccountSettingsPage = Loadable({
   modules: ["AgentAccountSettingsPage"],
 });
 
+const AccountSettingsPage = Loadable({
+  loader: () =>
+    import(
+      /* webpackChunkName: "AgentAccountSettingsPage" */ "./container/Settings/AccountSettings"
+    ),
+  loading: Loading,
+  modules: ["AccountSettingsPage"],
+});
+
 /**
  *
  * Not Found Route Component
@@ -217,9 +239,13 @@ const Routes = () => {
           <Route key={path} path={path} exact={exact} component={component} />
         ))}
         <ProtectedRoute path={ADD_HOTEL_PAGE} component={AddListing} />
-        <ProtectedRoute
+        {/* <ProtectedRoute
           path={AGENT_ACCOUNT_SETTINGS_PAGE}
           component={AgentAccountSettingsPage}
+        /> */}
+        <ProtectedRoute
+          path={ACCOUNT_SETTINGS_PAGE}
+          component={AccountSettingsPage}
         />
         <Route component={NotFound} />
       </Switch>

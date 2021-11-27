@@ -6,10 +6,12 @@ export const AGENTS_PAGE = "/agents";
 export const LISTING_POSTS_PAGE = "/listing";
 export const SINGLE_POST_PAGE = "/post";
 export const ADD_RESORT_PAGE = "/add-resort";
+export const MANAGE_RESORT_PAGE = "/manage-resort";
 
 // Agent Profile Page Section
 export const AGENT_PROFILE_PAGE = "/profile";
 export const AGENT_ACCOUNT_SETTINGS_PAGE = "/account-settings";
+export const ACCOUNT_SETTINGS_PAGE = "/settings-page";
 export const AGENT_PROFILE_EDIT_PAGE = "/edit";
 export const AGENT_IMAGE_EDIT_PAGE = "/change-image";
 export const AGENT_PASSWORD_CHANGE_PAGE = "/change-password";

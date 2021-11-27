@@ -25,14 +25,14 @@ import {
   AddPhotosText,
   SaveButton,
   CancelButton,
+  AdditionalServicesWrapper,
+  AdditionalServicesInput,
 } from "./AddResort.style";
 import { alignItems } from "styled-system";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const AddResort = () => {
-  const [AdditionalFeatures, setAdditionalFeatures] = useState([
-    { title: "service", fee: "123" },
-  ]);
+  const [serviceID, setServiceID] = useState(1);
   const features = [
     { icon: wifi, name: "wifi" },
     { icon: Kitchen, name: "kitchen" },
@@ -49,7 +49,49 @@ const AddResort = () => {
     { icon: petfriendlyicon, name: "Pet friendly" },
     { icon: singleicon, name: "Singles-friendly" },
   ];
+  const [AdditionalFeatures, setAdditionalFeatures] = useState([]);
+  const [additionalServices, setAdditionalServices] = useState({
+    serviceTitle: "",
+    serviceFee: "",
+    id: serviceID,
+  });
+  const handleDeleteService = (chipToDelete) => () => {
+    console.log("Deleted Chip is", chipToDelete);
+    setAdditionalFeatures((AdditionalFeatures) =>
+      AdditionalFeatures.filter((chip) => chip.id !== chipToDelete.id)
+    );
+    setServiceID(serviceID - 1);
+  };
+  const onAddService = () => {
+    if (
+      additionalServices.serviceTitle !== "" &&
+      additionalServices.serviceFee !== ""
+    ) {
+      setAdditionalServices((prevState) => ({
+        ...prevState,
+        id: serviceID,
+      }));
+      setAdditionalFeatures((arr) => [...arr, additionalServices]);
+      console.log("Newly Added Service is", additionalServices);
+      setServiceID(serviceID + 1);
+      console.log("Updated Service ID is", serviceID);
+      setAdditionalServices((prevState) => ({
+        ...prevState,
+        serviceFee: "",
+        serviceTitle: "",
+      }));
+    } else {
+      alert("please fill the data");
+    }
+  };
 
+  const handleAdditionalServicesInput = (e) => {
+    const { name, value } = e.target;
+    setAdditionalServices((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
   const [images, setImages] = React.useState([]);
   const [selectedFeatures, setSelectedFeatures] = useState("");
   const [resortName, setReseortName] = useState("");
@@ -176,6 +218,7 @@ const AddResort = () => {
         </GoogleMapReact>
       </div>
       <HeadingWrapper>Resort Features</HeadingWrapper>
+      <AdditionalServicesWrapper></AdditionalServicesWrapper>
 
       {features.map((item, index) => {
         return (
@@ -195,17 +238,19 @@ const AddResort = () => {
           />
         );
       })}
-      <hr></hr>
+      <hr style={{ marginBottom: "20px" }}></hr>
+
+      {/* Additional Service */}
+      {/* Additional Service */}
+      {/* Additional Service */}
+      {/* Additional Service */}
+      {/* Additional Service */}
+
       {AdditionalFeatures.map((item, index) => {
         return (
           <Chip
-            // avatar={
-            //   <img
-            //     src={item.icon}
-            //     style={{ height: "15px", width: "15px", color: "blue" }}
-            //   />
-            // }
-            label={item.title + " / " + item.fee}
+            onDelete={handleDeleteService(item)}
+            label={item.serviceTitle + " / " + item.serviceFee}
             sx={{
               paddingLeft: "5px",
               marginBottom: "10px",
@@ -214,6 +259,51 @@ const AddResort = () => {
           />
         );
       })}
+
+      <HeadingWrapper>Additional Services</HeadingWrapper>
+      <AdditionalServicesWrapper>
+        <AdditionalServicesInput
+          name="serviceTitle"
+          value={additionalServices.serviceTitle}
+          onChange={handleAdditionalServicesInput}
+          placeholder="Service"
+        ></AdditionalServicesInput>
+        <AdditionalServicesInput
+          name="serviceFee"
+          value={additionalServices.serviceFee}
+          onChange={handleAdditionalServicesInput}
+          placeholder="Service Fee"
+        ></AdditionalServicesInput>
+        <div
+          onClick={onAddService}
+          style={{
+            height: "50px",
+            width: "50px",
+            background: "white",
+            border: "1px solid #E3E3E3",
+            borderRadius: "100px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={addicon}
+            style={{
+              height: "20px",
+              width: "20px",
+              alignItems: "center",
+            }}
+            alt="logo"
+          />
+        </div>
+      </AdditionalServicesWrapper>
+
+      {/* Additional Service */}
+      {/* Additional Service */}
+      {/* Additional Service */}
+      {/* Additional Service */}
+      {/* Additional Service */}
 
       <div
         style={{
