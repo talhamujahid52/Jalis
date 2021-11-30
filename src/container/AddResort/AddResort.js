@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import "./AddResort.css";
-import wifi from "../../assetts/wifiIcon.svg";
-import Kitchen from "../../assetts/KitchenIcon.svg";
-import AC from "../../assetts/ACIcon.svg";
-import shower from "../../assetts/Shower.svg";
-import TV from "../../assetts/TVIcon.svg";
-import pool from "../../assetts/PoolIcon.svg";
-import addicon from "../../assetts/AddIcon.svg";
-import tenticon from "../../assetts/TentIcon.svg";
-import familyicon from "../../assetts/FamilyIcon.svg";
-import fireplaceicon from "../../assetts/FireplaceIcon.svg";
-import cleaningicon from "../../assetts/CleaningIcon.svg";
-import petfriendlyicon from "../../assetts/PetFriendlyIcon.svg";
-import singleicon from "../../assetts/SingleIcons.svg";
+import wifi from "../../assets/wifiIcon.svg";
+import Kitchen from "../../assets/KitchenIcon.svg";
+import AC from "../../assets/ACIcon.svg";
+import shower from "../../assets/Shower.svg";
+import TV from "../../assets/TVIcon.svg";
+import pool from "../../assets/PoolIcon.svg";
+import addicon from "../../assets/AddIcon.svg";
+import tenticon from "../../assets/TentIcon.svg";
+import familyicon from "../../assets/FamilyIcon.svg";
+import fireplaceicon from "../../assets/FireplaceIcon.svg";
+import cleaningicon from "../../assets/CleaningIcon.svg";
+import petfriendlyicon from "../../assets/PetFriendlyIcon.svg";
+import singleicon from "../../assets/SingleIcons.svg";
 import GoogleMapReact from "google-map-react";
 import ImageUploading from "react-images-uploading";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
+import { ADD_RESORT_PAGE, ADD_SECTION_PAGE } from "settings/constant";
+import { useHistory } from "react-router-dom";
 
 import AddResortWrapper from "./AddResort.style";
 import {
@@ -29,26 +31,27 @@ import {
   AdditionalServicesInput,
 } from "./AddResort.style";
 import { alignItems } from "styled-system";
-
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
 const AddResort = () => {
+  const history = useHistory();
   const [serviceID, setServiceID] = useState(1);
-  const features = [
-    { icon: wifi, name: "wifi" },
-    { icon: Kitchen, name: "kitchen" },
-    { icon: shower, name: "Full bathroom" },
-    { icon: AC, name: "Air conditioning" },
-    { icon: TV, name: "TV" },
-    { icon: pool, name: "Swimming pool" },
-    { icon: tenticon, name: "Tent" },
-    { icon: tenticon, name: "Grill" },
-    { icon: familyicon, name: "Family-friendly" },
-    { icon: fireplaceicon, name: "Fireplace" },
-    { icon: fireplaceicon, name: "Allow smoking" },
-    { icon: cleaningicon, name: "Cleaning service" },
-    { icon: petfriendlyicon, name: "Pet friendly" },
-    { icon: singleicon, name: "Singles-friendly" },
-  ];
+  const [features, setFeatures] = useState([
+    { icon: wifi, name: "wifi", selected: false },
+    { icon: Kitchen, name: "kitchen", selected: false },
+    { icon: shower, name: "Full bathroom", selected: false },
+    { icon: AC, name: "Air conditioning", selected: false },
+    { icon: TV, name: "TV", selected: false },
+    { icon: pool, name: "Swimming pool", selected: false },
+    { icon: tenticon, name: "Tent", selected: false },
+    { icon: tenticon, name: "Grill", selected: false },
+    { icon: familyicon, name: "Family-friendly", selected: false },
+    { icon: fireplaceicon, name: "Fireplace", selected: false },
+    { icon: fireplaceicon, name: "Allow smoking", selected: false },
+    { icon: cleaningicon, name: "Cleaning service", selected: false },
+    { icon: petfriendlyicon, name: "Pet friendly", selected: false },
+    { icon: singleicon, name: "Singles-friendly", selected: false },
+  ]);
   const [AdditionalFeatures, setAdditionalFeatures] = useState([]);
   const [additionalServices, setAdditionalServices] = useState({
     serviceTitle: "",
@@ -223,6 +226,15 @@ const AddResort = () => {
       {features.map((item, index) => {
         return (
           <Chip
+            onClick={() => {
+              // let newArray = new Array();
+              let newArray = [...features];
+              console.log("new Array is", newArray);
+              newArray[index].selected = !newArray[index].selected;
+              // return newArray;
+              console.log("new Array is", newArray);
+              setFeatures(newArray);
+            }}
             avatar={
               <img
                 src={item.icon}
@@ -234,6 +246,7 @@ const AddResort = () => {
               paddingLeft: "5px",
               marginBottom: "10px",
               marginRight: "10px",
+              backgroundColor: item.selected ? "#ED702D28" : "white",
             }}
           />
         );
@@ -435,7 +448,13 @@ const AddResort = () => {
           justifyContent: "space-between",
         }}
       >
-        <SaveButton>Save</SaveButton>
+        <SaveButton
+          onClick={() => {
+            history.push(ADD_SECTION_PAGE);
+          }}
+        >
+          Save
+        </SaveButton>
         <CancelButton>Cancel</CancelButton>
       </div>
       {/* </div> */}

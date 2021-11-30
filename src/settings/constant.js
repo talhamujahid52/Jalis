@@ -7,6 +7,8 @@ export const LISTING_POSTS_PAGE = "/listing";
 export const SINGLE_POST_PAGE = "/post";
 export const ADD_RESORT_PAGE = "/add-resort";
 export const MANAGE_RESORT_PAGE = "/manage-resort";
+export const ADD_SECTION_PAGE = "/add-section";
+export const MANAGE_SECTION_PAGE = "/manage-section";
 
 // Agent Profile Page Section
 export const AGENT_PROFILE_PAGE = "/profile";

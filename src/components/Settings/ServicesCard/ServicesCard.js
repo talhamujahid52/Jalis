@@ -1,7 +1,7 @@
 import React from "react";
 import "./ServicesCard.css";
-import mybooking from "../../../assetts/MyBooking.svg";
-import arrow from "../../../assetts/chevron-down.svg";
+import mybooking from "../../../assets/MyBooking.svg";
+import arrow from "../../../assets/chevron-down.svg";
 
 const ServicesCard = (props) => {
   return (

@@ -1,12 +1,12 @@
 import React from "react";
 import "./AccountSettings.css";
 import { useHistory } from "react-router-dom";
-import resort from "../../assetts/ResortBooking.svg";
-import manageresort from "../../assetts/ManageResorts.svg";
-import blockdates from "../../assetts/BlockDates.svg";
-import messages from "../../assetts/Messages.svg";
-import reports from "../../assetts/ReportResortOwner.svg";
-import contactadmin from "../../assetts/ContactSiteAdmin.svg";
+import resort from "../../assets/ResortBooking.svg";
+import manageresort from "../../assets/ManageResorts.svg";
+import blockdates from "../../assets/BlockDates.svg";
+import messages from "../../assets/Messages.svg";
+import reports from "../../assets/ReportResortOwner.svg";
+import contactadmin from "../../assets/ContactSiteAdmin.svg";
 
 import ServicesCard from "../../components/Settings/ServicesCard/ServicesCard";
 import ProfileCard from "../../components/Settings/ProfileCard/ProfileCard";

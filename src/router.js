@@ -19,6 +19,8 @@ import {
   PRIVACY_PAGE,
   PRICING_PLAN_PAGE,
   ADD_RESORT_PAGE,
+  ADD_SECTION_PAGE,
+  MANAGE_SECTION_PAGE,
   MANAGE_RESORT_PAGE,
 } from "./settings/constant";
 
@@ -115,6 +117,28 @@ const routes = [
         ),
       loading: Loading,
       modules: ["ManageResort"],
+    }),
+  },
+  {
+    path: ADD_SECTION_PAGE,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "ForgetPassword" */ "./container/AddSection/AddSection"
+        ),
+      loading: Loading,
+      modules: ["AddSection"],
+    }),
+  },
+  {
+    path: MANAGE_SECTION_PAGE,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "ForgetPassword" */ "./container/ManageSection/ManageSection"
+        ),
+      loading: Loading,
+      modules: ["ManageSection"],
     }),
   },
   {

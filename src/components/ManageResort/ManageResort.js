@@ -1,143 +1,188 @@
 import React from "react";
 import "./ManageResort.css";
-import addresort from "../../assetts/addresort.jpg";
-import verified from "../../assetts/Verified.svg";
-import pauseicon from "../../assetts/PauseIcon.svg";
-import archiveicon from "../../assetts/ArchiveIcon.svg";
-import statsicon from "../../assetts/StatsIcon.svg";
-import homeicon from "../../assetts/HomeIcon.svg";
+import addresort from "../../assets/addresort.jpg";
+import verified from "../../assets/Verified.svg";
+import pauseicon from "../../assets/PauseIcon.svg";
+import archiveicon from "../../assets/ArchiveIcon.svg";
+import statsicon from "../../assets/StatsIcon.svg";
+import homeicon from "../../assets/HomeIcon.svg";
+import { useHistory } from "react-router-dom";
+import { ADD_RESORT_PAGE, ADD_SECTION_PAGE } from "settings/constant";
 
 const ManageResort = () => {
+  const history = useHistory();
+
   return (
     <div class="manageresort">
       {/* //image */}
-      <div className="resort-image">
-        <img
-          src={addresort}
-          style={{
-            height: "100%",
-            width: "100%",
-          }}
-          alt="logo"
-        />
-      </div>
-      <div className="resort-info">
-        <p
-          style={{
-            color: "#A5A5A5",
-            fontSize: "14px",
-            // border: "1px solid red",
-            margin: "0px",
-          }}
-        >
-          RESORT
-        </p>
-        <div className="verified">
-          <p style={{ fontSize: "20px" }}>Dubai Golden Beach</p>
+      <div style={{ display: "flex" }}>
+        <div className="resort-image">
           <img
-            src={verified}
+            src={addresort}
             style={{
-              height: "25px",
-              width: "25px",
+              height: "100%",
+              width: "100%",
             }}
             alt="logo"
           />
         </div>
-        <div
-          style={
-            {
-              //  border: "1px solid red"
-            }
-          }
-        >
-          <p style={{ color: "#A5A5A5", fontSize: "14px", margin: "0px" }}>
-            Created: 12/09/2020
-          </p>
+        <div className="resort-info">
           <p
             style={{
               color: "#A5A5A5",
               fontSize: "14px",
+              // border: "1px solid red",
               margin: "0px",
-              marginTop: "5px",
             }}
           >
-            Last edited: 12/09/2020
+            RESORT
           </p>
+          <div className="verified">
+            <p style={{ fontSize: "20px" }}>Dubai Golden Beach</p>
+            <img
+              src={verified}
+              style={{
+                height: "25px",
+                width: "25px",
+              }}
+              alt="logo"
+            />
+          </div>
           <div
-            style={{ height: "2px", width: "100%", background: "#f5f5f5" }}
-          ></div>
-        </div>
-        <div className="menu">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              // alignItems: "center",
-              width: "40px",
-            }}
+            style={
+              {
+                //  border: "1px solid red"
+              }
+            }
           >
-            <div style={{ width: "10px", height: "14px" }}>
-              <img src={pauseicon} alt="logo" />
-            </div>
-            <p style={{ fontSize: "14px", marginTop: "4px" }}>Edit</p>
+            <p style={{ color: "#A5A5A5", fontSize: "14px", margin: "0px" }}>
+              Created: 12/09/2020
+            </p>
+            <p
+              style={{
+                color: "#A5A5A5",
+                fontSize: "14px",
+                margin: "0px",
+                marginTop: "5px",
+              }}
+            >
+              Last edited: 12/09/2020
+            </p>
+            <div
+              style={{ height: "2px", width: "100%", background: "#f5f5f5" }}
+            ></div>
           </div>
 
-          <div
-            onClick={() => {
-              console.log("I am Clicked");
-            }}
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              // alignItems: "center",
-              width: "65px",
-            }}
-          >
-            <div style={{ width: "10px", height: "14px" }}>
-              <img src={archiveicon} alt="logo" />
+          <div className="menu">
+            <div
+              className="iconHover"
+              onClick={() => {
+                alert("I am clicked");
+              }}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                // alignItems: "center",
+                width: "40px",
+                // border: "1px solid red",
+                paddingTop: "2px",
+              }}
+            >
+              <div style={{ width: "10px", height: "15px" }}>
+                <img
+                  style={{ height: "100%", width: "100%" }}
+                  src={pauseicon}
+                  alt="logo"
+                />
+              </div>
+              <p style={{ fontSize: "14px", margin: "0px", marginTop: "2px" }}>
+                Edit
+              </p>
             </div>
-            <p style={{ fontSize: "14px", marginTop: "4px" }}>Pause</p>
-          </div>
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              // alignItems: "center",
-              width: "80px",
-            }}
-          >
-            <div style={{ width: "10px", height: "14px" }}>
-              <img src={archiveicon} alt="logo" />
+            <div
+              className="iconHover"
+              onClick={() => {
+                alert("I am clicked");
+              }}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                width: "55px",
+              }}
+            >
+              <div style={{ width: "15px", height: "25px" }}>
+                <img
+                  style={{ height: "100%", width: "100%" }}
+                  src={archiveicon}
+                  alt="logo"
+                />
+              </div>
+              <p style={{ fontSize: "14px", marginTop: "4px", margin: "0px" }}>
+                Pause
+              </p>
             </div>
-            <p style={{ fontSize: "14px", marginTop: "4px" }}>Archieve</p>
-          </div>
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              // alignItems: "center",
-              width: "55px",
-            }}
-          >
-            <div style={{ width: "14px", height: "16px" }}>
-              <img src={statsicon} alt="logo" />
+            <div
+              className="iconHover"
+              onClick={() => {
+                alert("I am clicked");
+              }}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                width: "75px",
+              }}
+            >
+              <div style={{ width: "15px", height: "25px" }}>
+                <img
+                  style={{ height: "100%", width: "100%" }}
+                  src={archiveicon}
+                  alt="logo"
+                />
+              </div>
+              <p style={{ fontSize: "14px", marginTop: "4px", margin: "0px" }}>
+                Archieve
+              </p>
             </div>
-            <p style={{ fontSize: "14px", marginTop: "4px" }}>Stats</p>
+
+            <div
+              className="iconHover"
+              onClick={() => {
+                alert("I am clicked");
+              }}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                // alignItems: "center",
+                width: "55px",
+              }}
+            >
+              <div style={{ width: "14px", height: "16px" }}>
+                <img src={statsicon} alt="logo" />
+              </div>
+              <p style={{ fontSize: "14px", marginTop: "4px" }}>Stats</p>
+            </div>
           </div>
         </div>
       </div>
       {/* extradiv */}
-      <div
+      {/* <div
         style={{
           width: "300px",
           height: "190px",
           //  border: "1px solid cyan"
         }}
-      ></div>
+      ></div> */}
       {/* managesection */}
-      <div className="managesection">
+      <div
+        onClick={() => {
+          history.push(ADD_SECTION_PAGE);
+        }}
+        className="managesection iconHover"
+      >
         <div
           style={{
             height: "35px",
@@ -161,7 +206,14 @@ const ManageResort = () => {
             />
           </div>
         </div>
-        <p style={{ color: "#ED702D", fontSize: "14px", textAlign: "center" }}>
+        <p
+          style={{
+            color: "#ED702D",
+            fontSize: "14px",
+            textAlign: "center",
+            margin: "0px",
+          }}
+        >
           Manage Sections
         </p>
       </div>

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import locationicon from "../../../assetts/location-pin.svg";
-import email from "../../../assetts/Email.svg";
-import edit from "../../../assetts/Edit.svg";
-
+import locationicon from "../../../assets/location-pin.svg";
+import email from "../../../assets/Email.svg";
+import edit from "../../../assets/Edit.svg";
 import "./ProfileCard.css";
 
 const ProfileCard = () => {
