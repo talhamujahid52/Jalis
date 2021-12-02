@@ -14,15 +14,19 @@ import {
   DaysInputWrapper,
   RightDaysInputWrapper,
   LeftDaysInputWrapper,
+  CheckedInputWrapper,
 } from "./PricingSection.style";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import Checkbox from "@mui/material/Checkbox";
 // import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const PricingSection = () => {
-  const [priceTag, setPriceTag] = useState("");
+  const [priceTagWeekends, setPriceTagWeekends] = useState("");
+  const [priceTagEidUlFitr, setPriceTagEidUlFitr] = useState("Fix");
+  const [priceTagEidUlAdha, setPriceTagEidUlAdha] = useState("Fix");
 
   return (
     <PricingWrapper>
@@ -32,12 +36,22 @@ const PricingSection = () => {
         <TextHeading>Monday, Tuesday, Wednesday, Thursday</TextHeading>
       </HeadingWrapper>
       <InputAndTitleWrapSimple>
-        <div style={{ width: "50%" }}>
+        <div style={{ width: "50%", marginTop: "15px" }}>
           <InputTitle>Price per night</InputTitle>
           <InputWrapper></InputWrapper>
         </div>
         <div style={{ width: "50%" }}>
-          <InputTitle>Price per night</InputTitle>
+          <CheckedInputWrapper>
+            <Checkbox
+              sx={{
+                color: "#6F6E71",
+                "&.Mui-checked": {
+                  color: "#ED702D",
+                },
+              }}
+            />
+            <InputTitle>Price per night</InputTitle>
+          </CheckedInputWrapper>
           <InputWrapper></InputWrapper>
         </div>
       </InputAndTitleWrapSimple>
@@ -51,23 +65,24 @@ const PricingSection = () => {
           <ButtonWrapper>
             <PriceButtons
               onClick={() => {
-                setPriceTag("Customize");
+                setPriceTagWeekends("Customize");
               }}
               style={{
                 backgroundColor:
-                  priceTag === "Customize" ? "#ED702D1A" : "white",
-                color: priceTag === "Customize" ? "#ED702D" : "#A5A5A5",
+                  priceTagWeekends === "Customize" ? "#ED702D1A" : "white",
+                color: priceTagWeekends === "Customize" ? "#ED702D" : "#A5A5A5",
               }}
             >
               Customize price
             </PriceButtons>
             <PriceButtons
               onClick={() => {
-                setPriceTag("Fix");
+                setPriceTagWeekends("Fix");
               }}
               style={{
-                backgroundColor: priceTag === "Fix" ? "#ED702D1A" : "white",
-                color: priceTag === "Fix" ? "#ED702D" : "#A5A5A5",
+                backgroundColor:
+                  priceTagWeekends === "Fix" ? "#ED702D1A" : "white",
+                color: priceTagWeekends === "Fix" ? "#ED702D" : "#A5A5A5",
               }}
             >
               Fix price
@@ -81,114 +96,208 @@ const PricingSection = () => {
             }}
           ></hr>
           <InputAndTitleWrap>
-            <div style={{ width: "50%" }}>
+            <div style={{ width: "50%", marginTop: "15px" }}>
               <InputTitle>Price per night</InputTitle>
               <InputWrapper></InputWrapper>
             </div>
             <div style={{ width: "50%" }}>
-              <InputTitle>Special Offer</InputTitle>
+              <CheckedInputWrapper>
+                <Checkbox
+                  sx={{
+                    color: "#6F6E71",
+                    "&.Mui-checked": {
+                      color: "#ED702D",
+                    },
+                  }}
+                />
+                <InputTitle>Special Offer</InputTitle>
+              </CheckedInputWrapper>
               <InputWrapper></InputWrapper>
             </div>
           </InputAndTitleWrap>
         </ButtonsAndInputWrapper>
       </div>
-      <Accordion>
-        <AccordionSummary
-          // expandIcon={}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>Eid ul Fitar</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            <AccordianInputs>
-              <div style={{ width: "50%" }}>
-                <InputTitle>From</InputTitle>
-                <InputWrapper></InputWrapper>
-              </div>
-              <div style={{ width: "50%" }}>
-                <InputTitle>To</InputTitle>
-                <InputWrapper></InputWrapper>
-              </div>
-            </AccordianInputs>
-            <ButtonWrapper style={{ marginTop: "20px" }}>
-              <PriceButtons
-                onClick={() => {
-                  setPriceTag("Customize");
-                }}
-                style={{
-                  backgroundColor:
-                    priceTag === "Customize" ? "#ED702D1A" : "white",
-                  color: priceTag === "Customize" ? "#ED702D" : "#A5A5A5",
-                }}
-              >
-                Customize price
-              </PriceButtons>
-              <PriceButtons
-                onClick={() => {
-                  setPriceTag("Fix");
-                }}
-                style={{
-                  backgroundColor: priceTag === "Fix" ? "#ED702D1A" : "white",
-                  color: priceTag === "Fix" ? "#ED702D" : "#A5A5A5",
-                }}
-              >
-                Fix price
-              </PriceButtons>
-            </ButtonWrapper>
-            <DaysInputWrapper>
-              <LeftDaysInputWrapper>
-                <div>
-                  <InputTitle>Price per night</InputTitle>
+      <div>
+        <Accordion style={{ borderRadius: "25px" }}>
+          <AccordionSummary
+            // expandIcon={}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Eid ul Fitar</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <AccordianInputs>
+                <div style={{ width: "50%" }}>
+                  <InputTitle>From</InputTitle>
                   <InputWrapper></InputWrapper>
                 </div>
-                <div>
-                  <InputTitle>Price per night</InputTitle>
+                <div style={{ width: "50%" }}>
+                  <InputTitle>To</InputTitle>
                   <InputWrapper></InputWrapper>
                 </div>
-                <div>
-                  <InputTitle>Price per night</InputTitle>
-                  <InputWrapper></InputWrapper>
-                </div>
-                <div>
-                  <InputTitle>Price per night</InputTitle>
-                  <InputWrapper></InputWrapper>
-                </div>
-                <div>
-                  <InputTitle>Price per night</InputTitle>
-                  <InputWrapper></InputWrapper>
-                </div>
-              </LeftDaysInputWrapper>
-              <RightDaysInputWrapper>
-                <div>
-                  <InputTitle>Price per night</InputTitle>
-                  <InputWrapper></InputWrapper>
-                </div>
-                <div>
-                  <InputTitle>Price per night</InputTitle>
-                  <InputWrapper></InputWrapper>
-                </div>
-                <div>
-                  <InputTitle>Price per night</InputTitle>
-                  <InputWrapper></InputWrapper>
-                </div>
-                <div>
-                  <InputTitle>Price per night</InputTitle>
-                  <InputWrapper></InputWrapper>
-                </div>
-                <div>
-                  <InputTitle>Price per night</InputTitle>
-                  <InputWrapper></InputWrapper>
-                </div>
-              </RightDaysInputWrapper>
-            </DaysInputWrapper>
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+              </AccordianInputs>
+              <ButtonWrapper style={{ marginTop: "20px" }}>
+                <PriceButtons
+                  onClick={() => {
+                    setPriceTagEidUlFitr("Customize");
+                  }}
+                  style={{
+                    backgroundColor:
+                      priceTagEidUlFitr === "Customize" ? "#ED702D1A" : "white",
+                    color:
+                      priceTagEidUlFitr === "Customize" ? "#ED702D" : "#A5A5A5",
+                  }}
+                >
+                  Customize price
+                </PriceButtons>
+                <PriceButtons
+                  onClick={() => {
+                    setPriceTagEidUlFitr("Fix");
+                  }}
+                  style={{
+                    backgroundColor:
+                      priceTagEidUlFitr === "Fix" ? "#ED702D1A" : "white",
+                    color: priceTagEidUlFitr === "Fix" ? "#ED702D" : "#A5A5A5",
+                  }}
+                >
+                  Fix price
+                </PriceButtons>
+              </ButtonWrapper>
+              <DaysInputWrapper>
+                <LeftDaysInputWrapper>
+                  {priceTagEidUlFitr === "Fix" && (
+                    <div style={{ marginTop: "15px" }}>
+                      <InputTitle>Price per Night</InputTitle>
+                      <InputWrapper></InputWrapper>
+                    </div>
+                  )}
+                  {priceTagEidUlFitr === "Customize" && (
+                    <>
+                      <div style={{ marginTop: "15px" }}>
+                        <InputTitle>Day 01</InputTitle>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <InputTitle>Day 02</InputTitle>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <InputTitle>Day 03</InputTitle>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <InputTitle>Day 04</InputTitle>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <InputTitle>Day 05</InputTitle>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                    </>
+                  )}
+                </LeftDaysInputWrapper>
+                <RightDaysInputWrapper>
+                  {priceTagEidUlFitr === "Fix" && (
+                    <div>
+                      <CheckedInputWrapper>
+                        <Checkbox
+                          sx={{
+                            color: "#6F6E71",
+                            "&.Mui-checked": {
+                              color: "#ED702D",
+                            },
+                          }}
+                        />
+                        <InputTitle>Special Offer</InputTitle>
+                      </CheckedInputWrapper>
+                      <InputWrapper></InputWrapper>
+                    </div>
+                  )}
+                  {priceTagEidUlFitr === "Customize" && (
+                    <>
+                      <div>
+                        <CheckedInputWrapper>
+                          <Checkbox
+                            sx={{
+                              color: "#6F6E71",
+                              "&.Mui-checked": {
+                                color: "#ED702D",
+                              },
+                            }}
+                          />
+                          <InputTitle>Special Offer</InputTitle>
+                        </CheckedInputWrapper>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <CheckedInputWrapper>
+                          <Checkbox
+                            sx={{
+                              color: "#6F6E71",
+                              "&.Mui-checked": {
+                                color: "#ED702D",
+                              },
+                            }}
+                          />
+                          <InputTitle>Special Offer</InputTitle>
+                        </CheckedInputWrapper>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <CheckedInputWrapper>
+                          <Checkbox
+                            sx={{
+                              color: "#6F6E71",
+                              "&.Mui-checked": {
+                                color: "#ED702D",
+                              },
+                            }}
+                          />
+                          <InputTitle>Special Offer</InputTitle>
+                        </CheckedInputWrapper>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <CheckedInputWrapper>
+                          <Checkbox
+                            sx={{
+                              color: "#6F6E71",
+                              "&.Mui-checked": {
+                                color: "#ED702D",
+                              },
+                            }}
+                          />
+                          <InputTitle>Special Offer</InputTitle>
+                        </CheckedInputWrapper>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <CheckedInputWrapper>
+                          <Checkbox
+                            sx={{
+                              color: "#6F6E71",
+                              "&.Mui-checked": {
+                                color: "#ED702D",
+                              },
+                            }}
+                          />
+                          <InputTitle>Special Offer</InputTitle>
+                        </CheckedInputWrapper>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                    </>
+                  )}
+                </RightDaysInputWrapper>
+              </DaysInputWrapper>
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      </div>
       {/* Second ACcordian */}
       <div style={{ marginTop: "40px" }}>
-        <Accordion>
+        <Accordion style={{ borderRadius: "25px" }}>
           <AccordionSummary
             // expandIcon={}
             aria-controls="panel1a-content"
@@ -211,23 +320,25 @@ const PricingSection = () => {
               <ButtonWrapper style={{ marginTop: "20px" }}>
                 <PriceButtons
                   onClick={() => {
-                    setPriceTag("Customize");
+                    setPriceTagEidUlAdha("Customize");
                   }}
                   style={{
                     backgroundColor:
-                      priceTag === "Customize" ? "#ED702D1A" : "white",
-                    color: priceTag === "Customize" ? "#ED702D" : "#A5A5A5",
+                      priceTagEidUlAdha === "Customize" ? "#ED702D1A" : "white",
+                    color:
+                      priceTagEidUlAdha === "Customize" ? "#ED702D" : "#A5A5A5",
                   }}
                 >
                   Customize price
                 </PriceButtons>
                 <PriceButtons
                   onClick={() => {
-                    setPriceTag("Fix");
+                    setPriceTagEidUlAdha("Fix");
                   }}
                   style={{
-                    backgroundColor: priceTag === "Fix" ? "#ED702D1A" : "white",
-                    color: priceTag === "Fix" ? "#ED702D" : "#A5A5A5",
+                    backgroundColor:
+                      priceTagEidUlAdha === "Fix" ? "#ED702D1A" : "white",
+                    color: priceTagEidUlAdha === "Fix" ? "#ED702D" : "#A5A5A5",
                   }}
                 >
                   Fix price
@@ -235,48 +346,128 @@ const PricingSection = () => {
               </ButtonWrapper>
               <DaysInputWrapper>
                 <LeftDaysInputWrapper>
-                  <div>
-                    <InputTitle>Price per night</InputTitle>
-                    <InputWrapper></InputWrapper>
-                  </div>
-                  <div>
-                    <InputTitle>Price per night</InputTitle>
-                    <InputWrapper></InputWrapper>
-                  </div>
-                  <div>
-                    <InputTitle>Price per night</InputTitle>
-                    <InputWrapper></InputWrapper>
-                  </div>
-                  <div>
-                    <InputTitle>Price per night</InputTitle>
-                    <InputWrapper></InputWrapper>
-                  </div>
-                  <div>
-                    <InputTitle>Price per night</InputTitle>
-                    <InputWrapper></InputWrapper>
-                  </div>
+                  {priceTagEidUlAdha === "Fix" && (
+                    <div style={{ marginTop: "15px" }}>
+                      <InputTitle>Price per night</InputTitle>
+                      <InputWrapper></InputWrapper>
+                    </div>
+                  )}
+                  {priceTagEidUlAdha === "Customize" && (
+                    <>
+                      <div style={{ marginTop: "15px" }}>
+                        <InputTitle>Price per night</InputTitle>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <InputTitle>Price per night</InputTitle>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <InputTitle>Price per night</InputTitle>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <InputTitle>Price per night</InputTitle>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <InputTitle>Price per night</InputTitle>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                    </>
+                  )}
                 </LeftDaysInputWrapper>
                 <RightDaysInputWrapper>
-                  <div>
-                    <InputTitle>Price per night</InputTitle>
-                    <InputWrapper></InputWrapper>
-                  </div>
-                  <div>
-                    <InputTitle>Price per night</InputTitle>
-                    <InputWrapper></InputWrapper>
-                  </div>
-                  <div>
-                    <InputTitle>Price per night</InputTitle>
-                    <InputWrapper></InputWrapper>
-                  </div>
-                  <div>
-                    <InputTitle>Price per night</InputTitle>
-                    <InputWrapper></InputWrapper>
-                  </div>
-                  <div>
-                    <InputTitle>Price per night</InputTitle>
-                    <InputWrapper></InputWrapper>
-                  </div>
+                  {priceTagEidUlAdha === "Fix" && (
+                    <div>
+                      <CheckedInputWrapper>
+                        <Checkbox
+                          sx={{
+                            color: "#6F6E71",
+                            "&.Mui-checked": {
+                              color: "#ED702D",
+                            },
+                          }}
+                        />
+                        <InputTitle>Special Offer</InputTitle>
+                      </CheckedInputWrapper>
+                      <InputWrapper></InputWrapper>
+                    </div>
+                  )}
+                  {priceTagEidUlAdha === "Customize" && (
+                    <>
+                      <div>
+                        <CheckedInputWrapper>
+                          <Checkbox
+                            sx={{
+                              color: "#6F6E71",
+                              "&.Mui-checked": {
+                                color: "#ED702D",
+                              },
+                            }}
+                          />
+                          <InputTitle>Special Offer</InputTitle>
+                        </CheckedInputWrapper>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <CheckedInputWrapper>
+                          <Checkbox
+                            sx={{
+                              color: "#6F6E71",
+                              "&.Mui-checked": {
+                                color: "#ED702D",
+                              },
+                            }}
+                          />
+                          <InputTitle>Special Offer</InputTitle>
+                        </CheckedInputWrapper>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <CheckedInputWrapper>
+                          <Checkbox
+                            sx={{
+                              color: "#6F6E71",
+                              "&.Mui-checked": {
+                                color: "#ED702D",
+                              },
+                            }}
+                          />
+                          <InputTitle>Special Offer</InputTitle>
+                        </CheckedInputWrapper>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <CheckedInputWrapper>
+                          <Checkbox
+                            sx={{
+                              color: "#6F6E71",
+                              "&.Mui-checked": {
+                                color: "#ED702D",
+                              },
+                            }}
+                          />
+                          <InputTitle>Special Offer</InputTitle>
+                        </CheckedInputWrapper>
+                        <InputWrapper></InputWrapper>
+                      </div>
+                      <div>
+                        <CheckedInputWrapper>
+                          <Checkbox
+                            sx={{
+                              color: "#6F6E71",
+                              "&.Mui-checked": {
+                                color: "#ED702D",
+                              },
+                            }}
+                          />
+                          <InputTitle>Special Offer</InputTitle>
+                        </CheckedInputWrapper>
+                        <InputWrapper></InputWrapper>
+                      </div>{" "}
+                    </>
+                  )}
                 </RightDaysInputWrapper>
               </DaysInputWrapper>
             </Typography>

@@ -5,7 +5,7 @@ import edit from "../../../assets/Edit.svg";
 import "./ProfileCard.css";
 
 const ProfileCard = () => {
-  const [userType, setUserType] = useState("resortOwner");
+  const [userType, setUserType] = useState("serviceProvider");
   return (
     <div className="outerdiv">
       <div
@@ -16,7 +16,6 @@ const ProfileCard = () => {
         }}
       >
         <div className="roundedImage"></div>
-
         {userType === "notLoggedIn" && (
           <div className="notLoggedInDiv">
             <p

@@ -1,6 +1,7 @@
 // import React from "react";
 import GeneralSection from "../../components/AddSection/GeneralSection/GeneralSection";
 import PricingSection from "../../components/AddSection/PricingSection/PricingSection";
+import ImagesSection from "../../components/AddSection/ImagesSection/ImagesSection";
 // const AddSection = () => {
 //   return (
 //     <div style={{ display: "flex", justifyContent: "center", padding: "40px" }}>
@@ -19,11 +20,15 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useHistory } from "react-router-dom";
+import { MANAGE_SECTION_PAGE } from "settings/constant";
 
 const steps = ["", "", ""];
-const components = [<GeneralSection />, <PricingSection />];
+const components = [<GeneralSection />, <PricingSection />, <ImagesSection />];
 
 export default function HorizontalLinearStepper() {
+  const history = useHistory();
+
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
 
@@ -33,6 +38,9 @@ export default function HorizontalLinearStepper() {
 
   const isStepSkipped = (step) => {
     return skipped.has(step);
+  };
+  const onFinishClick = () => {
+    history.push(MANAGE_SECTION_PAGE);
   };
 
   const handleNext = () => {
@@ -90,18 +98,19 @@ export default function HorizontalLinearStepper() {
           );
         })}
       </Stepper>
-      {activeStep === steps.length ? (
-        <React.Fragment>
-          {/* <Typography sx={{ mt: 2, mb: 1 }}>
-            All steps completed - you&apos;re finished
-            <GeneralSection></GeneralSection>
-          </Typography> */}
-          <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-            <Box sx={{ flex: "1 1 auto" }} />
-            <Button onClick={handleReset}>Reset</Button>
-          </Box>
-        </React.Fragment>
-      ) : (
+      {
+        // activeStep === steps.length ? (
+        //   <React.Fragment>
+        //     {/* <Typography sx={{ mt: 2, mb: 1 }}>
+        //       All steps completed - you&apos;re finished
+        //       <GeneralSection></GeneralSection>
+        //     </Typography> */}
+        //     <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+        //       <Box sx={{ flex: "1 1 auto" }} />
+        //       <Button onClick={handleReset}>Reset</Button>
+        //     </Box>
+        //   </React.Fragment>
+        // ) : (
         <React.Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>
             {components[activeStep]}
@@ -118,18 +127,23 @@ export default function HorizontalLinearStepper() {
               Back
             </Button>
             <Box sx={{ flex: "1 1 auto" }} />
-            {isStepOptional(activeStep) && (
+            {/* {isStepOptional(activeStep) && (
               <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
                 Skip
               </Button>
-            )}
+            )} */}
 
-            <Button onClick={handleNext}>
+            <Button
+              onClick={
+                activeStep === steps.length - 1 ? onFinishClick : handleNext
+              }
+            >
               {activeStep === steps.length - 1 ? "Finish" : "Next"}
             </Button>
           </Box>
         </React.Fragment>
-      )}
+        // )
+      }
     </Box>
   );
 }

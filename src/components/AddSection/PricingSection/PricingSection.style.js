@@ -26,8 +26,9 @@ export const InputAndTitleWrapSimple = styled.div`
   width: 100%;
 `;
 export const InputTitle = styled.div`
+  color: #6f6e71;
   font-size: 16x;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-bottom: 5px;
 `;
 
@@ -92,7 +93,17 @@ export const DaysInputWrapper = styled.div`
 `;
 export const RightDaysInputWrapper = styled.div`
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 export const LeftDaysInputWrapper = styled.div`
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+`;
+export const CheckedInputWrapper = styled.div`
+  display: flex;
+  align-items: center;
 `;

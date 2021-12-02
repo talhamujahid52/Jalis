@@ -1,5 +1,5 @@
 import React from "react";
-import "./ManageResort.css";
+import "./ManageSection.css";
 import addresort from "../../assets/addresort.jpg";
 import verified from "../../assets/Verified.svg";
 import pauseicon from "../../assets/PauseIcon.svg";
@@ -7,11 +7,7 @@ import archiveicon from "../../assets/ArchiveIcon.svg";
 import statsicon from "../../assets/StatsIcon.svg";
 import homeicon from "../../assets/HomeIcon.svg";
 import { useHistory } from "react-router-dom";
-import {
-  ADD_RESORT_PAGE,
-  ADD_SECTION_PAGE,
-  MANAGE_SECTION_PAGE,
-} from "settings/constant";
+import { ADD_RESORT_PAGE, ADD_SECTION_PAGE } from "settings/constant";
 
 const ManageResort = () => {
   const history = useHistory();
@@ -183,7 +179,8 @@ const ManageResort = () => {
       {/* managesection */}
       <div
         onClick={() => {
-          history.push(MANAGE_SECTION_PAGE);
+          history.push(ADD_SECTION_PAGE);
+          // alert("Hi I am in AdD Section");
         }}
         className="managesection iconHover"
       >
