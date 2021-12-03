@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Location from "../../assets/location-pin.svg";
 import GridCardWrapper, {
   ImageWrapper,
   FavoriteIcon,
@@ -35,8 +36,25 @@ const GridCard = ({
             alignItems: "center",
           }}
         >
-          {location && <LocationArea>{location}</LocationArea>}
-          {rating && <RatingArea className="rating">{rating}</RatingArea>}
+          <div style={{ display: "flex" }}>
+            {location && (
+              <img
+                style={{ height: "20px", width: "15px", marginRight: "5px" }}
+                src={Location}
+              />
+            )}
+            {/* {location && <LocationArea>{location}</LocationArea>} */}
+            {location && (
+              <LocationArea>81 Pennsylvania Avenue, USA</LocationArea>
+            )}
+          </div>
+          <div style={{ display: "flex" }}>
+            {rating && (
+              <p style={{ fontSize: "14px", color: "#FFBB00", margin: "0px" }}>
+                4.1
+              </p>
+            )}
+          </div>
         </div>
         <div
           style={{
@@ -46,7 +64,14 @@ const GridCard = ({
           }}
         >
           {title && <TitleArea>{title}</TitleArea>}
-          {price && <PriceArea className="price">{price}</PriceArea>}
+          {price && (
+            <PriceArea className="price"> start from ريال1000/2000</PriceArea>
+          )}
+        </div>
+        <div>
+          <p style={{ color: "#ED702D", fontSize: "12px", fontWeight: "bold" }}>
+            1.4k Reviews
+          </p>
         </div>
 
         {/* <MetaWrapper className="meta_wrapper">

@@ -44,10 +44,10 @@ const TopHotelsGrid = () => {
 
   return (
     <Container fluid={true}>
-      <SectionTitle
+      {/* <SectionTitle
         title={<Heading content="Travelers’ Choice: Top hotels" />}
         link={<TextLink link={LISTING_POSTS_PAGE} content="Show all" />}
-      />
+      /> */}
 
       <SectionGrid
         link={SINGLE_POST_PAGE}

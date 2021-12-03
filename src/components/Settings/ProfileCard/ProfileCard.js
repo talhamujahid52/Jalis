@@ -4,8 +4,8 @@ import email from "../../../assets/Email.svg";
 import edit from "../../../assets/Edit.svg";
 import "./ProfileCard.css";
 
-const ProfileCard = () => {
-  const [userType, setUserType] = useState("serviceProvider");
+const ProfileCard = ({ userType }) => {
+  // const [userType, setUserType] = useState("serviceProvider");
   return (
     <div className="outerdiv">
       <div
