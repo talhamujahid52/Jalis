@@ -12,7 +12,7 @@ import ProfileCard from "../../components/Settings/ProfileCard/ProfileCard";
 import { MANAGE_RESORT_PAGE } from "../../settings/constant";
 
 const AccountSettings = () => {
-  const [userType, setUserType] = useState("notLoggedIn");
+  const [userType, setUserType] = useState("resortOwner");
   const history = useHistory();
   const handleClick = () => history.push(MANAGE_RESORT_PAGE);
 
