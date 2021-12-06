@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Location from "../../assets/location-pin.svg";
+import Verified from "../../assets/Verified.svg";
+import starIcon from "../../assets/star.svg";
 import GridCardWrapper, {
   ImageWrapper,
   FavoriteIcon,
@@ -47,6 +49,12 @@ const GridCard = ({
             {location && (
               <LocationArea>81 Pennsylvania Avenue, USA</LocationArea>
             )}
+            {location && (
+              <img
+                style={{ height: "18px", width: "12px", marginLeft: "5px" }}
+                src={Verified}
+              />
+            )}
           </div>
           <div style={{ display: "flex" }}>
             {rating && (
@@ -54,6 +62,15 @@ const GridCard = ({
                 4.1
               </p>
             )}
+            {rating &&
+              new Array(5).fill(0).map((item) => {
+                return (
+                  <img
+                    style={{ height: "18px", width: "12px", marginLeft: "2px" }}
+                    src={starIcon}
+                  />
+                );
+              })}
           </div>
         </div>
         <div
@@ -66,6 +83,7 @@ const GridCard = ({
           {title && <TitleArea>{title}</TitleArea>}
           {price && (
             <PriceArea className="price"> start from ريال1000/2000</PriceArea>
+            // <PriceArea className="price"> <p style={{fontFamily:""}}></p></PriceArea>
           )}
         </div>
         <div>

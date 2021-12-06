@@ -22,6 +22,7 @@ import {
   ADD_SECTION_PAGE,
   MANAGE_SECTION_PAGE,
   MANAGE_RESORT_PAGE,
+  TAB_Navigation,
 } from "./settings/constant";
 
 /**
@@ -139,6 +140,17 @@ const routes = [
         ),
       loading: Loading,
       modules: ["ManageSection"],
+    }),
+  },
+  {
+    path: TAB_Navigation,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "ForgetPassword" */ "./container/TabNavigation/TabNavigation"
+        ),
+      loading: Loading,
+      modules: ["TabNavigation"],
     }),
   },
   {

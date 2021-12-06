@@ -9,12 +9,13 @@ import reports from "../../assets/ReportResortOwner.svg";
 import contactadmin from "../../assets/ContactSiteAdmin.svg";
 import ServicesCard from "../../components/Settings/ServicesCard/ServicesCard";
 import ProfileCard from "../../components/Settings/ProfileCard/ProfileCard";
-import { MANAGE_RESORT_PAGE } from "../../settings/constant";
+import { MANAGE_RESORT_PAGE, TAB_Navigation } from "../../settings/constant";
 
 const AccountSettings = () => {
   const [userType, setUserType] = useState("resortOwner");
   const history = useHistory();
-  const handleClick = () => history.push(MANAGE_RESORT_PAGE);
+  // const handleClick = () => history.push(MANAGE_RESORT_PAGE);
+  const handleClick = () => history.push(TAB_Navigation);
 
   return (
     <div
