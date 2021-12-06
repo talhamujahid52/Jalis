@@ -13,6 +13,24 @@ const ManageResort = () => {
 
   return (
     <ManageResortWrapper>
+      <div
+        onClick={() => {
+          alert("This is Create New Resort");
+        }}
+        style={{
+          alignSelf: "end",
+          paddingTop: "10px",
+          paddingBottom: "10px",
+          paddingRight: "20px",
+          paddingLeft: "20px",
+          borderRadius: "20px",
+          backgroundColor: "#FCE8DE",
+          color: "#ED702D",
+          marginBottom: "40px",
+        }}
+      >
+        Create New Resort
+      </div>
       <ManageResortComponent></ManageResortComponent>
       <ManageResortComponent></ManageResortComponent>
       <ManageResortComponent></ManageResortComponent>

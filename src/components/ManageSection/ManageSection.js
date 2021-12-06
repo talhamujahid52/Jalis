@@ -13,7 +13,7 @@ const ManageResort = () => {
   const history = useHistory();
 
   return (
-    <div class="manageresort">
+    <div class="manageSection">
       {/* //image */}
       <div style={{ display: "flex" }}>
         <div className="resort-image">

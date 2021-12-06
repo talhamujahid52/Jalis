@@ -17,6 +17,9 @@ const ManageResort = () => {
   const history = useHistory();
 
   return (
+    // <div
+    //   style={{ height: "100px", width: "100%", border: "1px solid red" }}
+    // ></div>
     <div class="manageresort">
       {/* //image */}
       <div style={{ display: "flex" }}>
@@ -182,9 +185,9 @@ const ManageResort = () => {
       ></div> */}
       {/* managesection */}
       <div
-        onClick={() => {
-          history.push(MANAGE_SECTION_PAGE);
-        }}
+        // onClick={() => {
+        //   history.push(MANAGE_SECTION_PAGE);
+        // }}
         className="managesection iconHover"
       >
         <div

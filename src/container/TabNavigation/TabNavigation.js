@@ -5,7 +5,10 @@ import Box from "@mui/material/Box";
 
 import ManageResort from "../ManageResort/ManageResort";
 import ManageSection from "../ManageSection/ManageSection";
-
+import {
+  TabNavigationWrapper,
+  TabNavigationComponentWrapper,
+} from "./TabNavigation.style";
 const TabNavigation = () => {
   const [value, setValue] = React.useState("one");
 
@@ -14,38 +17,41 @@ const TabNavigation = () => {
   };
 
   return (
-    // <div className="container">
-    <Box
-      sx={{
-        width: "100%",
-        // border: "1px solid red",
-      }}
-    >
-      <Box
-        sx={{
-          borderBottom: 1,
-          borderColor: "divider",
-          // border: "1px solid red",
-        }}
-      >
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-          TabIndicatorProps={{
-            style: {
-              backgroundColor: "orange",
-            },
+    <TabNavigationWrapper>
+      <TabNavigationComponentWrapper>
+        <Box
+          sx={{
+            borderBottom: 1,
+            borderColor: "divider",
+            // border: "1px solid red",
           }}
         >
-          <Tab style={{ color: "orange" }} value="one" label="Manage Resort" />
-          <Tab style={{ color: "orange" }} value="two" label="Manage Section" />
-        </Tabs>
-      </Box>
-      {value === "one" && <ManageResort />}
-      {value === "two" && <ManageSection />}
-    </Box>
-    // </div>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+            TabIndicatorProps={{
+              style: {
+                backgroundColor: "orange",
+              },
+            }}
+          >
+            <Tab
+              style={{ color: "orange" }}
+              value="one"
+              label="Manage Resort"
+            />
+            <Tab
+              style={{ color: "orange" }}
+              value="two"
+              label="Manage Section"
+            />
+          </Tabs>
+        </Box>
+        {value === "one" && <ManageResort />}
+        {value === "two" && <ManageSection />}
+      </TabNavigationComponentWrapper>
+    </TabNavigationWrapper>
   );
 };
 
