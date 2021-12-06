@@ -10,6 +10,7 @@ import GridCardWrapper, {
   LocationArea,
   TitleArea,
   PriceArea,
+  ArabicText,
   RatingArea,
   MetaWrapper,
   ButtonGroup,
@@ -82,8 +83,13 @@ const GridCard = ({
         >
           {title && <TitleArea>{title}</TitleArea>}
           {price && (
-            <PriceArea className="price"> start from ريال1000/2000</PriceArea>
-            // <PriceArea className="price"> <p style={{fontFamily:""}}></p></PriceArea>
+            <PriceArea className="price">
+              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                start from
+                <ArabicText>ريال</ArabicText>
+                1000/2000
+              </div>
+            </PriceArea>
           )}
         </div>
         <div>

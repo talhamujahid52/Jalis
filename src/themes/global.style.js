@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import { createGlobalStyle } from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,8 +13,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: ${themeGet('primary.0', '#008489')};
-    color: ${themeGet('color.1', '#ffffff')};
+    background: ${themeGet("primary.0", "#008489")};
+    color: ${themeGet("color.1", "#ffffff")};
   }
 
   html {
@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
   textarea,
   span,
   div {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif, 'Noto Kufi Arabic';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
@@ -79,7 +79,7 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     min-height: 100vh;
     overflow: hidden;
-    background-color: ${themeGet('color.1', '#ffffff')};
+    background-color: ${themeGet("color.1", "#ffffff")};
 
     main.ant-layout-content {
       flex: 1 0 auto;
@@ -107,14 +107,14 @@ const GlobalStyle = createGlobalStyle`
         font-size: 15px;
         line-height: 18px;
         font-weight: 700;
-        color: ${themeGet('text.0', '#2C2C2C')};
+        color: ${themeGet("text.0", "#2C2C2C")};
       }
       .ant-card-body p {
         display: flex;
-        color: ${themeGet('text.2', '#777777')};
+        color: ${themeGet("text.2", "#777777")};
         justify-content: flex-start;
         strong {
-          color: ${themeGet('text.0', '#2C2C2C')};
+          color: ${themeGet("text.0", "#2C2C2C")};
           width: 30%;
         }
       }
@@ -132,7 +132,7 @@ const GlobalStyle = createGlobalStyle`
             border: 0;
             &.account_menu {
               li {
-                color: ${themeGet('text.0', '#2C2C2C')};
+                color: ${themeGet("text.0", "#2C2C2C")};
                 font-size: 15px;
                 line-height: 18px;
                 font-weight: 400;
@@ -144,14 +144,14 @@ const GlobalStyle = createGlobalStyle`
                 }
                 a {
                   padding: 8px 0;
-                  color: ${themeGet('text.0', '#2C2C2C')};
+                  color: ${themeGet("text.0", "#2C2C2C")};
                   transition: color 0.2s ease-in-out;
                   &:hover {
-                    color: ${themeGet('primary.0', '#008489')};
+                    color: ${themeGet("primary.0", "#008489")};
                   }
                   &.active {
                     font-weight: 700;
-                    color: ${themeGet('primary.0', '#008489')};
+                    color: ${themeGet("primary.0", "#008489")};
                   }
                 }
                 button {
@@ -162,7 +162,7 @@ const GlobalStyle = createGlobalStyle`
                   background-color: transparent;
                   transition: color 0.2s ease-in-out;
                   &:hover {
-                    color: ${themeGet('primary.0', '#008489')};
+                    color: ${themeGet("primary.0", "#008489")};
                   }
                   &:focus {
                     outline: none;
@@ -182,7 +182,7 @@ const GlobalStyle = createGlobalStyle`
         .DayPicker_weekHeader {
           .DayPicker_weekHeader_ul {
             .DayPicker_weekHeader_li {
-              color: ${themeGet('text.0', '#2C2C2C')};
+              color: ${themeGet("text.0", "#2C2C2C")};
               small {
                 font-size: 13px;
               }
@@ -194,7 +194,7 @@ const GlobalStyle = createGlobalStyle`
             .CalendarMonth {
               .CalendarMonth_caption {
                 font-size: 16px;
-                color: ${themeGet('text.0', '#2C2C2C')};
+                color: ${themeGet("text.0", "#2C2C2C")};
               }
             }
           }
@@ -279,14 +279,14 @@ const GlobalStyle = createGlobalStyle`
           line-height: inherit;
           > div {
             padding: 15px 20px;
-            color: ${themeGet('text.0', '#2C2C2C')};
+            color: ${themeGet("text.0", "#2C2C2C")};
             svg {
               margin-right: 8px;
             }
           }
 
           &:hover {
-            background-color: ${themeGet('color.2', '#F7F7F7')};
+            background-color: ${themeGet("color.2", "#F7F7F7")};
           }
         }
       }
@@ -446,7 +446,7 @@ const GlobalStyle = createGlobalStyle`
       opacity: 1;
       align-items: center;
       display: inline-flex !important;
-      background-color: ${themeGet('color.1', '#ffffff')} !important;
+      background-color: ${themeGet("color.1", "#ffffff")} !important;
       box-shadow: 0 3px 6px rgba(0,0,0,0.16);
       > img {
         margin: 0 !important;
@@ -492,7 +492,7 @@ const GlobalStyle = createGlobalStyle`
             svg {
               path {
                 opacity: 0.8;
-                fill: ${themeGet('color.1', '#ffffff')};
+                fill: ${themeGet("color.1", "#ffffff")};
                 transition: all 0.3s ease;
               }
             }
@@ -511,12 +511,12 @@ const GlobalStyle = createGlobalStyle`
 
   .quantity {
     button.btn {
-      border: 1px solid ${themeGet('primary.0', '#008489')};
+      border: 1px solid ${themeGet("primary.0", "#008489")};
       svg {
-        fill: ${themeGet('primary.0', '#008489')};
+        fill: ${themeGet("primary.0", "#008489")};
       }
       &:hover {
-        background-color: ${themeGet('primary.0', '#008489')};
+        background-color: ${themeGet("primary.0", "#008489")};
         svg {
           fill: #ffffff;
         }
@@ -524,7 +524,7 @@ const GlobalStyle = createGlobalStyle`
     }
     input[type="number"],
     input[type="number"].qnt-input {
-      color: ${themeGet('text.0', '#2C2C2C')};
+      color: ${themeGet("text.0", "#2C2C2C")};
     }
   }
 
@@ -540,7 +540,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0 0 30px;
         padding: 25px 20px;
         align-items: center;
-        background-color: ${themeGet('color.2', '#F7F7F7')};
+        background-color: ${themeGet("color.2", "#F7F7F7")};
         li {
           height: auto;
           line-height: 1;
@@ -558,12 +558,12 @@ const GlobalStyle = createGlobalStyle`
             border-radius: 3px;
             font-size: 15px;
             font-weight: 700;
-            color: ${themeGet('text.0', '#2C2C2C')};
+            color: ${themeGet("text.0", "#2C2C2C")};
           }
           &:last-child {
             a {
-              color: ${themeGet('color.1', '#ffffff')};
-              background-color: ${themeGet('primary.0', '#008489')};
+              color: ${themeGet("color.1", "#ffffff")};
+              background-color: ${themeGet("primary.0", "#008489")};
               transition: opacity 0.2s ease;
               &:hover {
                 opacity: 0.9;
@@ -585,11 +585,11 @@ const GlobalStyle = createGlobalStyle`
             font-size: 15px;
             padding: 0 31px;
             border-left: 4px solid transparent;
-            color: ${themeGet('text.0', '#2C2C2C')};
+            color: ${themeGet("text.0", "#2C2C2C")};
             &.active {
               font-weight: 700;
-              border-color: ${themeGet('primary.0', '#008489')};
-              color: ${themeGet('primary.0', '#008489')};
+              border-color: ${themeGet("primary.0", "#008489")};
+              color: ${themeGet("primary.0", "#008489")};
             }
           }
           button {
@@ -600,10 +600,10 @@ const GlobalStyle = createGlobalStyle`
             padding: 0 32px;
             cursor: pointer;
             background-color: transparent;
-            color: ${themeGet('text.0', '#2C2C2C')};
+            color: ${themeGet("text.0", "#2C2C2C")};
             transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
             &:hover {
-              color: ${themeGet('primary.0', '#008489')};
+              color: ${themeGet("primary.0", "#008489")};
             }
             &focus {
               outline: 0;
@@ -611,7 +611,7 @@ const GlobalStyle = createGlobalStyle`
           }
           &:hover {
             a {
-              color: ${themeGet('primary.0', '#008489')};
+              color: ${themeGet("primary.0", "#008489")};
             }
           }
         }
@@ -638,21 +638,21 @@ const GlobalStyle = createGlobalStyle`
       padding: 10px 14px;
       cursor: pointer;
       font-size: 13px;
-      color: ${themeGet('text.1', '#909090')};
+      color: ${themeGet("text.1", "#909090")};
       .pac-icon {
         margin-top: 6px;
       }
       .pac-item-query {
         font-size: 15px;
         font-weight: 600;
-        color: ${themeGet('text.0', '#2C2C2C')};  
+        color: ${themeGet("text.0", "#2C2C2C")};  
         .pac-matched {
           font-weight: 700;
-          color: ${themeGet('color.0', '#000000')};
+          color: ${themeGet("color.0", "#000000")};
         }
       } 
       &:hover {
-        background-color: ${themeGet('color.2', '#F7F7F7')};
+        background-color: ${themeGet("color.2", "#F7F7F7")};
       }
     }
   }
@@ -673,7 +673,7 @@ const GlobalStyle = createGlobalStyle`
           header {
             padding-top: 50px;
             padding-bottom: 20px;
-            border-color: ${themeGet('border.0', '#EBEBEB')};
+            border-color: ${themeGet("border.0", "#EBEBEB")};
             @media   (max-width: 375px) {
               padding-top: 30px;
             }
@@ -686,7 +686,7 @@ const GlobalStyle = createGlobalStyle`
             padding: 0 9px;
           }
           footer {
-            border-color: ${themeGet('border.0', '#EBEBEB')};
+            border-color: ${themeGet("border.0", "#EBEBEB")};
           }
         }
         > button.close {
@@ -699,7 +699,7 @@ const GlobalStyle = createGlobalStyle`
           position: absolute;
           font-size: 32px;
           background-color: transparent;
-          color: ${themeGet('text.1', '#909090')};
+          color: ${themeGet("text.1", "#909090")};
           transition: all 0.3s ease;
           @media   (max-width: 375px) {
             top: 10px;
@@ -709,7 +709,7 @@ const GlobalStyle = createGlobalStyle`
           &:hover,
           &:focus {
             outline: none;
-            color: ${themeGet('text.0', '#2C2C2C')};
+            color: ${themeGet("text.0", "#2C2C2C")};
           }
           &::after {
             display: none;
@@ -721,12 +721,12 @@ const GlobalStyle = createGlobalStyle`
 
   .reservation_sidebar {
     padding: 0 !important;
-    background-color: ${themeGet('color.1', '#ffffff')};
+    background-color: ${themeGet("color.1", "#ffffff")};
     header {
       padding-bottom: 27px;
       margin-bottom: 29px;
       padding: 25px 30px 26px 30px;
-      border-bottom: 1px solid ${themeGet('border.0', '#EBEBEB')};
+      border-bottom: 1px solid ${themeGet("border.0", "#EBEBEB")};
       @media   (max-width: 375px) {
         padding: 25px 15px 26px 15px;
       }
@@ -738,11 +738,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p {
-      color: ${themeGet('text.0', '#2C2C2C')};
+      color: ${themeGet("text.0", "#2C2C2C")};
       font-size: 15px;
       font-weight: 400;
       a {
-        color: ${themeGet('primary.0', '#008489')};
+        color: ${themeGet("primary.0", "#008489")};
         font-weight: 700;
         &:hover,
         &:focus {
@@ -756,7 +756,7 @@ const GlobalStyle = createGlobalStyle`
     footer {
       padding: 25px 30px 28px 30px;
       margin-top: 29px;
-      border-top: 1px solid ${themeGet('border.0', '#EBEBEB')};
+      border-top: 1px solid ${themeGet("border.0", "#EBEBEB")};
       @media   (max-width: 375px) {
         padding: 20px 15px 25px 15px;
       }
@@ -773,18 +773,18 @@ const GlobalStyle = createGlobalStyle`
 
   .ant-input-affix-wrapper {
     border-radius: 3px;
-    border-color: ${themeGet('border.3', '#E6E6E6')};
+    border-color: ${themeGet("border.3", "#E6E6E6")};
   }
 
   .ant-input-search-icon::before {
-    border-color: ${themeGet('border.3', '#E6E6E6')};
+    border-color: ${themeGet("border.3", "#E6E6E6")};
   }
 
   .ant-checkbox-wrapper:hover .ant-checkbox-inner, 
   .ant-checkbox:hover .ant-checkbox-inner, 
   .ant-checkbox-input:focus + .ant-checkbox-inner,
   .ant-checkbox-checked::after {
-    border-color: ${themeGet('primary.0', '#008489')} !important;
+    border-color: ${themeGet("primary.0", "#008489")} !important;
   }
 
   .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {

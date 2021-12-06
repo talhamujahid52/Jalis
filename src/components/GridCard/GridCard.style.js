@@ -234,6 +234,7 @@ export const TitleArea = styled.div`
 `;
 
 export const PriceArea = styled.div`
+  /* display:flex; */
   text-align: right;
   color: ${themeGet("text.0", "#2C2C2C")};
   font-size: 13px;
@@ -243,6 +244,12 @@ export const PriceArea = styled.div`
   width: 50%;
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+export const ArabicText = styled.p`
+  margin-left: 2px;
+  margin-right: 2px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  color: ${themeGet("primary.0", "#2C2C2C")};
 `;
 
 export const RatingArea = styled.div`
