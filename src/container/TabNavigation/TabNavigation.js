@@ -41,15 +41,15 @@ const TabNavigation = () => {
               value="one"
               label="Manage Resort"
             />
-            <Tab
+            {/* <Tab
               style={{ color: "orange" }}
               value="two"
               label="Manage Section"
-            />
+            /> */}
           </Tabs>
         </Box>
         {value === "one" && <ManageResort />}
-        {value === "two" && <ManageSection />}
+        {/* {value === "two" && <ManageSection />} */}
       </TabNavigationComponentWrapper>
     </TabNavigationWrapper>
   );

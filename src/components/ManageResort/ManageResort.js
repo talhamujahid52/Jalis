@@ -185,9 +185,9 @@ const ManageResort = () => {
       ></div> */}
       {/* managesection */}
       <div
-        // onClick={() => {
-        //   history.push(MANAGE_SECTION_PAGE);
-        // }}
+        onClick={() => {
+          history.push(MANAGE_SECTION_PAGE);
+        }}
         className="managesection iconHover"
       >
         <div

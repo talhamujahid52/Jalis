@@ -64,7 +64,7 @@ const GridCardWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  // border: 2px solid blue;
+  /* border: 2px solid blue; */
   padding: 15px;
   border-radius: 20px;
 
@@ -76,13 +76,14 @@ export const ImageWrapper = styled.div`
   .react-multi-carousel-list {
     // border: 2px solid green;
     border-radius: 20px;
-    over-flow: hidden;
-    min-height: 150px;
+    /* over-flow: hidden; */
+    min-height: 180px;
     background-color: #e9e8ec;
   }
 
   .react-multi-carousel-item {
-    height: 150px;
+    height: 180px;
+    object-fit: cover;
     // border: 2px solid blue;
     // border-radius: 20px;
     // over-flow: hidden;
@@ -183,14 +184,18 @@ export const FavoriteIcon = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-  margin: 3px;
-  padding: 15px;
+  /* margin: 3px; */
+  /* padding: 15px; */
+  padding-right: 15px;
+  padding-left: 15px;
+  /* padding-bottom: 0px; */
+  /* border: 1px solid green; */
   // border-width: 2px;
   // border-style: solid;
   // border-top-width: 0;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  border-color: ${themeGet("border.3", "#E6E6E6")};
+  /* border-color: ${themeGet("border.3", "#E6E6E6")}; */
   transition: border-color 0.2s ease;
 `;
 
@@ -210,7 +215,7 @@ export const TitleArea = styled.div`
   font-weight: 700;
   margin-bottom: 2px;
   white-space: nowrap;
-  width: 50%;
+  /* width: 50%; */
   overflow: hidden;
   text-overflow: ellipsis;
   @media (max-width: 480px) {

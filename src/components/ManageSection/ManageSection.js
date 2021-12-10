@@ -35,7 +35,7 @@ const ManageResort = () => {
               margin: "0px",
             }}
           >
-            RESORT
+            Section
           </p>
           <div className="verified">
             <p style={{ fontSize: "20px" }}>Dubai Golden Beach</p>
@@ -179,8 +179,8 @@ const ManageResort = () => {
       {/* managesection */}
       <div
         onClick={() => {
-          history.push(ADD_SECTION_PAGE);
-          // alert("Hi I am in AdD Section");
+          // history.push(ADD_SECTION_PAGE);
+          alert("Hi I am Block Dates");
         }}
         className="managesection iconHover"
       >
@@ -215,7 +215,7 @@ const ManageResort = () => {
             margin: "0px",
           }}
         >
-          Manage Sections
+          Block Dates
         </p>
       </div>
     </div>

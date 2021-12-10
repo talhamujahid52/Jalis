@@ -22,6 +22,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useHistory } from "react-router-dom";
 import { MANAGE_SECTION_PAGE } from "settings/constant";
+import { StepperButton } from "./AddSection.style";
 
 const steps = ["", "", ""];
 const components = [<GeneralSection />, <PricingSection />, <ImagesSection />];
@@ -133,13 +134,20 @@ export default function HorizontalLinearStepper() {
               </Button>
             )} */}
 
-            <Button
+            {/* <Button
               onClick={
                 activeStep === steps.length - 1 ? onFinishClick : handleNext
               }
             >
               {activeStep === steps.length - 1 ? "Finish" : "Next"}
-            </Button>
+            </Button> */}
+            <StepperButton
+              onClick={
+                activeStep === steps.length - 1 ? onFinishClick : handleNext
+              }
+            >
+              {activeStep === steps.length - 1 ? "Finish" : "Next"}
+            </StepperButton>
           </Box>
         </React.Fragment>
         // )

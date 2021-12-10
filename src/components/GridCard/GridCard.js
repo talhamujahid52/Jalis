@@ -50,16 +50,24 @@ const GridCard = ({
             {location && (
               <LocationArea>81 Pennsylvania Avenue, USA</LocationArea>
             )}
-            {location && (
+            {/* {location && (
               <img
                 style={{ height: "18px", width: "12px", marginLeft: "5px" }}
                 src={Verified}
               />
-            )}
+            )} */}
           </div>
           <div style={{ display: "flex" }}>
             {rating && (
-              <p style={{ fontSize: "14px", color: "#FFBB00", margin: "0px" }}>
+              <p
+                style={{
+                  fontSize: "16px",
+                  color: "#FFBB00",
+                  margin: "0px",
+                  fontWeight: "bold",
+                  marginRight: "5px",
+                }}
+              >
                 4.1
               </p>
             )}
@@ -67,7 +75,7 @@ const GridCard = ({
               new Array(5).fill(0).map((item) => {
                 return (
                   <img
-                    style={{ height: "18px", width: "12px", marginLeft: "2px" }}
+                    style={{ height: "20px", width: "15px", marginLeft: "2px" }}
                     src={starIcon}
                   />
                 );
@@ -81,13 +89,30 @@ const GridCard = ({
             alignItems: "center",
           }}
         >
-          {title && <TitleArea>{title}</TitleArea>}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              // justifyContent: "space-between",
+              // border: "1px solid red",
+              width: "50%",
+            }}
+          >
+            {title && <TitleArea>{title}</TitleArea>}
+            {title && (
+              <img
+                style={{ height: "18px", width: "12px", marginLeft: "5px" }}
+                src={Verified}
+              />
+            )}
+          </div>
           {price && (
             <PriceArea className="price">
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 start from
                 <ArabicText>ريال</ArabicText>
-                1000/2000
+                <p style={{ color: "#ED702D" }}>1000</p>/
+                <p style={{ textDecoration: "line-through" }}>2000</p>
               </div>
             </PriceArea>
           )}
