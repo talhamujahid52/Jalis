@@ -6,6 +6,9 @@ import pauseicon from "../../assets/PauseIcon.svg";
 import archiveicon from "../../assets/ArchiveIcon.svg";
 import statsicon from "../../assets/StatsIcon.svg";
 import homeicon from "../../assets/HomeIcon.svg";
+import editIcon from "../../assets/edit-resource-icon.svg";
+import BlockDates from "../../assets/BlockDatesIcon.svg";
+
 import { useHistory } from "react-router-dom";
 import { ADD_RESORT_PAGE, ADD_SECTION_PAGE } from "settings/constant";
 
@@ -91,7 +94,7 @@ const ManageResort = () => {
               <div style={{ width: "10px", height: "15px" }}>
                 <img
                   style={{ height: "100%", width: "100%" }}
-                  src={pauseicon}
+                  src={editIcon}
                   alt="logo"
                 />
               </div>
@@ -107,19 +110,26 @@ const ManageResort = () => {
               }}
               style={{
                 display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
+                // justifyContent: "space-between",
+                // alignItems: "center",
                 width: "55px",
               }}
             >
-              <div style={{ width: "15px", height: "25px" }}>
+              <div
+                style={{
+                  width: "10px",
+                  height: "15px",
+                  marginRight: "5px",
+                  marginTop: "3px",
+                }}
+              >
                 <img
                   style={{ height: "100%", width: "100%" }}
-                  src={archiveicon}
+                  src={pauseicon}
                   alt="logo"
                 />
               </div>
-              <p style={{ fontSize: "14px", marginTop: "4px", margin: "0px" }}>
+              <p style={{ fontSize: "14px", margin: "0px", marginTop: "5px" }}>
                 Pause
               </p>
             </div>
@@ -198,7 +208,7 @@ const ManageResort = () => {
         >
           <div style={{ height: "18px", width: "16px" }}>
             <img
-              src={homeicon}
+              src={BlockDates}
               style={{
                 height: "100%",
                 width: "100%",

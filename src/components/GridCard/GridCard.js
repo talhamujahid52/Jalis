@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Location from "../../assets/location-pin.svg";
 import Verified from "../../assets/Verified.svg";
 import starIcon from "../../assets/star.svg";
+import ribbon from "../../assets/ribbon-orange.svg";
 import GridCardWrapper, {
   ImageWrapper,
   FavoriteIcon,
@@ -30,6 +31,21 @@ const GridCard = ({
   let classes = viewDetailsBtn || editBtn ? `has_btn ${className}` : className;
   return (
     <GridCardWrapper className={`grid_card ${classes}`.trim()}>
+      <div
+        style={{
+          position: "absolute",
+          top: "20px",
+          left: "0px",
+          zIndex: "100",
+          height: "30px",
+          // width: "200px",
+        }}
+      >
+        <img src={ribbon} style={{ height: "100%", width: "100%" }} />
+        <p style={{ color: "white", marginTop: "-28px", marginLeft: "10px" }}>
+          Special Offer: 40%
+        </p>
+      </div>
       <ImageWrapper className="media_wrapper">{children}</ImageWrapper>
       <ContentWrapper className="content_wrapper">
         <div

@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ManageResort.css";
 import addresort from "../../assets/addresort.jpg";
 import verified from "../../assets/Verified.svg";
 import pauseicon from "../../assets/PauseIcon.svg";
+import publishIcon from "../../assets/publish-icon.svg";
 import archiveicon from "../../assets/ArchiveIcon.svg";
 import statsicon from "../../assets/StatsIcon.svg";
 import homeicon from "../../assets/HomeIcon.svg";
+import editIcon from "../../assets/edit-resource-icon.svg";
+import BlockDates from "../../assets/BlockDatesIcon.svg";
 import { useHistory } from "react-router-dom";
 import {
   ADD_RESORT_PAGE,
   ADD_SECTION_PAGE,
   MANAGE_SECTION_PAGE,
 } from "settings/constant";
+import { color } from "styled-system";
 
 const ManageResort = () => {
   const history = useHistory();
+  const [paused, setPaused] = useState(false);
 
   return (
     // <div
@@ -24,6 +29,26 @@ const ManageResort = () => {
       {/* //image */}
       <div style={{ display: "flex" }}>
         <div className="resort-image">
+          {paused && (
+            <div
+              style={{
+                position: "absolute",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                right: "15px",
+                top: "10px",
+                height: "30px",
+                width: "80px",
+                backgroundColor: "#EE1E4F",
+                borderRadius: "20px",
+                color: "white",
+              }}
+            >
+              Paused
+            </div>
+          )}
+
           <img
             src={addresort}
             style={{
@@ -95,10 +120,10 @@ const ManageResort = () => {
                 paddingTop: "2px",
               }}
             >
-              <div style={{ width: "10px", height: "15px" }}>
+              <div style={{ width: "13px", height: "13px" }}>
                 <img
                   style={{ height: "100%", width: "100%" }}
-                  src={pauseicon}
+                  src={editIcon}
                   alt="logo"
                 />
               </div>
@@ -110,24 +135,54 @@ const ManageResort = () => {
             <div
               className="iconHover"
               onClick={() => {
-                alert("I am clicked");
+                // alert("I am clicked");
+                setPaused(!paused);
               }}
               style={{
                 display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "55px",
+                // justifyContent: "space-between",
+                // alignItems: "center",
+                width: "70px",
               }}
             >
-              <div style={{ width: "15px", height: "25px" }}>
-                <img
-                  style={{ height: "100%", width: "100%" }}
-                  src={archiveicon}
-                  alt="logo"
-                />
-              </div>
-              <p style={{ fontSize: "14px", marginTop: "4px", margin: "0px" }}>
-                Pause
+              {paused && (
+                <div
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    marginRight: "5px",
+                    marginTop: "3px",
+                  }}
+                >
+                  <img
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                    }}
+                    src={publishIcon}
+                    alt="logo"
+                  />
+                </div>
+              )}
+              {!paused && (
+                <div
+                  style={{
+                    width: "10px",
+                    height: "15px",
+                    marginRight: "5px",
+                    marginTop: "3px",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src={pauseicon}
+                    alt="logo"
+                  />
+                </div>
+              )}
+
+              <p style={{ fontSize: "14px", margin: "0px", marginTop: "5px" }}>
+                {paused ? "Publish" : "Pause"}
               </p>
             </div>
 

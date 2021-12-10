@@ -141,6 +141,7 @@ const AddResort = () => {
     <AddResortWrapper>
       <HeadingWrapper>Resort Name</HeadingWrapper>
       <input
+        required
         type="text"
         value={resortName}
         onChange={(e) => {
