@@ -128,20 +128,8 @@ export default function HorizontalLinearStepper() {
               Back
             </Button>
             <Box sx={{ flex: "1 1 auto" }} />
-            {/* {isStepOptional(activeStep) && (
-              <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
-                Skip
-              </Button>
-            )} */}
-
-            {/* <Button
-              onClick={
-                activeStep === steps.length - 1 ? onFinishClick : handleNext
-              }
-            >
-              {activeStep === steps.length - 1 ? "Finish" : "Next"}
-            </Button> */}
             <StepperButton
+              type="submit"
               onClick={
                 activeStep === steps.length - 1 ? onFinishClick : handleNext
               }

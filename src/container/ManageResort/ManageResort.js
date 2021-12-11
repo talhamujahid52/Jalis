@@ -36,6 +36,7 @@ const ManageResort = () => {
           <img style={{ height: "100%", width: "100%" }} src={AddIcon}></img>
         </div>
       </div>
+
       <ManageResortComponent></ManageResortComponent>
       <ManageResortComponent></ManageResortComponent>
       <ManageResortComponent></ManageResortComponent>

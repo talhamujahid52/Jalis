@@ -41,15 +41,21 @@ const TabNavigation = () => {
               value="one"
               label="Manage Resort"
             />
-            {/* <Tab
+            <Tab style={{ color: "orange" }} value="two" label="Chats" />
+            <Tab
               style={{ color: "orange" }}
-              value="two"
-              label="Manage Section"
-            /> */}
+              value="three"
+              label="Resort Bookings"
+            />
+            <Tab style={{ color: "orange" }} value="four" label="Reports" />
+            <Tab style={{ color: "orange" }} value="five" label="Support" />
           </Tabs>
         </Box>
         {value === "one" && <ManageResort />}
-        {/* {value === "two" && <ManageSection />} */}
+        {value === "two" && <h1>This is Block Dates </h1>}
+        {value === "three" && <h1>This is Resort Bookings </h1>}
+        {value === "four" && <h1>This is Reports </h1>}
+        {value === "five" && <h1>This is Support </h1>}
       </TabNavigationComponentWrapper>
     </TabNavigationWrapper>
   );

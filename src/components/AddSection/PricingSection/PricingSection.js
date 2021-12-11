@@ -31,6 +31,9 @@ const PricingSection = () => {
         <div style={{ width: "50%", marginTop: "15px" }}>
           <InputTitle>Price per night</InputTitle>
           <InputWrapper
+            type="number"
+            min={0}
+            max={6}
             value={nightPrice}
             onChange={(e) => {
               setNightPrice(e.target.value);
@@ -59,6 +62,9 @@ const PricingSection = () => {
             <InputTitle>Special offer</InputTitle>
           </CheckedInputWrapper>
           <InputWrapper
+            type="number"
+            min={0}
+            max={6}
             value={specialPrice}
             onChange={(e) => {
               setSpecialPrice(e.target.value);

@@ -82,6 +82,9 @@ const EidulAdha = () => {
                     <div style={{ marginTop: "15px" }}>
                       <InputTitle>Price per Night</InputTitle>
                       <InputWrapper
+                        type="number"
+                        min={0}
+                        max={6}
                         disabled={specialPriceChecked}
                         style={{
                           cursor: specialPriceChecked
@@ -99,6 +102,9 @@ const EidulAdha = () => {
                       <div style={{ marginTop: "15px" }}>
                         <InputTitle>Day 01</InputTitle>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={day1}
                           style={{
                             cursor: day1 ? "not-allowed" : "default",
@@ -109,6 +115,9 @@ const EidulAdha = () => {
                       <div>
                         <InputTitle>Day 02</InputTitle>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={day2}
                           style={{
                             cursor: day2 ? "not-allowed" : "default",
@@ -119,6 +128,9 @@ const EidulAdha = () => {
                       <div>
                         <InputTitle>Day 03</InputTitle>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={day3}
                           style={{
                             cursor: day3 ? "not-allowed" : "default",
@@ -129,6 +141,9 @@ const EidulAdha = () => {
                       <div>
                         <InputTitle>Day 04</InputTitle>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={day4}
                           style={{
                             cursor: day4 ? "not-allowed" : "default",
@@ -139,6 +154,9 @@ const EidulAdha = () => {
                       <div>
                         <InputTitle>Day 05</InputTitle>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={day5}
                           style={{
                             cursor: day5 ? "not-allowed" : "default",
@@ -149,6 +167,9 @@ const EidulAdha = () => {
                       <div>
                         <InputTitle>Day 06</InputTitle>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={day6}
                           style={{
                             cursor: day6 ? "not-allowed" : "default",
@@ -178,6 +199,9 @@ const EidulAdha = () => {
                         <InputTitle>Special Offer</InputTitle>
                       </CheckedInputWrapper>
                       <InputWrapper
+                        type="number"
+                        min={0}
+                        max={6}
                         disabled={!specialPriceChecked}
                         style={{
                           cursor: !specialPriceChecked
@@ -207,6 +231,9 @@ const EidulAdha = () => {
                           <InputTitle>Special Offer</InputTitle>
                         </CheckedInputWrapper>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={!day1}
                           style={{
                             cursor: !day1 ? "not-allowed" : "default",
@@ -231,6 +258,9 @@ const EidulAdha = () => {
                           <InputTitle>Special Offer</InputTitle>
                         </CheckedInputWrapper>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={!day2}
                           style={{
                             cursor: !day2 ? "not-allowed" : "default",
@@ -255,6 +285,9 @@ const EidulAdha = () => {
                           <InputTitle>Special Offer</InputTitle>
                         </CheckedInputWrapper>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={!day3}
                           style={{
                             cursor: !day3 ? "not-allowed" : "default",
@@ -279,6 +312,9 @@ const EidulAdha = () => {
                           <InputTitle>Special Offer</InputTitle>
                         </CheckedInputWrapper>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={!day4}
                           style={{
                             cursor: !day4 ? "not-allowed" : "default",
@@ -303,6 +339,9 @@ const EidulAdha = () => {
                           <InputTitle>Special Offer</InputTitle>
                         </CheckedInputWrapper>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={!day5}
                           style={{
                             cursor: !day5 ? "not-allowed" : "default",
@@ -327,6 +366,9 @@ const EidulAdha = () => {
                           <InputTitle>Special Offer</InputTitle>
                         </CheckedInputWrapper>
                         <InputWrapper
+                          type="number"
+                          min={0}
+                          max={6}
                           disabled={!day6}
                           style={{
                             cursor: !day6 ? "not-allowed" : "default",

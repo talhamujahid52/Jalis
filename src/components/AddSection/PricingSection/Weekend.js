@@ -66,6 +66,9 @@ const Weekend = () => {
                 <div style={{ width: "50%", marginTop: "15px" }}>
                   <InputTitle>Friday</InputTitle>
                   <InputWrapper
+                    type="number"
+                    min={0}
+                    max={6}
                     disabled={fridayChecked}
                     style={{
                       cursor: fridayChecked ? "not-allowed" : "default",
@@ -90,6 +93,9 @@ const Weekend = () => {
                     <InputTitle>Special Offer</InputTitle>
                   </CheckedInputWrapper>
                   <InputWrapper
+                    type="number"
+                    min={0}
+                    max={6}
                     disabled={!fridayChecked}
                     style={{
                       cursor: !fridayChecked ? "not-allowed" : "default",
@@ -102,6 +108,9 @@ const Weekend = () => {
                 <div style={{ width: "50%", marginTop: "15px" }}>
                   <InputTitle>Satuarday</InputTitle>
                   <InputWrapper
+                    type="number"
+                    min={0}
+                    max={6}
                     disabled={satuardayChecked}
                     style={{
                       cursor: satuardayChecked ? "not-allowed" : "default",
@@ -128,6 +137,9 @@ const Weekend = () => {
                     <InputTitle>Special Offer</InputTitle>
                   </CheckedInputWrapper>
                   <InputWrapper
+                    type="number"
+                    min={0}
+                    max={6}
                     disabled={!satuardayChecked}
                     style={{
                       cursor: !satuardayChecked ? "not-allowed" : "default",
@@ -140,6 +152,9 @@ const Weekend = () => {
                 <div style={{ width: "50%", marginTop: "15px" }}>
                   <InputTitle>Sunday</InputTitle>
                   <InputWrapper
+                    type="number"
+                    min={0}
+                    max={6}
                     disabled={sundayChecked}
                     style={{
                       cursor: sundayChecked ? "not-allowed" : "default",
@@ -164,6 +179,9 @@ const Weekend = () => {
                     <InputTitle>Special Offer</InputTitle>
                   </CheckedInputWrapper>
                   <InputWrapper
+                    type="number"
+                    min={0}
+                    max={6}
                     disabled={!sundayChecked}
                     style={{
                       cursor: !sundayChecked ? "not-allowed" : "default",
@@ -180,6 +198,9 @@ const Weekend = () => {
                 <div style={{ width: "50%", marginTop: "15px" }}>
                   <InputTitle>Price per night</InputTitle>
                   <InputWrapper
+                    type="number"
+                    min={0}
+                    max={6}
                     disabled={specialPriceChecked}
                     style={{
                       cursor: specialPriceChecked ? "not-allowed" : "default",
@@ -206,6 +227,9 @@ const Weekend = () => {
                     <InputTitle>Special Offer</InputTitle>
                   </CheckedInputWrapper>
                   <InputWrapper
+                    type="number"
+                    min={0}
+                    max={6}
                     disabled={!specialPriceChecked}
                     style={{
                       cursor: !specialPriceChecked ? "not-allowed" : "default",
