@@ -10,9 +10,11 @@
   margin-bottom: 40px;
 }
 
-.resort-image {
+.section-image {
   height: 190px;
   width: 250px;
+  position: relative;
+
   /* border: 1px solid red; */
   overflow: hidden;
   border-radius: 20px;
@@ -88,5 +90,13 @@
     /* margin-top: 0px; */
     margin-left: 15px;
     /* border: 1px solid blue; */
+  }
+}
+@media only screen and (max-width: 800px) {
+  .section-image {
+    height: 130px;
+    width: 170px;
+    /* border: 1px solid red; */
+    border-radius: 20px;
   }
 }

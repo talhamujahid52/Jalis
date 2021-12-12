@@ -16,7 +16,7 @@
   /* border: 1px solid red; */
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 .resort-info {
   /* margin-top: 0px; */
@@ -91,3 +91,19 @@
     /* border: 1px solid blue; */
   }
 }
+@media only screen and (max-width: 800px) {
+  .resort-image {
+    height: 130px;
+    width: 170px;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+  }
+}
+/* @media only screen and (max-width: 600px) {
+  .resort-image {
+    height: 70px;
+    width: 80px;
+    /* border: 1px solid red; */
+/* border-radius: 100px;
+  }
+}  */

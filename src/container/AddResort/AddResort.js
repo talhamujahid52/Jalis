@@ -17,7 +17,11 @@ import GoogleMapReact from "google-map-react";
 import ImageUploading from "react-images-uploading";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
-import { ADD_RESORT_PAGE, ADD_SECTION_PAGE } from "settings/constant";
+import {
+  ADD_RESORT_PAGE,
+  ADD_SECTION_PAGE,
+  HOME_PAGE,
+} from "settings/constant";
 import { useHistory } from "react-router-dom";
 
 import AddResortWrapper from "./AddResort.style";
@@ -138,7 +142,12 @@ const AddResort = () => {
 
   return (
     //
-    <form id="form1">
+    <form
+      id="form1"
+      onSubmit={() => {
+        history.push(ADD_SECTION_PAGE);
+      }}
+    >
       <AddResortWrapper>
         <HeadingWrapper>Resort Name</HeadingWrapper>
         <input
@@ -462,13 +471,20 @@ const AddResort = () => {
           <SaveButton
             form="form1"
             type="submit"
-            onClick={() => {
-              //history.push(ADD_SECTION_PAGE);
-            }}
+            // onClick={() => {
+            //   history.push(ADD_SECTION_PAGE);
+            // }}
           >
             Save
           </SaveButton>
-          <CancelButton type="button">Cancel</CancelButton>
+          <CancelButton
+            onClick={() => {
+              history.push(HOME_PAGE);
+            }}
+            type="button"
+          >
+            Cancel
+          </CancelButton>
         </div>
         {/* </div> */}
       </AddResortWrapper>

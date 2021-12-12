@@ -16,8 +16,10 @@ import {
   MANAGE_SECTION_PAGE,
 } from "settings/constant";
 import { color } from "styled-system";
+import useWindowSize from "../../library/hooks/useWindowSize";
 
 const ManageResort = () => {
+  const { width } = useWindowSize();
   const history = useHistory();
   const [paused, setPaused] = useState(false);
 
@@ -27,7 +29,7 @@ const ManageResort = () => {
     // ></div>
     <div class="manageresort">
       {/* //image */}
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", alignItems: "center" }}>
         <div className="resort-image">
           {paused && (
             <div
@@ -38,8 +40,9 @@ const ManageResort = () => {
                 justifyContent: "center",
                 right: "15px",
                 top: "10px",
-                height: "30px",
-                width: "80px",
+                height: width > 800 ? "30px" : "20px",
+                width: width > 800 ? "80px" : "50px",
+                fontSize: width > 800 ? "14px" : "10px",
                 backgroundColor: "#EE1E4F",
                 borderRadius: "20px",
                 color: "white",
@@ -142,7 +145,7 @@ const ManageResort = () => {
                 display: "flex",
                 // justifyContent: "space-between",
                 // alignItems: "center",
-                width: "70px",
+                width: paused ? "70px" : "50px",
               }}
             >
               {paused && (

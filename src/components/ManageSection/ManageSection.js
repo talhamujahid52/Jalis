@@ -1,25 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ManageSection.css";
 import addresort from "../../assets/addresort.jpg";
 import verified from "../../assets/Verified.svg";
 import pauseicon from "../../assets/PauseIcon.svg";
 import archiveicon from "../../assets/ArchiveIcon.svg";
 import statsicon from "../../assets/StatsIcon.svg";
+import bookingIcon from "../../assets/BookingsIcon.svg";
 import homeicon from "../../assets/HomeIcon.svg";
 import editIcon from "../../assets/edit-resource-icon.svg";
 import BlockDates from "../../assets/BlockDatesIcon.svg";
+import publishIcon from "../../assets/publish-icon.svg";
 
 import { useHistory } from "react-router-dom";
 import { ADD_RESORT_PAGE, ADD_SECTION_PAGE } from "settings/constant";
+import useWindowSize from "../../library/hooks/useWindowSize";
 
 const ManageResort = () => {
   const history = useHistory();
+  const [paused, setPaused] = useState(false);
+  const { width } = useWindowSize();
 
   return (
     <div class="manageSection">
       {/* //image */}
-      <div style={{ display: "flex" }}>
-        <div className="resort-image">
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <div className="section-image">
+          {paused && (
+            <div
+              style={{
+                position: "absolute",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                right: "15px",
+                top: "10px",
+                height: width > 800 ? "30px" : "20px",
+                width: width > 800 ? "80px" : "50px",
+                fontSize: width > 800 ? "14px" : "10px",
+                backgroundColor: "#EE1E4F",
+                borderRadius: "20px",
+                color: "white",
+              }}
+            >
+              Paused
+            </div>
+          )}
           <img
             src={addresort}
             style={{
@@ -84,14 +109,17 @@ const ManageResort = () => {
               }}
               style={{
                 display: "flex",
-                justifyContent: "space-between",
+                // justifyContent: "space-between",
                 // alignItems: "center",
                 width: "40px",
                 // border: "1px solid red",
+                marginRight: "4px",
                 paddingTop: "2px",
               }}
             >
-              <div style={{ width: "10px", height: "15px" }}>
+              <div
+                style={{ width: "10px", height: "15px", marginRight: "2px" }}
+              >
                 <img
                   style={{ height: "100%", width: "100%" }}
                   src={editIcon}
@@ -102,8 +130,61 @@ const ManageResort = () => {
                 Edit
               </p>
             </div>
-
             <div
+              className="iconHover"
+              onClick={() => {
+                // alert("I am clicked");
+                setPaused(!paused);
+              }}
+              style={{
+                display: "flex",
+                // justifyContent: "space-between",
+                // alignItems: "center",
+                width: paused ? "70px" : "50px",
+              }}
+            >
+              {paused && (
+                <div
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    marginRight: "5px",
+                    marginTop: "3px",
+                  }}
+                >
+                  <img
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                    }}
+                    src={publishIcon}
+                    alt="logo"
+                  />
+                </div>
+              )}
+              {!paused && (
+                <div
+                  style={{
+                    width: "10px",
+                    height: "15px",
+                    marginRight: "5px",
+                    marginTop: "3px",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src={pauseicon}
+                    alt="logo"
+                  />
+                </div>
+              )}
+
+              <p style={{ fontSize: "14px", margin: "0px", marginTop: "5px" }}>
+                {paused ? "Publish" : "Pause"}
+              </p>
+            </div>
+
+            {/* <div
               className="iconHover"
               onClick={() => {
                 alert("I am clicked");
@@ -113,6 +194,7 @@ const ManageResort = () => {
                 // justifyContent: "space-between",
                 // alignItems: "center",
                 width: "55px",
+                marginRight: "4px",
               }}
             >
               <div
@@ -132,7 +214,7 @@ const ManageResort = () => {
               <p style={{ fontSize: "14px", margin: "0px", marginTop: "5px" }}>
                 Pause
               </p>
-            </div>
+            </div> */}
 
             <div
               className="iconHover"
@@ -141,12 +223,15 @@ const ManageResort = () => {
               }}
               style={{
                 display: "flex",
-                justifyContent: "space-between",
+                // justifyContent: "space-between",
                 alignItems: "center",
                 width: "75px",
+                marginRight: "4px",
               }}
             >
-              <div style={{ width: "15px", height: "25px" }}>
+              <div
+                style={{ width: "15px", height: "25px", marginRight: "2px" }}
+              >
                 <img
                   style={{ height: "100%", width: "100%" }}
                   src={archiveicon}
@@ -165,15 +250,31 @@ const ManageResort = () => {
               }}
               style={{
                 display: "flex",
-                justifyContent: "space-between",
+                // justifyContent: "space-between",
                 // alignItems: "center",
-                width: "55px",
+                width: "80px",
               }}
             >
-              <div style={{ width: "14px", height: "16px" }}>
-                <img src={statsicon} alt="logo" />
+              <div
+                style={{
+                  width: "14px",
+                  height: "14px",
+                  margin: "0px",
+
+                  marginTop: "2px",
+                  marginRight: "2px",
+                  // border: "1px solid red",
+                }}
+              >
+                <img
+                  style={{ height: "100%", width: "100%" }}
+                  src={bookingIcon}
+                  alt="logo"
+                />
               </div>
-              <p style={{ fontSize: "14px", marginTop: "4px" }}>Stats</p>
+              <p style={{ fontSize: "14px", margin: "0px", marginTop: "4px" }}>
+                Bookings
+              </p>
             </div>
           </div>
         </div>
