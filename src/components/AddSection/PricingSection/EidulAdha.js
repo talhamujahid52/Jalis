@@ -54,6 +54,7 @@ const EidulAdha = () => {
                   onClick={() => {
                     setPriceTagEidUlAdha("Customize");
                   }}
+                  type="button"
                   style={{
                     backgroundColor:
                       priceTagEidUlAdha === "Customize" ? "#ED702D1A" : "white",
@@ -67,6 +68,7 @@ const EidulAdha = () => {
                   onClick={() => {
                     setPriceTagEidUlAdha("Fix");
                   }}
+                  type="button"
                   style={{
                     backgroundColor:
                       priceTagEidUlAdha === "Fix" ? "#ED702D1A" : "white",
@@ -86,6 +88,7 @@ const EidulAdha = () => {
                         min={0}
                         max={6}
                         disabled={specialPriceChecked}
+                        required={!specialPriceChecked}
                         style={{
                           cursor: specialPriceChecked
                             ? "not-allowed"
@@ -106,6 +109,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={day1}
+                          required={!day1}
                           style={{
                             cursor: day1 ? "not-allowed" : "default",
                             textDecoration: day1 ? "line-through" : "none",
@@ -119,6 +123,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={day2}
+                          required={!day2}
                           style={{
                             cursor: day2 ? "not-allowed" : "default",
                             textDecoration: day2 ? "line-through" : "none",
@@ -132,6 +137,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={day3}
+                          required={!day3}
                           style={{
                             cursor: day3 ? "not-allowed" : "default",
                             textDecoration: day3 ? "line-through" : "none",
@@ -145,6 +151,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={day4}
+                          required={!day4}
                           style={{
                             cursor: day4 ? "not-allowed" : "default",
                             textDecoration: day4 ? "line-through" : "none",
@@ -158,6 +165,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={day5}
+                          required={!day5}
                           style={{
                             cursor: day5 ? "not-allowed" : "default",
                             textDecoration: day5 ? "line-through" : "none",
@@ -171,6 +179,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={day6}
+                          required={!day6}
                           style={{
                             cursor: day6 ? "not-allowed" : "default",
                             textDecoration: day6 ? "line-through" : "none",
@@ -203,6 +212,7 @@ const EidulAdha = () => {
                         min={0}
                         max={6}
                         disabled={!specialPriceChecked}
+                        required={specialPriceChecked}
                         style={{
                           cursor: !specialPriceChecked
                             ? "not-allowed"
@@ -235,6 +245,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={!day1}
+                          required={day1}
                           style={{
                             cursor: !day1 ? "not-allowed" : "default",
                             // textDecoration: "line-through",
@@ -262,6 +273,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={!day2}
+                          required={day2}
                           style={{
                             cursor: !day2 ? "not-allowed" : "default",
                             // textDecoration: "line-through",
@@ -289,6 +301,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={!day3}
+                          required={day3}
                           style={{
                             cursor: !day3 ? "not-allowed" : "default",
                             // textDecoration: "line-through",
@@ -316,6 +329,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={!day4}
+                          required={day4}
                           style={{
                             cursor: !day4 ? "not-allowed" : "default",
                             // textDecoration: "line-through",
@@ -343,6 +357,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={!day5}
+                          required={day5}
                           style={{
                             cursor: !day5 ? "not-allowed" : "default",
                             // textDecoration: "line-through",
@@ -370,6 +385,7 @@ const EidulAdha = () => {
                           min={0}
                           max={6}
                           disabled={!day6}
+                          required={day6}
                           style={{
                             cursor: !day6 ? "not-allowed" : "default",
                             // textDecoration: "line-through",

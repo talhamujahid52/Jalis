@@ -4,9 +4,10 @@ import { useHistory } from "react-router-dom";
 import AddIcon from "../../assets/AddIcon.svg";
 import { ADD_RESORT_PAGE } from "settings/constant";
 import { ManageResortWrapper } from "./ManageResort.style";
+import staticAnimation from "../../assets/FileSearching.svg";
 const ManageResort = () => {
   const history = useHistory();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(false);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -36,10 +37,22 @@ const ManageResort = () => {
           <img style={{ height: "100%", width: "100%" }} src={AddIcon}></img>
         </div>
       </div>
-
-      <ManageResortComponent></ManageResortComponent>
-      <ManageResortComponent></ManageResortComponent>
-      <ManageResortComponent></ManageResortComponent>
+      {value && (
+        <div>
+          <img
+            src={staticAnimation}
+            style={{ height: "100%", width: "100%" }}
+          ></img>
+          <p>You haven’t added any resorts. Add you first resort now!</p>
+        </div>
+      )}
+      {!value && (
+        <>
+          <ManageResortComponent></ManageResortComponent>
+          <ManageResortComponent></ManageResortComponent>
+          <ManageResortComponent></ManageResortComponent>
+        </>
+      )}
     </ManageResortWrapper>
   );
 };

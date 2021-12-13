@@ -29,6 +29,7 @@ const Weekend = () => {
         <ButtonsAndInputWrapper>
           <ButtonWrapper>
             <PriceButtons
+              type="button"
               onClick={() => {
                 setPriceTagWeekends("Customize");
               }}
@@ -41,6 +42,7 @@ const Weekend = () => {
               Customize price
             </PriceButtons>
             <PriceButtons
+              type="button"
               onClick={() => {
                 setPriceTagWeekends("Fix");
               }}
@@ -69,6 +71,7 @@ const Weekend = () => {
                     type="number"
                     min={0}
                     max={6}
+                    required={!fridayChecked}
                     disabled={fridayChecked}
                     style={{
                       cursor: fridayChecked ? "not-allowed" : "default",
@@ -96,6 +99,7 @@ const Weekend = () => {
                     type="number"
                     min={0}
                     max={6}
+                    required={fridayChecked}
                     disabled={!fridayChecked}
                     style={{
                       cursor: !fridayChecked ? "not-allowed" : "default",
@@ -112,6 +116,7 @@ const Weekend = () => {
                     min={0}
                     max={6}
                     disabled={satuardayChecked}
+                    required={!satuardayChecked}
                     style={{
                       cursor: satuardayChecked ? "not-allowed" : "default",
                       textDecoration: satuardayChecked
@@ -141,6 +146,7 @@ const Weekend = () => {
                     min={0}
                     max={6}
                     disabled={!satuardayChecked}
+                    required={satuardayChecked}
                     style={{
                       cursor: !satuardayChecked ? "not-allowed" : "default",
                       // textDecoration: "line-through",
@@ -156,6 +162,7 @@ const Weekend = () => {
                     min={0}
                     max={6}
                     disabled={sundayChecked}
+                    required={!sundayChecked}
                     style={{
                       cursor: sundayChecked ? "not-allowed" : "default",
                       textDecoration: sundayChecked ? "line-through" : "none",
@@ -183,6 +190,7 @@ const Weekend = () => {
                     min={0}
                     max={6}
                     disabled={!sundayChecked}
+                    required={sundayChecked}
                     style={{
                       cursor: !sundayChecked ? "not-allowed" : "default",
                       // textDecoration: "line-through",
@@ -201,6 +209,7 @@ const Weekend = () => {
                     type="number"
                     min={0}
                     max={6}
+                    required={!specialPriceChecked}
                     disabled={specialPriceChecked}
                     style={{
                       cursor: specialPriceChecked ? "not-allowed" : "default",
@@ -230,6 +239,7 @@ const Weekend = () => {
                     type="number"
                     min={0}
                     max={6}
+                    required={specialPriceChecked}
                     disabled={!specialPriceChecked}
                     style={{
                       cursor: !specialPriceChecked ? "not-allowed" : "default",

@@ -19,7 +19,6 @@ import {
   FormProvider,
 } from "react-hook-form";
 const steps = ["", "", ""];
-const components = [<GeneralSection />, <PricingSection />, <ImagesSection />];
 
 export default function HorizontalLinearStepper() {
   const history = useHistory();
@@ -46,6 +45,12 @@ export default function HorizontalLinearStepper() {
     console.log(data);
   };
 
+  const components = [
+    <GeneralSection handleNext={handleNext} handleBack={handleBack} />,
+    <PricingSection handleNext={handleNext} handleBack={handleBack} />,
+    <ImagesSection handleNext={onFinishClick} handleBack={handleBack} />,
+  ];
+
   return (
     <Box sx={{ width: "100%", padding: "40px" }}>
       <Stepper activeStep={activeStep}>
@@ -68,11 +73,11 @@ export default function HorizontalLinearStepper() {
         <React.Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>
             {components[activeStep]}
-            <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+            {/* <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
               <Button
                 color="inherit"
                 disabled={activeStep === 0}
-                onClick={handleBack}
+                // onClick={handleBack}
                 sx={{ mr: 1 }}
               >
                 Back
@@ -80,35 +85,14 @@ export default function HorizontalLinearStepper() {
               <Box sx={{ flex: "1 1 auto" }} />
               <StepperButton
                 type="submit"
-                onClick={
-                  activeStep === steps.length - 1 ? onFinishClick : handleNext
-                }
+                // onClick={
+                //   activeStep === steps.length - 1 ? onFinishClick : handleNext
+                // }
               >
                 {activeStep === steps.length - 1 ? "Finish" : "Next"}
               </StepperButton>
-            </Box>
+            </Box> */}
           </Typography>
-          {/* <Typography sx={{ mt: 2, mb: 1 }}>{<GeneralSection />}</Typography> */}
-
-          {/* <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-            <Button
-              color="inherit"
-              disabled={activeStep === 0}
-              onClick={handleBack}
-              sx={{ mr: 1 }}
-            >
-              Back
-            </Button>
-            <Box sx={{ flex: "1 1 auto" }} />
-            <StepperButton
-              type="submit"
-              onClick={
-                activeStep === steps.length - 1 ? onFinishClick : handleNext
-              }
-            >
-              {activeStep === steps.length - 1 ? "Finish" : "Next"}
-            </StepperButton>
-          </Box> */}
         </React.Fragment>
       }
     </Box>
