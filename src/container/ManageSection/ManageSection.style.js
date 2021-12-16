@@ -30,7 +30,7 @@ export const TabNavigationWrapper = styled.div`
 `;
 
 export const TabNavigationComponentWrapper = styled.div`
-  width: 80%;
+  width: 100%;
   @media (max-width: 700px) {
     width: 100%;
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
@@ -11,11 +11,19 @@ import {
 } from "./TabNavigation.style";
 const TabNavigation = () => {
   const [value, setValue] = React.useState("one");
-  // const [switchSections, setSwitch]
+  const [switchSections, setSwitchSections] = React.useState(true);
+
+  const changeSections = () => {
+    setSwitchSections(!switchSections);
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  // useEffect(() => {
+  //   setSwitchSections(true);
+  // }, []);
 
   return (
     <TabNavigationWrapper>
@@ -41,6 +49,9 @@ const TabNavigation = () => {
               style={{ color: "orange" }}
               value="one"
               label="Manage Resort"
+              onClick={() => {
+                setSwitchSections(true);
+              }}
             />
             <Tab style={{ color: "orange" }} value="two" label="Chats" />
             <Tab
@@ -52,7 +63,12 @@ const TabNavigation = () => {
             <Tab style={{ color: "orange" }} value="five" label="Support" />
           </Tabs>
         </Box>
-        {value === "one" && <ManageResort />}
+        {value === "one" &&
+          (switchSections ? (
+            <ManageResort changeSections={changeSections} />
+          ) : (
+            <ManageSection changeSections={changeSections} />
+          ))}
         {value === "two" && <h1>This is Block Dates </h1>}
         {value === "three" && <h1>This is Resort Bookings </h1>}
         {value === "four" && <h1>This is Reports </h1>}

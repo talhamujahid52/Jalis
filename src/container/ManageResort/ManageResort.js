@@ -5,7 +5,9 @@ import AddIcon from "../../assets/AddIcon.svg";
 import { ADD_RESORT_PAGE } from "settings/constant";
 import { ManageResortWrapper } from "./ManageResort.style";
 import staticAnimation from "../../assets/FileSearching.svg";
-const ManageResort = () => {
+const ManageResort = (props) => {
+  console.log("Props are ,", props);
+  const changeSection = props.changeSections;
   const history = useHistory();
   const [value, setValue] = React.useState(false);
   const handleChange = (event, newValue) => {
@@ -48,9 +50,15 @@ const ManageResort = () => {
       )}
       {!value && (
         <>
-          <ManageResortComponent></ManageResortComponent>
-          <ManageResortComponent></ManageResortComponent>
-          <ManageResortComponent></ManageResortComponent>
+          <ManageResortComponent
+            changeSection={changeSection}
+          ></ManageResortComponent>
+          <ManageResortComponent
+            changeSection={changeSection}
+          ></ManageResortComponent>
+          <ManageResortComponent
+            changeSection={changeSection}
+          ></ManageResortComponent>
         </>
       )}
     </ManageResortWrapper>

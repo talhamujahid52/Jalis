@@ -18,7 +18,7 @@ import {
 import { color } from "styled-system";
 import useWindowSize from "../../library/hooks/useWindowSize";
 
-const ManageResort = () => {
+const ManageResort = (props) => {
   const { width } = useWindowSize();
   const history = useHistory();
   const [paused, setPaused] = useState(false);
@@ -29,7 +29,7 @@ const ManageResort = () => {
     // ></div>
     <div class="manageresort">
       {/* //image */}
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div style={{ display: "flex" }}>
         <div className="resort-image">
           {paused && (
             <div
@@ -244,7 +244,8 @@ const ManageResort = () => {
       {/* managesection */}
       <div
         onClick={() => {
-          history.push(MANAGE_SECTION_PAGE);
+          // history.push(MANAGE_SECTION_PAGE);
+          props.changeSection();
         }}
         className="managesection iconHover"
       >

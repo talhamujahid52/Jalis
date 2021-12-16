@@ -7,7 +7,6 @@ import Box from "@mui/material/Box";
 import { useHistory } from "react-router-dom";
 import { ADD_SECTION_PAGE } from "settings/constant";
 import staticAnimation from "../../assets/FileSearching.svg";
-
 import {
   ManageSectionWrapper,
   DisplayManageSectionCenterWrapper,
@@ -19,7 +18,6 @@ const ManageSection = () => {
   const history = useHistory();
   const [value, setValue] = React.useState("one");
   const [empty, setEmpty] = React.useState(true);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
