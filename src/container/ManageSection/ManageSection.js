@@ -22,90 +22,52 @@ const ManageSection = () => {
     setValue(newValue);
   };
   return (
-    <TabNavigationWrapper>
-      <TabNavigationComponentWrapper>
-        <Box
-          sx={{
-            borderBottom: 1,
-            borderColor: "divider",
-            // border: "1px solid red",
+    <DisplayManageSectionCenterWrapper>
+      <ManageSectionWrapper>
+        <div
+          onClick={() => {
+            history.push(ADD_SECTION_PAGE);
+            // alert("This is ADD Section");
+          }}
+          style={{
+            alignSelf: "end",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            paddingRight: "20px",
+            paddingLeft: "20px",
+            borderRadius: "20px",
+            backgroundColor: "#FCE8DE",
+            color: "#ED702D",
+            marginBottom: "40px",
+            display: "flex",
+            // justifyContent: "space-between",
+            // alignItems: "center",
           }}
         >
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-            TabIndicatorProps={{
-              style: {
-                backgroundColor: "orange",
-              },
-            }}
-          >
-            <Tab
-              style={{ color: "orange" }}
-              value="one"
-              label="Manage Section"
-            />
-          </Tabs>
-        </Box>
-
-        {value === "one" && (
-          <DisplayManageSectionCenterWrapper>
-            <ManageSectionWrapper>
-              <div
-                onClick={() => {
-                  history.push(ADD_SECTION_PAGE);
-                  // alert("This is ADD Section");
-                }}
-                style={{
-                  alignSelf: "end",
-                  paddingTop: "10px",
-                  paddingBottom: "10px",
-                  paddingRight: "20px",
-                  paddingLeft: "20px",
-                  borderRadius: "20px",
-                  backgroundColor: "#FCE8DE",
-                  color: "#ED702D",
-                  marginBottom: "40px",
-                  display: "flex",
-                  // justifyContent: "space-between",
-                  // alignItems: "center",
-                }}
-              >
-                Add New Section
-                <div
-                  style={{ height: "12px", width: "12px", marginLeft: "20px" }}
-                >
-                  <img
-                    style={{ height: "100%", width: "100%" }}
-                    src={AddIcon}
-                  ></img>
-                </div>
-              </div>
-              {empty && (
-                <>
-                  <ManageSectionComponent></ManageSectionComponent>
-                  <ManageSectionComponent></ManageSectionComponent>
-                  <ManageSectionComponent></ManageSectionComponent>
-                  <ManageSectionComponent></ManageSectionComponent>
-                </>
-              )}
-              {!empty && (
-                <div>
-                  <img
-                    src={staticAnimation}
-                    style={{ height: "100%", width: "100%" }}
-                  ></img>
-                  <p>
-                    You haven’t added any resorts. Add you first resort now!
-                  </p>
-                </div>
-              )}
-            </ManageSectionWrapper>
-          </DisplayManageSectionCenterWrapper>
+          Add New Section
+          <div style={{ height: "12px", width: "12px", marginLeft: "20px" }}>
+            <img style={{ height: "100%", width: "100%" }} src={AddIcon}></img>
+          </div>
+        </div>
+        {empty && (
+          <>
+            <ManageSectionComponent></ManageSectionComponent>
+            <ManageSectionComponent></ManageSectionComponent>
+            <ManageSectionComponent></ManageSectionComponent>
+            <ManageSectionComponent></ManageSectionComponent>
+          </>
         )}
-      </TabNavigationComponentWrapper>
-    </TabNavigationWrapper>
+        {!empty && (
+          <div>
+            <img
+              src={staticAnimation}
+              style={{ height: "100%", width: "100%" }}
+            ></img>
+            <p>You haven’t added any resorts. Add you first resort now!</p>
+          </div>
+        )}
+      </ManageSectionWrapper>
+    </DisplayManageSectionCenterWrapper>
   );
 };
 
