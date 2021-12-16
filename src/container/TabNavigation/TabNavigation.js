@@ -11,6 +11,7 @@ import {
 } from "./TabNavigation.style";
 const TabNavigation = () => {
   const [value, setValue] = React.useState("one");
+  // const [switchSections, setSwitch]
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

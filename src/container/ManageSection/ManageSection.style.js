@@ -6,7 +6,7 @@ export const ManageSectionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  width: 80%;
+  width: 100%;
 
   @media (max-width: 1100px) {
     width: 100%;
@@ -20,4 +20,18 @@ export const DisplayManageSectionCenterWrapper = styled.div`
 
   /* align-items: center; */
   /* padding: 20px; */
+`;
+export const TabNavigationWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  @media (max-width: 700px) {
+    display: block;
+  }
+`;
+
+export const TabNavigationComponentWrapper = styled.div`
+  width: 80%;
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;
