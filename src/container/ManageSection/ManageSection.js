@@ -18,7 +18,7 @@ import {
 const ManageSection = () => {
   const history = useHistory();
   const [value, setValue] = React.useState("one");
-  const [empty, setEmpty] = React.useState(false);
+  const [empty, setEmpty] = React.useState(true);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
