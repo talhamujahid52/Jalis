@@ -244,7 +244,6 @@ const ManageResort = (props) => {
       {/* managesection */}
       <div
         onClick={() => {
-          // history.push(MANAGE_SECTION_PAGE);
           props.changeSection();
         }}
         className="managesection iconHover"

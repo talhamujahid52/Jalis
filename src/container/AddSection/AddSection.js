@@ -10,7 +10,7 @@ import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useHistory } from "react-router-dom";
-import { MANAGE_SECTION_PAGE } from "settings/constant";
+import { MANAGE_SECTION_PAGE, TAB_Navigation } from "settings/constant";
 import { StepperButton } from "./AddSection.style";
 import {
   useForm,
@@ -33,7 +33,7 @@ export default function HorizontalLinearStepper() {
     return skipped.has(step);
   };
   const onFinishClick = () => {
-    history.push(MANAGE_SECTION_PAGE);
+    history.push(TAB_Navigation);
   };
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
