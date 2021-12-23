@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Heading from 'components/UI/Heading/Heading';
-import Text from 'components/UI/Text/Text';
-import LocationWrapper from './Location.style';
-import Map from 'components/Map/Map';
-import { Element } from 'react-scroll';
+import React from "react";
+import PropTypes from "prop-types";
+import Heading from "components/UI/Heading/Heading";
+import Text from "components/UI/Text/Text";
+import LocationWrapper from "./Location.style";
+import Map from "components/Map/Map";
+import { Element } from "react-scroll";
 
 const Location = ({
   titleStyle,
@@ -18,8 +18,10 @@ const Location = ({
   return (
     <Element name="location" className="location">
       <LocationWrapper>
-        <Heading as="h2" content="Location" {...titleStyle} />
-        <Text content={formattedAddress} {...locationMetaStyle} />
+        {/* <Heading as="h2" content="Location" {...titleStyle} /> */}
+        <Heading as="h2" content="City & Location" {...titleStyle} />
+
+        {/* <Text content={formattedAddress} {...locationMetaStyle} />
         <Text
           content="Take an easy walk to the main historic sites of the city. The
           neighborhood is perfect for an authentic taste of Roman life, with
@@ -32,7 +34,7 @@ const Location = ({
           {...contentStyle}
           {...boldContentStyle}
         />
-        <Text content="26 mins by car without traffic" {...contentStyle} />
+        <Text content="26 mins by car without traffic" {...contentStyle} /> */}
 
         <Map location={location} multiple={false} />
       </LocationWrapper>
@@ -48,32 +50,32 @@ Location.propTypes = {
 
 Location.defaultProps = {
   titleStyle: {
-    color: '#2C2C2C',
-    fontSize: ['17px', '20px', '25px'],
-    lineHeight: ['1.15', '1.2', '1.36'],
-    mb: '4px',
+    color: "#2C2C2C",
+    fontSize: ["17px", "20px", "25px"],
+    lineHeight: ["1.15", "1.2", "1.36"],
+    mb: "4px",
   },
   locationMetaStyle: {
-    fontSize: '13px',
-    fontWeight: '400',
-    color: '#909090',
-    mb: ['14px', '20px', '27px'],
+    fontSize: "13px",
+    fontWeight: "400",
+    color: "#909090",
+    mb: ["14px", "20px", "27px"],
   },
   contentStyle: {
-    fontSize: '15px',
-    fontWeight: '400',
-    color: '#2C2C2C',
-    lineHeight: '1.6',
-    mb: ['14px', '20px', '27px'],
+    fontSize: "15px",
+    fontWeight: "400",
+    color: "#2C2C2C",
+    lineHeight: "1.6",
+    mb: ["14px", "20px", "27px"],
   },
   boldContentStyle: {
-    fontWeight: '700',
-    mb: '0!important',
+    fontWeight: "700",
+    mb: "0!important",
   },
   linkStyle: {
-    fontSize: '15px',
-    fontWeight: '700',
-    color: '#008489',
+    fontSize: "15px",
+    fontWeight: "700",
+    color: "#008489",
   },
 };
 

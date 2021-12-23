@@ -1,11 +1,11 @@
-import React from 'react';
-import { FiExternalLink } from 'react-icons/fi';
-import TextLink from 'components/UI/TextLink/TextLink';
-import Rating from 'components/UI/Rating/Rating';
-import Favourite from 'components/UI/Favorite/Favorite';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import GridCard from '../GridCard/GridCard';
+import React from "react";
+import { FiExternalLink } from "react-icons/fi";
+import TextLink from "components/UI/TextLink/TextLink";
+import Rating from "components/UI/Rating/Rating";
+import Favourite from "components/UI/Favorite/Favorite";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import GridCard from "../GridCard/GridCard";
 
 const responsive = {
   desktop: {
@@ -49,7 +49,7 @@ const PostGrid = ({
       isCarousel={true}
       favorite={
         <Favourite
-          onClick={event => {
+          onClick={(event) => {
             console.log(event);
           }}
         />
@@ -89,10 +89,10 @@ const PostGrid = ({
             key={index}
             draggable={false}
             style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              position: 'relative',
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              position: "relative",
             }}
           />
         ))}

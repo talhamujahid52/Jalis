@@ -1,31 +1,31 @@
-import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import styled from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
 
 const SinglePageWrapper = styled.div`
   padding-bottom: 56px;
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-right: 50px;
   @media (max-width: 480px) {
     margin-bottom: 30px;
+  }
+  @media (max-width: 480px) {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
   }
 `;
 
 export const LocationMeta = styled.div`
-  color: ${themeGet('text.1', '#909090')};
+  color: ${themeGet("text.1", "#909090")};
   font-size: 13px;
   font-weight: 400;
-`;
-
-export const Title = styled.h2`
-  color: ${themeGet('text.0', '#2C2C2C')};
-  font-size: 25px;
-  line-height: 34px;
-  font-weight: 700;
-  margin: 0 0 4px;
 `;
 
 export const RatingMeta = styled.div`
   display: flex;
   align-items: center;
-  color: ${themeGet('text.0', '#2C2C2C')};
+  color: ${themeGet("text.0", "#2C2C2C")};
   font-size: 13px;
   margin-top: 10px;
   margin-bottom: 27px;
@@ -34,11 +34,11 @@ export const RatingMeta = styled.div`
   }
 
   i {
-    color: ${themeGet('primary.0', '#008489')};
+    color: ${themeGet("primary.0", "#008489")};
   }
 
   svg {
-    fill: ${themeGet('primary.0', '#008489')};
+    fill: ${themeGet("primary.0", "#008489")};
   }
 
   strong {
@@ -49,7 +49,7 @@ export const RatingMeta = styled.div`
 `;
 
 export const Text = styled.p`
-  color: ${themeGet('text.0', '#2C2C2C')};
+  color: ${themeGet("text.0", "#2C2C2C")};
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -69,19 +69,19 @@ export const TextButton = styled.div`
 export const TobBarWrapper = styled.div`
   .sticky-outer-wrapper {
     .sticky-inner-wrapper {
-      background-color: ${themeGet('color.1', '#ffffff')};
+      background-color: ${themeGet("color.1", "#ffffff")};
 
       .scrollbar {
         box-shadow: none;
-        border-top: 1px solid ${themeGet('border.3', '#E6E6E6')};
-        border-bottom: 1px solid ${themeGet('border.3', '#E6E6E6')};
+        border-top: 1px solid ${themeGet("border.3", "#E6E6E6")};
+        border-bottom: 1px solid ${themeGet("border.3", "#E6E6E6")};
 
         .scrollbar_left {
           margin-right: 25px;
           padding-left: 25px;
 
           a {
-            color: ${themeGet('text.0', '#2C2C2C')};
+            color: ${themeGet("text.0", "#2C2C2C")};
             font-size: 15px;
             padding: 28px 20px;
             text-transform: capitalize;
@@ -96,13 +96,13 @@ export const TobBarWrapper = styled.div`
             }
 
             &:hover {
-              color: ${themeGet('primary.0', '#008489')};
+              color: ${themeGet("primary.0", "#008489")};
             }
 
             &.active {
               font-weight: 700;
-              color: ${themeGet('primary.0', '#008489')};
-              border-bottom: 3px solid ${themeGet('primary.0', '#008489')};
+              color: ${themeGet("primary.0", "#008489")};
+              border-bottom: 3px solid ${themeGet("primary.0", "#008489")};
             }
           }
         }
@@ -144,8 +144,8 @@ export const ButtonGroup = styled.div`
     height: 37px;
     min-width: 90px;
     padding: 0 5px;
-    border: 1px solid ${themeGet('border.3', '#E6E6E6')};
-    color: ${themeGet('text.0', '#2C2C2C')};
+    border: 1px solid ${themeGet("border.3", "#E6E6E6")};
+    color: ${themeGet("text.0", "#2C2C2C")};
     font-size: 15px;
     font-weight: 700;
     display: inline-flex;
@@ -158,7 +158,7 @@ export const ButtonGroup = styled.div`
       margin-right: 10px;
       path {
         fill: transparent;
-        stroke: ${themeGet('text.0', '#2C2C2C')};
+        stroke: ${themeGet("text.0", "#2C2C2C")};
         stroke-width: 1.5px;
       }
     }
@@ -166,8 +166,8 @@ export const ButtonGroup = styled.div`
     &.active {
       svg {
         path {
-          stroke: ${themeGet('color.4', '#FC5C63')};
-          fill: ${themeGet('color.4', '#FC5C63')};
+          stroke: ${themeGet("color.4", "#FC5C63")};
+          fill: ${themeGet("color.4", "#FC5C63")};
         }
       }
     }
@@ -176,7 +176,7 @@ export const ButtonGroup = styled.div`
       outline: none;
     }
     &:hover {
-      background-color: ${themeGet('color.2', '#F7F7F7')};
+      background-color: ${themeGet("color.2", "#F7F7F7")};
     }
     &:after {
       display: none;
@@ -199,9 +199,27 @@ export const ButtonGroup = styled.div`
   }
 `;
 
+export const ImageWrapper = styled.div`
+  padding: 30px;
+  border-radius: 40px;
+  background: #f8f9fa;
+  @media (max-width: 800px) {
+    padding: 15px;
+  }
+`;
+export const ResortDetailWrapper = styled.div`
+  padding: 50px;
+  @media (max-width: 800px) {
+    padding: 20px;
+  }
+`;
+
 export const PostImage = styled.div`
   height: 600px;
   position: relative;
+  border-radius: 40px;
+  /* border: 1px solid red; */
+  overflow: hidden;
 
   @media (max-width: 767px) {
     height: 406px;
@@ -217,7 +235,7 @@ export const PostImage = styled.div`
   }
 
   .image_gallery_button {
-    background: ${themeGet('color.1', '#ffffff')};
+    background: ${themeGet("color.1", "#ffffff")};
     border-radius: 3px;
     font-size: 15px;
     font-weight: 700;
@@ -231,9 +249,103 @@ export const PostImage = styled.div`
 
     &:hover,
     &:focus {
-      background: ${themeGet('color.2', '#F7F7F7')};
-      color: ${themeGet('text.0', '#2C2C2C')};
+      background: ${themeGet("color.2", "#F7F7F7")};
+      color: ${themeGet("text.0", "#2C2C2C")};
     }
+  }
+`;
+export const ResortInfoWrapper = styled.div``;
+export const LocationWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+export const LocationArea = styled.div`
+  color: ${themeGet("text.1", "#909090")};
+  font-size: 24px;
+  font-weight: 400;
+  white-space: nowrap;
+  /* width: 50%; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
+  margin-top: 5px;
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+`;
+export const RatingWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+export const RatingText = styled.p`
+  font-size: 24px;
+  color: #ffbb00;
+  font-weight: bold;
+  margin: 0px;
+  margin-right: 5px;
+  /* border: 1px solid red; */
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+`;
+export const RatingAndLocationWrapper = styled.div`
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const TitleAndPriceWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+
+  /* border: 1px solid blue; */
+`;
+export const Title = styled.h2`
+  color: ${themeGet("text.0", "#2C2C2C")};
+  font-size: 25px;
+  line-height: 34px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  /* width: 80%; */
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+`;
+export const ArabicText = styled.p`
+  margin: 0px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  color: ${themeGet("primary.0", "#2C2C2C")};
+`;
+
+export const PriceArea = styled.div`
+  margin: 0px;
+  /* border: 1px solid red; */
+  color: ${themeGet("text.0", "#2C2C2C")};
+  font-size: 24px;
+  font-weight: 400;
+  width: 50%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+`;
+export const startFromText = styled.p`
+  font-size: 24px;
+  font-weight: 400;
+  color: ${themeGet("text.0", "#2C2C2C")};
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  @media (max-width: 800px) {
+    font-size: 16px;
   }
 `;
 
