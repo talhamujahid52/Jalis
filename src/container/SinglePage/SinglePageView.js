@@ -8,6 +8,7 @@ import useWindowSize from "library/hooks/useWindowSize";
 import Description from "./Description/Description";
 import Amenities from "./Amenities/Amenities";
 import Location from "./Location/Location";
+import ReviewsAndRatings from "./ReviewsAndRatings/ReviewsAndRatings";
 import Review from "./Review/Review";
 import Reservation from "./Reservation/Reservation";
 import BottomReservation from "./Reservation/BottomReservation";
@@ -213,24 +214,7 @@ const SinglePage = ({ match }) => {
       </div>
       <Amenities amenities={amenities} />
       <Location location={data[0]} />
-      <div
-        style={{
-          marginTop: "40px",
-          marginBottom: "40px",
-          borderRadius: "10px",
-          height: "200px",
-          backgroundColor: "silver",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <p
-          style={{ fontsize: "28px", color: "whitesmoke", fontWeight: "bold" }}
-        >
-          Adds placeholder
-        </p>
-      </div>
+
       <Pricing></Pricing>
       <div style={{ backgroundColor: "" }}>
         <p
@@ -238,7 +222,7 @@ const SinglePage = ({ match }) => {
             margin: "0px",
             marginBottom: "10px",
             marginTop: "20px",
-            fontSize: "18px",
+            fontSize: "16px",
             fontWeight: "bold",
           }}
         >
@@ -268,6 +252,25 @@ const SinglePage = ({ match }) => {
           );
         })}
       </div>
+      <div
+        style={{
+          marginTop: "40px",
+          marginBottom: "40px",
+          borderRadius: "10px",
+          height: "200px",
+          backgroundColor: "silver",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <p
+          style={{ fontsize: "28px", color: "whitesmoke", fontWeight: "bold" }}
+        >
+          Adds placeholder
+        </p>
+      </div>
+      <ReviewsAndRatings></ReviewsAndRatings>
 
       {/* <TopBar title={title} shareURL={href} author={author} media={gallery} /> */}
 
