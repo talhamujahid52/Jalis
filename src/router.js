@@ -23,6 +23,7 @@ import {
   MANAGE_SECTION_PAGE,
   MANAGE_RESORT_PAGE,
   TAB_Navigation,
+  Resource_Section_Selection,
 } from "./settings/constant";
 
 /**
@@ -162,6 +163,17 @@ const routes = [
         ),
       loading: Loading,
       modules: ["SinglePageView"],
+    }),
+  },
+  {
+    path: Resource_Section_Selection,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "Listing" */ "./container/ResourceSectionSelection/ResourceSectionSelection"
+        ),
+      loading: Loading,
+      modules: ["ResourceSectionSelection"],
     }),
   },
   {

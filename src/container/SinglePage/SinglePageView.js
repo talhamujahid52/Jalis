@@ -14,6 +14,8 @@ import Reservation from "./Reservation/Reservation";
 import BottomReservation from "./Reservation/BottomReservation";
 import TopBar from "./TopBar/TopBar";
 import AddsPlaceholder from "container/Home/AddsPlaceholder/AddsPlaceholder";
+import { Resource_Section_Selection } from "settings/constant";
+import { useHistory } from "react-router-dom";
 import SinglePageWrapper, {
   PostImage,
   ImageWrapper,
@@ -39,6 +41,7 @@ import Pricing from "./Pricing/Pricing";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 const SinglePage = ({ match }) => {
+  const history = useHistory();
   const [additionalFeatures, setAdditionalFeatures] = useState([
     { price: "ريال10", name: "early Checkin", selected: false },
     { price: "ريال10", name: "Heater", selected: false },
@@ -271,6 +274,19 @@ const SinglePage = ({ match }) => {
         </p>
       </div>
       <ReviewsAndRatings></ReviewsAndRatings>
+      <button
+        style={{
+          height: "60px",
+          width: "200px",
+          backgroundColor: "orange",
+          borderRadius: "10px",
+        }}
+        onClick={() => {
+          history.push(Resource_Section_Selection);
+        }}
+      >
+        Next
+      </button>
 
       {/* <TopBar title={title} shareURL={href} author={author} media={gallery} /> */}
 
