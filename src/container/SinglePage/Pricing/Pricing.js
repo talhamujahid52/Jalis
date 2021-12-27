@@ -30,14 +30,6 @@ const Pricing = () => {
         }}
       >
         <LocalizationProvider dateAdapter={AdapterDateFns}>
-          {/* <MobileDatePicker
-          label="For mobile"
-          value={value}
-          onChange={(newValue) => {
-            setValue(newValue);
-          }}
-          renderInput={(params) => <TextField {...params} />}
-        /> */}
           <div
             style={{
               display: "flex",
@@ -72,29 +64,7 @@ const Pricing = () => {
               renderInput={(params) => <TextField {...params} />}
             />
           </div>
-
-          {/* <DatePicker
-          disableFuture
-          label="Responsive"
-          openTo="year"
-          views={['year', 'month', 'day']}
-          value={value}
-          onChange={(newValue) => {
-            setValue(newValue);
-          }}
-          renderInput={(params) => <TextField {...params} />}
-        /> */}
         </LocalizationProvider>
-
-        {/* <DateRangePickerBox
-          item={calendarItem}
-          startDateId="startDateId-id-home"
-          endDateId="endDateId-id-home"
-          updateSearchData={(setDateValue) => setSearchDate(setDateValue)}
-          showClearDates={true}
-          small={true}
-          numberOfMonths={1}
-        /> */}
       </div>
     </>
   );

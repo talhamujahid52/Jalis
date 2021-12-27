@@ -11,6 +11,7 @@ export const ADD_SECTION_PAGE = "/add-section";
 export const MANAGE_SECTION_PAGE = "/manage-section";
 export const TAB_Navigation = "/tab-navigation";
 export const Resource_Section_Selection = "/resource-section-selection";
+export const Summary_Detail = "/summary-detail";
 
 // Agent Profile Page Section
 export const AGENT_PROFILE_PAGE = "/profile";

@@ -204,8 +204,8 @@ export const LocationArea = styled.div`
   color: ${themeGet("text.1", "#909090")};
   font-size: 13px;
   font-weight: 400;
-  white-space: nowrap;
   width: 50%;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 `;

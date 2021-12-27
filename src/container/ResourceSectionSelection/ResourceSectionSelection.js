@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import SectionComponent from "./SectionComponent/SectionComponent";
-import { OuterWrapper } from "./ResourceSectionSelection.style";
+import {
+  OuterWrapper,
+  DateSelectionWwrapper,
+  NextButton,
+} from "./ResourceSectionSelection.style";
 import Chip from "@mui/material/Chip";
+import TextField from "@mui/material/TextField";
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
+import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
+import { useHistory } from "react-router-dom";
+import { Summary_Detail } from "settings/constant";
 
 const ResourceSectionSelection = () => {
+  const history = useHistory();
+  const [value, setValue] = React.useState(new Date());
+  const color = "#ffffff";
   const [additionalFeatures, setAdditionalFeatures] = useState([
     { price: "ريال10", name: "early Checkin", selected: false },
     { price: "ريال10", name: "Heater", selected: false },
@@ -62,6 +75,103 @@ const ResourceSectionSelection = () => {
             />
           );
         })}
+      </div>
+      <div
+        style={{
+          marginTop: "20px",
+          padding: "35px",
+          paddingTop: "20px",
+          paddingBottom: "20px",
+          backgroundColor: "#2F3547",
+          width: "85%",
+          borderRadius: "20px",
+        }}
+      >
+        <p
+          style={{
+            margin: "0px",
+            fontSize: "14px",
+            fontWeight: "bold",
+            marginBottom: "20px",
+            color: "white",
+          }}
+        >
+          You've selected 3 Days for Booking
+        </p>
+        <DateSelectionWwrapper>
+          <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <div
+              style={{
+                display: "flex",
+                // justifyContent: "center",
+                alignItems: "center",
+                borderRadius: "20px",
+                backgroundColor: "#2F3547",
+                // padding: "40px",
+              }}
+            >
+              <DesktopDatePicker
+                label="Check in date"
+                value={value}
+                minDate={new Date("2017-01-01")}
+                onChange={(newValue) => {
+                  setValue(newValue);
+                }}
+                renderInput={(params) => {
+                  return (
+                    <TextField
+                      {...params}
+                      sx={{
+                        svg: { color },
+                        input: { color },
+                        label: { color },
+                        backgroundColor: { color },
+                      }}
+                    />
+                  );
+                }}
+                // color="white"
+              />
+              <p
+                style={{
+                  margin: "0px",
+                  marginRight: "20px",
+                  marginLeft: "20px",
+                  color: "white",
+                }}
+              >
+                to
+              </p>
+              <DesktopDatePicker
+                label="Check out date"
+                value={value}
+                minDate={new Date("2017-01-01")}
+                onChange={(newValue) => {
+                  setValue(newValue);
+                }}
+                renderInput={(params) => {
+                  return (
+                    <TextField
+                      {...params}
+                      sx={{
+                        svg: { color },
+                        input: { color },
+                        label: { color },
+                      }}
+                    />
+                  );
+                }}
+              />
+            </div>
+          </LocalizationProvider>
+          <NextButton
+            onClick={() => {
+              history.push(Summary_Detail);
+            }}
+          >
+            Next
+          </NextButton>
+        </DateSelectionWwrapper>
       </div>
     </OuterWrapper>
   );

@@ -24,6 +24,7 @@ import {
   MANAGE_RESORT_PAGE,
   TAB_Navigation,
   Resource_Section_Selection,
+  Summary_Detail,
 } from "./settings/constant";
 
 /**
@@ -174,6 +175,15 @@ const routes = [
         ),
       loading: Loading,
       modules: ["ResourceSectionSelection"],
+    }),
+  },
+  {
+    path: Summary_Detail,
+    component: Loadable({
+      loader: () =>
+        import(/* webpackChunkName: "Listing" */ "./container/Summary/Summary"),
+      loading: Loading,
+      modules: ["SummaryDetail"],
     }),
   },
   {
