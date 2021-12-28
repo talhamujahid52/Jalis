@@ -10,7 +10,8 @@ export const MainSummaryWrapper = styled.div`
   background: #f8f9fa;
   border-radius: 20px;
   @media (max-width: 1100px) {
-    padding: 20px 20px;
+    padding: 20px 10px;
+    margin: 0px 10px;
   }
 `;
 
@@ -20,6 +21,9 @@ export const DetailsWrapper = styled.div`
   padding: 30px;
   background: #ffffff;
   border-radius: 20px;
+  @media (max-width: 1100px) {
+    padding: 20px 10px;
+  }
 `;
 
 export const ResortNameImagePriceWrapper = styled.div`

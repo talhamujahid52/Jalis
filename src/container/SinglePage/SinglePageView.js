@@ -29,6 +29,7 @@ import SinglePageWrapper, {
   PriceArea,
   ArabicText,
   Title,
+  NextButton,
   startFromText,
 } from "./SinglePageView.style";
 import PostImageGallery from "./ImageGallery/ImageGallery";
@@ -171,12 +172,14 @@ const SinglePage = ({ match }) => {
             <PriceArea>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 {/* <startFromText>start from</startFromText> */}
-                start from
+                {"  "}
+                <p style={{ margin: "0px" }}>start from</p>
                 <ArabicText>ريال</ArabicText>
                 <p style={{ color: "#ED702D", margin: "0px" }}>1000</p>/
                 <p style={{ textDecoration: "line-through", margin: "0px" }}>
                   2000
                 </p>
+                {"  "}
               </div>
             </PriceArea>
           </TitleAndPriceWrapper>
@@ -255,7 +258,18 @@ const SinglePage = ({ match }) => {
           );
         })}
       </div>
-      <div
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <NextButton
+          onClick={() => {
+            history.push(Resource_Section_Selection);
+          }}
+        >
+          Next
+        </NextButton>
+      </div>
+
+      <AddsPlaceholder></AddsPlaceholder>
+      {/* <div
         style={{
           marginTop: "40px",
           marginBottom: "40px",
@@ -272,9 +286,9 @@ const SinglePage = ({ match }) => {
         >
           Adds placeholder
         </p>
-      </div>
+      </div> */}
       <ReviewsAndRatings></ReviewsAndRatings>
-      <button
+      {/* <button
         style={{
           height: "60px",
           width: "200px",
@@ -286,7 +300,7 @@ const SinglePage = ({ match }) => {
         }}
       >
         Next
-      </button>
+      </button> */}
 
       {/* <TopBar title={title} shareURL={href} author={author} media={gallery} /> */}
 

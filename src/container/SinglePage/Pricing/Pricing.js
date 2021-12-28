@@ -7,6 +7,7 @@ import DatePicker from "@mui/lab/DatePicker";
 import MobileDatePicker from "@mui/lab/MobileDatePicker";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import Stack from "@mui/material/Stack";
+import { RowWrapper } from "./Pricing.style";
 // const calendarItem = {
 //   separator: "-",
 //   format: "MM-DD-YYYY",
@@ -21,14 +22,7 @@ const Pricing = () => {
   return (
     <>
       <h2 style={{ fontWeight: "bold" }}> Pricing</h2>
-      <div
-        style={{
-          background: "#F8F9FA",
-          borderRadius: "20px",
-          // height: "200px",
-          padding: "20px",
-        }}
-      >
+      <RowWrapper>
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <div
             style={{
@@ -37,7 +31,7 @@ const Pricing = () => {
               alignItems: "center",
               borderRadius: "20px",
               backgroundColor: "white",
-              padding: "40px",
+              padding: "20px",
             }}
           >
             <DesktopDatePicker
@@ -65,7 +59,7 @@ const Pricing = () => {
             />
           </div>
         </LocalizationProvider>
-      </div>
+      </RowWrapper>
     </>
   );
 };

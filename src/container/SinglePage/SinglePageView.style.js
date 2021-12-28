@@ -293,13 +293,18 @@ export const RatingAndLocationWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 export const TitleAndPriceWrapper = styled.div`
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-
-  /* border: 1px solid blue; */
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 export const Title = styled.h2`
   color: ${themeGet("text.0", "#2C2C2C")};
@@ -330,10 +335,12 @@ export const PriceArea = styled.div`
   font-size: 24px;
   font-weight: 400;
   width: 50%;
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: nowrap; */
   @media (max-width: 800px) {
+    width: 52%;
+    /* text-align: left; */
     font-size: 16px;
   }
 `;
@@ -346,6 +353,24 @@ export const startFromText = styled.p`
   white-space: nowrap;
   @media (max-width: 800px) {
     font-size: 16px;
+  }
+`;
+export const NextButton = styled.div`
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 300px;
+  color: white;
+  background: #ed702d;
+  border-radius: 5px;
+  border: 0px;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 20px;
+  box-shadow: 0px 3px 99px #00000047;
+  @media (max-width: 1100px) {
+    margin-top: 20px;
   }
 `;
 

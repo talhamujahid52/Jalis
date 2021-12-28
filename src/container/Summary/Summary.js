@@ -23,11 +23,13 @@ import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
+import useSummaryModal from "./SummaryModal/SummaryModal";
 const Summary = () => {
   const [value, setValue] = React.useState(new Date());
-
+  const Modal = useSummaryModal();
   return (
     <MainSummaryWrapper>
+      <Modal.Popup />
       <h1 style={{ margin: "0px", fontWeight: "bold" }}> Summary</h1>
       <p style={{ color: "#A5A5A5", margin: "0px", fontSize: "16px" }}>
         Your Resort Booking Summary
@@ -355,7 +357,7 @@ const Summary = () => {
           width: "100%",
         }}
       >
-        <ProceedButton>Proceed</ProceedButton>
+        <ProceedButton onClick={Modal.handleOpen}>Proceed</ProceedButton>
         <CancelButton>Cancel</CancelButton>
       </div>
     </MainSummaryWrapper>
