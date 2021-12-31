@@ -25,6 +25,7 @@ import {
   TAB_Navigation,
   Resource_Section_Selection,
   Summary_Detail,
+  My_Bookings,
 } from "./settings/constant";
 
 /**
@@ -222,6 +223,17 @@ const routes = [
         import(/* webpackChunkName: "Pricing" */ "./container/Pricing/Pricing"),
       loading: Loading,
       modules: ["Pricing"],
+    }),
+  },
+  {
+    path: My_Bookings,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "Pricing" */ "./container/MyBookings/MyBookings"
+        ),
+      loading: Loading,
+      modules: ["MyBookings"],
     }),
   },
 ];
