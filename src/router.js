@@ -26,6 +26,8 @@ import {
   Resource_Section_Selection,
   Summary_Detail,
   My_Bookings,
+  Reports,
+  Revenue,
 } from "./settings/constant";
 
 /**
@@ -234,6 +236,24 @@ const routes = [
         ),
       loading: Loading,
       modules: ["MyBookings"],
+    }),
+  },
+  {
+    path: Reports,
+    component: Loadable({
+      loader: () =>
+        import(/* webpackChunkName: "Pricing" */ "./container/Reports/Reports"),
+      loading: Loading,
+      modules: ["Reports"],
+    }),
+  },
+  {
+    path: Revenue,
+    component: Loadable({
+      loader: () =>
+        import(/* webpackChunkName: "Pricing" */ "./container/Reports/Revenue"),
+      loading: Loading,
+      modules: ["Revenue"],
     }),
   },
 ];

@@ -23,11 +23,13 @@ import {
   CancelBookingButton,
   ExpandDivWrapper,
 } from "./MyBookingsComponent.style";
+import ExpandedComponent from "../ExpandedComponent/ExpandedComponent";
 import { height } from "styled-system";
 const MyBookingsComponent = () => {
   const [value, setValue] = React.useState(new Date());
   const [rateResort, setRateResort] = useState(false);
   const [cancelBooking, setCancelBooking] = useState(false);
+  const [expand, setExpand] = useState(false);
 
   return (
     <OutsideWrapper>
@@ -129,20 +131,30 @@ const MyBookingsComponent = () => {
         </MiddleDiv>
       </MainWrapper>
       <ExpandDivWrapper>
-        <p style={{ margin: "0px", color: "white" }}> View Booking Details</p>
         <div
-          onClick={() => {
-            alert("hi");
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
           }}
-          style={{ display: "flex" }}
         >
-          <p style={{ margin: "0px", color: "white", marginRight: "10px" }}>
-            Expand
-          </p>
-          <div style={{ width: "13px", height: "13px", margin: "0px" }}>
-            <img style={{ height: "100%", width: "100%" }} src={downArrow} />
+          <p style={{ margin: "0px", color: "white" }}> View Booking Details</p>
+          <div
+            onClick={() => {
+              // alert("hi");
+              setExpand(!expand);
+            }}
+            style={{ display: "flex" }}
+          >
+            <p style={{ margin: "0px", color: "white", marginRight: "10px" }}>
+              Expand
+            </p>
+            <div style={{ width: "13px", height: "13px", margin: "0px" }}>
+              <img style={{ height: "100%", width: "100%" }} src={downArrow} />
+            </div>
           </div>
         </div>
+        {expand && <ExpandedComponent></ExpandedComponent>}
       </ExpandDivWrapper>
     </OutsideWrapper>
   );

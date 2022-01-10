@@ -137,11 +137,10 @@ export const CancelBookingButton = styled.div`
     width: 200px;
   }
 `;
-
 export const ExpandDivWrapper = styled.div`
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   padding: 20px 30px;
   @media (max-width: 1100px) {
     padding: 20px 10px;

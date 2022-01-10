@@ -13,6 +13,7 @@ import {
   MANAGE_RESORT_PAGE,
   TAB_Navigation,
   My_Bookings,
+  Reports,
 } from "../../settings/constant";
 
 const AccountSettings = () => {
@@ -94,11 +95,13 @@ const AccountSettings = () => {
                 ></ServicesCard>
 
                 <ServicesCard
+                  onClick={() => {
+                    history.push(Reports);
+                  }}
                   picture={reports}
                   name="Reports"
                   description="Check your performence reports"
                 ></ServicesCard>
-
                 <ServicesCard
                   picture={contactadmin}
                   name="Contact Site Admin"
