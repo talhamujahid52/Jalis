@@ -15,6 +15,7 @@ export const Summary_Detail = "/summary-detail";
 export const My_Bookings = "/my-bookings";
 export const Reports = "/reports";
 export const Revenue = "/revenue";
+export const BlockedDates = "/blocked-dates";
 
 // Agent Profile Page Section
 export const AGENT_PROFILE_PAGE = "/profile";

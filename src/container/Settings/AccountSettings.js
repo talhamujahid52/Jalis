@@ -14,6 +14,7 @@ import {
   TAB_Navigation,
   My_Bookings,
   Reports,
+  BlockedDates,
 } from "../../settings/constant";
 
 const AccountSettings = () => {
@@ -84,6 +85,9 @@ const AccountSettings = () => {
                 ></ServicesCard>
 
                 <ServicesCard
+                  onClick={() => {
+                    history.push(BlockedDates);
+                  }}
                   picture={blockdates}
                   name="Block Dates"
                   description="Block dates from the calender"

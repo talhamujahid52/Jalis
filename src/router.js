@@ -28,6 +28,7 @@ import {
   My_Bookings,
   Reports,
   Revenue,
+  BlockedDates,
 } from "./settings/constant";
 
 /**
@@ -254,6 +255,17 @@ const routes = [
         import(/* webpackChunkName: "Pricing" */ "./container/Reports/Revenue"),
       loading: Loading,
       modules: ["Revenue"],
+    }),
+  },
+  {
+    path: BlockedDates,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "Pricing" */ "./container/BlockedDates/BlockedDates"
+        ),
+      loading: Loading,
+      modules: ["BlockedDates"],
     }),
   },
 ];
