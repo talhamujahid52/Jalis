@@ -353,7 +353,7 @@ const Summary = () => {
       <div
         style={{
           display: "flex",
-          justifyContent: "space-around",
+          justifyContent: "center",
           width: "100%",
         }}
       >

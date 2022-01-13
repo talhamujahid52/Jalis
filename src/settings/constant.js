@@ -13,9 +13,13 @@ export const TAB_Navigation = "/tab-navigation";
 export const Resource_Section_Selection = "/resource-section-selection";
 export const Summary_Detail = "/summary-detail";
 export const My_Bookings = "/my-bookings";
+export const My_Resort_Bookings = "/my-resort-bookings";
 export const Reports = "/reports";
 export const Revenue = "/revenue";
 export const BlockedDates = "/blocked-dates";
+export const Messages = "/messages";
+export const DetailedChat = "/detailed-chat";
+export const CurrentPlan = "/current-plan";
 
 // Agent Profile Page Section
 export const AGENT_PROFILE_PAGE = "/profile";

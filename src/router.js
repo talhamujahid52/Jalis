@@ -26,9 +26,13 @@ import {
   Resource_Section_Selection,
   Summary_Detail,
   My_Bookings,
+  My_Resort_Bookings,
   Reports,
   Revenue,
   BlockedDates,
+  Messages,
+  CurrentPlan,
+  DetailedChat,
 } from "./settings/constant";
 
 /**
@@ -240,6 +244,17 @@ const routes = [
     }),
   },
   {
+    path: My_Resort_Bookings,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "Pricing" */ "./container/MyResortBookings/MyResortBookings"
+        ),
+      loading: Loading,
+      modules: ["MyResortBookings"],
+    }),
+  },
+  {
     path: Reports,
     component: Loadable({
       loader: () =>
@@ -266,6 +281,39 @@ const routes = [
         ),
       loading: Loading,
       modules: ["BlockedDates"],
+    }),
+  },
+  {
+    path: Messages,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "Pricing" */ "./container/Messages/Messages"
+        ),
+      loading: Loading,
+      modules: ["Messages"],
+    }),
+  },
+  {
+    path: CurrentPlan,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "Pricing" */ "./container/Pricing/SelectedPlanDescription"
+        ),
+      loading: Loading,
+      modules: ["CurrentPlan"],
+    }),
+  },
+  {
+    path: DetailedChat,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "Pricing" */ "./container/Messages/DetailedChat/DetailedChat"
+        ),
+      loading: Loading,
+      modules: ["DetailedChat"],
     }),
   },
 ];

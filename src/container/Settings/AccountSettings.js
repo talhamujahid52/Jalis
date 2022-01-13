@@ -15,6 +15,8 @@ import {
   My_Bookings,
   Reports,
   BlockedDates,
+  Messages,
+  My_Resort_Bookings,
 } from "../../settings/constant";
 
 const AccountSettings = () => {
@@ -73,6 +75,9 @@ const AccountSettings = () => {
                   }}
                 ></ServicesCard>
                 <ServicesCard
+                  onClick={() => {
+                    history.push(My_Resort_Bookings);
+                  }}
                   picture={resort}
                   name="Resort Bookings"
                   description="See a list of all resorts bookings"
@@ -93,6 +98,9 @@ const AccountSettings = () => {
                   description="Block dates from the calender"
                 ></ServicesCard>
                 <ServicesCard
+                  onClick={() => {
+                    history.push(Messages);
+                  }}
                   picture={messages}
                   name="Messages"
                   description="Connect With your Clients"

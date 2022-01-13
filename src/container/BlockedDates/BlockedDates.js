@@ -8,10 +8,6 @@ import DatePicker from "react-multi-date-picker";
 import { Calendar } from "react-multi-date-picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 
-const BlockedDateText = () => {
-  return <BlockDatesHeadingText> Block Dates</BlockDatesHeadingText>;
-};
-
 const BlockedDates = () => {
   return (
     <BlockedDatesWrapper>
