@@ -17,6 +17,7 @@ import {
   BlockedDates,
   Messages,
   My_Resort_Bookings,
+  AddService,
 } from "../../settings/constant";
 
 const AccountSettings = () => {
@@ -87,6 +88,15 @@ const AccountSettings = () => {
                   name="Manage resorts"
                   description="Add and remove resorts and resources"
                   onClick={handleClick}
+                ></ServicesCard>
+
+                <ServicesCard
+                  picture={manageresort}
+                  name="Manage Services"
+                  description="Add and remove resorts and resources"
+                  onClick={() => {
+                    history.push(AddService);
+                  }}
                 ></ServicesCard>
 
                 <ServicesCard

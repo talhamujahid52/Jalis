@@ -20,6 +20,7 @@ export const BlockedDates = "/blocked-dates";
 export const Messages = "/messages";
 export const DetailedChat = "/detailed-chat";
 export const CurrentPlan = "/current-plan";
+export const AddService = "/add-Service";
 
 // Agent Profile Page Section
 export const AGENT_PROFILE_PAGE = "/profile";

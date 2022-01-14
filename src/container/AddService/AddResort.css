@@ -1,0 +1,40 @@
+.resortNameInput {
+  width: 100%;
+  border-radius: 40px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid white;
+  padding: 8px 16px;
+  /* background: green; */
+  color: #a5a5a5;
+}
+.resortNameInput:focus {
+  border: 2px solid#ccc;
+}
+.resortDescriptionInput {
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid white;
+  padding: 8px 16px;
+  height: 25vh;
+  /* max-height: 300px; */
+  /* background: green; */
+  color: #a5a5a5;
+}
+.resortDescriptionInput:focus {
+  border: 2px solid#ccc;
+}
+.image-item {
+  display: flex;
+  /* margin: 10px 0; */
+}
+.image-item__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+button {
+  height: 40px;
+}

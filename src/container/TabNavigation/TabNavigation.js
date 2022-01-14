@@ -4,6 +4,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import ManageResort from "../ManageResort/ManageResort";
 import ManageSection from "../ManageSection/ManageSection";
+import ManageServices from "../ManageServices/ManageServices";
 import {
   TabNavigationWrapper,
   TabNavigationComponentWrapper,
@@ -52,6 +53,14 @@ const TabNavigation = () => {
                 setSwitchSections(true);
               }}
             />
+            <Tab
+              style={{ color: "orange" }}
+              value="six"
+              label="Manage Services"
+              onClick={() => {
+                setSwitchSections(true);
+              }}
+            />
             <Tab style={{ color: "orange" }} value="two" label="Chats" />
             <Tab
               style={{ color: "orange" }}
@@ -72,6 +81,13 @@ const TabNavigation = () => {
         {value === "three" && <h1>This is Resort Bookings </h1>}
         {value === "four" && <h1>This is Reports </h1>}
         {value === "five" && <h1>This is Support </h1>}
+        {value === "six" &&
+          (switchSections ? (
+            <ManageServices changeSections={changeSections} />
+          ) : (
+            <ManageSection changeSections={changeSections} />
+          ))}
+        {/* {value === "six" && <ManageServices />} */}
       </TabNavigationComponentWrapper>
     </TabNavigationWrapper>
   );

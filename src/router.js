@@ -33,6 +33,7 @@ import {
   Messages,
   CurrentPlan,
   DetailedChat,
+  AddService,
 } from "./settings/constant";
 
 /**
@@ -314,6 +315,17 @@ const routes = [
         ),
       loading: Loading,
       modules: ["DetailedChat"],
+    }),
+  },
+  {
+    path: AddService,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "Pricing" */ "./container/AddService/AddService"
+        ),
+      loading: Loading,
+      modules: ["AddService"],
     }),
   },
 ];
