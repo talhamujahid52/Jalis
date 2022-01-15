@@ -19,7 +19,7 @@ const SingleReview = () => {
               height: "75px",
               width: "75px",
               borderRadius: "100px",
-              backgroundColor: "grey",
+              backgroundColor: "green",
             }}
           ></div>
           <p

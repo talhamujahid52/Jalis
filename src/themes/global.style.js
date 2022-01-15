@@ -790,6 +790,27 @@ const GlobalStyle = createGlobalStyle`
   .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
     background-color: rgba(0, 132, 137, 0.2);
   }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ED702D;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ED702D;
+}
 `;
 
 export default GlobalStyle;
