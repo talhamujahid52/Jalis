@@ -32,6 +32,7 @@ import SinglePageWrapper, {
   NextButton,
   startFromText,
 } from "./SinglePageView.style";
+import "./SinglePageView.css";
 import PostImageGallery from "./ImageGallery/ImageGallery";
 import useDataApi from "library/hooks/useDataApi";
 import isEmpty from "lodash/isEmpty";
@@ -41,6 +42,9 @@ import starIcon from "../../assets/star.svg";
 import Pricing from "./Pricing/Pricing";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import { Carousel } from "react-responsive-carousel";
+import { Carousel } from "react-carousel-minimal";
 const SinglePage = ({ match }) => {
   const history = useHistory();
   const [additionalFeatures, setAdditionalFeatures] = useState([
@@ -72,12 +76,70 @@ const SinglePage = ({ match }) => {
     amenities,
     author,
   } = data[0];
+  const Imagesdata = [
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
+      // caption: `<div>
+      //             San Francisco
+      //             <br/>
+      //             Next line
+      //           </div>`,
+    },
+    {
+      image:
+        "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
+      // caption: "Scotland",
+    },
+    {
+      image:
+        "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
+      // caption: "Darjeeling",
+    },
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
+      // caption: "San Francisco",
+    },
+    {
+      image:
+        "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
+      // caption: "Scotland",
+    },
+  ];
 
   return (
     <SinglePageWrapper>
       <ImageWrapper>
         <PostImage>
-          <img
+          <Carousel
+            data={Imagesdata}
+            time={2000}
+            width="100%"
+            height="500px"
+            // captionStyle={captionStyle}
+            radius="10px"
+            // slideNumber={true}
+            // slideNumberStyle={slideNumberStyle}
+            captionPosition="bottom"
+            automatic={true}
+            // dots={true}
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideBackgroundColor="white"
+            slideImageFit="cover"
+            thumbnails={true}
+            thumbnailWidth="150px"
+            // thumbnailHeight="200px"
+            style={{
+              textAlign: "center",
+              // maxWidth: "850px",
+              // maxHeight: "500px",
+              // margin: "40px auto",
+            }}
+          />
+
+          {/* <img
             className="absolute"
             src="/images/single-post-bg.jpg"
             alt="Listing details page banner"
@@ -116,7 +178,7 @@ const SinglePage = ({ match }) => {
                 </svg>
               </Button>
             </Fragment>
-          </Modal>
+          </Modal> */}
         </PostImage>
         <ResortInfoWrapper>
           <RatingAndLocationWrapper>
@@ -140,9 +202,10 @@ const SinglePage = ({ match }) => {
             <RatingWrapper>
               <RatingText>4.1</RatingText>
 
-              {new Array(5).fill(0).map((item) => {
+              {new Array(5).fill(0).map((item, index) => {
                 return (
                   <img
+                    key={index}
                     style={{
                       height: "20px",
                       width: "15px",
@@ -237,6 +300,7 @@ const SinglePage = ({ match }) => {
         {additionalFeatures.map((item, index) => {
           return (
             <Chip
+              key={index}
               onClick={() => {
                 let newArray = [...additionalFeatures];
                 console.log("new Array is", newArray);

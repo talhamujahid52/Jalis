@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 
 const SinglePageWrapper = styled.div`
-  padding-bottom: 56px;
+  /* padding-bottom: 56px;
   padding-left: 50px;
   padding-top: 50px;
-  padding-right: 50px;
+  padding-right: 50px; */
+  padding: 30px 50px;
   @media (max-width: 480px) {
     margin-bottom: 30px;
   }
@@ -201,7 +202,7 @@ export const ButtonGroup = styled.div`
 
 export const ImageWrapper = styled.div`
   padding: 30px;
-  border-radius: 40px;
+  border-radius: 20px;
   background: #f8f9fa;
   @media (max-width: 800px) {
     padding: 15px;
@@ -215,17 +216,17 @@ export const ResortDetailWrapper = styled.div`
 `;
 
 export const PostImage = styled.div`
-  height: 600px;
-  position: relative;
-  border-radius: 40px;
+  /* height: 600px; */
+  /* position: relative; */
+  /* border-radius: 40px; */
   /* border: 1px solid red; */
-  overflow: hidden;
+  /* overflow: hidden; */
 
-  @media (max-width: 767px) {
+  /* @media (max-width: 767px) {
     height: 406px;
-  }
+  } */
 
-  img.absolute {
+  /* img.absolute {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -252,7 +253,7 @@ export const PostImage = styled.div`
       background: ${themeGet("color.2", "#F7F7F7")};
       color: ${themeGet("text.0", "#2C2C2C")};
     }
-  }
+  } */
 `;
 export const ResortInfoWrapper = styled.div``;
 export const LocationWrapper = styled.div`

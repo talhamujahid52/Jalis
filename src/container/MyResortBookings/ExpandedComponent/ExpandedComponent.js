@@ -143,6 +143,7 @@ const ExpandedComponent = () => {
       {Billing.map((item, idx) => {
         return (
           <div
+            key={idx}
             style={{
               display: "flex",
               justifyContent: "space-between",

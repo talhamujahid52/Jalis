@@ -39,9 +39,9 @@ const MobileMenu = ({ className }) => {
           <Menu.Item key="3">
             <NavLink to={ACCOUNT_SETTINGS_PAGE}>Account Settings</NavLink>
           </Menu.Item>
-          <Menu.Item key="3">
+          {/* <Menu.Item key="3">
             <NavLink to={ADD_RESORT_PAGE}>Add Hotel</NavLink>
-          </Menu.Item>
+          </Menu.Item> */}
         </>
       )}
       {loggedIn && (

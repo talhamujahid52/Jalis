@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const AmenitiesWrapper = styled.div`
   padding: 29px 0;
-
+  margin: 30px 30px;
   .amenities_title {
     margin-bottom: 30px;
   }
@@ -15,13 +15,17 @@ const AmenitiesWrapper = styled.div`
 `;
 
 export const AmenitiesArea = styled.div`
+  padding: 20px 50px;
+  background: #fafafa;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  row-gap: 20px;
+  column-gap: 50px;
+  justify-content: center;
   margin-bottom: -15px;
 
-  > div {
+  /* > div {
     width: calc(100% / 4 - 10px);
 
     @media (max-width: 767px) {
@@ -33,7 +37,7 @@ export const AmenitiesArea = styled.div`
       width: calc(100% / 2 - 10px);
       margin-bottom: 20px;
     }
-  }
+  } */
 `;
 
 export default AmenitiesWrapper;

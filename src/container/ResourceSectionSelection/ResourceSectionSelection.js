@@ -55,6 +55,7 @@ const ResourceSectionSelection = () => {
         {additionalFeatures.map((item, index) => {
           return (
             <Chip
+              key={index}
               onClick={() => {
                 let newArray = [...additionalFeatures];
                 console.log("new Array is", newArray);

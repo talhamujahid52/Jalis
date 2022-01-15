@@ -315,6 +315,7 @@ const AddResort = () => {
           {AdditionalFeatures.map((item, index) => {
             return (
               <Chip
+                key={index}
                 onDelete={handleDeleteService(item)}
                 label={item.serviceTitle + " / " + item.serviceFee}
                 sx={{

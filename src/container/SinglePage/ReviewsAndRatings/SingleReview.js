@@ -35,9 +35,10 @@ const SingleReview = () => {
           </p>
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          {new Array(5).fill(0).map((item) => {
+          {new Array(5).fill(0).map((item, index) => {
             return (
               <img
+                key={index}
                 style={{
                   height: "20px",
                   width: "15px",

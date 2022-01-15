@@ -243,6 +243,7 @@ const AddResort = () => {
         {features.map((item, index) => {
           return (
             <Chip
+              key={index}
               onClick={() => {
                 // let newArray = new Array();
                 let newArray = [...features];

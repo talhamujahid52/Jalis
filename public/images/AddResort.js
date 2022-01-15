@@ -207,6 +207,7 @@ const AddResort = () => {
       {features.map((item, index) => {
         return (
           <Chip
+            key={index}
             avatar={
               <img
                 src={item.icon}

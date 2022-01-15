@@ -88,9 +88,10 @@ const GridCard = ({
               </p>
             )}
             {rating &&
-              new Array(5).fill(0).map((item) => {
+              new Array(5).fill(0).map((item, index) => {
                 return (
                   <img
+                    key={index}
                     style={{ height: "20px", width: "15px", marginLeft: "2px" }}
                     src={starIcon}
                   />

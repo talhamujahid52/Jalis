@@ -1,13 +1,13 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Menu } from 'antd';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Menu } from "antd";
 
 import {
   HOME_PAGE,
   LISTING_POSTS_PAGE,
   AGENT_PROFILE_PAGE,
   PRICING_PLAN_PAGE,
-} from 'settings/constant';
+} from "settings/constant";
 
 const MainMenu = ({ className }) => {
   return (
@@ -24,7 +24,7 @@ const MainMenu = ({ className }) => {
         <NavLink to={`${AGENT_PROFILE_PAGE}`}>Contact Us</NavLink>
       </Menu.Item>
       <Menu.Item key="3">
-        <NavLink to={`${PRICING_PLAN_PAGE}`}>FAQ</NavLink>
+        <NavLink to={`${PRICING_PLAN_PAGE}`}>Services</NavLink>
       </Menu.Item>
       <Menu.Item key="4">
         <NavLink to={`${PRICING_PLAN_PAGE}`}>Settings</NavLink>
