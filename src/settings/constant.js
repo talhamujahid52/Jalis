@@ -1,5 +1,7 @@
 // General Page Section
 export const HOME_PAGE = "/";
+export const SERVICES_HOME_PAGE = "/service";
+
 export const AGENTS_PAGE = "/agents";
 
 // Listing Single Page Section

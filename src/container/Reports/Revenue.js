@@ -1,119 +1,135 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import { useState } from "react";
 import {
   RevenueWrapper,
   RevenueHeadingText,
   StatsWrapper,
+  MonthlyAndYearlyRevenueWrapper,
+  MonthlyAndYearlyRevenueWrapperRow,
+  BookingRow,
+  BookingRowHeadingText,
+  BookingRowText,
 } from "./Revenue.style";
-
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
-  },
-}));
-
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
-  // hide last border
-  "&:last-child td, &:last-child th": {
-    border: 0,
-  },
-}));
-
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
-
+import BookingRowComponent from "./RevenueComponent";
+import AddsPlaceholder from "container/Home/AddsPlaceholder/AddsPlaceholder";
 const Revenue = () => {
+  const [paid, setPaid] = useState(false);
   return (
     <RevenueWrapper>
       <RevenueHeadingText>Revenue</RevenueHeadingText>
       <p style={{ color: "#A5A5A5" }}>Check your performance reports</p>
       <StatsWrapper>
-        {/* <h2
+        <MonthlyAndYearlyRevenueWrapperRow>
+          <MonthlyAndYearlyRevenueWrapper>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <p
+                style={{
+                  margin: "0px",
+                  fontSize: "16px",
+                  marginRight: "10px",
+                  fontFamily: "Noto Kufi Arabic, sans-serif",
+                }}
+              >
+                ريال
+              </p>
+              <p
+                style={{
+                  margin: "0px",
+                  fontSize: "40px",
+                  fontWeight: "bolder",
+                  fontFamily: "Noto Kufi Arabic, sans-serif",
+                }}
+              >
+                50
+              </p>
+            </div>
+            <p style={{ margin: "0px", fontSize: "14px", fontWeight: "bold" }}>
+              Monthly Revenue
+            </p>
+          </MonthlyAndYearlyRevenueWrapper>
+          <MonthlyAndYearlyRevenueWrapper>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <p
+                style={{
+                  margin: "0px",
+                  fontSize: "16px",
+                  marginRight: "10px",
+                  fontFamily: "Noto Kufi Arabic, sans-serif",
+                }}
+              >
+                ريال
+              </p>
+              <p
+                style={{
+                  margin: "0px",
+                  fontSize: "40px",
+                  fontWeight: "bolder",
+                  fontFamily: "Noto Kufi Arabic, sans-serif",
+                }}
+              >
+                1000
+              </p>
+            </div>
+            <p style={{ margin: "0px", fontSize: "14px", fontWeight: "bold" }}>
+              Annual Revenue
+            </p>
+          </MonthlyAndYearlyRevenueWrapper>
+        </MonthlyAndYearlyRevenueWrapperRow>
+
+        <BookingRow style={{ borderBottom: "4px solid #F8F9FA" }}>
+          <div
+            style={{
+              height: "80px",
+              width: "5%",
+              borderTopLeftRadius: "15px",
+              borderBottomLeftRadius: "15px",
+              backgroundColor: "white",
+            }}
+          ></div>
+          <div
+            style={{
+              height: "80px",
+              width: "95%",
+              borderTopRightRadius: "15px",
+              borderBottomRightRadius: "15px",
+              backgroundColor: "white",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
+            }}
+          >
+            <BookingRowHeadingText>Booking ID</BookingRowHeadingText>
+            <BookingRowHeadingText>Transaction ID</BookingRowHeadingText>
+            <BookingRowHeadingText>Paid</BookingRowHeadingText>
+            <BookingRowHeadingText>Remaining</BookingRowHeadingText>
+            <BookingRowHeadingText>Booking Date</BookingRowHeadingText>
+          </div>
+        </BookingRow>
+        <BookingRowComponent></BookingRowComponent>
+        <BookingRowComponent></BookingRowComponent>
+        <BookingRowComponent paid={true}></BookingRowComponent>
+        <BookingRowComponent></BookingRowComponent>
+        <BookingRowComponent></BookingRowComponent>
+        <div
           style={{
-            margin: "0px",
-            fontWeight: "bold",
-            paddingBottom: "30px",
-            borderBottom: "2px solid #F8F9FA",
+            marginTop: "40px",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
-          Stats For this week
-        </h2> */}
-        <TableContainer>
-          <Table sx={{ minWidth: 700 }}>
-            <TableHead>
-              <TableRow>
-                <TableCell sx={{ color: "#6F6E71" }}>Booking ID</TableCell>
-                <TableCell sx={{ color: "#6F6E71" }}>Transaction ID</TableCell>
-                <TableCell sx={{ color: "#6F6E71" }}>Paid</TableCell>
-                <TableCell sx={{ color: "#6F6E71" }}>Remaining</TableCell>
-                <TableCell sx={{ color: "#6F6E71" }}>Booking Date</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody sx={{ backgroundColor: "#F8F9FA" }}>
-              {rows.map((row) => (
-                <TableRow
-                  sx={
-                    {
-                      // borderRadius: "15px",
-                      // marginBottom: "10px",
-                      // border: "1px solid red",
-                    }
-                  }
-                  key={row.name}
-                >
-                  <TableCell
-                    sx={{
-                      color: "black",
-                      fontWeight: "bold",
-                      // border: "1px solid red",
-                      // borderTopLeftRadius: "10px",
-                      // borderBottomLeftRadius: "10px",
-                    }}
-                  >
-                    {row.name}
-                  </TableCell>
-                  <TableCell sx={{ color: "black", fontWeight: "bold" }}>
-                    {row.calories}
-                  </TableCell>
-                  <TableCell sx={{ color: "black", fontWeight: "bold" }}>
-                    {row.fat}
-                  </TableCell>
-                  <TableCell sx={{ color: "black", fontWeight: "bold" }}>
-                    {row.carbs}
-                  </TableCell>
-                  <TableCell sx={{ color: "black", fontWeight: "bold" }}>
-                    {row.protein}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        {/*  */}
+          <p
+            style={{
+              margin: "0px",
+              fontSize: "18px",
+              color: "#ED702D",
+              textDecoration: "underline",
+            }}
+          >
+            LOAD MORE
+          </p>
+        </div>
       </StatsWrapper>
+      <AddsPlaceholder horizontalMargin={true}></AddsPlaceholder>
     </RevenueWrapper>
   );
 };

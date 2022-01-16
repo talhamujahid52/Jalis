@@ -34,6 +34,7 @@ import {
   CurrentPlan,
   DetailedChat,
   AddService,
+  SERVICES_HOME_PAGE,
 } from "./settings/constant";
 
 /**
@@ -51,6 +52,18 @@ const routes = [
         import(/* webpackChunkName: "Home" */ "./container/Home/Home"),
       loading: Loading,
       modules: ["Home"],
+    }),
+    exact: true,
+  },
+  {
+    path: SERVICES_HOME_PAGE,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "Home" */ "./container/Home_Services/HomeServices"
+        ),
+      loading: Loading,
+      modules: ["Home_Services"],
     }),
     exact: true,
   },
