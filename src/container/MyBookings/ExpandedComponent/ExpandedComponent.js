@@ -17,7 +17,7 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import googlePay from "../../../assets/GPay-icon.svg";
-
+import useGiveRatingModal from "../../Summary/SummaryModal/GiveRatingModal";
 const ExpandedComponent = () => {
   const Billing = [
     { name: "Booking Amount", price: "ريال 2210" },
@@ -27,10 +27,13 @@ const ExpandedComponent = () => {
     { name: "Remaining Amount", price: "ريال 1105" },
   ];
   const [value, setValue] = React.useState(new Date());
+  const Modal = useGiveRatingModal();
 
   return (
     <ExpandedComponentWrapper>
       {/* IDs DIV */}
+      <Modal.Popup />
+
       <BookingAndTransactionIDWrapper>
         <BookingAndTransactionID
           style={{ marginRight: "20px" }}
@@ -184,6 +187,7 @@ const ExpandedComponent = () => {
           display: "flex",
           marginTop: "20px",
         }}
+        onClick={Modal.handleOpen}
       >
         Get a copy of your contract
       </div>

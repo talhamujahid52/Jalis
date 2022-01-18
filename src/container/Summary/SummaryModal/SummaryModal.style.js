@@ -18,6 +18,16 @@ export const TopDivWrapper = styled.div`
   padding: 20px 50px;
   border: 1px solid #e5e5e5;
   border-radius: 20px;
+  /* text-align: center; */
+  @media (max-width: 1100px) {
+    padding: 20px 20px;
+  }
+`;
+export const TopDivWrapperRating = styled.div`
+  padding: 20px 50px;
+  /* border: 1px solid #e5e5e5; */
+  /* border-radius: 20px; */
+  text-align: center;
   @media (max-width: 1100px) {
     padding: 20px 20px;
   }
@@ -36,8 +46,21 @@ export const ProceedButton = styled.button`
   padding: 10px 30px;
   border-radius: 5px;
 `;
+export const CancelButton = styled.button`
+  border: 1px solid #ee7738;
+  background: white;
+  color: #ee7738;
+  padding: 10px 30px;
+  border-radius: 5px;
+`;
 export const RowWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+`;
+
+export const TextArea = styled.textarea`
+  &:focus {
+    border-color: #e7e7e7;
+  }
 `;

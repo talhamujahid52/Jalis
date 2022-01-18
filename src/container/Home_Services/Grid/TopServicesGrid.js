@@ -3,11 +3,16 @@ import Heading from "components/UI/Heading/Heading";
 import TextLink from "components/UI/TextLink/TextLink";
 import Container from "components/UI/Container/Container";
 import { PostPlaceholder } from "components/UI/ContentLoader/ContentLoader";
-import SectionGrid from "components/SectionGrid/SectionGrid";
+// import SectionGrid from "components/SectionGrid/SectionGrid";
+import SectionGridServices from "components/SectionGrid/SectionGridServices";
 import SectionTitle from "components/SectionTitle/SectionTitle";
 import useWindowSize from "library/hooks/useWindowSize";
 import useDataApi from "library/hooks/useDataApi";
-import { LISTING_POSTS_PAGE, SINGLE_POST_PAGE } from "settings/constant";
+import {
+  LISTING_POSTS_PAGE,
+  SINGLE_POST_PAGE,
+  SINGLE_SERVICES_PAGE,
+} from "settings/constant";
 const TopHotelsGrid = () => {
   const { data, loading } = useDataApi("/data/top-hotel.json");
   const { width } = useWindowSize();
@@ -49,8 +54,8 @@ const TopHotelsGrid = () => {
         link={<TextLink link={LISTING_POSTS_PAGE} content="Show all" />}
       /> */}
 
-      <SectionGrid
-        link={SINGLE_POST_PAGE}
+      <SectionGridServices
+        link={SINGLE_SERVICES_PAGE}
         columnWidth={columnWidth}
         data={posts}
         loading={loading}
