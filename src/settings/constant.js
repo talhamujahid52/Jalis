@@ -11,6 +11,8 @@ export const SINGLE_SERVICES_PAGE = "/service";
 
 export const ADD_RESORT_PAGE = "/add-resort";
 export const MANAGE_RESORT_PAGE = "/manage-resort";
+export const MANAGE_SERVICE_PAGE = "/manage-service";
+
 export const ADD_SECTION_PAGE = "/add-section";
 export const MANAGE_SECTION_PAGE = "/manage-section";
 export const TAB_Navigation = "/tab-navigation";
@@ -25,6 +27,7 @@ export const Messages = "/messages";
 export const DetailedChat = "/detailed-chat";
 export const CurrentPlan = "/current-plan";
 export const AddService = "/add-Service";
+export const UserProfile = "/user-profile";
 
 // Agent Profile Page Section
 export const AGENT_PROFILE_PAGE = "/profile";

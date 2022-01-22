@@ -1,18 +1,8 @@
 import React, { Fragment, useState } from "react";
 import { useLocation } from "library/hooks/useLocation";
-import Sticky from "react-stickynode";
-import { Row, Col, Modal, Button } from "antd";
-import Container from "components/UI/Container/Container";
 import Loader from "components/Loader/Loader";
 import useWindowSize from "library/hooks/useWindowSize";
-import Description from "./Description/Description";
-import Amenities from "./Amenities/Amenities";
 import Location from "./Location/Location";
-import ReviewsAndRatings from "./ReviewsAndRatings/ReviewsAndRatings";
-import Review from "./Review/Review";
-import Reservation from "./Reservation/Reservation";
-import BottomReservation from "./Reservation/BottomReservation";
-import TopBar from "./TopBar/TopBar";
 import AddsPlaceholder from "container/Home/AddsPlaceholder/AddsPlaceholder";
 import { Resource_Section_Selection } from "settings/constant";
 import { useHistory } from "react-router-dom";
@@ -20,17 +10,11 @@ import SinglePageWrapper, {
   PostImage,
   ImageWrapper,
   ResortInfoWrapper,
-  LocationWrapper,
-  LocationArea,
-  RatingWrapper,
-  RatingText,
-  RatingAndLocationWrapper,
   TitleAndPriceWrapper,
   PriceArea,
   ArabicText,
   Title,
   NextButton,
-  startFromText,
 } from "./SinglePageView.style";
 import "./SinglePageView.css";
 import PostImageGallery from "./ImageGallery/ImageGallery";
@@ -38,14 +22,15 @@ import useDataApi from "library/hooks/useDataApi";
 import isEmpty from "lodash/isEmpty";
 import locationIcon from "../../assets/location-pin.svg";
 import verifiedIcon from "../../assets/Verified.svg";
-import starIcon from "../../assets/star.svg";
-import Pricing from "./Pricing/Pricing";
+import resortImage from "../../assets/addresort.jpg";
 import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from "react-responsive-carousel";
-import { Carousel } from "react-carousel-minimal";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const SinglePage = ({ match }) => {
+  const [nav1, setNav1] = useState();
+  const [nav2, setNav2] = useState();
   const history = useHistory();
   const [additionalFeatures, setAdditionalFeatures] = useState([
     { price: "ريال10", name: "early Checkin", selected: false },
@@ -76,114 +61,104 @@ const SinglePage = ({ match }) => {
     amenities,
     author,
   } = data[0];
-  const Imagesdata = [
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
-      // caption: `<div>
-      //             San Francisco
-      //             <br/>
-      //             Next line
-      //           </div>`,
-    },
-    {
-      image:
-        "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
-      // caption: "Scotland",
-    },
-    {
-      image:
-        "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
-      // caption: "Darjeeling",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
-      // caption: "San Francisco",
-    },
-    {
-      image:
-        "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
-      // caption: "Scotland",
-    },
+  const images = [
+    "https://picsum.photos/id/1018/1000/600/",
+    "https://picsum.photos/id/1015/1000/600/",
+    "https://picsum.photos/id/1019/1000/600/",
+    "https://picsum.photos/id/1018/1000/600/",
+    "https://picsum.photos/id/1015/1000/600/",
+    "https://picsum.photos/id/1019/1000/600/",
+    "https://picsum.photos/id/1018/1000/600/",
+    "https://picsum.photos/id/1015/1000/600/",
+    "https://picsum.photos/id/1019/1000/600/",
+    "https://picsum.photos/id/1018/1000/600/",
+    "https://picsum.photos/id/1015/1000/600/",
+    "https://picsum.photos/id/1019/1000/600/",
   ];
 
   return (
     <SinglePageWrapper>
       <ImageWrapper>
         <PostImage>
-          <Carousel
-            data={Imagesdata}
-            time={2000}
-            width="100%"
-            height="500px"
-            // captionStyle={captionStyle}
-            radius="10px"
-            // slideNumber={true}
-            // slideNumberStyle={slideNumberStyle}
-            captionPosition="bottom"
-            automatic={true}
-            // dots={true}
-            pauseIconColor="white"
-            pauseIconSize="40px"
-            slideBackgroundColor="white"
-            slideImageFit="cover"
-            thumbnails={true}
-            thumbnailWidth="150px"
-            // thumbnailHeight="200px"
-            style={{
-              textAlign: "center",
-              // maxWidth: "850px",
-              // maxHeight: "500px",
-              // margin: "40px auto",
-            }}
-          />
-        </PostImage>
-        <ResortInfoWrapper>
-          {/* <RatingAndLocationWrapper>
-            <LocationWrapper>
-              <div
-                style={{
-                  height: "20px",
-                  width: "15px",
-                  margin: "0px",
-                  marginRight: "5px",
-                }}
-              >
-                <img
-                  style={{ height: "100%", width: "100%" }}
-                  src={locationIcon}
-                />
-              </div>
-              <LocationArea>81 Pennsylvania Avenue, USA</LocationArea>
-             
-            </LocationWrapper>
-            <RatingWrapper>
-              <RatingText>4.1</RatingText>
-
-              {new Array(5).fill(0).map((item, index) => {
+          <div>
+            <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
+              {images.map((item, idx) => {
                 return (
-                  <img
-                    key={index}
-                    style={{
-                      height: "20px",
-                      width: "15px",
-                      margin: "0px",
-                      marginLeft: "2px",
-                    }}
-                    src={starIcon}
-                  />
+                  <div>
+                    <div
+                      style={{
+                        backgroundColor: "green",
+                        height: "400px",
+                        width: "100%",
+                        borderRadius: "20px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src={resortImage}
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          objectFit: "cover",
+                        }}
+                      ></img>
+                    </div>
+                  </div>
                 );
               })}
-            </RatingWrapper>
-          </RatingAndLocationWrapper> */}
+            </Slider>
+            <Slider
+              asNavFor={nav1}
+              ref={(slider2) => setNav2(slider2)}
+              slidesToShow={
+                width < 550
+                  ? 3
+                  : (width >= 550) & (width < 900)
+                  ? 4
+                  : images.length < 5
+                  ? images.length
+                  : 5
+              }
+              swipeToSlide={true}
+              focusOnSelect={true}
+            >
+              {images.map((item, idx) => {
+                return (
+                  <div>
+                    <div
+                      style={{
+                        backgroundColor: "green",
+                        height: width < 900 ? " 100px" : "140px",
+                        width: width < 900 ? " 100px" : "220px",
+                        margin: "20px 0px",
+                        borderRadius: "10px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src={resortImage}
+                        // src={item[idx]}
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          objectFit: "cover",
+                        }}
+                      ></img>
+                    </div>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
+        </PostImage>
+        <ResortInfoWrapper>
           <TitleAndPriceWrapper>
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
                 width: "50%",
-                marginTop: "40px",
+                marginTop: "0px",
               }}
             >
               <Title>{title}</Title>
@@ -193,13 +168,44 @@ const SinglePage = ({ match }) => {
               />
             </div>
             <PriceArea>
-              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                }}
+              >
                 {/* <startFromText>start from</startFromText> */}
                 {"  "}
-                <p style={{ margin: "0px" }}>start from</p>
+                <p
+                  style={{
+                    margin: "0px",
+                    marginRight: "10px",
+                    // fontWeight: "bold",
+                    fontSize: "18px",
+                    color: "#A5A5A5",
+                  }}
+                >
+                  start from
+                </p>
                 <ArabicText>ريال</ArabicText>
-                <p style={{ color: "#ED702D", margin: "0px" }}>1000</p>/
-                <p style={{ textDecoration: "line-through", margin: "0px" }}>
+                <p
+                  style={{
+                    color: "#ED702D",
+                    margin: "0px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  1000 /
+                </p>
+
+                <p
+                  style={{
+                    textDecoration: "line-through",
+                    margin: "0px",
+                    fontWeight: "bold",
+                  }}
+                >
                   2000
                 </p>
                 {"  "}
@@ -282,7 +288,10 @@ const SinglePage = ({ match }) => {
                 marginRight: "10px",
                 fontFamily: "Noto Kufi Arabic, sans-serif",
                 backgroundColor: item.selected ? "#ED702D28" : "white",
-                borderWidth: "2px",
+                color: item.selected ? "#ED702D" : "#ADADAD",
+
+                borderWidth: item.selected ? "0px" : "2px",
+
                 borderStyle: "solid",
                 borderColor: item.selected ? "#ED702D28" : "#E3E3E3",
               }}

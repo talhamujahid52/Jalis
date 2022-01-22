@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DateRangePickerBox from "../../../components/UI/DatePicker/ReactDates";
 import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
@@ -13,12 +13,17 @@ import { RowWrapper } from "./Pricing.style";
 //   format: "MM-DD-YYYY",
 //   locale: "en",
 // };
-const Pricing = () => {
-  const [value, setValue] = React.useState(new Date());
+const Pricing = (props) => {
+  const [checkInDate, setCheckInDate] = React.useState(new Date());
+  const [checkOutDate, setCheckOutDate] = React.useState(new Date());
+
   const [searchDate, setSearchDate] = useState({
     setStartDate: null,
     setEndDate: null,
   });
+  useEffect(() => {
+    console.log("props in Pricing is ", props);
+  }, []);
   return (
     <>
       <h2 style={{ fontWeight: "bold" }}> Pricing</h2>
@@ -37,10 +42,11 @@ const Pricing = () => {
             <div style={{ display: "flex", flexDirection: "column" }}>
               <DesktopDatePicker
                 label="Check in date"
-                value={value}
-                minDate={new Date("2017-01-01")}
+                value={checkInDate}
+                minDate={new Date()}
                 onChange={(newValue) => {
-                  setValue(newValue);
+                  setCheckInDate(newValue);
+                  props.setCheckInDate(newValue);
                 }}
                 renderInput={(params) => <TextField {...params} />}
               />
@@ -108,10 +114,11 @@ const Pricing = () => {
             <div style={{ display: "flex", flexDirection: "column" }}>
               <DesktopDatePicker
                 label="Check out date"
-                value={value}
-                minDate={new Date("2017-01-01")}
+                value={checkOutDate}
+                minDate={new Date()}
                 onChange={(newValue) => {
-                  setValue(newValue);
+                  setCheckOutDate(newValue);
+                  props.setCheckOutDate(newValue);
                 }}
                 renderInput={(params) => <TextField {...params} />}
               />

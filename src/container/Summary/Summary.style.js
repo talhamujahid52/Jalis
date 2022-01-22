@@ -100,7 +100,18 @@ export const PaymentWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
+export const PaymentMethodImage = styled.div`
+  width: 100px;
+  height: 60px;
+  @media (max-width: 1100px) {
+    width: 60px;
+    height: 40px;
+  }
+`;
 export const ProceedButton = styled.button`
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
   border: 0px;
   background: #ed702d;
   color: white;

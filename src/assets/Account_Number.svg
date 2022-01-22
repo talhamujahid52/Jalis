@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.212" x2="0.899" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2ae7e8"/>
+      <stop offset="1" stop-color="#00b4b5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.678"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Account_Number" transform="translate(0 0.327)">
+    <rect id="Rectangle_6492" data-name="Rectangle 6492" width="64" height="64" rx="10" transform="translate(0 -0.327)" fill="url(#linear-gradient)"/>
+    <path id="Icon_material-format-list-numbered" data-name="Icon material-format-list-numbered" d="M3,24.4H5.83V25.1H4.415V26.52H5.83v.708H3v1.415H7.245V22.982H3ZM4.415,11.661H5.83V6H3V7.415H4.415ZM3,15.906H5.547L3,18.878v1.274H7.245V18.736H4.7l2.547-2.972V14.491H3Zm7.076-8.491v2.83H29.888V7.415Zm0,19.812H29.888V24.4H10.076Zm0-8.491H29.888v-2.83H10.076Z" transform="translate(15.229 14.508)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

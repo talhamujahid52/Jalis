@@ -1,8 +1,8 @@
-import React from 'react';
-import { MarkerClusterer } from '@react-google-maps/api';
-import MapWrapper from './MapWrapper';
-import HotelMapMarkerCluster from './ListingPageMap';
-import HotelMapMarkerSingle from './SinglePageMap';
+import React from "react";
+import { MarkerClusterer } from "@react-google-maps/api";
+import MapWrapper from "./MapWrapper";
+import HotelMapMarkerCluster from "./ListingPageMap";
+import HotelMapMarkerSingle from "./SinglePageMap";
 
 const Map = (props) => {
   const { multiple, location } = props;
@@ -40,8 +40,8 @@ const Map = (props) => {
         <MapWrapper
           id="map-single-location"
           mapContainerStyle={{
-            height: '400px',
-            width: '100%',
+            height: "300px",
+            width: "100%",
           }}
           zoom={8}
           center={{

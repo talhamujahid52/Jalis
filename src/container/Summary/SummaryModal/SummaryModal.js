@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FinalCalculationNameAndAmount } from "./SummaryModal.style";
 import madaIcon from "../../../assets/mada-icon.svg";
 import Modal from "@mui/material/Modal";
@@ -11,9 +11,11 @@ import {
 
 const useSummaryModal = () => {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const handleOpen = () => {
+    setOpen(true);
+  };
   const handleClose = () => setOpen(false);
-  const Popup = () => {
+  const Popup = (props) => {
     return (
       <div>
         <Modal
@@ -92,7 +94,7 @@ const useSummaryModal = () => {
                 <div style={{ height: "60px", width: "100px" }}>
                   <img
                     style={{ color: "#707070", height: "100%", width: "100%" }}
-                    src={madaIcon}
+                    src={props.paymentMethod ? props.paymentMethod : madaIcon}
                   />
                 </div>
               </RowWrapper>

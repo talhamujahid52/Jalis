@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.212" x2="0.899" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffc850"/>
+      <stop offset="1" stop-color="#ffb719"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.678"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Reviews_Rating" transform="translate(-307 -398)">
+    <rect id="Rectangle_6427" data-name="Rectangle 6427" width="65" height="65" rx="10" transform="translate(307 398)" fill="url(#linear-gradient)"/>
+    <path id="Icon_awesome-star" data-name="Icon awesome-star" d="M14.05.94,10.6,7.93,2.888,9.055a1.69,1.69,0,0,0-.935,2.883l5.581,5.438-1.32,7.682a1.689,1.689,0,0,0,2.45,1.779l6.9-3.627,6.9,3.627a1.69,1.69,0,0,0,2.45-1.779L23.6,17.376l5.581-5.438a1.69,1.69,0,0,0-.935-2.883L20.528,7.93,17.08.94A1.691,1.691,0,0,0,14.05.94Z" transform="translate(324.13 416.572)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

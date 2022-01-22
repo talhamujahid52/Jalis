@@ -1,0 +1,22 @@
+<svg id="Bank" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.212" x2="0.899" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a8dcfe"/>
+      <stop offset="1" stop-color="#39a1fa"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.678"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_6444" data-name="Rectangle 6444" width="64" height="64" rx="10" fill="url(#linear-gradient)"/>
+  <g id="museum" transform="translate(18.23 18.229)">
+    <path id="Path_11656" data-name="Path 11656" d="M396.426,268.344h3.141v7.522h-3.141Zm0,0" transform="translate(-375.669 -254.293)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_11657" data-name="Path 11657" d="M282.809,268.344h3.142v7.522h-3.142Zm0,0" transform="translate(-268.001 -254.293)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_11658" data-name="Path 11658" d="M169.191,268.344h3.142v7.522h-3.142Zm0,0" transform="translate(-160.332 -254.293)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_11659" data-name="Path 11659" d="M55.578,268.344H58.72v7.522H55.578Zm0,0" transform="translate(-52.668 -254.293)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_11660" data-name="Path 11660" d="M58.661,209.129v-.785H35.578v.785a.785.785,0,0,0,.785.785H57.876A.785.785,0,0,0,58.661,209.129Zm0,0" transform="translate(-33.715 -197.435)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_11661" data-name="Path 11661" d="M26.037,442H.8a.785.785,0,0,0-.785.785v2.094a.785.785,0,0,0,.785.785H26.037a.785.785,0,0,0,.785-.785v-2.094A.785.785,0,0,0,26.037,442Zm0,0" transform="translate(-0.014 -418.857)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_11662" data-name="Path 11662" d="M.787,9.338H26.025a.785.785,0,0,0,.412-1.454L13.817.117a.785.785,0,0,0-.823,0L.375,7.884A.785.785,0,0,0,.787,9.338ZM12.872,4.62H13.94a.785.785,0,1,1,0,1.571H12.872a.785.785,0,0,1,0-1.571Zm0,0" transform="translate(-0.001 0)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

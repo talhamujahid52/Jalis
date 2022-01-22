@@ -10,7 +10,8 @@ const ReviewsAndRatings = () => {
         style={{
           background: "#F8F9FA",
           borderRadius: "20px",
-          padding: "20px",
+          padding: "10px 10px",
+          // paddingTop: "10px",
         }}
       >
         <SingleReview></SingleReview>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.212" x2="0.899" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fecf92"/>
+      <stop offset="1" stop-color="#fd8d4b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.678"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="SMSNotification" transform="translate(-307 -671)">
+    <rect id="Rectangle_6515" data-name="Rectangle 6515" width="65" height="65" rx="10" transform="translate(307 671)" fill="url(#linear-gradient)"/>
+    <path id="Icon_material-email" data-name="Icon material-email" d="M31.486,6H6.165A3.161,3.161,0,0,0,3.016,9.165L3,28.156a3.174,3.174,0,0,0,3.165,3.165H31.486a3.174,3.174,0,0,0,3.165-3.165V9.165A3.174,3.174,0,0,0,31.486,6Zm0,6.33-12.66,7.913L6.165,12.33V9.165l12.66,7.913,12.66-7.913Z" transform="translate(320.209 685.893)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

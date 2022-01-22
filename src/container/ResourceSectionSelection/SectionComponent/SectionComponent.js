@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import resortImage from "../../../assets/ResortBooking.svg";
 import bedIcon from "../../../assets/BedIcon.svg";
+import AreaIcon from "../../../assets/AreaIcon.svg";
+import PeopleIcon from "../../../assets/NumPeopleIcon.svg";
+import LivingroomIcon from "../../../assets/LivingroomIcon.svg";
+import SelectedIcon from "../../../assets/selectedIcon.svg";
 import forwardArrow from "../../../assets/Arrow_2.svg";
 import {
   MainWrapper,
@@ -100,20 +104,29 @@ const SectionComponent = () => {
                 <p>2 bedrooms</p>
               </FeatureIconAndText>
               <FeatureIconAndText>
-                <div>
-                  <img src={bedIcon} />
+                <div style={{ width: "50px", height: "30px" }}>
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={LivingroomIcon}
+                  />
                 </div>
                 <p>3 living rooms</p>
               </FeatureIconAndText>
               <FeatureIconAndText>
-                <div>
-                  <img src={bedIcon} />
+                <div style={{ width: "38px", height: "25px" }}>
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={PeopleIcon}
+                  />
                 </div>
                 <p>7 people max</p>
               </FeatureIconAndText>
               <FeatureIconAndText>
-                <div>
-                  <img src={bedIcon} />
+                <div style={{ width: "28px", height: "28px" }}>
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={AreaIcon}
+                  />
                 </div>
                 <p>3500 sq ft</p>
               </FeatureIconAndText>
@@ -143,7 +156,7 @@ const SectionComponent = () => {
                 <p
                   style={{ margin: "0px", color: "#A5A7AF", fontSize: "16px" }}
                 >
-                  Check out Time
+                  Check in Time
                 </p>
                 <p
                   style={{
@@ -163,10 +176,19 @@ const SectionComponent = () => {
         style={{ backgroundColor: clicked ? "#ED702D" : "#a5a5a5" }}
         onClick={handleClick}
       >
-        <p style={{ margin: "0px", textAlign: "center" }}>
-          Choose The Resource
+        <p
+          style={{
+            margin: "0px",
+            textAlign: "center",
+            fontSize: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          Choose this resource
         </p>
-        <img src={bedIcon} />
+        <div style={{ width: "41px", height: "24px" }}>
+          <img style={{ width: "100%", height: "100%" }} src={SelectedIcon} />
+        </div>
       </ChooseTheResource>
     </ComponentOuterWrapper>
   );

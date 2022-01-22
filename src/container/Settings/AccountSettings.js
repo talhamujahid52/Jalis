@@ -18,6 +18,7 @@ import {
   Messages,
   My_Resort_Bookings,
   AddService,
+  MANAGE_SERVICE_PAGE,
 } from "../../settings/constant";
 
 const AccountSettings = () => {
@@ -95,7 +96,7 @@ const AccountSettings = () => {
                   name="Manage Services"
                   description="Add and remove resorts and resources"
                   onClick={() => {
-                    history.push(AddService);
+                    history.push(MANAGE_SERVICE_PAGE);
                   }}
                 ></ServicesCard>
 

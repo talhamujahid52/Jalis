@@ -1,5 +1,6 @@
 import React from "react";
 import starIcon from "../../../assets/star.svg";
+import reviewProfile from "../../../assets/reviewProfile.png";
 import { TopDiv, MiddleDiv } from "./SingleReview.style";
 const SingleReview = () => {
   return (
@@ -8,12 +9,12 @@ const SingleReview = () => {
         padding: "15px",
         backgroundColor: "white",
         borderRadius: "20px",
-        marginBottom: "20px",
+        margin: "10px 0px",
       }}
     >
       {/* Top Div */}
       <TopDiv>
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div style={{ display: "flex", alignItems: "flex-start" }}>
           <div
             style={{
               height: "75px",
@@ -21,7 +22,15 @@ const SingleReview = () => {
               borderRadius: "100px",
               backgroundColor: "green",
             }}
-          ></div>
+          >
+            <img
+              style={{
+                height: "100%",
+                width: "100%",
+              }}
+              src={reviewProfile}
+            ></img>
+          </div>
           <p
             style={{
               color: "black",
@@ -29,12 +38,19 @@ const SingleReview = () => {
               fontWeight: "bold",
               margin: "0px",
               marginLeft: "10px",
+              marginTop: "15px",
             }}
           >
             Marks Anderson
           </p>
         </div>
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginBottom: "20px",
+          }}
+        >
           {new Array(5).fill(0).map((item, index) => {
             return (
               <img

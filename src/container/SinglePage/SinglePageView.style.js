@@ -11,9 +11,9 @@ const SinglePageWrapper = styled.div`
     margin-bottom: 30px;
   }
   @media (max-width: 480px) {
-    padding-left: 20px;
+    padding-left: 10px;
     padding-top: 20px;
-    padding-right: 20px;
+    padding-right: 10px;
   }
 `;
 
@@ -261,8 +261,9 @@ export const LocationWrapper = styled.div`
   align-items: center;
 `;
 export const LocationArea = styled.div`
-  color: ${themeGet("text.1", "#909090")};
-  font-size: 24px;
+  /* color: ${themeGet("text.1", "#909090")}; */
+  color: #3a3a3a;
+  font-size: 22px;
   font-weight: 400;
   white-space: nowrap;
   /* width: 50%; */
@@ -308,10 +309,12 @@ export const TitleAndPriceWrapper = styled.div`
   }
 `;
 export const Title = styled.h2`
-  color: ${themeGet("text.0", "#2C2C2C")};
+  /* color: ${themeGet("text.0", "#2C2C2C")}; */
+  color: #3a3a3a;
   font-size: 25px;
   line-height: 34px;
-  font-weight: 700;
+  /* font-weight: 700; */
+  font-weight: bolder;
   margin: 0 0 4px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -325,6 +328,7 @@ export const ArabicText = styled.p`
   margin: 0px;
   margin-left: 2px;
   margin-right: 2px;
+  font-weight: bold;
   font-family: "Noto Kufi Arabic", sans-serif;
   color: ${themeGet("primary.0", "#2C2C2C")};
 `;
@@ -340,7 +344,9 @@ export const PriceArea = styled.div`
   overflow: hidden;
   white-space: nowrap; */
   @media (max-width: 800px) {
-    width: 52%;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
     /* text-align: left; */
     font-size: 16px;
   }

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.212" x2="0.899" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c7f9b1"/>
+      <stop offset="1" stop-color="#2dcb36"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.678"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="PushNotification" transform="translate(-307 -616)">
+    <rect id="Rectangle_6450" data-name="Rectangle 6450" width="65" height="65" rx="10" transform="translate(307 616)" fill="url(#linear-gradient)"/>
+    <path id="Icon_material-notifications-active" data-name="Icon material-notifications-active" d="M11.924,6.278,9.636,3.99A16.679,16.679,0,0,0,3.045,16.549h3.2A13.512,13.512,0,0,1,11.924,6.278ZM31.746,16.549h3.2A16.78,16.78,0,0,0,28.355,3.99L26.083,6.278A13.591,13.591,0,0,1,31.746,16.549Zm-3.152.8c0-4.912-2.624-9.023-7.2-10.111V6.15a2.4,2.4,0,0,0-4.8,0V7.238C12,8.326,9.4,12.421,9.4,17.349v8l-3.2,3.2v1.6h25.6v-1.6l-3.2-3.2ZM19,34.947a2.8,2.8,0,0,0,.64-.064A3.246,3.246,0,0,0,21.939,33a3.212,3.212,0,0,0,.24-1.248h-6.4A3.223,3.223,0,0,0,19,34.947Z" transform="translate(319.915 628.268)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

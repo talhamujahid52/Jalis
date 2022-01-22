@@ -36,6 +36,7 @@ import {
   AddResortInputWrapper,
   AddServiceInputWrapper,
   AddServiceTextAreaWrapper,
+  PricingWrapper,
 } from "./AddService.style";
 import { alignItems } from "styled-system";
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -273,44 +274,8 @@ const AddResort = () => {
               />
             </GoogleMapReact>
           </div>
-          {/* <HeadingWrapper>Resort Features</HeadingWrapper>
-          <AdditionalServicesWrapper></AdditionalServicesWrapper> */}
-
-          {/* {features.map((item, index) => {
-            return (
-              <Chip
-                onClick={() => {
-                  // let newArray = new Array();
-                  let newArray = [...features];
-                  console.log("new Array is", newArray);
-                  newArray[index].selected = !newArray[index].selected;
-                  // return newArray;
-                  console.log("new Array is", newArray);
-                  setFeatures(newArray);
-                }}
-                avatar={
-                  <img
-                    src={item.icon}
-                    style={{ height: "15px", width: "15px", color: "blue" }}
-                  />
-                }
-                label={item.name}
-                sx={{
-                  paddingLeft: "5px",
-                  marginBottom: "10px",
-                  marginRight: "10px",
-                  backgroundColor: item.selected ? "#ED702D28" : "white",
-                }}
-              />
-            );
-          })} */}
-          {/* <hr style={{ marginBottom: "20px" }}></hr> */}
-
-          {/* Additional Service */}
-          {/* Additional Service */}
-          {/* Additional Service */}
-          {/* Additional Service */}
-          {/* Additional Service */}
+          {/* <HeadingWrapper>Price</HeadingWrapper>
+          <PricingWrapper></PricingWrapper> */}
 
           {AdditionalFeatures.map((item, index) => {
             return (

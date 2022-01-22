@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SectionComponent from "./SectionComponent/SectionComponent";
 import {
   OuterWrapper,
@@ -13,7 +13,10 @@ import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import { useHistory } from "react-router-dom";
 import { Summary_Detail } from "settings/constant";
 
-const ResourceSectionSelection = () => {
+const ResourceSectionSelection = (props) => {
+  const checkInDate = props.location.state.checkInDate;
+  const checkOutDate = props.location.state.checkOutDate;
+
   const history = useHistory();
   const [value, setValue] = React.useState(new Date());
   const color = "#ffffff";
@@ -24,6 +27,16 @@ const ResourceSectionSelection = () => {
     { price: "ريال10", name: "Air conditioning", selected: false },
     { price: "ريال10", name: "TV", selected: false },
   ]);
+  useEffect(() => {
+    console.log(
+      "checkInDate in Resource Section Selection",
+      props.location.state.checkInDate
+    );
+    console.log(
+      "checkOutDate in Resource Section Selection",
+      props.location.state.checkOutDate
+    );
+  }, []);
   return (
     <OuterWrapper>
       <h1 style={{ margin: "0px", fontWeight: "bold" }}>Section</h1>
@@ -69,7 +82,11 @@ const ResourceSectionSelection = () => {
                 marginBottom: "10px",
                 marginRight: "10px",
                 backgroundColor: item.selected ? "#ED702D28" : "white",
-                borderWidth: "2px",
+                color: item.selected ? "#ED702D" : "#ADADAD",
+                borderWidth: item.selected ? "0px" : "2px",
+                fontFamily: "Noto Kufi Arabic, sans-serif",
+
+                // borderWidth: "2px",
                 borderStyle: "solid",
                 borderColor: item.selected ? "#ED702D28" : "#E3E3E3",
               }}
@@ -113,7 +130,8 @@ const ResourceSectionSelection = () => {
             >
               <DesktopDatePicker
                 label="Check in date"
-                value={value}
+                disabled
+                value={props.location.state.checkInDate}
                 minDate={new Date("2017-01-01")}
                 onChange={(newValue) => {
                   setValue(newValue);
@@ -145,7 +163,8 @@ const ResourceSectionSelection = () => {
               </p>
               <DesktopDatePicker
                 label="Check out date"
-                value={value}
+                value={props.location.state.checkOutDate}
+                disabled
                 minDate={new Date("2017-01-01")}
                 onChange={(newValue) => {
                   setValue(newValue);
@@ -158,6 +177,7 @@ const ResourceSectionSelection = () => {
                         svg: { color },
                         input: { color },
                         label: { color },
+                        backgroundColor: { color },
                       }}
                     />
                   );
@@ -167,7 +187,7 @@ const ResourceSectionSelection = () => {
           </LocalizationProvider>
           <NextButton
             onClick={() => {
-              history.push(Summary_Detail);
+              history.push(Summary_Detail, { checkInDate, checkOutDate });
             }}
           >
             Next

@@ -1,6 +1,9 @@
 import React from "react";
+import useWindowSize from "../../../library/hooks/useWindowSize";
 
 const AmenetiesComponent = (props) => {
+  const { width } = useWindowSize();
+
   return (
     <div
       style={{
@@ -10,7 +13,12 @@ const AmenetiesComponent = (props) => {
         alignItems: "center",
       }}
     >
-      <div style={{ width: "100px", height: "100px" }}>
+      <div
+        style={{
+          width: width > 600 ? "100px" : "30px",
+          height: width > 600 ? "100px" : "30px",
+        }}
+      >
         <img style={{ height: "100%", width: "100%" }} src={props.image} />
       </div>
       <p style={{ color: "#2D3447", fontSize: "14px", fontWeight: "bold" }}>

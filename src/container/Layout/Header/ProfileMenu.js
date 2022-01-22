@@ -9,6 +9,7 @@ import {
   ACCOUNT_SETTINGS_PAGE,
   ADD_HOTEL_PAGE,
   ADD_RESORT_PAGE,
+  UserProfile,
 } from "settings/constant";
 
 const ProfileMenu = ({ avatar, history }) => {
@@ -35,7 +36,8 @@ const ProfileMenu = ({ avatar, history }) => {
 
       <Menu className={`dropdown-menu ${state ? "active" : "hide"}`}>
         <Menu.Item onClick={closeDropdown} key="0">
-          <NavLink to={AGENT_PROFILE_PAGE}>View Profile</NavLink>
+          {/* <NavLink to={AGENT_PROFILE_PAGE}>View Profile</NavLink> */}
+          <NavLink to={UserProfile}>View Profile</NavLink>
         </Menu.Item>
         <Menu.Item onClick={closeDropdown} key="1">
           <NavLink to={ADD_RESORT_PAGE}>Add Hotel</NavLink>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   MainSummaryWrapper,
   DetailsWrapper,
@@ -10,6 +10,7 @@ import {
   NameSectionAndPriceWrapper,
   FinalCalculationNameAndAmount,
   PaymentWrapper,
+  PaymentMethodImage,
   ProceedButton,
   CancelButton,
 } from "./Summary.style";
@@ -19,17 +20,26 @@ import locationIcon from "../../assets/location-pin.svg";
 import VisaMcIcon from "../../assets/visaMC-icon.svg";
 import madaIcon from "../../assets/mada-icon.svg";
 import googlePay from "../../assets/GPay-icon.svg";
+import doneAllIcon from "../../assets/DoneAll.svg";
 import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import useSummaryModal from "./SummaryModal/SummaryModal";
-const Summary = () => {
+import useWindowSize from "../../library/hooks/useWindowSize";
+
+const Summary = (props) => {
+  const { width } = useWindowSize();
   const [value, setValue] = React.useState(new Date());
   const Modal = useSummaryModal();
+  const [visa, setVisa] = useState();
+  const [mada, setMada] = useState();
+  const [google, setGoogle] = useState();
+  const [paymentMethod, setPaymentMethod] = useState();
+
   return (
     <MainSummaryWrapper>
-      <Modal.Popup />
+      <Modal.Popup paymentMethod={paymentMethod} />
       <h1 style={{ margin: "0px", fontWeight: "bold" }}> Summary</h1>
       <p style={{ color: "#A5A5A5", margin: "0px", fontSize: "16px" }}>
         Your Resort Booking Summary
@@ -130,7 +140,8 @@ const Summary = () => {
           >
             <DesktopDatePicker
               label="Check in date"
-              value={value}
+              value={props.location.state.checkInDate}
+              disabled
               minDate={new Date("2017-01-01")}
               onChange={(newValue) => {
                 setValue(newValue);
@@ -152,7 +163,8 @@ const Summary = () => {
             </p>
             <DesktopDatePicker
               label="Check out date"
-              value={value}
+              value={props.location.state.checkOutDate}
+              disabled
               minDate={new Date("2017-01-01")}
               onChange={(newValue) => {
                 setValue(newValue);
@@ -170,24 +182,33 @@ const Summary = () => {
             borderBottom: "1px solid #707070 ",
           }}
         >
-          <div
+          {/* <div
             style={{
-              backgroundColor: "#F8F9FA",
+              // backgroundColor: "#F8F9FA",
               borderRadius: "20px",
-              padding: "20px",
+              padding: "10px",
             }}
-          >
-            <p style={{ margin: "0px", fontSize: "16px" }}>
+          > */}
+          {/* <p style={{ margin: "0px", fontSize: "16px" }}>
               It was my first visit to this property had heard lot of praises
               turned out to be worth it.
-            </p>
-          </div>
+            </p> */}
+          <textarea
+            style={{
+              borderRadius: "5px",
+              width: "100%",
+              height: "100px",
+              padding: "20px",
+              // border: "0px",
+            }}
+          ></textarea>
+          {/* </div> */}
         </div>
-        <div
+        {/* <div
           style={{
             paddingTop: "20px",
             paddingBottom: "20px",
-            borderBottom: "1px solid #707070 ",
+            borderBottom: "1px solid #707070",
           }}
         >
           <div
@@ -227,7 +248,7 @@ const Summary = () => {
         >
           This information is needed to be added to the contract and it will not
           be saved
-        </p>
+        </p> */}
         <p
           style={{
             margin: "0px",
@@ -276,7 +297,7 @@ const Summary = () => {
           <FinalCalculationNameAndAmount style={{ color: "black" }}>
             Total amount
           </FinalCalculationNameAndAmount>
-          <FinalCalculationNameAndAmount style={{ color: "black" }}>
+          <FinalCalculationNameAndAmount style={{ color: "#ED702D" }}>
             ريال 3020
           </FinalCalculationNameAndAmount>
         </div>
@@ -295,17 +316,39 @@ const Summary = () => {
             ريال 906
           </FinalCalculationNameAndAmount>
         </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "20px",
+          }}
+        >
+          <FinalCalculationNameAndAmount>
+            Remaining
+          </FinalCalculationNameAndAmount>
+
+          <FinalCalculationNameAndAmount>
+            ريال 106
+          </FinalCalculationNameAndAmount>
+        </div>
       </DetailsWrapper>
       <PaymentWrapper>
-        <h1 style={{ margin: "0px", fontWeight: "bold", textAlign: "center" }}>
+        <p
+          style={{
+            margin: "0px",
+            fontWeight: "bold",
+            textAlign: "center",
+            fontSize: width > 900 ? "28px" : "22px",
+          }}
+        >
           Choose your Payment Method
-        </h1>
+        </p>
         <p
           style={{
             color: "#A5A5A5",
             fontSize: "16px",
             margin: "0px",
-            marginTop: "25px",
+            marginTop: width > 900 ? "25px" : "10px",
             marginBottom: "25px",
           }}
         >
@@ -319,32 +362,66 @@ const Summary = () => {
             justifyContent: "center",
           }}
         >
-          <div style={{ height: "60px", width: "100px" }}>
+          <PaymentMethodImage
+            style={{
+              border: visa ? "1px solid #ED702D" : "0px ",
+              borderRadius: "8px",
+            }}
+            onClick={() => {
+              setVisa(!visa);
+              setGoogle(false);
+              setMada(false);
+              setPaymentMethod(VisaMcIcon);
+            }}
+          >
             <img
               style={{ color: "#707070", height: "100%", width: "100%" }}
               src={VisaMcIcon}
             />
-          </div>
-          <div style={{ height: "60px", width: "100px" }}>
+          </PaymentMethodImage>
+          <PaymentMethodImage
+            style={{
+              border: mada ? "1px solid #ED702D" : "0px ",
+              borderRadius: "8px",
+            }}
+            onClick={() => {
+              setVisa(false);
+              setGoogle(false);
+              setMada(!mada);
+              setPaymentMethod(madaIcon);
+            }}
+          >
             <img
               style={{ color: "#707070", height: "100%", width: "100%" }}
               src={madaIcon}
             />
-          </div>
-          <div style={{ height: "60px", width: "100px" }}>
+          </PaymentMethodImage>
+          <PaymentMethodImage
+            style={{
+              border: google ? "1px solid #ED702D" : "0px ",
+              borderRadius: "8px",
+            }}
+            onClick={() => {
+              setVisa(false);
+              setGoogle(!google);
+              setMada(false);
+              setPaymentMethod(googlePay);
+            }}
+          >
             <img
               style={{ color: "#707070", height: "100%", width: "100%" }}
               src={googlePay}
             />
-          </div>
+          </PaymentMethodImage>
         </div>
       </PaymentWrapper>
       <p
         style={{
           margin: "0px",
-          marginTop: "70px",
+          marginTop: "50px",
           marginBottom: "30px",
           fontSize: "18px",
+          textAlign: "center",
         }}
       >
         By proceeding, I confirm that I read and agree to the terms and
@@ -353,11 +430,19 @@ const Summary = () => {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-around",
           width: "100%",
         }}
       >
-        <ProceedButton onClick={Modal.handleOpen}>Proceed</ProceedButton>
+        <ProceedButton onClick={Modal.handleOpen}>
+          <div style={{ width: "30px", height: "27px", marginRight: "10px" }}>
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={doneAllIcon}
+            ></img>
+          </div>
+          Proceed
+        </ProceedButton>
         <CancelButton>Cancel</CancelButton>
       </div>
     </MainSummaryWrapper>

@@ -36,6 +36,8 @@ import {
   DetailedChat,
   AddService,
   SERVICES_HOME_PAGE,
+  UserProfile,
+  MANAGE_SERVICE_PAGE,
 } from "./settings/constant";
 
 /**
@@ -46,6 +48,16 @@ import {
 const Loading = () => null;
 
 const routes = [
+  {
+    path: UserProfile,
+    component: Loadable({
+      loader: () =>
+        import(/* webpackChunkName: "Home" */ "./container/Profile/Profile"),
+      loading: Loading,
+      modules: ["UserProfile"],
+    }),
+    exact: true,
+  },
   {
     path: HOME_PAGE,
     component: Loadable({
@@ -143,6 +155,17 @@ const routes = [
         ),
       loading: Loading,
       modules: ["ManageResort"],
+    }),
+  },
+  {
+    path: MANAGE_SERVICE_PAGE,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "ForgetPassword" */ "./container/ManageServices/ManageServices"
+        ),
+      loading: Loading,
+      modules: ["ManageService"],
     }),
   },
   {

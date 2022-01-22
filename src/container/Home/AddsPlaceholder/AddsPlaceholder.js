@@ -1,7 +1,10 @@
 import React from "react";
 import Container from "components/UI/Container/Container";
+import useWindowSize from "../../../library/hooks/useWindowSize";
 
 const AddsPlaceholder = (props) => {
+  const { width } = useWindowSize();
+
   return (
     <>
       {props.horizontalMargin && (
@@ -11,7 +14,7 @@ const AddsPlaceholder = (props) => {
             marginTop: "40px",
             marginBottom: "40px",
             borderRadius: "25px",
-            height: "200px",
+            height: width > 900 ? "200px" : "150px",
             backgroundColor: "#031930D9",
             display: "flex",
             alignItems: "center",
@@ -37,7 +40,8 @@ const AddsPlaceholder = (props) => {
               marginTop: "40px",
               marginBottom: "40px",
               borderRadius: "25px",
-              height: "200px",
+              height: width > 900 ? "200px" : "150px",
+
               backgroundColor: "#031930D9",
               display: "flex",
               alignItems: "center",

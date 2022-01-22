@@ -46,8 +46,8 @@ export const ImageWrapper = styled.div`
   border-radius: 10px;
   background: #ff51b5;
   @media (max-width: 600px) {
-    height: 160px;
-    width: 130px;
+    height: 80px;
+    width: 60px;
   }
 `;
 export const BottomRightDiv = styled.div`
@@ -63,7 +63,7 @@ export const BottomRightDiv = styled.div`
 `;
 export const FeaturesWrapper = styled.div`
   border-radius: 10px;
-  width: 350px;
+  width: 400px;
   background: #fafafa;
   display: flex;
   flex-wrap: wrap;
@@ -111,16 +111,16 @@ export const IndividualTimeWrapper = styled.div`
 export const ChooseTheResource = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  /* background: #a5a5a5; */
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   /* border: 1px solid red; */
   height: 220px;
-  width: 15%;
-  padding: 50px 50px;
+  /* width: 15%; */
+  padding: 50px 20px;
   color: #ffffff;
-  font-size: 18px;
+  /* font-size: 18px; */
   @media (max-width: 1100px) {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 20px;

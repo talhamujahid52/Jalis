@@ -20,7 +20,7 @@ export const AddResortInputWrapper = styled.div`
   }
 `;
 export const HeadingWrapper = styled.p`
-  font-size: 12px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -107,6 +107,12 @@ export const CancelButton = styled.button`
   @media (max-width: 900px) {
     width: 150px;
   }
+`;
+
+export const PricingWrapper = styled.div`
+  box-shadow: 0px 2px 16px #0000000f;
+  border-radius: 8px;
+  border: 1px solid #f5f4f4;
 `;
 
 export default AddResortWrapper;
