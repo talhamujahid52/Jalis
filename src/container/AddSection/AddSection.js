@@ -7,16 +7,19 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useHistory } from "react-router-dom";
-import { MANAGE_SECTION_PAGE, TAB_Navigation } from "settings/constant";
-import { StepperButton } from "./AddSection.style";
+import {
+  //  MANAGE_SECTION_PAGE,
+  TAB_Navigation,
+} from "settings/constant";
+// import { StepperButton } from "./AddSection.style";
 import {
   useForm,
-  useFormContext,
-  Controller,
-  FormProvider,
+  // useFormContext,
+  // Controller,
+  // FormProvider,
 } from "react-hook-form";
 const steps = ["", "", ""];
 
@@ -24,7 +27,7 @@ export default function HorizontalLinearStepper() {
   const history = useHistory();
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
-  const methods = useForm();
+  // const methods = useForm();
 
   const isStepOptional = (step) => {
     return step === 1;
@@ -41,9 +44,9 @@ export default function HorizontalLinearStepper() {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
-  const onDataSubmit = (data) => {
-    console.log(data);
-  };
+  // const onDataSubmit = (data) => {
+  //   console.log(data);
+  // };
 
   const components = [
     <GeneralSection handleNext={handleNext} handleBack={handleBack} />,

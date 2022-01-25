@@ -1,5 +1,5 @@
-import React, { Fragment, useState } from "react";
-import { useLocation } from "library/hooks/useLocation";
+import React, { useState } from "react";
+// import { useLocation } from "library/hooks/useLocation";
 import Loader from "components/Loader/Loader";
 import useWindowSize from "library/hooks/useWindowSize";
 import Location from "./Location/Location";
@@ -17,10 +17,10 @@ import SinglePageWrapper, {
   NextButton,
 } from "./SinglePageView.style";
 import "./SinglePageView.css";
-import PostImageGallery from "./ImageGallery/ImageGallery";
+// import PostImageGallery from "./ImageGallery/ImageGallery";
 import useDataApi from "library/hooks/useDataApi";
 import isEmpty from "lodash/isEmpty";
-import locationIcon from "../../assets/location-pin.svg";
+// import locationIcon from "../../assets/location-pin.svg";
 import verifiedIcon from "../../assets/Verified.svg";
 import resortImage from "../../assets/addresort.jpg";
 import Chip from "@mui/material/Chip";
@@ -39,8 +39,8 @@ const SinglePage = ({ match }) => {
     { price: "ريال10", name: "Air conditioning", selected: false },
     { price: "ريال10", name: "TV", selected: false },
   ]);
-  const { href } = useLocation();
-  const [isModalShowing, setIsModalShowing] = useState(false);
+  // const { href } = useLocation();
+  // const [isModalShowing, setIsModalShowing] = useState(false);
   const { width } = useWindowSize();
 
   let url = "/data/hotel-single.json";
@@ -95,6 +95,7 @@ const SinglePage = ({ match }) => {
                       }}
                     >
                       <img
+                        alt="resortImage"
                         src={resortImage}
                         style={{
                           height: "100%",
@@ -136,6 +137,7 @@ const SinglePage = ({ match }) => {
                       }}
                     >
                       <img
+                        alt="resortImage"
                         src={resortImage}
                         // src={item[idx]}
                         style={{
@@ -163,6 +165,7 @@ const SinglePage = ({ match }) => {
             >
               <Title>{title}</Title>
               <img
+                alt="Verified"
                 style={{ height: "24px", width: "18px", marginLeft: "5px" }}
                 src={verifiedIcon}
               />

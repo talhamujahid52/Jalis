@@ -12,9 +12,9 @@ import GridCardWrapper, {
   TitleArea,
   PriceArea,
   ArabicText,
-  RatingArea,
-  MetaWrapper,
-  ButtonGroup,
+  // RatingArea,
+  // MetaWrapper,
+  // ButtonGroup,
 } from "./GridCard.style";
 
 const GridCard = ({
@@ -41,7 +41,11 @@ const GridCard = ({
           // width: "200px",
         }}
       >
-        <img src={ribbon} style={{ height: "100%", width: "100%" }} />
+        <img
+          alt="ribbon"
+          src={ribbon}
+          style={{ height: "100%", width: "100%" }}
+        />
         <p style={{ color: "white", marginTop: "-28px", marginLeft: "10px" }}>
           Special Offer: 40%
         </p>
@@ -58,6 +62,7 @@ const GridCard = ({
           <div style={{ display: "flex" }}>
             {location && (
               <img
+                alt="Location"
                 style={{ height: "20px", width: "15px", marginRight: "5px" }}
                 src={Location}
               />
@@ -91,6 +96,7 @@ const GridCard = ({
               new Array(5).fill(0).map((item, index) => {
                 return (
                   <img
+                    alt="starIcon"
                     key={index}
                     style={{ height: "20px", width: "15px", marginLeft: "2px" }}
                     src={starIcon}
@@ -119,6 +125,7 @@ const GridCard = ({
             {title && <TitleArea>{title}</TitleArea>}
             {title && (
               <img
+                alt="verified"
                 style={{ height: "18px", width: "12px", marginLeft: "5px" }}
                 src={Verified}
               />
@@ -166,6 +173,7 @@ const GridCard = ({
             </p>
             {title && (
               <img
+                alt="Verified"
                 style={{ height: "18px", width: "12px", marginLeft: "5px" }}
                 src={Verified}
               />

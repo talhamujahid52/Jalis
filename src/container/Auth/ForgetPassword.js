@@ -1,9 +1,9 @@
 import React from "react";
 import { useForm, Controller } from "react-hook-form";
-import { MdEmail } from "react-icons/md";
+// import { MdEmail } from "react-icons/md";
 import { Input, Button } from "antd";
 import { Radio } from "antd";
-import Logo from "components/UI/Logo/Logo";
+// import Logo from "components/UI/Logo/Logo";
 import FormControl from "components/UI/FormControl/FormControl";
 import { useHistory } from "react-router-dom";
 import { ENTER_NEW_PASSWORD } from "settings/constant";
@@ -14,12 +14,12 @@ import Wrapper, {
   FormWrapper,
   BannerWrapper,
 } from "./Auth.style";
-import { set } from "lodash";
+// import { set } from "lodash";
 
 export default function ForgetPassWord() {
   const history = useHistory();
   const [value, setValue] = React.useState(1);
-  const [emailRequired, setEmailRequired] = React.useState(false);
+  // const [emailRequired, setEmailRequired] = React.useState(false);
   const [input1, setInput1] = React.useState(false);
   const [input2, setInput2] = React.useState(true);
 

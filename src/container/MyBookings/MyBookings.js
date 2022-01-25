@@ -17,7 +17,7 @@ const MyBookings = () => {
       <TopDivWrapper>
         <ImageAndTextWrapper>
           <ImageWrapper>
-            <img src={mybooking} />
+            <img alt="myBookingImage" src={mybooking} />
           </ImageWrapper>
           <TextWrapper>My Bookings</TextWrapper>
         </ImageAndTextWrapper>

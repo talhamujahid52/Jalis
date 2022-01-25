@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import {
   RevenueWrapper,
   RevenueHeadingText,
@@ -8,12 +8,12 @@ import {
   MonthlyAndYearlyRevenueWrapperRow,
   BookingRow,
   BookingRowHeadingText,
-  BookingRowText,
+  // BookingRowText,
 } from "./Revenue.style";
 import BookingRowComponent from "./RevenueComponent";
 import AddsPlaceholder from "container/Home/AddsPlaceholder/AddsPlaceholder";
 const Revenue = () => {
-  const [paid, setPaid] = useState(false);
+  // const [paid, setPaid] = useState(false);
   return (
     <RevenueWrapper>
       <RevenueHeadingText>Revenue</RevenueHeadingText>

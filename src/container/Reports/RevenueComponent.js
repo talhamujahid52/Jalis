@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import { BookingRow, BookingRowText } from "./Revenue.style";
 const RevenueComponent = (props) => {
   return (

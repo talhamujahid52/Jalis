@@ -4,9 +4,9 @@ import { Divider } from "antd";
 import Logo from "components/UI/Logo/Logo";
 import { LOGIN_PAGE } from "settings/constant";
 import SignUpForm from "./SignUpForm";
-import SocialLogin from "../SocialLogin";
+// import SocialLogin from "../SocialLogin";
 import Wrapper, {
-  Title,
+  // Title,
   TitleInfo,
   Text,
   FormWrapper,

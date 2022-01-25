@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { useLocation } from "library/hooks/useLocation";
 import Loader from "components/Loader/Loader";
 import useWindowSize from "library/hooks/useWindowSize";
@@ -22,10 +22,10 @@ import SinglePageWrapper, {
   ArabicText,
   Title,
   NextButton,
-  startFromText,
+  // startFromText,
 } from "./SinglePageView.style";
 import "./SinglePageView.css";
-import PostImageGallery from "./ImageGallery/ImageGallery";
+// import PostImageGallery from "./ImageGallery/ImageGallery";
 import useDataApi from "library/hooks/useDataApi";
 import isEmpty from "lodash/isEmpty";
 import locationIcon from "../../assets/location-pin.svg";
@@ -41,7 +41,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from "react-responsive-carousel";
 // import { Carousel } from "react-carousel-minimal";
-import ImageGallery from "react-image-gallery";
+// import ImageGallery from "react-image-gallery";
 const SinglePage = ({ match }) => {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
@@ -55,8 +55,8 @@ const SinglePage = ({ match }) => {
     { price: "ريال10", name: "Air conditioning", selected: false },
     { price: "ريال10", name: "TV", selected: false },
   ]);
-  const { href } = useLocation();
-  const [isModalShowing, setIsModalShowing] = useState(false);
+  // const { href } = useLocation();
+  // const [isModalShowing, setIsModalShowing] = useState(false);
   const { width } = useWindowSize();
 
   let url = "/data/hotel-single.json";
@@ -125,6 +125,7 @@ const SinglePage = ({ match }) => {
                       }}
                     >
                       <img
+                        alt="resortImage"
                         src={resortImage}
                         style={{
                           height: "100%",
@@ -167,6 +168,7 @@ const SinglePage = ({ match }) => {
                       }}
                     >
                       <img
+                        alt="resortImage"
                         src={resortImage}
                         // src={item[idx]}
                         style={{
@@ -238,6 +240,7 @@ const SinglePage = ({ match }) => {
                 }}
               >
                 <img
+                  alt="location"
                   style={{ height: "100%", width: "100%" }}
                   src={locationIcon}
                 />
@@ -251,6 +254,7 @@ const SinglePage = ({ match }) => {
               {new Array(5).fill(0).map((item, index) => {
                 return (
                   <img
+                    alt="star"
                     key={index}
                     style={{
                       height: "20px",
@@ -274,6 +278,7 @@ const SinglePage = ({ match }) => {
             >
               <Title>{title}</Title>
               <img
+                alt="verified"
                 style={{ height: "24px", width: "18px", marginLeft: "5px" }}
                 src={verifiedIcon}
               />

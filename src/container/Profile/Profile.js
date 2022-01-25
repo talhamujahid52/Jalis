@@ -64,7 +64,7 @@ const Profile = () => {
                   Mark Nicholas
                 </h2>
                 <div style={{ height: "20px", width: "20px" }}>
-                  <img src={EditIcon}></img>
+                  <img alt="EditImage" src={EditIcon}></img>
                 </div>
               </div>
               <div
@@ -84,12 +84,16 @@ const Profile = () => {
             </div>
           </div>
           <div>
-            <img src={Edit}></img>
+            <img alt="EditImage" src={Edit}></img>
           </div>
         </ImageAndNameWrapper>
         <EmailWrapper>
           <div style={{ height: "25px", width: "20px" }}>
-            <img style={{ width: "100%", height: "100%" }} src={Email}></img>
+            <img
+              alt="EmailImage"
+              style={{ width: "100%", height: "100%" }}
+              src={Email}
+            ></img>
           </div>
           <p
             style={{
@@ -107,7 +111,11 @@ const Profile = () => {
         <WhatsappWrapper>
           <div style={{ display: "flex", alignItems: "center" }}>
             <div style={{ width: "90px", height: "60px" }}>
-              <img src={WhatsApp} style={{ width: "100%", height: "100%" }} />
+              <img
+                alt="WhatsApp"
+                src={WhatsApp}
+                style={{ width: "100%", height: "100%" }}
+              />
             </div>
             <p
               style={{
@@ -133,7 +141,7 @@ const Profile = () => {
               Change Phone number
             </p>
             <div style={{ height: "20px", width: "20px", marginLeft: "10px" }}>
-              <img src={EditIcon}></img>
+              <img alt="EditIcon" src={EditIcon}></img>
             </div>
           </div>
         </WhatsappWrapper>
@@ -175,7 +183,7 @@ const Profile = () => {
               Change Password
             </p>
             <div style={{ height: "20px", width: "20px", marginLeft: "10px" }}>
-              <img src={EditIcon}></img>
+              <img alt="EditImage" src={EditIcon}></img>
             </div>
           </div>
         </WhatsappWrapper>

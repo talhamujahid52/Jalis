@@ -4,9 +4,9 @@ import PricingWrapper, {
   PricingHeader,
   Title,
   Description,
-  ButtonGroup,
+  // ButtonGroup,
   PricingTableArea,
-  Button,
+  // Button,
   MembershipsPlanWrapper,
   PaymentOptionWrapper,
   AllTransactionsText,
@@ -19,8 +19,8 @@ import { CurrentPlan } from "../../settings/constant";
 // demo data
 import { monthlyPlans, annuallyPlans } from "./Pricing.data";
 import MadaIcon from "../../assets/mada-icon.svg";
-import VisaIcon from "../../assets/visaMC-icon.svg";
-import stcPayIcon from "../../assets/stcPay-icon.svg";
+// import VisaIcon from "../../assets/visaMC-icon.svg";
+// import stcPayIcon from "../../assets/stcPay-icon.svg";
 import { useHistory } from "react-router-dom";
 
 const Pricing = () => {

@@ -10,14 +10,14 @@ import contactadmin from "../../assets/ContactSiteAdmin.svg";
 import ServicesCard from "../../components/Settings/ServicesCard/ServicesCard";
 import ProfileCard from "../../components/Settings/ProfileCard/ProfileCard";
 import {
-  MANAGE_RESORT_PAGE,
+  // MANAGE_RESORT_PAGE,
   TAB_Navigation,
   My_Bookings,
   Reports,
   BlockedDates,
   Messages,
   My_Resort_Bookings,
-  AddService,
+  // AddService,
   MANAGE_SERVICE_PAGE,
 } from "../../settings/constant";
 
@@ -92,15 +92,6 @@ const AccountSettings = () => {
                 ></ServicesCard>
 
                 <ServicesCard
-                  picture={manageresort}
-                  name="Manage Services"
-                  description="Add and remove resorts and resources"
-                  onClick={() => {
-                    history.push(MANAGE_SERVICE_PAGE);
-                  }}
-                ></ServicesCard>
-
-                <ServicesCard
                   onClick={() => {
                     history.push(BlockedDates);
                   }}
@@ -155,6 +146,14 @@ const AccountSettings = () => {
                   picture={contactadmin}
                   name="Add Services"
                   description="see a list of all resort bookings"
+                ></ServicesCard>
+                <ServicesCard
+                  picture={manageresort}
+                  name="Manage Services"
+                  description="Add and remove resorts and resources"
+                  onClick={() => {
+                    history.push(MANAGE_SERVICE_PAGE);
+                  }}
                 ></ServicesCard>
                 <ServicesCard
                   picture={contactadmin}

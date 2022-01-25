@@ -1,5 +1,5 @@
 import Container from "components/UI/Container/Container";
-import React, { useState } from "react";
+import React from "react";
 import { PriceButtons, ButtonWrapper } from "./ServicesNearYourLocation.style";
 const ResortNearYourLocation = () => {
   return (

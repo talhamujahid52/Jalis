@@ -28,6 +28,7 @@ export const DetailedChat = "/detailed-chat";
 export const CurrentPlan = "/current-plan";
 export const AddService = "/add-Service";
 export const UserProfile = "/user-profile";
+export const Favourites = "/favourites";
 
 // Agent Profile Page Section
 export const AGENT_PROFILE_PAGE = "/profile";

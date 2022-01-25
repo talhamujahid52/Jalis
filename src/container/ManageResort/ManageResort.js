@@ -10,9 +10,9 @@ const ManageResort = (props) => {
   const changeSection = props.changeSections;
   const history = useHistory();
   const [value, setValue] = React.useState(false);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  // const handleChange = (event, newValue) => {
+  //   setValue(newValue);
+  // };
 
   return (
     <ManageResortWrapper>
@@ -36,12 +36,17 @@ const ManageResort = (props) => {
       >
         Create New Resort{" "}
         <div style={{ height: "12px", width: "12px", marginLeft: "20px" }}>
-          <img style={{ height: "100%", width: "100%" }} src={AddIcon}></img>
+          <img
+            alt="AddIcon"
+            style={{ height: "100%", width: "100%" }}
+            src={AddIcon}
+          ></img>
         </div>
       </div>
       {value && (
         <div>
           <img
+            alt="Animation"
             src={staticAnimation}
             style={{ height: "100%", width: "100%" }}
           ></img>

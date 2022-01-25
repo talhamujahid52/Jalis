@@ -1,13 +1,13 @@
 import React from "react";
 import { useForm, Controller } from "react-hook-form";
-import { MdEmail } from "react-icons/md";
+// import { MdEmail } from "react-icons/md";
 import { Input, Button } from "antd";
-import { Radio } from "antd";
-import Logo from "components/UI/Logo/Logo";
+// import { Radio } from "antd";
+// import Logo from "components/UI/Logo/Logo";
 import FormControl from "components/UI/FormControl/FormControl";
 import Wrapper, {
   Title,
-  TitleInfo,
+  // TitleInfo,
   FormWrapper,
   BannerWrapper,
   ToChangePassword,

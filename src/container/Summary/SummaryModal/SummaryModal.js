@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FinalCalculationNameAndAmount } from "./SummaryModal.style";
 import madaIcon from "../../../assets/mada-icon.svg";
 import Modal from "@mui/material/Modal";
@@ -93,6 +93,7 @@ const useSummaryModal = () => {
                 </FinalCalculationNameAndAmount>
                 <div style={{ height: "60px", width: "100px" }}>
                   <img
+                    alt="paymentIcon"
                     style={{ color: "#707070", height: "100%", width: "100%" }}
                     src={props.paymentMethod ? props.paymentMethod : madaIcon}
                   />

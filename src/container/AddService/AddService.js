@@ -16,10 +16,10 @@ import singleicon from "../../assets/SingleIcons.svg";
 import GoogleMapReact from "google-map-react";
 import ImageUploading from "react-images-uploading";
 import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
+// import Stack from "@mui/material/Stack";
 import {
-  ADD_RESORT_PAGE,
-  ADD_SECTION_PAGE,
+  // ADD_RESORT_PAGE,
+  // ADD_SECTION_PAGE,
   HOME_PAGE,
 } from "settings/constant";
 import { useHistory } from "react-router-dom";
@@ -36,30 +36,30 @@ import {
   AddResortInputWrapper,
   AddServiceInputWrapper,
   AddServiceTextAreaWrapper,
-  PricingWrapper,
+  // PricingWrapper,
 } from "./AddService.style";
-import { alignItems } from "styled-system";
+// import { alignItems } from "styled-system";
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const AddResort = () => {
   const history = useHistory();
   const [serviceID, setServiceID] = useState(1);
-  const [features, setFeatures] = useState([
-    { icon: wifi, name: "wifi", selected: false },
-    { icon: Kitchen, name: "kitchen", selected: false },
-    { icon: shower, name: "Full bathroom", selected: false },
-    { icon: AC, name: "Air conditioning", selected: false },
-    { icon: TV, name: "TV", selected: false },
-    { icon: pool, name: "Swimming pool", selected: false },
-    { icon: tenticon, name: "Tent", selected: false },
-    { icon: tenticon, name: "Grill", selected: false },
-    { icon: familyicon, name: "Family-friendly", selected: false },
-    { icon: fireplaceicon, name: "Fireplace", selected: false },
-    { icon: fireplaceicon, name: "Allow smoking", selected: false },
-    { icon: cleaningicon, name: "Cleaning service", selected: false },
-    { icon: petfriendlyicon, name: "Pet friendly", selected: false },
-    { icon: singleicon, name: "Singles-friendly", selected: false },
-  ]);
+  // const [features, setFeatures] = useState([
+  //   { icon: wifi, name: "wifi", selected: false },
+  //   { icon: Kitchen, name: "kitchen", selected: false },
+  //   { icon: shower, name: "Full bathroom", selected: false },
+  //   { icon: AC, name: "Air conditioning", selected: false },
+  //   { icon: TV, name: "TV", selected: false },
+  //   { icon: pool, name: "Swimming pool", selected: false },
+  //   { icon: tenticon, name: "Tent", selected: false },
+  //   { icon: tenticon, name: "Grill", selected: false },
+  //   { icon: familyicon, name: "Family-friendly", selected: false },
+  //   { icon: fireplaceicon, name: "Fireplace", selected: false },
+  //   { icon: fireplaceicon, name: "Allow smoking", selected: false },
+  //   { icon: cleaningicon, name: "Cleaning service", selected: false },
+  //   { icon: petfriendlyicon, name: "Pet friendly", selected: false },
+  //   { icon: singleicon, name: "Singles-friendly", selected: false },
+  // ]);
   const [AdditionalFeatures, setAdditionalFeatures] = useState([]);
   const [additionalServices, setAdditionalServices] = useState({
     serviceTitle: "",
@@ -104,33 +104,33 @@ const AddResort = () => {
     }));
   };
   const [images, setImages] = React.useState([]);
-  const [selectedFeatures, setSelectedFeatures] = useState("");
+  // const [selectedFeatures, setSelectedFeatures] = useState("");
   const [resortName, setReseortName] = useState("");
   const [description, setDescription] = useState("");
-  const [type, setType] = useState("");
-  const [address, setAddress] = useState("");
-  const [camp, setCamp] = useState(false);
-  const [chalet, setChalet] = useState(false);
-  const [resort, setResort] = useState(false);
+  // const [type, setType] = useState("");
+  // const [address, setAddress] = useState("");
+  // const [camp, setCamp] = useState(false);
+  // const [chalet, setChalet] = useState(false);
+  // const [resort, setResort] = useState(false);
 
-  const handleCampClick = () => {
-    setCamp(!camp);
-    setChalet(false);
-    setResort(false);
-    setType("Camp");
-  };
-  const handleChaletClick = () => {
-    setCamp(false);
-    setChalet(!chalet);
-    setResort(false);
-    setType("Chalet");
-  };
-  const handleResortClick = () => {
-    setCamp(false);
-    setChalet(false);
-    setResort(!resort);
-    setType("Resort");
-  };
+  // const handleCampClick = () => {
+  //   setCamp(!camp);
+  //   setChalet(false);
+  //   setResort(false);
+  //   setType("Camp");
+  // };
+  // const handleChaletClick = () => {
+  //   setCamp(false);
+  //   setChalet(!chalet);
+  //   setResort(false);
+  //   setType("Chalet");
+  // };
+  // const handleResortClick = () => {
+  //   setCamp(false);
+  //   setChalet(false);
+  //   setResort(!resort);
+  //   setType("Resort");
+  // };
   const onChange = (imageList, addUpdateIndex) => {
     // data for submit
     console.log(imageList, addUpdateIndex);

@@ -15,7 +15,7 @@ import {
   SINGLE_SERVICES_PAGE,
   ADD_HOTEL_PAGE,
   AGENT_PROFILE_PAGE,
-  AGENT_ACCOUNT_SETTINGS_PAGE,
+  // AGENT_ACCOUNT_SETTINGS_PAGE,
   ACCOUNT_SETTINGS_PAGE,
   PRIVACY_PAGE,
   PRICING_PLAN_PAGE,
@@ -38,6 +38,7 @@ import {
   SERVICES_HOME_PAGE,
   UserProfile,
   MANAGE_SERVICE_PAGE,
+  Favourites,
 } from "./settings/constant";
 
 /**
@@ -65,6 +66,18 @@ const routes = [
         import(/* webpackChunkName: "Home" */ "./container/Home/Home"),
       loading: Loading,
       modules: ["Home"],
+    }),
+    exact: true,
+  },
+  {
+    path: Favourites,
+    component: Loadable({
+      loader: () =>
+        import(
+          /* webpackChunkName: "Home" */ "./container/Favourites/Favourites"
+        ),
+      loading: Loading,
+      modules: ["Favourites"],
     }),
     exact: true,
   },
@@ -392,14 +405,14 @@ const AddListing = Loadable({
   modules: ["AddListing"],
 });
 
-const AgentAccountSettingsPage = Loadable({
-  loader: () =>
-    import(
-      /* webpackChunkName: "AgentAccountSettingsPage" */ "./container/Agent/AccountSettings/AgentAccountSettingsPage"
-    ),
-  loading: Loading,
-  modules: ["AgentAccountSettingsPage"],
-});
+// const AgentAccountSettingsPage = Loadable({
+//   loader: () =>
+//     import(
+//       /* webpackChunkName: "AgentAccountSettingsPage" */ "./container/Agent/AccountSettings/AgentAccountSettingsPage"
+//     ),
+//   loading: Loading,
+//   modules: ["AgentAccountSettingsPage"],
+// });
 
 const AccountSettingsPage = Loadable({
   loader: () =>

@@ -10,7 +10,7 @@ import {
   ButtonsAndInputWrapper,
   CheckedInputWrapper,
 } from "./PricingSection.style";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
 const Weekend = () => {
   const [priceTagWeekends, setPriceTagWeekends] = useState("Fix");

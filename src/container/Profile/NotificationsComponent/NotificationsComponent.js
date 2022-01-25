@@ -4,7 +4,7 @@ import {
   ImageWrapper,
 } from "./NotificationsComponent.style";
 import Switch from "@mui/material/Switch";
-import NotificatioinImage from "../../../assets/PushNotification.svg";
+// import NotificatioinImage from "../../../assets/PushNotification.svg";
 import DownArrow from "../../../assets/chevron-down.svg";
 const label = { inputProps: { "aria-label": "Switch demo" } };
 const NotificationsComponent = (props) => {
@@ -15,6 +15,7 @@ const NotificationsComponent = (props) => {
       >
         <ImageWrapper>
           <img
+            alt="NotificationImage"
             style={{ height: "100%", width: "100%" }}
             src={props.image}
           ></img>
@@ -43,7 +44,7 @@ const NotificationsComponent = (props) => {
         </div>
       </div>
       <div>
-        {props.show && <img src={DownArrow} />}
+        {props.show && <img alt="DownArrow" src={DownArrow} />}
         {!props.show && <Switch {...label} defaultChecked />}
         {/* <Switch {...label} defaultChecked /> */}
         {/* <img src={DownArrow} /> */}

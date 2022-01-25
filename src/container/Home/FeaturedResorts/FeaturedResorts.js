@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Loader from "components/Loader/Loader";
@@ -7,7 +7,7 @@ import Heading from "components/UI/Heading/Heading";
 import TextLink from "components/UI/TextLink/TextLink";
 import SectionTitle from "components/SectionTitle/SectionTitle";
 import ProductCard from "components/ProductCard/ProductCard";
-import ImageCard from "components/ImageCard/ImageCard";
+// import ImageCard from "components/ImageCard/ImageCard";
 import GlideCarousel, {
   GlideSlide,
 } from "components/UI/GlideCarousel/GlideCarousel";
@@ -45,7 +45,7 @@ const carouselOptions = {
 
 const FeaturedResort = () => {
   // const [data, setData] = useState();
-  const { data, loading } = useDataApi("/data/top-hotel.json");
+  const { data } = useDataApi("/data/top-hotel.json");
   // console.log("Data in Top hotel ", data);
 
   // useEffect(() => {

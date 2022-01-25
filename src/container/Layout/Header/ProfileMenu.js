@@ -4,10 +4,10 @@ import useOnClickOutside from "library/hooks/useOnClickOutside";
 import { NavLink, withRouter } from "react-router-dom";
 import { AuthContext } from "context/AuthProvider";
 import {
-  AGENT_PROFILE_PAGE,
-  AGENT_ACCOUNT_SETTINGS_PAGE,
+  // AGENT_PROFILE_PAGE,
+  // AGENT_ACCOUNT_SETTINGS_PAGE,
   ACCOUNT_SETTINGS_PAGE,
-  ADD_HOTEL_PAGE,
+  // ADD_HOTEL_PAGE,
   ADD_RESORT_PAGE,
   UserProfile,
 } from "settings/constant";

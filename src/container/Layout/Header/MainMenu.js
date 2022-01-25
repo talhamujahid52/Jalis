@@ -4,10 +4,12 @@ import { Menu } from "antd";
 
 import {
   HOME_PAGE,
-  LISTING_POSTS_PAGE,
+  // LISTING_POSTS_PAGE,
   AGENT_PROFILE_PAGE,
   PRICING_PLAN_PAGE,
   SERVICES_HOME_PAGE,
+  // AGENT_PROFILE_FAVOURITE,
+  Favourites,
 } from "settings/constant";
 
 const MainMenu = ({ className }) => {
@@ -19,7 +21,7 @@ const MainMenu = ({ className }) => {
         </NavLink>
       </Menu.Item>
       <Menu.Item key="1">
-        <NavLink to={`${LISTING_POSTS_PAGE}`}>About Us</NavLink>
+        <NavLink to={`${Favourites}`}>Favourites</NavLink>
       </Menu.Item>
       <Menu.Item key="2">
         <NavLink to={`${AGENT_PROFILE_PAGE}`}>Contact Us</NavLink>

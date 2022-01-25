@@ -1,12 +1,12 @@
 import React from "react";
-import { FinalCalculationNameAndAmount } from "./SummaryModal.style";
-import madaIcon from "../../../assets/mada-icon.svg";
+// import { FinalCalculationNameAndAmount } from "./SummaryModal.style";
+// import madaIcon from "../../../assets/mada-icon.svg";
 import Modal from "@mui/material/Modal";
 import StarRatings from "react-star-ratings";
 import {
   ModalWrapper,
   ProceedButton,
-  RowWrapper,
+  // RowWrapper,
   TopDivWrapperRating,
   CancelButton,
   TextArea,

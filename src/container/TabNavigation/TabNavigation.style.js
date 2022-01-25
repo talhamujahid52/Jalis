@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { themeGet } from "@styled-system/theme-get";
-import Box from "@mui/material/Box";
+// import { themeGet } from "@styled-system/theme-get";
+// import Box from "@mui/material/Box";
 
 export const TabNavigationWrapper = styled.div`
   display: flex;

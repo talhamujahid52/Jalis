@@ -5,7 +5,7 @@ import {
   BookSelectedDates,
 } from "./BlockedDates.style";
 // import DatePicker from "react-multi-date-picker";
-import DatePicker, { DateObject } from "react-multi-date-picker";
+// import DatePicker, { DateObject } from "react-multi-date-picker";
 import { Calendar } from "react-multi-date-picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 import useWindowSize from "../../library/hooks/useWindowSize";
@@ -15,8 +15,8 @@ const BlockedDates = () => {
   const { width } = useWindowSize();
 
   const [date, setDate] = useState();
-  const [weekPicker, setWeekPicker] = useState(false);
-  const [monthPicker, setMonthPicker] = useState(false);
+  // const [weekPicker, setWeekPicker] = useState(false);
+  // const [monthPicker, setMonthPicker] = useState(false);
 
   useEffect(() => {
     console.log("Current date is, ", date);
@@ -97,8 +97,8 @@ const BlockedDates = () => {
         onChange={setDate}
         minDate={new Date()}
         numberOfMonths={width > 700 ? 2 : 1}
-        weekPicker={weekPicker}
-        onlyMonthPicker={monthPicker}
+        // weekPicker={weekPicker}
+        // onlyMonthPicker={monthPicker}
         range
         plugins={[<DatePanel />]}
       />

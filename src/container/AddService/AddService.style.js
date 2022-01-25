@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { themeGet } from "@styled-system/theme-get";
+// import { themeGet } from "@styled-system/theme-get";
 
 const AddResortWrapper = styled.div`
   padding: 30px 75px;

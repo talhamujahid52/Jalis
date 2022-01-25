@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import locationicon from "../../../assets/location-pin.svg";
 import email from "../../../assets/Email.svg";
 import edit from "../../../assets/Edit.svg";

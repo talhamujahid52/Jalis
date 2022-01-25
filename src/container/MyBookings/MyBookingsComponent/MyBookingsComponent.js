@@ -6,7 +6,7 @@ import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import downArrow from "../../../assets/Arrow-down.svg";
 import {
   OutsideWrapper,
@@ -24,7 +24,7 @@ import {
   ExpandDivWrapper,
 } from "./MyBookingsComponent.style";
 import ExpandedComponent from "../ExpandedComponent/ExpandedComponent";
-import { height } from "styled-system";
+// import { height } from "styled-system";
 const MyBookingsComponent = () => {
   const [value, setValue] = React.useState(new Date());
   const [rateResort, setRateResort] = useState(false);
@@ -37,7 +37,7 @@ const MyBookingsComponent = () => {
         <ResortNameImagePriceWrapper>
           <div style={{ display: "flex" }}>
             <ImageWrapper>
-              <img src={ResortImage} />
+              <img alt="ResortImage" src={ResortImage} />
             </ImageWrapper>
             <NameAndSectionWrapper>
               <div>
@@ -46,6 +46,7 @@ const MyBookingsComponent = () => {
                   style={{ height: "30px", width: "24px", marginRight: "20px" }}
                 >
                   <img
+                    alt="Verified"
                     src={verifiedIcon}
                     style={{ height: "100%", width: "100%" }}
                   />
@@ -108,7 +109,7 @@ const MyBookingsComponent = () => {
                 }}
                 rateResort={rateResort}
               >
-                <img src={Star} />
+                <img alt="starImage" src={Star} />
                 <p style={{ margin: "0px", marginLeft: "10px" }}>
                   Rate this Resort
                 </p>
@@ -150,7 +151,11 @@ const MyBookingsComponent = () => {
               Expand
             </p>
             <div style={{ width: "13px", height: "13px", margin: "0px" }}>
-              <img style={{ height: "100%", width: "100%" }} src={downArrow} />
+              <img
+                alt="DownArrow"
+                style={{ height: "100%", width: "100%" }}
+                src={downArrow}
+              />
             </div>
           </div>
         </div>

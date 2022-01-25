@@ -7,11 +7,11 @@ import FormControl from "components/UI/FormControl/FormControl";
 import { AuthContext } from "context/AuthProvider";
 import {
   FORGET_PASSWORD_PAGE,
-  OTP_VERIFICATION,
-  ENTER_NEW_PASSWORD,
+  // OTP_VERIFICATION,
+  // ENTER_NEW_PASSWORD,
 } from "settings/constant";
 import { FieldWrapper, SwitchWrapper, Label } from "../Auth.style";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const SignInForm = () => {
   const { signIn, loggedIn } = useContext(AuthContext);

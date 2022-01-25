@@ -4,11 +4,14 @@ import { Menu } from "antd";
 import { AuthContext } from "context/AuthProvider";
 import {
   HOME_PAGE,
-  LISTING_POSTS_PAGE,
+  // LISTING_POSTS_PAGE,
   PRICING_PLAN_PAGE,
-  AGENT_ACCOUNT_SETTINGS_PAGE,
+  // AGENT_ACCOUNT_SETTINGS_PAGE,
   ACCOUNT_SETTINGS_PAGE,
-  ADD_RESORT_PAGE,
+  // ADD_RESORT_PAGE,
+  Favourites,
+  AGENT_PROFILE_PAGE,
+  SERVICES_HOME_PAGE,
 } from "settings/constant";
 
 const MobileMenu = ({ className }) => {
@@ -23,13 +26,13 @@ const MobileMenu = ({ className }) => {
         </NavLink>
       </Menu.Item>
       <Menu.Item key="1">
-        <NavLink to={LISTING_POSTS_PAGE}>Abouts Us</NavLink>
+        <NavLink to={Favourites}>Favourites</NavLink>
       </Menu.Item>
       <Menu.Item key="2">
-        <NavLink to={PRICING_PLAN_PAGE}>Contact Us</NavLink>
+        <NavLink to={AGENT_PROFILE_PAGE}>Contact Us</NavLink>
       </Menu.Item>
       <Menu.Item key="5">
-        <NavLink to={PRICING_PLAN_PAGE}>FAQ</NavLink>
+        <NavLink to={SERVICES_HOME_PAGE}>Services</NavLink>
       </Menu.Item>
       <Menu.Item key="6">
         <NavLink to={PRICING_PLAN_PAGE}>Settings</NavLink>

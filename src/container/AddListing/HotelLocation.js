@@ -4,18 +4,27 @@ import { useStateMachine } from "little-state-machine";
 import { useForm, Controller } from "react-hook-form";
 import { Row, Col, Input, Button } from "antd";
 import FormControl from "components/UI/FormControl/FormControl";
-import MapWithSearchBox from "components/Map/MapSearchBox";
-import { mapDataHelper } from "components/Map/mapDataHelper";
+// import MapWithSearchBox from "components/Map/MapSearchBox";
+// import { mapDataHelper } from "components/Map/mapDataHelper";
 import AddListingAction from "./AddListingAction";
 import { FormHeader, Title, FormContent, FormAction } from "./AddListing.style";
 
 const HotelLocation = ({ setStep }) => {
-  let tempLocationData = [];
-  const [location, setLocation] = useState([]);
-  const { control, register, errors, setValue, handleSubmit } = useForm({
+  // let tempLocationData = [];
+  // const [location, setLocation] = useState([]);
+  const {
+    control,
+    register,
+    errors,
+    // setValue,
+    handleSubmit,
+  } = useForm({
     mode: "onChange",
   });
-  const { action, state } = useStateMachine(AddListingAction);
+  const {
+    // action,
+    state,
+  } = useStateMachine(AddListingAction);
 
   useEffect(() => {
     register({ name: "locationData" }, { required: true });

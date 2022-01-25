@@ -3,12 +3,12 @@ import {
   NotificationsComponentWrapper,
   ImageWrapper,
 } from "./BankComponent.style";
-import Switch from "@mui/material/Switch";
-import NotificatioinImage from "../../../assets/PushNotification.svg";
-import DownArrow from "../../../assets/chevron-down.svg";
+// import Switch from "@mui/material/Switch";
+// import NotificatioinImage from "../../../assets/PushNotification.svg";
+// import DownArrow from "../../../assets/chevron-down.svg";
 import EditIcon from "../../../assets/EditUsername.svg";
 
-const label = { inputProps: { "aria-label": "Switch demo" } };
+// const label = { inputProps: { "aria-label": "Switch demo" } };
 const BankComponent = (props) => {
   return (
     <NotificationsComponentWrapper>
@@ -16,7 +16,7 @@ const BankComponent = (props) => {
         style={{ display: "flex", alignItems: "center", marginRight: "20px" }}
       >
         <ImageWrapper>
-          <img src={props.image}></img>
+          <img alt="BankImage" src={props.image}></img>
         </ImageWrapper>
         <div>
           <p
@@ -54,7 +54,7 @@ const BankComponent = (props) => {
           Edit
         </p>
         <div style={{ height: "20px", width: "20px", marginLeft: "10px" }}>
-          <img src={EditIcon}></img>
+          <img alt="EditImage" src={EditIcon}></img>
         </div>
       </div>
     </NotificationsComponentWrapper>
