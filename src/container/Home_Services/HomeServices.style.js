@@ -46,4 +46,7 @@ export const FilterImageWrapper = styled.div`
   height: 60px;
   width: 60px;
   margin-left: 20px;
+  &:hover {
+    cursor: pointer;
+  }
 `;

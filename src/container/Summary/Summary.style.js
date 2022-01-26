@@ -107,6 +107,9 @@ export const PaymentMethodImage = styled.div`
     width: 60px;
     height: 40px;
   }
+  &:hover {
+    cursor: pointer;
+  }
 `;
 export const ProceedButton = styled.button`
   display: flex;
@@ -117,6 +120,9 @@ export const ProceedButton = styled.button`
   color: white;
   padding: 10px 30px;
   border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 export const CancelButton = styled.button`
   border: 1px solid #ed702d;
@@ -124,4 +130,7 @@ export const CancelButton = styled.button`
   color: #ed702d;
   padding: 10px 30px;
   border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
 `;

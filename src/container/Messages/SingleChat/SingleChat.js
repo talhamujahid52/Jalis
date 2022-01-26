@@ -17,7 +17,14 @@ const SingleChat = (props) => {
           <img src={profileImg} />
         </ImageWrapper>
         <div>
-          <p style={{ margin: "0px", fontSize: "16px", fontWeight: "bold" }}>
+          <p
+            style={{
+              margin: "0px",
+              fontSize: "16px",
+              fontWeight: "bold",
+              cursor: "pointer",
+            }}
+          >
             Abid Iqbal
           </p>
           <p style={{ margin: "0px", fontSize: "14px", color: "#A5A5A5" }}>

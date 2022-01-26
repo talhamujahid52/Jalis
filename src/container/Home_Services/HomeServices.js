@@ -51,6 +51,7 @@ const HomeServices = () => {
               backgroundColor:
                 cityFilter === "Riyadh" ? "#ED702D" : "#ED702D1A",
               color: cityFilter === "Riyadh" ? "white" : "#ED702D",
+              borderWidth: cityFilter ? "0px" : "0px",
             }}
           >
             Riyadh
@@ -63,6 +64,7 @@ const HomeServices = () => {
               backgroundColor:
                 cityFilter === "Makkah" ? "#ED702D" : "#ED702D1A",
               color: cityFilter === "Makkah" ? "white" : "#ED702D",
+              borderWidth: cityFilter ? "0px" : "0px",
             }}
           >
             Makkah
@@ -75,6 +77,7 @@ const HomeServices = () => {
               backgroundColor:
                 cityFilter === "Madina" ? "#ED702D" : "#ED702D1A",
               color: cityFilter === "Madina" ? "white" : "#ED702D",
+              borderWidth: cityFilter ? "0px" : "0px",
             }}
           >
             Madina
@@ -86,6 +89,7 @@ const HomeServices = () => {
             style={{
               backgroundColor: cityFilter === "Reset" ? "#ED702D" : "#ED702D1A",
               color: cityFilter === "Reset" ? "white" : "#ED702D",
+              borderWidth: cityFilter ? "0px" : "0px",
             }}
           >
             Reset

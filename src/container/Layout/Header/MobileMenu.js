@@ -12,6 +12,7 @@ import {
   Favourites,
   AGENT_PROFILE_PAGE,
   SERVICES_HOME_PAGE,
+  LOGIN_PAGE,
 } from "settings/constant";
 
 const MobileMenu = ({ className }) => {
@@ -34,19 +35,31 @@ const MobileMenu = ({ className }) => {
       <Menu.Item key="5">
         <NavLink to={SERVICES_HOME_PAGE}>Services</NavLink>
       </Menu.Item>
-      <Menu.Item key="6">
-        <NavLink to={PRICING_PLAN_PAGE}>Settings</NavLink>
-      </Menu.Item>
+      {!loggedIn && (
+        <>
+          <Menu.Item key="6">
+            <NavLink to={LOGIN_PAGE}>Settings</NavLink>
+          </Menu.Item>
+        </>
+      )}
       {loggedIn && (
+        <>
+          <Menu.Item key="6">
+            <NavLink to={ACCOUNT_SETTINGS_PAGE}>Settings</NavLink>
+          </Menu.Item>
+        </>
+      )}
+
+      {/* {loggedIn && (
         <>
           <Menu.Item key="3">
             <NavLink to={ACCOUNT_SETTINGS_PAGE}>Account Settings</NavLink>
           </Menu.Item>
-          {/* <Menu.Item key="3">
+          <Menu.Item key="3">
             <NavLink to={ADD_RESORT_PAGE}>Add Hotel</NavLink>
-          </Menu.Item> */}
+          </Menu.Item>
         </>
-      )}
+      )} */}
       {loggedIn && (
         <Menu.Item key="4">
           <button onClick={logOut}>Log Out</button>

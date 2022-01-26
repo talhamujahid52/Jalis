@@ -45,6 +45,9 @@ export const ProceedButton = styled.button`
   color: white;
   padding: 10px 30px;
   border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 export const CancelButton = styled.button`
   border: 1px solid #ee7738;
@@ -52,6 +55,9 @@ export const CancelButton = styled.button`
   color: #ee7738;
   padding: 10px 30px;
   border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 export const RowWrapper = styled.div`
   display: flex;

@@ -183,6 +183,7 @@ const ExpandedComponent = () => {
           justifyContent: "center",
           display: "flex",
           marginTop: "20px",
+          cursor: "pointer",
         }}
       >
         Get a copy of your contract

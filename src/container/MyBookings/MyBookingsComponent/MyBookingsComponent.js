@@ -145,7 +145,7 @@ const MyBookingsComponent = () => {
               // alert("hi");
               setExpand(!expand);
             }}
-            style={{ display: "flex" }}
+            style={{ display: "flex", cursor: "pointer" }}
           >
             <p style={{ margin: "0px", color: "white", marginRight: "10px" }}>
               Expand

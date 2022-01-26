@@ -37,4 +37,7 @@ export const NextButton = styled.div`
   @media (max-width: 1100px) {
     margin-top: 20px;
   }
+  &:hover {
+    cursor: pointer;
+  }
 `;

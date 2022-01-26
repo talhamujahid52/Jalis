@@ -117,7 +117,7 @@ const SinglePage = ({ match }) => {
                   <div>
                     <div
                       style={{
-                        backgroundColor: "green",
+                        // backgroundColor: "green",
                         height: "400px",
                         width: "100%",
                         borderRadius: "20px",
@@ -147,9 +147,11 @@ const SinglePage = ({ match }) => {
                   ? 3
                   : (width >= 550) & (width < 900)
                   ? 4
-                  : images.length < 5
+                  : (width >= 1200) & (width < 1500)
+                  ? 5
+                  : images.length < 6
                   ? images.length
-                  : 5
+                  : 6
               }
               swipeToSlide={true}
               focusOnSelect={true}
@@ -159,10 +161,10 @@ const SinglePage = ({ match }) => {
                   <div>
                     <div
                       style={{
-                        backgroundColor: "green",
-                        height: width < 900 ? " 100px" : "140px",
-                        width: width < 900 ? " 100px" : "220px",
-                        margin: "20px 0px",
+                        // backgroundColor: "green",
+                        height: width < 1500 ? " 100px" : "140px",
+                        width: width < 1500 ? " 100px" : "220px",
+                        margin: "10px 0px",
                         borderRadius: "10px",
                         overflow: "hidden",
                       }}

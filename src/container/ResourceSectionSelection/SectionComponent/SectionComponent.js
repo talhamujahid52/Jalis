@@ -173,7 +173,10 @@ const SectionComponent = () => {
         </BottomDiv>
       </MainWrapper>
       <ChooseTheResource
-        style={{ backgroundColor: clicked ? "#ED702D" : "#a5a5a5" }}
+        style={{
+          backgroundColor: clicked ? "#ED702D" : "#a5a5a5",
+          cursor: "pointer",
+        }}
         onClick={handleClick}
       >
         <p

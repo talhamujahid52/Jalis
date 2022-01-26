@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 // import { useLocation } from "library/hooks/useLocation";
 import Loader from "components/Loader/Loader";
 import useWindowSize from "library/hooks/useWindowSize";
 import Location from "./Location/Location";
 import AddsPlaceholder from "container/Home/AddsPlaceholder/AddsPlaceholder";
-import { Resource_Section_Selection } from "settings/constant";
+import { Messages, LOGIN_PAGE } from "settings/constant";
 import { useHistory } from "react-router-dom";
 import SinglePageWrapper, {
   PostImage,
@@ -28,7 +28,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { AuthContext } from "../../context/AuthProvider";
+
 const SinglePage = ({ match }) => {
+  const { loggedIn } = useContext(AuthContext);
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const history = useHistory();
@@ -87,7 +90,7 @@ const SinglePage = ({ match }) => {
                   <div>
                     <div
                       style={{
-                        backgroundColor: "green",
+                        // backgroundColor: "green",
                         height: "400px",
                         width: "100%",
                         borderRadius: "20px",
@@ -114,11 +117,13 @@ const SinglePage = ({ match }) => {
               slidesToShow={
                 width < 550
                   ? 3
-                  : (width >= 550) & (width < 900)
+                  : (width >= 550) & (width < 1200)
                   ? 4
-                  : images.length < 5
+                  : (width >= 1200) & (width < 1500)
+                  ? 5
+                  : images.length < 6
                   ? images.length
-                  : 5
+                  : 6
               }
               swipeToSlide={true}
               focusOnSelect={true}
@@ -128,10 +133,10 @@ const SinglePage = ({ match }) => {
                   <div>
                     <div
                       style={{
-                        backgroundColor: "green",
-                        height: width < 900 ? " 100px" : "140px",
-                        width: width < 900 ? " 100px" : "220px",
-                        margin: "20px 0px",
+                        // backgroundColor: "green",
+                        height: width < 1500 ? " 100px" : "160px",
+                        width: width < 1500 ? " 100px" : "220px",
+                        margin: "10px 0px",
                         borderRadius: "10px",
                         overflow: "hidden",
                       }}
@@ -308,7 +313,12 @@ const SinglePage = ({ match }) => {
         <NextButton
           style={{ borderRadius: "70px", textAlign: "center" }}
           onClick={() => {
-            history.push(Resource_Section_Selection);
+            {
+              loggedIn && history.push(Messages);
+            }
+            {
+              !loggedIn && history.push(LOGIN_PAGE);
+            }
           }}
         >
           Chat with us

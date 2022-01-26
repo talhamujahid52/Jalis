@@ -186,6 +186,7 @@ const ExpandedComponent = () => {
           justifyContent: "center",
           display: "flex",
           marginTop: "20px",
+          cursor: "pointer",
         }}
         onClick={Modal.handleOpen}
       >
