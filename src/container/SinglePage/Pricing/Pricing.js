@@ -22,7 +22,7 @@ const Pricing = (props) => {
     setEndDate: null,
   });
   useEffect(() => {
-    console.log("props in Pricing is ", props);
+    // console.log("props in Pricing is ", props);
   }, []);
   return (
     <>

@@ -25,9 +25,24 @@ const MainMenu = ({ className }) => {
           Home
         </NavLink>
       </Menu.Item>
-      <Menu.Item key="1">
+
+      {/* <Menu.Item key="1">
         <NavLink to={`${Favourites}`}>Favourites</NavLink>
-      </Menu.Item>
+      </Menu.Item> */}
+      {!loggedIn && (
+        <>
+          <Menu.Item key="6">
+            <NavLink to={`${LOGIN_PAGE}`}>Favourites</NavLink>
+          </Menu.Item>
+        </>
+      )}
+      {loggedIn && (
+        <>
+          <Menu.Item key="7">
+            <NavLink to={`${Favourites}`}>Favourites</NavLink>
+          </Menu.Item>
+        </>
+      )}
       <Menu.Item key="2">
         <NavLink to={`${AGENT_PROFILE_PAGE}`}>Contact Us</NavLink>
       </Menu.Item>
@@ -36,14 +51,14 @@ const MainMenu = ({ className }) => {
       </Menu.Item>
       {!loggedIn && (
         <>
-          <Menu.Item key="6">
+          <Menu.Item key="8">
             <NavLink to={LOGIN_PAGE}>Settings</NavLink>
           </Menu.Item>
         </>
       )}
       {loggedIn && (
         <>
-          <Menu.Item key="6">
+          <Menu.Item key="9">
             <NavLink to={ACCOUNT_SETTINGS_PAGE}>Settings</NavLink>
           </Menu.Item>
         </>

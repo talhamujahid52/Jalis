@@ -22,9 +22,15 @@ import AccountImage from "../../assets/Account_Number.svg";
 import ReviewsAndRatings from "../../assets/Reviews_Rating.svg";
 import NotificationsImage from "../../assets/PushNotification.svg";
 import SmsImage from "../../assets/SMSNotification.svg";
+import { useState } from "react";
 
 const Profile = () => {
   const { width } = useWindowSize();
+  const [name, setName] = useState("Mark Nicholas");
+  const [phone, setPhone] = useState("+9665512345678");
+  const [password, setPassword] = useState(123456789);
+  const [bankName, setBankName] = useState("My Bank International");
+  const [accountNumber, setAccountNumber] = useState("SA123455555");
 
   return (
     <ProfileWrapper>
@@ -54,7 +60,7 @@ const Profile = () => {
                   marginBottom: "10px",
                 }}
               >
-                <h2
+                {/* <h2
                   style={{
                     margin: "0px",
                     fontWeight: "bold",
@@ -62,7 +68,21 @@ const Profile = () => {
                   }}
                 >
                   Mark Nicholas
-                </h2>
+                </h2> */}
+                <input
+                  style={{
+                    borderRadius: "8px",
+                    fontWeight: "bold",
+                    fontSize: "24px",
+                    marginRight: "10px",
+                    border: "2px solid #F5F4F4 ",
+                    padding: "0px 10px",
+                  }}
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                ></input>
                 <div style={{ height: "20px", width: "20px" }}>
                   <img alt="EditImage" src={EditIcon}></img>
                 </div>
@@ -117,7 +137,7 @@ const Profile = () => {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
-            <p
+            {/* <p
               style={{
                 margin: "0px",
                 color: "#3A3A3A",
@@ -126,7 +146,21 @@ const Profile = () => {
               }}
             >
               +9665512345678
-            </p>
+            </p> */}
+            <input
+              style={{
+                borderRadius: "8px",
+                fontWeight: "bold",
+                fontSize: "22px",
+                color: "#3A3A3A",
+                border: "2px solid #F5F4F4 ",
+                padding: "0px 10px",
+              }}
+              onChange={(e) => {
+                setPhone(e.target.value);
+              }}
+              value={phone}
+            ></input>
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
             <p
@@ -159,7 +193,7 @@ const Profile = () => {
               </div>
             )}
 
-            <p
+            {/* <p
               style={{
                 margin: "0px",
                 color: "#3A3A3A",
@@ -168,7 +202,22 @@ const Profile = () => {
               }}
             >
               ***********
-            </p>
+            </p> */}
+            <input
+              type="password"
+              style={{
+                borderRadius: "8px",
+                fontWeight: "bold",
+                fontSize: "22px",
+                color: "#3A3A3A",
+                border: "2px solid #F5F4F4 ",
+                padding: "0px 10px",
+              }}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              value={password}
+            ></input>
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
             <p
@@ -199,11 +248,15 @@ const Profile = () => {
           heading="Bank Name"
           subHeading="My Bank International"
           image={BankImage}
+          name={bankName}
+          setName={setBankName}
         ></BankComponent>
         <BankComponent
           heading="Account number"
           subHeading="SA1234555555"
           image={AccountImage}
+          name={accountNumber}
+          setName={setAccountNumber}
         ></BankComponent>
       </ReviewsAndRatingWrapper>
       <ReviewsAndRatingWrapper>

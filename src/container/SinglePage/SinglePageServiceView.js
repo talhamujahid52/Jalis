@@ -87,7 +87,7 @@ const SinglePage = ({ match }) => {
             <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
               {images.map((item, idx) => {
                 return (
-                  <div>
+                  <div key={idx}>
                     <div
                       style={{
                         // backgroundColor: "green",

@@ -29,7 +29,7 @@ const BankComponent = (props) => {
           >
             {props.heading}
           </p>
-          <p
+          {/* <p
             style={{
               margin: "0px",
               color: "#ED702D",
@@ -38,7 +38,21 @@ const BankComponent = (props) => {
             }}
           >
             {props.subHeading}
-          </p>
+          </p> */}
+          <input
+            style={{
+              borderRadius: "8px",
+              fontWeight: "bold",
+              fontSize: "16px",
+              color: "#ED702D",
+              border: "2px solid #F5F4F4 ",
+              padding: "0px 10px",
+            }}
+            onChange={(e) => {
+              props.setName(e.target.value);
+            }}
+            value={props.name}
+          ></input>
         </div>
       </div>
       <div style={{ display: "flex" }}>

@@ -31,6 +31,17 @@ const NotificationsComponent = (props) => {
           >
             {props.heading}
           </p>
+          {/* <input
+            style={{
+              borderRadius: "8px",
+              fontWeight: "bold",
+              fontSize: "22px",
+              color: "#3A3A3A",
+              border: "2px solid #F5F4F4 ",
+              padding: "0px 10px",
+            }}
+            // value={phone}
+          ></input> */}
           <p
             style={{
               margin: "0px",
