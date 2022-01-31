@@ -5,13 +5,15 @@ import Box from "@mui/material/Box";
 import ManageResort from "../ManageResort/ManageResort";
 import ManageSection from "../ManageSection/ManageSection";
 import MessagesScreen from "../../container/Messages/Messages";
+import MyResortBookingsScreen from "../../container/MyResortBookings/MyResortBookings";
+import ReportsScreen from "../../container/Reports/Reports";
 import ManageServices from "../ManageServices/ManageServices";
 import {
   TabNavigationWrapper,
   TabNavigationComponentWrapper,
 } from "./TabNavigation.style";
 import { useHistory } from "react-router-dom";
-import { Messages } from "settings/constant";
+import { Messages, Reports, My_Resort_Bookings } from "settings/constant";
 const TabNavigation = () => {
   const [value, setValue] = React.useState("one");
   const [switchSections, setSwitchSections] = React.useState(true);
@@ -83,8 +85,12 @@ const TabNavigation = () => {
         {/* {value === "two" && <h1>This is Block Dates </h1>} */}
         {value === "two" && <MessagesScreen />}
 
-        {value === "three" && <h1>This is Resort Bookings </h1>}
-        {value === "four" && <h1>This is Reports </h1>}
+        {/* {value === "three" && <h1>This is Resort Bookings </h1>} */}
+        {value === "three" && <MyResortBookingsScreen />}
+
+        {/* {value === "four" && <h1>This is Reports </h1>} */}
+        {value === "four" && <ReportsScreen></ReportsScreen>}
+
         {value === "five" && <h1>This is Support </h1>}
         {/* {value === "six" &&
           (switchSections ? (
