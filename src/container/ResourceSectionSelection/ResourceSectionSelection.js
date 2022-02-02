@@ -128,29 +128,42 @@ const ResourceSectionSelection = (props) => {
                 // padding: "40px",
               }}
             >
-              <DesktopDatePicker
-                label="Check in date"
-                disabled
-                value={props.location.state.checkInDate}
-                minDate={new Date("2017-01-01")}
-                onChange={(newValue) => {
-                  setValue(newValue);
-                }}
-                renderInput={(params) => {
-                  return (
-                    <TextField
-                      {...params}
-                      sx={{
-                        svg: { color },
-                        input: { color },
-                        label: { color },
-                        backgroundColor: { color },
-                      }}
-                    />
-                  );
-                }}
-                // color="white"
-              />
+              <div>
+                <p style={{ color: "white", margin: "0px" }}>Check in Date</p>
+                <DesktopDatePicker
+                  InputProps={{
+                    style: {
+                      borderColor: "white",
+                      borderStyle: "solid",
+                      // borderWidth: borderWidths[1],
+                    },
+                  }}
+                  // label="Check in date"
+                  // disabled
+                  readOnly
+                  value={props.location.state.checkInDate}
+                  minDate={new Date("2017-01-01")}
+                  onChange={(newValue) => {
+                    setValue(newValue);
+                  }}
+                  border="1px solid white"
+                  renderInput={(params) => {
+                    return (
+                      <TextField
+                        {...params}
+                        sx={{
+                          svg: { color },
+                          input: { color },
+                          label: { color },
+                          backgroundColor: { color },
+                        }}
+                      />
+                    );
+                  }}
+                  // color="white"
+                />
+              </div>
+
               <p
                 style={{
                   margin: "0px",
@@ -161,28 +174,39 @@ const ResourceSectionSelection = (props) => {
               >
                 to
               </p>
-              <DesktopDatePicker
-                label="Check out date"
-                value={props.location.state.checkOutDate}
-                disabled
-                minDate={new Date("2017-01-01")}
-                onChange={(newValue) => {
-                  setValue(newValue);
-                }}
-                renderInput={(params) => {
-                  return (
-                    <TextField
-                      {...params}
-                      sx={{
-                        svg: { color },
-                        input: { color },
-                        label: { color },
-                        backgroundColor: { color },
-                      }}
-                    />
-                  );
-                }}
-              />
+              <div>
+                <p style={{ color: "white", margin: "0px" }}>Check out Date</p>
+                <DesktopDatePicker
+                  // label="Check out date"
+                  value={props.location.state.checkOutDate}
+                  // disabled
+                  InputProps={{
+                    style: {
+                      borderColor: "white",
+                      borderStyle: "solid",
+                      // borderWidth: borderWidths[1],
+                    },
+                  }}
+                  readOnly
+                  // minDate={new Date("2017-01-01")}
+                  onChange={(newValue) => {
+                    setValue(newValue);
+                  }}
+                  renderInput={(params) => {
+                    return (
+                      <TextField
+                        {...params}
+                        sx={{
+                          svg: { color },
+                          input: { color },
+                          label: { color },
+                          backgroundColor: { color },
+                        }}
+                      />
+                    );
+                  }}
+                />
+              </div>
             </div>
           </LocalizationProvider>
           <NextButton

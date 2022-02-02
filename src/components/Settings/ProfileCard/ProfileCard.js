@@ -2,9 +2,13 @@ import React from "react";
 import locationicon from "../../../assets/location-pin.svg";
 import email from "../../../assets/Email.svg";
 import edit from "../../../assets/Edit.svg";
+import { useHistory } from "react-router-dom";
 import "./ProfileCard.css";
+import { UserProfile } from "settings/constant";
+const avatarImg = `http://s3.amazonaws.com/redqteam.com/isomorphic-reloaded-image/profilepic.png`;
 
 const ProfileCard = ({ userType }) => {
+  const history = useHistory();
   // const [userType, setUserType] = useState("serviceProvider");
   return (
     <div className="outerdiv">
@@ -15,7 +19,9 @@ const ProfileCard = ({ userType }) => {
           alignItems: "center",
         }}
       >
-        <div className="roundedImage"></div>
+        <div className="roundedImage" style={{ overflow: "hidden" }}>
+          <img src={avatarImg}></img>
+        </div>
         {userType === "notLoggedIn" && (
           <div className="notLoggedInDiv">
             <p
@@ -81,7 +87,8 @@ const ProfileCard = ({ userType }) => {
       {/* <div className="emptyDivWidth"></div> */}
       <div
         onClick={() => {
-          alert("hi");
+          history.push(UserProfile);
+          // alert("hi");
         }}
         // className="editLogo"
       >

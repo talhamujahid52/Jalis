@@ -76,6 +76,7 @@ export const FeaturesWrapper = styled.div`
   @media (max-width: 600px) {
     column-gap: 10px;
     width: 290px;
+    /* width: 300px; */
   }
   /* border: 1px solid orange; */
 `;
@@ -83,6 +84,7 @@ export const FeatureIconAndText = styled.div`
   padding: 10px 20px;
   display: flex;
   align-items: center;
+  /* border: 1px solid red; */
   p {
     margin: 0px;
     font-size: 14px;

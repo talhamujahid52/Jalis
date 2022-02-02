@@ -35,10 +35,12 @@ const BlockedDates = () => {
         <div>
           <h2 style={{ fontWeight: "bold" }}>Section 1</h2>
           <p style={{ color: "#A5A5A5", fontSize: "16px" }}>
-            Select any date or range of dates to be blocked
+            Select any date or multiple dates to be blocked
           </p>
         </div>
-        <BookSelectedDates>Book Selected Dates</BookSelectedDates>
+        {width > 1100 && (
+          <BookSelectedDates>Book Selected Dates</BookSelectedDates>
+        )}
       </div>
       {/* <div
         style={{
@@ -99,9 +101,15 @@ const BlockedDates = () => {
         numberOfMonths={width > 700 ? 2 : 1}
         // weekPicker={weekPicker}
         // onlyMonthPicker={monthPicker}
-        range
+        // range
+        multiple
         plugins={[<DatePanel />]}
       />
+      {width < 1100 && (
+        <div style={{ marginTop: "40px" }}>
+          <BookSelectedDates>Book Selected Dates</BookSelectedDates>
+        </div>
+      )}
     </BlockedDatesWrapper>
   );
 };

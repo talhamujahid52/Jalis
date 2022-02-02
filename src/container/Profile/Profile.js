@@ -23,6 +23,7 @@ import ReviewsAndRatings from "../../assets/Reviews_Rating.svg";
 import NotificationsImage from "../../assets/PushNotification.svg";
 import SmsImage from "../../assets/SMSNotification.svg";
 import { useState } from "react";
+const avatarImg = `http://s3.amazonaws.com/redqteam.com/isomorphic-reloaded-image/profilepic.png`;
 
 const Profile = () => {
   const { width } = useWindowSize();
@@ -51,7 +52,9 @@ const Profile = () => {
       <PersonalInfoWrapper>
         <ImageAndNameWrapper>
           <div style={{ display: "flex", alignItems: "center" }}>
-            <ImageWrapper />
+            <ImageWrapper>
+              <img src={avatarImg}></img>
+            </ImageWrapper>
             <div>
               <div
                 style={{

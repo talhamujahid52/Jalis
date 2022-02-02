@@ -26,4 +26,5 @@ export const BookSelectedDates = styled.div`
   text-align: center;
   background: #ed702d;
   color: white;
+  cursor: pointer;
 `;

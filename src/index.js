@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+// import { ThemeProvider } from '@material-ui/core';
 import theme from "themes/default.theme";
 import GlobalStyles from "themes/global.style";
 import AuthProvider from "context/AuthProvider";
