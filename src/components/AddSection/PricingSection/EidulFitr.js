@@ -85,7 +85,7 @@ const EidulFitr = () => {
                       <InputWrapper
                         type="number"
                         min={0}
-                        max={6}
+                        // max={6}
                         disabled={specialPriceChecked}
                         required={!specialPriceChecked}
                         style={{
@@ -106,7 +106,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={day1}
                           required={!day1}
                           style={{
@@ -120,7 +120,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={day2}
                           required={!day2}
                           style={{
@@ -134,7 +134,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={day3}
                           required={!day3}
                           style={{
@@ -148,7 +148,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={day4}
                           required={!day4}
                           style={{
@@ -162,7 +162,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={day5}
                           required={!day5}
                           style={{
@@ -176,7 +176,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={day6}
                           required={!day6}
                           style={{
@@ -209,7 +209,7 @@ const EidulFitr = () => {
                       <InputWrapper
                         type="number"
                         min={0}
-                        max={6}
+                        // max={6}
                         disabled={!specialPriceChecked}
                         required={specialPriceChecked}
                         style={{
@@ -242,7 +242,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={!day1}
                           required={day1}
                           style={{
@@ -270,7 +270,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={!day2}
                           required={day2}
                           style={{
@@ -298,7 +298,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={!day3}
                           required={day3}
                           style={{
@@ -326,7 +326,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={!day4}
                           required={day4}
                           style={{
@@ -354,7 +354,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={!day5}
                           required={day5}
                           style={{
@@ -382,7 +382,7 @@ const EidulFitr = () => {
                         <InputWrapper
                           type="number"
                           min={0}
-                          max={6}
+                          // max={6}
                           disabled={!day6}
                           required={day6}
                           style={{

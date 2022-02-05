@@ -378,6 +378,7 @@ const AddResort = () => {
                   <HeadingWrapper>Add Photos</HeadingWrapper>
 
                   <button
+                    type="button"
                     style={
                       (isDragging ? { color: "red" } : null,
                       {
@@ -385,6 +386,7 @@ const AddResort = () => {
                         background: "white",
                         outline: "none",
                         border: "none",
+                        cursor: "pointer",
                       })
                     }
                     onClick={onImageUpload}
@@ -440,9 +442,9 @@ const AddResort = () => {
                             // margin: "0px",
                             position: "absolute",
                             top: "10px",
-                            right: "20px",
-                            height: "25px",
-                            width: "25px",
+                            right: "10px",
+                            height: "20px",
+                            width: "20px",
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",

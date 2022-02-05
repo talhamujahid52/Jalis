@@ -35,7 +35,7 @@ const PricingSection = (props) => {
               type="number"
               required={!specialPriceChecked}
               min={0}
-              max={6}
+              // max={6}
               value={nightPrice}
               onChange={(e) => {
                 setNightPrice(e.target.value);
@@ -66,7 +66,7 @@ const PricingSection = (props) => {
             <InputWrapper
               type="number"
               min={0}
-              max={6}
+              // max={6}
               value={specialPrice}
               onChange={(e) => {
                 setSpecialPrice(e.target.value);

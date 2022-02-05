@@ -40,6 +40,8 @@ export const FinalCalculationNameAndAmount = styled.p`
   font-family: "Noto Kufi Arabic", sans-serif;
 `;
 export const ProceedButton = styled.button`
+  display: flex;
+  align-items: center;
   border: 0px;
   background: #ed702d;
   color: white;

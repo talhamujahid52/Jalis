@@ -366,6 +366,7 @@ export const NextButton = styled.div`
   margin: 30px 0px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 60px;
   width: 300px;
   color: white;
@@ -374,7 +375,7 @@ export const NextButton = styled.div`
   border: 0px;
   font-size: 20px;
   text-align: left;
-  padding-left: 20px;
+  padding: 0px 50px;
   box-shadow: 0px 3px 99px #00000047;
   @media (max-width: 1100px) {
     margin-top: 20px;

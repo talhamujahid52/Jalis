@@ -45,6 +45,7 @@ export const ImageWrapper = styled.div`
   width: 170px;
   border-radius: 10px;
   background: #ff51b5;
+  overflow: hidden;
   @media (max-width: 600px) {
     height: 80px;
     width: 60px;

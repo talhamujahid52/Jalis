@@ -6,7 +6,7 @@ import livingroomicon from "../../../assets/LivingroomIcon.svg";
 import checkinicon from "../../../assets/CheckinIcon.svg";
 import checkouticon from "../../../assets/CheckoutIcon.svg";
 import areaicon from "../../../assets/AreaIcon.svg";
-import bedicon from "../../../assets/BedIcon.svg";
+import bedicon from "../../../assets/orangeBed.svg";
 
 const AddSection = (props) => {
   const [sectionName, setSectionName] = useState("");
@@ -102,7 +102,7 @@ const AddSection = (props) => {
                 required
                 type="number"
                 min={0}
-                max={6}
+                // max={6}
                 placeholder="People count"
                 value={peopleCount}
                 onChange={(e) => {
@@ -128,7 +128,7 @@ const AddSection = (props) => {
                 required
                 type="number"
                 min={0}
-                max={6}
+                // max={6}
                 placeholder="01"
                 value={livingRooms}
                 onChange={(e) => {
@@ -201,7 +201,7 @@ const AddSection = (props) => {
                 required
                 type="number"
                 min={0}
-                max={6}
+                // max={6}
                 placeholder="01"
                 value={bedRooms}
                 onChange={(e) => {

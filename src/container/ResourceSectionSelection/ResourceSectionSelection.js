@@ -12,6 +12,7 @@ import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import { useHistory } from "react-router-dom";
 import { Summary_Detail } from "settings/constant";
+import nextArrow from "../../assets/Path208.svg";
 
 const ResourceSectionSelection = (props) => {
   const checkInDate = props.location.state.checkInDate;
@@ -53,7 +54,7 @@ const ResourceSectionSelection = (props) => {
       <SectionComponent></SectionComponent>
       <SectionComponent></SectionComponent>
       <SectionComponent></SectionComponent>
-      <div style={{ backgroundColor: "" }}>
+      {/* <div style={{ backgroundColor: "" }}>
         <p
           style={{
             margin: "0px",
@@ -93,7 +94,7 @@ const ResourceSectionSelection = (props) => {
             />
           );
         })}
-      </div>
+      </div> */}
       <div
         style={{
           marginTop: "20px",
@@ -214,7 +215,13 @@ const ResourceSectionSelection = (props) => {
               history.push(Summary_Detail, { checkInDate, checkOutDate });
             }}
           >
-            Next
+            <p style={{ margin: "0px" }}>Next</p>
+            <div style={{ height: "30px", width: "30px" }}>
+              <img
+                style={{ width: "100%", height: "100%" }}
+                src={nextArrow}
+              ></img>
+            </div>
           </NextButton>
         </DateSelectionWwrapper>
       </div>

@@ -287,6 +287,7 @@ const AddResort = () => {
                   Add Photos
                 </p>
                 <button
+                  type="button"
                   style={
                     (isDragging ? { color: "red" } : null,
                     {
@@ -363,7 +364,7 @@ const AddResort = () => {
                         }}
                         onClick={() => onImageRemove(index)}
                       >
-                        Re
+                        <p style={{ margin: "0px" }}> x</p>
                       </button>
                     </div>
                   </div>

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import resortImage from "../../../assets/ResortBooking.svg";
-import bedIcon from "../../../assets/BedIcon.svg";
+// import bedIcon from "../../../assets/BedIcon.svg";
+import bedIcon from "../../../assets/orangeBed.svg";
+
 import AreaIcon from "../../../assets/AreaIcon.svg";
 import PeopleIcon from "../../../assets/NumPeopleIcon.svg";
 import LivingroomIcon from "../../../assets/LivingroomIcon.svg";
 import SelectedIcon from "../../../assets/selectedIcon.svg";
 import forwardArrow from "../../../assets/Arrow_2.svg";
+import SectionImage from "../../../assets/addresort.jpg";
 import {
   MainWrapper,
   TopDiv,
@@ -70,10 +73,30 @@ const SectionComponent = () => {
         ></hr>
         <BottomDiv>
           <BottomLeftDiv>
-            <ImageWrapper></ImageWrapper>
-            <ImageWrapper></ImageWrapper>
-            <ImageWrapper></ImageWrapper>
-            <ImageWrapper></ImageWrapper>
+            <ImageWrapper>
+              <img
+                style={{ height: "100%", width: "100%" }}
+                src={SectionImage}
+              ></img>
+            </ImageWrapper>
+            <ImageWrapper>
+              <img
+                style={{ height: "100%", width: "100%" }}
+                src={SectionImage}
+              ></img>
+            </ImageWrapper>
+            <ImageWrapper>
+              <img
+                style={{ height: "100%", width: "100%" }}
+                src={SectionImage}
+              ></img>
+            </ImageWrapper>
+            <ImageWrapper>
+              <img
+                style={{ height: "100%", width: "100%" }}
+                src={SectionImage}
+              ></img>
+            </ImageWrapper>
           </BottomLeftDiv>
           <BottomRightDiv>
             <div>
@@ -98,8 +121,11 @@ const SectionComponent = () => {
 
             <FeaturesWrapper>
               <FeatureIconAndText>
-                <div>
-                  <img src={bedIcon} />
+                <div style={{ width: "36px", height: "28px" }}>
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={bedIcon}
+                  />
                 </div>
                 <p>2 bedrooms</p>
               </FeatureIconAndText>

@@ -70,7 +70,7 @@ const Weekend = () => {
                   <InputWrapper
                     type="number"
                     min={0}
-                    max={6}
+                    // max={6}
                     required={!fridayChecked}
                     disabled={fridayChecked}
                     style={{
@@ -98,7 +98,7 @@ const Weekend = () => {
                   <InputWrapper
                     type="number"
                     min={0}
-                    max={6}
+                    // max={6}
                     required={fridayChecked}
                     disabled={!fridayChecked}
                     style={{
@@ -114,7 +114,7 @@ const Weekend = () => {
                   <InputWrapper
                     type="number"
                     min={0}
-                    max={6}
+                    // max={6}
                     disabled={satuardayChecked}
                     required={!satuardayChecked}
                     style={{
@@ -144,7 +144,7 @@ const Weekend = () => {
                   <InputWrapper
                     type="number"
                     min={0}
-                    max={6}
+                    // max={6}
                     disabled={!satuardayChecked}
                     required={satuardayChecked}
                     style={{
@@ -160,7 +160,7 @@ const Weekend = () => {
                   <InputWrapper
                     type="number"
                     min={0}
-                    max={6}
+                    // max={6}
                     disabled={sundayChecked}
                     required={!sundayChecked}
                     style={{
@@ -188,7 +188,7 @@ const Weekend = () => {
                   <InputWrapper
                     type="number"
                     min={0}
-                    max={6}
+                    // max={6}
                     disabled={!sundayChecked}
                     required={sundayChecked}
                     style={{
@@ -208,7 +208,7 @@ const Weekend = () => {
                   <InputWrapper
                     type="number"
                     min={0}
-                    max={6}
+                    // max={6}
                     required={!specialPriceChecked}
                     disabled={specialPriceChecked}
                     style={{
@@ -238,7 +238,7 @@ const Weekend = () => {
                   <InputWrapper
                     type="number"
                     min={0}
-                    max={6}
+                    // max={6}
                     required={specialPriceChecked}
                     disabled={!specialPriceChecked}
                     style={{

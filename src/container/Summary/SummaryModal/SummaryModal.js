@@ -8,6 +8,7 @@ import {
   RowWrapper,
   TopDivWrapper,
 } from "./SummaryModal.style";
+import doneAllIcon from "../../../assets/DoneAll.svg";
 
 const useSummaryModal = () => {
   const [open, setOpen] = React.useState(false);
@@ -160,12 +161,25 @@ const useSummaryModal = () => {
                 shortly, check your JunkMail/Spam folder)
               </p>
             </div>
-            <ProceedButton
-              style={{ alignSelf: "center" }}
-              onClick={handleClose}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
-              Continue
-            </ProceedButton>
+              <ProceedButton onClick={handleClose}>
+                <div
+                  style={{ width: "30px", height: "27px", marginRight: "10px" }}
+                >
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={doneAllIcon}
+                  ></img>
+                </div>
+                Continue
+              </ProceedButton>
+            </div>
           </ModalWrapper>
         </Modal>
       </div>

@@ -27,7 +27,7 @@ import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import useSummaryModal from "./SummaryModal/SummaryModal";
 import useWindowSize from "../../library/hooks/useWindowSize";
-
+import BillingSummaryImage from "../../assets/BillingSummaryIcon.svg";
 const Summary = (props) => {
   const { width } = useWindowSize();
   const [value, setValue] = React.useState(new Date());
@@ -96,7 +96,7 @@ const Summary = (props) => {
             </p>
           </NameSectionAndPriceWrapper>
         </ResortNameImagePriceWrapper>
-        <LocationWrapper>
+        {/* <LocationWrapper>
           <ImageWrapper>
             <img
               src={ResortImage}
@@ -123,7 +123,7 @@ const Summary = (props) => {
             </div>
             <LocationName>8 Pennsylvania Avenue, Washington, USA</LocationName>
           </div>
-        </LocationWrapper>
+        </LocationWrapper> */}
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <div
             style={{
@@ -204,62 +204,25 @@ const Summary = (props) => {
           ></textarea>
           {/* </div> */}
         </div>
-        {/* <div
-          style={{
-            paddingTop: "20px",
-            paddingBottom: "20px",
-            borderBottom: "1px solid #707070",
-          }}
-        >
-          <div
+        <div style={{ display: "flex", marginTop: "10px" }}>
+          <div style={{ width: "30px", height: "30px", marginRight: "10px" }}>
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={BillingSummaryImage}
+            ></img>
+          </div>
+          <p
             style={{
-              display: "flex",
-              justifyContent: "space-between",
-              backgroundColor: "#F8F9FA",
-              borderRadius: "20px",
-              padding: "20px",
+              margin: "0px",
+              color: "#ED702D",
+              fontSize: "20px",
+              fontWeight: "bold",
             }}
           >
-            <p style={{ margin: "0px", fontSize: "16px", fontWeight: "bold" }}>
-              Provide ID number
-            </p>
-            <div
-              style={{
-                backgroundColor: "white",
-                paddingRight: "10px",
-                paddingLeft: "10px",
-                color: "#A5A5A5",
-                borderRadius: "5px",
-              }}
-            >
-              123456789
-            </div>
-          </div>
+            Billing Summary
+          </p>
         </div>
-        <p
-          style={{
-            color: "#A5A5A5",
-            margin: "0px",
-            fontSize: "14px",
-            paddingTop: "20px",
-            paddingBottom: "20px",
-            borderBottom: "2px dashed #d5d5d5",
-          }}
-        >
-          This information is needed to be added to the contract and it will not
-          be saved
-        </p> */}
-        <p
-          style={{
-            margin: "0px",
-            color: "#ED702D",
-            fontSize: "20px",
-            fontWeight: "bold",
-            marginTop: "10px",
-          }}
-        >
-          Billing Summary
-        </p>
+
         <div
           style={{
             display: "flex",

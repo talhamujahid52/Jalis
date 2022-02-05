@@ -4,7 +4,7 @@ import { useForm, Controller } from "react-hook-form";
 import { Input, Button } from "antd";
 import { Radio } from "antd";
 // import Logo from "components/UI/Logo/Logo";
-import FormControl from "components/UI/FormControl/FormControl";
+import FormControl from "components/UI/FormControl/FormControlForgetPassword";
 import { useHistory } from "react-router-dom";
 import { ENTER_NEW_PASSWORD } from "settings/constant";
 
@@ -73,7 +73,7 @@ export default function ForgetPassWord() {
             onChange={onChange}
             value={value}
           >
-            <Radio value={1}>
+            <Radio style={{}} value={1}>
               <FormControl
                 label="Email"
                 htmlFor="email"
@@ -91,7 +91,8 @@ export default function ForgetPassWord() {
                 }
               >
                 <Controller
-                  as={<Input />}
+                  style={{ width: "100%" }}
+                  as={<Input style={{ width: "100%" }} />}
                   type="email"
                   id="email"
                   name="email"

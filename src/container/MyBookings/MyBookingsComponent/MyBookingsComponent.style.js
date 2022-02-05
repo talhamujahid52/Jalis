@@ -141,6 +141,7 @@ export const ExpandDivWrapper = styled.div`
   /* display: flex;
   align-items: center;
   justify-content: space-between; */
+  cursor: pointer;
   padding: 20px 30px;
   @media (max-width: 1100px) {
     padding: 20px 10px;

@@ -51,7 +51,7 @@ export const EmailWrapper = styled.div`
 export const WhatsappWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   @media (max-width: 900px) {
     display: flex;
     flex-direction: column;
@@ -63,7 +63,8 @@ export const WhatsappWrapper = styled.div`
 `;
 
 export const ProceedButton = styled.button`
-  border: 0px;
+  border: 1px solid #ed702d;
+  cursor: pointer;
   background: #ed702d;
   color: white;
   padding: 10px 30px;
@@ -75,4 +76,5 @@ export const CancelButton = styled.button`
   color: #ed702d;
   padding: 10px 30px;
   border-radius: 5px;
+  cursor: pointer;
 `;

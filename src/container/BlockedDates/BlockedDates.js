@@ -8,6 +8,7 @@ import {
 // import DatePicker, { DateObject } from "react-multi-date-picker";
 import { Calendar } from "react-multi-date-picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
+import "react-multi-date-picker/styles/colors/red.css";
 import useWindowSize from "../../library/hooks/useWindowSize";
 
 const BlockedDates = () => {
@@ -38,9 +39,9 @@ const BlockedDates = () => {
             Select any date or multiple dates to be blocked
           </p>
         </div>
-        {width > 1100 && (
+        {/* {width > 1100 && (
           <BookSelectedDates>Book Selected Dates</BookSelectedDates>
-        )}
+        )} */}
       </div>
       {/* <div
         style={{
@@ -95,6 +96,7 @@ const BlockedDates = () => {
       </div> */}
 
       <Calendar
+        className="red"
         value={date}
         onChange={setDate}
         minDate={new Date()}
@@ -105,11 +107,11 @@ const BlockedDates = () => {
         multiple
         plugins={[<DatePanel />]}
       />
-      {width < 1100 && (
-        <div style={{ marginTop: "40px" }}>
-          <BookSelectedDates>Book Selected Dates</BookSelectedDates>
-        </div>
-      )}
+      {/* {width < 1100 && ( */}
+      <div style={{ marginTop: "40px", width: "200px" }}>
+        <BookSelectedDates>Block Selected </BookSelectedDates>
+      </div>
+      {/* )} */}
     </BlockedDatesWrapper>
   );
 };

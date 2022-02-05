@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu } from "antd";
-
+import { useTranslation } from "react-i18next";
 import {
   HOME_PAGE,
   // LISTING_POSTS_PAGE,
@@ -17,12 +17,12 @@ import { AuthContext } from "../../../context/AuthProvider";
 
 const MainMenu = ({ className }) => {
   const { loggedIn } = useContext(AuthContext);
-
+  const { t, i18n } = useTranslation();
   return (
     <Menu className={className}>
       <Menu.Item key="0">
         <NavLink exact to={`${HOME_PAGE}`}>
-          Home
+          {t("Home")}
         </NavLink>
       </Menu.Item>
 

@@ -17,6 +17,7 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import googlePay from "../../../assets/GPay-icon.svg";
+import BillingSummaryImage from "../../../assets/BillingSummaryIcon.svg";
 
 const ExpandedComponent = () => {
   const Billing = [
@@ -86,6 +87,7 @@ const ExpandedComponent = () => {
           }}
         >
           <DesktopDatePicker
+            readOnly
             label="Check in date"
             value={value}
             minDate={new Date("2017-01-01")}
@@ -106,6 +108,7 @@ const ExpandedComponent = () => {
             to
           </p>
           <DesktopDatePicker
+            readOnly
             label="Check out date"
             value={value}
             minDate={new Date("2017-01-01")}
@@ -129,17 +132,25 @@ const ExpandedComponent = () => {
         </p>
       </BookingNotes>
       {/* Billing Calculation */}
-      <p
-        style={{
-          margin: "0px",
-          color: "#ED702D",
-          fontSize: "20px",
-          fontWeight: "bold",
-          marginTop: "10px",
-        }}
-      >
-        Billing Payment Summary
-      </p>
+      <div style={{ display: "flex", marginTop: "10px" }}>
+        <div style={{ width: "30px", height: "30px", marginRight: "10px" }}>
+          <img
+            style={{ width: "100%", height: "100%" }}
+            src={BillingSummaryImage}
+          ></img>
+        </div>
+        <p
+          style={{
+            margin: "0px",
+            color: "#ED702D",
+            fontSize: "20px",
+            fontWeight: "bold",
+            // marginTop: "10px",
+          }}
+        >
+          Billing Payment Summary
+        </p>
+      </div>
       {Billing.map((item, idx) => {
         return (
           <div
@@ -176,7 +187,7 @@ const ExpandedComponent = () => {
           <img src={googlePay} />
         </div>
       </div>
-      <div
+      {/* <div
         style={{
           color: "#64AA5D",
           fontSize: "16px",
@@ -187,7 +198,7 @@ const ExpandedComponent = () => {
         }}
       >
         Get a copy of your contract
-      </div>
+      </div> */}
     </ExpandedComponentWrapper>
   );
 };

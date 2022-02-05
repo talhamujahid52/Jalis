@@ -115,7 +115,8 @@ export const ProceedButton = styled.button`
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
-  border: 0px;
+  border: 1px solid #ed702d;
+
   background: #ed702d;
   color: white;
   padding: 10px 30px;

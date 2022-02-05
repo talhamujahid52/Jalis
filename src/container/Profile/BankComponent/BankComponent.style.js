@@ -4,7 +4,7 @@ export const NotificationsComponentWrapper = styled.div`
   margin: 20px 0px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: flex-start;

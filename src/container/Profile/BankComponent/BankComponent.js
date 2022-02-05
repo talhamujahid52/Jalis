@@ -55,7 +55,34 @@ const BankComponent = (props) => {
           ></input>
         </div>
       </div>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
+        <div
+          style={{
+            height: "20px",
+            width: "20px",
+            marginRight: "5px",
+            marginBottom: "5px",
+          }}
+        >
+          <img
+            style={{ height: "100%", width: "100%" }}
+            alt="EditIcon"
+            src={EditIcon}
+          ></img>
+        </div>
+        <p
+          style={{
+            margin: "0px",
+            color: "#3A3A3A",
+            fontSize: "18px",
+            fontWeight: "bold",
+            textDecoration: "underline",
+          }}
+        >
+          Save
+        </p>
+      </div>
+      {/* <div style={{ display: "flex" }}>
         <p
           style={{
             margin: "0px",
@@ -70,7 +97,7 @@ const BankComponent = (props) => {
         <div style={{ height: "20px", width: "20px", marginLeft: "10px" }}>
           <img alt="EditImage" src={EditIcon}></img>
         </div>
-      </div>
+      </div> */}
     </NotificationsComponentWrapper>
   );
 };

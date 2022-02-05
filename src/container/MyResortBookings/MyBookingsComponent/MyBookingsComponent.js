@@ -24,15 +24,20 @@ import {
   ExpandDivWrapper,
 } from "./MyBookingsComponent.style";
 import ExpandedComponent from "../ExpandedComponent/ExpandedComponent";
+import useGiveRatingModal from "../../Summary/SummaryModal/GiveRatingModal";
+
 // import { height } from "styled-system";
 const MyBookingsComponent = () => {
   const [value, setValue] = React.useState(new Date());
   const [rateResort, setRateResort] = useState(false);
   const [cancelBooking, setCancelBooking] = useState(false);
   const [expand, setExpand] = useState(false);
+  const Modal = useGiveRatingModal();
 
   return (
     <OutsideWrapper>
+      <Modal.Popup />
+
       <MainWrapper>
         <ResortNameImagePriceWrapper>
           <div style={{ display: "flex" }}>
@@ -71,6 +76,7 @@ const MyBookingsComponent = () => {
                 }}
               >
                 <DesktopDatePicker
+                  readOnly
                   label="Check in date"
                   value={value}
                   minDate={new Date("2017-01-01")}
@@ -92,6 +98,7 @@ const MyBookingsComponent = () => {
                   to
                 </p>
                 <DesktopDatePicker
+                  readOnly
                   label="Check out date"
                   value={value}
                   minDate={new Date("2017-01-01")}
@@ -104,10 +111,11 @@ const MyBookingsComponent = () => {
                 />
               </div>
               <RateResortButton
-                onClick={() => {
-                  setRateResort(!rateResort);
-                }}
-                rateResort={rateResort}
+                // onClick={() => {
+                //   setRateResort(!rateResort);
+                // }}
+                // rateResort={rateResort}
+                onClick={Modal.handleOpen}
               >
                 <img alt="star" src={Star} />
                 <p style={{ margin: "0px", marginLeft: "10px" }}>
@@ -131,7 +139,12 @@ const MyBookingsComponent = () => {
           </LocalizationProvider>
         </MiddleDiv>
       </MainWrapper>
-      <ExpandDivWrapper>
+      <ExpandDivWrapper
+        onClick={() => {
+          // alert("hi");
+          setExpand(!expand);
+        }}
+      >
         <div
           style={{
             display: "flex",
@@ -141,10 +154,10 @@ const MyBookingsComponent = () => {
         >
           <p style={{ margin: "0px", color: "white" }}> View Booking Details</p>
           <div
-            onClick={() => {
-              // alert("hi");
-              setExpand(!expand);
-            }}
+            // onClick={() => {
+            //   // alert("hi");
+            //   setExpand(!expand);
+            // }}
             style={{ display: "flex", cursor: "pointer" }}
           >
             <p style={{ margin: "0px", color: "white", marginRight: "10px" }}>

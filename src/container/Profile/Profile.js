@@ -23,6 +23,7 @@ import ReviewsAndRatings from "../../assets/Reviews_Rating.svg";
 import NotificationsImage from "../../assets/PushNotification.svg";
 import SmsImage from "../../assets/SMSNotification.svg";
 import { useState } from "react";
+import whiteStar from "../../assets/whiteStar.svg";
 const avatarImg = `http://s3.amazonaws.com/redqteam.com/isomorphic-reloaded-image/profilepic.png`;
 
 const Profile = () => {
@@ -86,27 +87,62 @@ const Profile = () => {
                     setName(e.target.value);
                   }}
                 ></input>
-                <div style={{ height: "20px", width: "20px" }}>
+                <div
+                  style={{ height: "20px", width: "20px", cursor: "pointer" }}
+                >
                   <img alt="EditImage" src={EditIcon}></img>
                 </div>
               </div>
               <div
                 style={{
-                  padding: "5px 10px",
+                  padding: "0px 10px",
                   borderRadius: "20px",
-                  width: "50px",
+                  width: "60px",
+                  height: "25px",
                   backgroundColor: "#F6B504",
                   display: "flex",
                   alignItems: "center",
                 }}
               >
-                <p style={{ margin: "0px", fontSize: "12px", color: "white" }}>
+                <p
+                  style={{
+                    margin: "0px",
+                    fontSize: "12px",
+                    color: "white",
+                    marginRight: "10px",
+                    height: "14px",
+                    width: "14px",
+                    marginBottom: "5px",
+                  }}
+                >
                   4.4
                 </p>
+                <div
+                  style={{
+                    margin: "0px",
+                    fontSize: "12px",
+                    color: "white",
+                    height: "12px",
+                    width: "12px",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src={whiteStar}
+                  ></img>
+                </div>
+                {/* <div style={{ height: "14px", width: "14px", margin: "0px" }}>
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src={whiteStar}
+                  ></img>
+                  dead
+                </div> */}
               </div>
             </div>
           </div>
-          <div>
+          <div style={{ cursor: "pointer" }}>
             <img alt="EditImage" src={Edit}></img>
           </div>
         </ImageAndNameWrapper>
@@ -132,7 +168,13 @@ const Profile = () => {
         </EmailWrapper>
         <hr style={{ color: "#F8F9FA", margin: "10px 0px" }}></hr>
         <WhatsappWrapper>
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginRight: "30px",
+            }}
+          >
             <div style={{ width: "90px", height: "60px" }}>
               <img
                 alt="WhatsApp"
@@ -140,16 +182,7 @@ const Profile = () => {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
-            {/* <p
-              style={{
-                margin: "0px",
-                color: "#3A3A3A",
-                fontSize: "22px",
-                fontWeight: "bold",
-              }}
-            >
-              +9665512345678
-            </p> */}
+
             <input
               style={{
                 borderRadius: "8px",
@@ -165,7 +198,23 @@ const Profile = () => {
               value={phone}
             ></input>
           </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div
+            style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+          >
+            <div
+              style={{
+                height: "20px",
+                width: "20px",
+                marginRight: "5px",
+                marginBottom: "5px",
+              }}
+            >
+              <img
+                style={{ height: "100%", width: "100%" }}
+                alt="EditIcon"
+                src={EditIcon}
+              ></img>
+            </div>
             <p
               style={{
                 margin: "0px",
@@ -175,11 +224,8 @@ const Profile = () => {
                 textDecoration: "underline",
               }}
             >
-              Change Phone number
+              Save
             </p>
-            <div style={{ height: "20px", width: "20px", marginLeft: "10px" }}>
-              <img alt="EditIcon" src={EditIcon}></img>
-            </div>
           </div>
         </WhatsappWrapper>
         <WhatsappWrapper>
@@ -188,6 +234,7 @@ const Profile = () => {
               display: "flex",
               alignItems: "center",
               marginTop: width < 900 ? "20px" : "0px",
+              marginRight: "30px",
             }}
           >
             {width > 900 && (
@@ -196,16 +243,6 @@ const Profile = () => {
               </div>
             )}
 
-            {/* <p
-              style={{
-                margin: "0px",
-                color: "#3A3A3A",
-                fontSize: "22px",
-                fontWeight: "bold",
-              }}
-            >
-              ***********
-            </p> */}
             <input
               type="password"
               style={{
@@ -222,7 +259,23 @@ const Profile = () => {
               value={password}
             ></input>
           </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div
+            style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+          >
+            <div
+              style={{
+                height: "20px",
+                width: "20px",
+                marginRight: "5px",
+                marginBottom: "5px",
+              }}
+            >
+              <img
+                style={{ height: "100%", width: "100%" }}
+                alt="EditIcon"
+                src={EditIcon}
+              ></img>
+            </div>
             <p
               style={{
                 margin: "0px",
@@ -232,11 +285,8 @@ const Profile = () => {
                 textDecoration: "underline",
               }}
             >
-              Change Password
+              Save
             </p>
-            <div style={{ height: "20px", width: "20px", marginLeft: "10px" }}>
-              <img alt="EditImage" src={EditIcon}></img>
-            </div>
           </div>
         </WhatsappWrapper>
       </PersonalInfoWrapper>

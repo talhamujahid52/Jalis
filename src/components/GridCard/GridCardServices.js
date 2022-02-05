@@ -131,7 +131,7 @@ const GridCard = ({
               />
             )}
           </div>
-          {/* {price && (
+          {price && (
             <PriceArea className="price">
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 start from
@@ -140,7 +140,7 @@ const GridCard = ({
                 <p style={{ textDecoration: "line-through" }}>2000</p>
               </div>
             </PriceArea>
-          )} */}
+          )}
         </div>
         <div
           style={{
@@ -150,7 +150,7 @@ const GridCard = ({
             // border: "1px solid red",
           }}
         >
-          <div
+          {/* <div
             style={{
               display: "flex",
               alignItems: "center",
@@ -178,8 +178,8 @@ const GridCard = ({
                 src={Verified}
               />
             )}
-          </div>
-          {price && (
+          </div> */}
+          {/* {price && (
             <PriceArea className="price">
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 start from
@@ -188,7 +188,7 @@ const GridCard = ({
                 <p style={{ textDecoration: "line-through" }}>2000</p>
               </div>
             </PriceArea>
-          )}
+          )} */}
         </div>
         {/* <div>
           <p style={{ color: "#ED702D", fontSize: "12px", fontWeight: "bold" }}>

@@ -30,6 +30,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { AuthContext } from "../../context/AuthProvider";
 
+import ChatIcon from "../../assets/whatsapp.svg";
+
 const SinglePage = ({ match }) => {
   const { loggedIn } = useContext(AuthContext);
   const [nav1, setNav1] = useState();
@@ -322,6 +324,9 @@ const SinglePage = ({ match }) => {
           }}
         >
           Chat with us
+          <div style={{ height: "30px", width: "30px" }}>
+            <img src={ChatIcon} style={{ height: "100%", width: "100%" }}></img>
+          </div>
         </NextButton>
       </div>
       {/* <ReviewsAndRatings></ReviewsAndRatings> */}

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import HtmlLabel from "../HtmlLabel/HtmlLabel";
 import Wrapper, { IconandLabelWrapper } from "./FormControl.style";
+import useWindowSize from "../../../library/hooks/useWindowSize";
 
 const FormControl = ({
   leftIcon,
@@ -19,9 +20,13 @@ const FormControl = ({
   if (className) {
     addAllClasses.push(className);
   }
+  const { width } = useWindowSize();
 
   return (
-    <Wrapper style={{ width: "" }} className={addAllClasses.join(" ")}>
+    <Wrapper
+      style={{ width: width < 500 ? " 300px" : "370px" }}
+      className={addAllClasses.join(" ")}
+    >
       <IconandLabelWrapper>
         {
           <img

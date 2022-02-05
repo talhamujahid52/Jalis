@@ -37,7 +37,7 @@ import Chip from "@mui/material/Chip";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import nextArrow from "../../assets/Path208.svg";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from "react-responsive-carousel";
 // import { Carousel } from "react-carousel-minimal";
@@ -49,11 +49,16 @@ const SinglePage = ({ match }) => {
   const [checkOutDate, setCheckOutDate] = useState(new Date());
   const history = useHistory();
   const [additionalFeatures, setAdditionalFeatures] = useState([
-    { price: "ريال10", name: "early Checkin", selected: false },
-    { price: "ريال10", name: "Heater", selected: false },
-    { price: "ريال10", name: "Full bathroom", selected: false },
-    { price: "ريال10", name: "Air conditioning", selected: false },
-    { price: "ريال10", name: "TV", selected: false },
+    { price: "10", currency: "ريال", name: "early Checkin", selected: false },
+    { price: "10", currency: "ريال", name: "Heater", selected: false },
+    { price: "10", currency: "ريال", name: "Full bathroom", selected: false },
+    {
+      price: "10",
+      currency: "ريال",
+      name: "Air conditioning",
+      selected: false,
+    },
+    { price: "10", currency: "ريال", name: "TV", selected: false },
   ]);
   // const { href } = useLocation();
   // const [isModalShowing, setIsModalShowing] = useState(false);
@@ -400,7 +405,7 @@ const SinglePage = ({ match }) => {
                 console.log("new Array is", newArray);
                 setAdditionalFeatures(newArray);
               }}
-              label={item.price + "  " + item.name}
+              label={item.currency + "  " + item.price + "  " + item.name}
               sx={{
                 paddingLeft: "5px",
                 marginBottom: "10px",
@@ -426,90 +431,19 @@ const SinglePage = ({ match }) => {
             // console.log("CheckOutDate", checkOutDate);
           }}
         >
-          Next
+          <p style={{ margin: "0px" }}>Next</p>
+          <div style={{ height: "30px", width: "30px" }}>
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={nextArrow}
+            ></img>
+          </div>
         </NextButton>
       </div>
 
       <AddsPlaceholder></AddsPlaceholder>
-      {/* <div
-        style={{
-          marginTop: "40px",
-          marginBottom: "40px",
-          borderRadius: "10px",
-          height: "200px",
-          backgroundColor: "silver",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <p
-          style={{ fontsize: "28px", color: "whitesmoke", fontWeight: "bold" }}
-        >
-          Adds placeholder
-        </p>
-      </div> */}
+
       <ReviewsAndRatings></ReviewsAndRatings>
-      {/* <button
-        style={{
-          height: "60px",
-          width: "200px",
-          backgroundColor: "orange",
-          borderRadius: "10px",
-        }}
-        onClick={() => {
-          history.push(Resource_Section_Selection);
-        }}
-      >
-        Next
-      </button> */}
-
-      {/* <TopBar title={title} shareURL={href} author={author} media={gallery} /> */}
-
-      {/* <Container>
-        <Row gutter={30} id="reviewSection" style={{ marginTop: 30 }}>
-          <Col xl={16}>
-            <Description
-              content={content}
-              title={title}
-              location={location}
-              rating={rating}
-              ratingCount={ratingCount}
-            />
-            <Amenities amenities={amenities} />
-            <Location location={data[0]} />
-          </Col>
-          <Col xl={8}>
-            {width > 1200 ? (
-              <Sticky
-                innerZ={999}
-                activeClass="isSticky"
-                top={202}
-                bottomBoundary="#reviewSection"
-              >
-                <Reservation />
-              </Sticky>
-            ) : (
-              <BottomReservation
-                title={title}
-                price={price}
-                rating={rating}
-                ratingCount={ratingCount}
-              />
-            )}
-          </Col>
-        </Row>
-        <Row gutter={30}>
-          <Col xl={16}>
-            <Review
-              reviews={reviews}
-              ratingCount={ratingCount}
-              rating={rating}
-            />
-          </Col>
-          <Col xl={8} />
-        </Row>
-      </Container> */}
     </SinglePageWrapper>
   );
 };
