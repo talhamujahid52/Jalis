@@ -10,10 +10,9 @@
   margin-bottom: 40px;
 }
 
-.resort-image {
+.resort-image-services {
   height: 190px;
   width: 250px;
-  /* border: 1px solid red; */
   position: relative;
   overflow: hidden;
   border-radius: 15px;
@@ -92,11 +91,10 @@
   }
 }
 @media only screen and (max-width: 800px) {
-  .resort-image {
-    height: 130px;
-    width: 170px;
-    /* border: 1px solid red; */
-    border-radius: 20px;
+  .resort-image-services {
+    height: 70px;
+    min-width: 70px;
+    border-radius: 100px;
   }
 }
 /* @media only screen and (max-width: 600px) {

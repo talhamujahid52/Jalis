@@ -7,6 +7,7 @@ import checkinicon from "../../../assets/CheckinIcon.svg";
 import checkouticon from "../../../assets/CheckoutIcon.svg";
 import areaicon from "../../../assets/AreaIcon.svg";
 import bedicon from "../../../assets/orangeBed.svg";
+import doneAllIcon from "../../../assets/DoneAll.svg";
 
 const AddSection = (props) => {
   const [sectionName, setSectionName] = useState("");
@@ -279,7 +280,21 @@ const AddSection = (props) => {
           type="submit"
           form="generalForm"
         >
-          NEXT
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <p style={{ margin: "0px" }}>NEXT</p>
+            <div style={{ width: "25px", height: "25px", marginLeft: "10px" }}>
+              <img
+                style={{ width: "100%", height: "100%" }}
+                src={doneAllIcon}
+              ></img>
+            </div>
+          </div>
         </button>
       </div>
     </form>

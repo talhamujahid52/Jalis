@@ -30,7 +30,7 @@ const ManageResort = (props) => {
     <div class="manageresort">
       {/* //image */}
       <div style={{ display: "flex" }}>
-        <div className="resort-image">
+        <div className="resort-image-services">
           {paused && (
             <div
               style={{

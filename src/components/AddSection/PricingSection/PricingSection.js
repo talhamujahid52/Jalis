@@ -13,6 +13,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Weekend from "./Weekend";
 import EidulFitr from "./EidulFitr";
 import EidulAdha from "./EidulAdha";
+import doneAllIcon from "../../../assets/DoneAll.svg";
 
 const PricingSection = (props) => {
   const [specialPriceChecked, setSpecialPriceChecked] = useState(false);
@@ -115,7 +116,21 @@ const PricingSection = (props) => {
           type="submit"
           form="pricingForm"
         >
-          NEXT
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <p style={{ margin: "0px" }}>NEXT</p>
+            <div style={{ width: "25px", height: "25px", marginLeft: "10px" }}>
+              <img
+                style={{ width: "100%", height: "100%" }}
+                src={doneAllIcon}
+              ></img>
+            </div>
+          </div>
         </button>
       </div>
     </form>

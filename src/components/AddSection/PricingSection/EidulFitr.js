@@ -15,6 +15,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
+import eidImage from "../../../assets/MoverIcon.svg";
+
 const EidulFitr = () => {
   const [priceTagEidUlFitr, setPriceTagEidUlFitr] = useState("Fix");
   const [specialPriceChecked, setSpecialPriceChecked] = useState(false);
@@ -34,7 +36,18 @@ const EidulFitr = () => {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>Eid ul Fitar</Typography>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <div
+                style={{ width: "20px", height: "20px", marginRight: "10px" }}
+              >
+                <img
+                  style={{ width: "100%", height: "100%" }}
+                  src={eidImage}
+                ></img>
+              </div>
+
+              <Typography style={{ marginTop: "10px" }}>Eid ul Fitr</Typography>
+            </div>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>

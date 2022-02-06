@@ -6,6 +6,8 @@ import {
   AddPhotoTextAndButtonWrapper,
   AddPhotosText,
 } from "./ImagesSection.style";
+import doneAllIcon from "../../../assets/DoneAll.svg";
+
 const ImagesSection = (props) => {
   const [images, setImages] = React.useState([]);
   const onChange = (imageList, addUpdateIndex) => {
@@ -169,7 +171,21 @@ const ImagesSection = (props) => {
           type="submit"
           onClick={props.handleNext}
         >
-          Finish
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <p style={{ margin: "0px" }}>Finish</p>
+            <div style={{ width: "25px", height: "25px", marginLeft: "10px" }}>
+              <img
+                style={{ width: "100%", height: "100%" }}
+                src={doneAllIcon}
+              ></img>
+            </div>
+          </div>
         </button>
       </div>
     </>

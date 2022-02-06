@@ -247,16 +247,17 @@ const AddResort = () => {
               onClick={() => {
                 // let newArray = new Array();
                 let newArray = [...features];
-                console.log("new Array is", newArray);
+                // console.log("new Array is", newArray);
                 newArray[index].selected = !newArray[index].selected;
                 // return newArray;
-                console.log("new Array is", newArray);
+                // console.log("new Array is", newArray);
                 setFeatures(newArray);
               }}
               avatar={
+                // <item.icon fill="blue" />
                 <img
                   src={item.icon}
-                  style={{ height: "15px", width: "15px", color: "blue" }}
+                  style={{ height: "15px", width: "15px" }}
                 />
               }
               label={item.name}
