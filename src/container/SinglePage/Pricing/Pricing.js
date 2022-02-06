@@ -80,7 +80,9 @@ const Pricing = (props) => {
                 renderInput={(params) => <TextField {...params} />}
               />
             </div>
-            <div style={{ display: "flex", gap: "50px" }}>
+            <div
+              style={{ display: "flex", gap: width > 800 ? "30px" : "10px" }}
+            >
               <div
                 style={{
                   display: "flex",
