@@ -33,18 +33,21 @@ const Footer = ({ logo, menu, bgSrc, copyright, className, path }) => {
             >
               <div style={{ height: "35px", width: "35px" }}>
                 <img
+                  alt=""
                   style={{ color: "#707070", height: "100%", width: "100%" }}
                   src={facebookIcon}
                 />
               </div>
               <div style={{ height: "35px", width: "35px" }}>
                 <img
+                  alt=""
                   style={{ color: "#707070", height: "100%", width: "100%" }}
                   src={instagramIcon}
                 />
               </div>
               <div style={{ height: "35px", width: "35px" }}>
                 <img
+                  alt=""
                   style={{ color: "#707070", height: "100%", width: "100%" }}
                   src={twitterIcon}
                 />
@@ -72,36 +75,42 @@ const Footer = ({ logo, menu, bgSrc, copyright, className, path }) => {
             >
               <div style={{ height: "60px", width: "100px" }}>
                 <img
+                  alt=""
                   style={{ color: "#707070", height: "100%", width: "100%" }}
                   src={VisaMcIcon}
                 />
               </div>
               <div style={{ height: "60px", width: "100px" }}>
                 <img
+                  alt=""
                   style={{ color: "#707070", height: "100%", width: "100%" }}
                   src={madaIcon}
                 />
               </div>
               <div style={{ height: "60px", width: "100px" }}>
                 <img
+                  alt=""
                   style={{ color: "#707070", height: "100%", width: "100%" }}
                   src={googlePay}
                 />
               </div>
               <div style={{ height: "60px", width: "100px" }}>
                 <img
+                  alt=""
                   style={{ color: "#707070", height: "100%", width: "100%" }}
                   src={ApplePay}
                 />
               </div>
               <div style={{ height: "60px", width: "100px" }}>
                 <img
+                  alt=""
                   style={{ color: "#707070", height: "100%", width: "100%" }}
                   src={stcPay}
                 />
               </div>
               <div style={{ height: "60px", width: "100px" }}>
                 <img
+                  alt=""
                   style={{ color: "#707070", height: "100%", width: "100%" }}
                   src={maroof}
                 />

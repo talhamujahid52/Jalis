@@ -57,6 +57,7 @@ const ExpandedComponent = () => {
       <LocationWrapper>
         <ImageWrapper>
           <img
+            alt=""
             src={ResortImage}
             style={{
               height: "100%",
@@ -74,7 +75,11 @@ const ExpandedComponent = () => {
           }}
         >
           <div style={{ height: "27px", width: "19px", marginRight: "10px" }}>
-            <img src={locationIcon} style={{ height: "100%", width: "100%" }} />
+            <img
+              alt=""
+              src={locationIcon}
+              style={{ height: "100%", width: "100%" }}
+            />
           </div>
           <LocationName>8 Pennsylvania Avenue, Washington, USA</LocationName>
         </div>
@@ -139,6 +144,7 @@ const ExpandedComponent = () => {
       <div style={{ display: "flex", marginTop: "10px" }}>
         <div style={{ width: "30px", height: "30px", marginRight: "10px" }}>
           <img
+            alt=""
             style={{ width: "100%", height: "100%" }}
             src={BillingSummaryImage}
           ></img>
@@ -188,7 +194,7 @@ const ExpandedComponent = () => {
             margin: "0px",
           }}
         >
-          <img src={googlePay} />
+          <img alt="" src={googlePay} />
         </div>
       </div>
       {/* <div

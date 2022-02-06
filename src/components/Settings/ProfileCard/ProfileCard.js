@@ -20,7 +20,7 @@ const ProfileCard = ({ userType }) => {
         }}
       >
         <div className="roundedImage" style={{ overflow: "hidden" }}>
-          <img src={avatarImg}></img>
+          <img alt="" src={avatarImg}></img>
         </div>
         {userType === "notLoggedIn" && (
           <div className="notLoggedInDiv">

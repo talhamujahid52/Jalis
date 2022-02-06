@@ -163,86 +163,92 @@ const AddSection = (props) => {
             </div>
           </div>
           <div className="moreDescription2">
-            <div class="addSectionText">
-              <img
-                src={areaicon}
-                style={{
-                  height: "20px",
-                  marginRight: "10px",
-                }}
-                alt="logo"
-              />
-              <p style={{ height: "20px" }}>Area</p>
-            </div>
             <div>
-              <input
-                type="text"
-                placeholder="Area"
-                value={area}
-                onChange={(e) => {
-                  setArea(e.target.value);
-                }}
-                className="DescriptionTextField"
-              ></input>
+              <div class="addSectionText">
+                <img
+                  src={areaicon}
+                  style={{
+                    height: "20px",
+                    marginRight: "10px",
+                  }}
+                  alt="logo"
+                />
+                <p style={{ height: "20px" }}>Area</p>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Area"
+                  value={area}
+                  onChange={(e) => {
+                    setArea(e.target.value);
+                  }}
+                  className="DescriptionTextField"
+                ></input>
+              </div>
             </div>
             {/* 2 */}
-            <div class="addSectionText">
-              <img
-                src={bedicon}
-                style={{
-                  height: "20px",
-                  marginRight: "10px",
-                }}
-                alt="logo"
-              />
-              <p style={{ height: "20px" }}>Bedrooms</p>
-            </div>
             <div>
-              <input
-                required
-                type="number"
-                min={0}
-                // max={6}
-                placeholder="01"
-                value={bedRooms}
-                onChange={(e) => {
-                  setBedRooms(e.target.value);
-                }}
-                className="DescriptionTextField"
-              ></input>
+              <div class="addSectionText">
+                <img
+                  src={bedicon}
+                  style={{
+                    height: "20px",
+                    marginRight: "10px",
+                  }}
+                  alt="logo"
+                />
+                <p style={{ height: "20px" }}>Bedrooms</p>
+              </div>
+              <div>
+                <input
+                  required
+                  type="number"
+                  min={0}
+                  // max={6}
+                  placeholder="01"
+                  value={bedRooms}
+                  onChange={(e) => {
+                    setBedRooms(e.target.value);
+                  }}
+                  className="DescriptionTextField"
+                ></input>
+              </div>
             </div>
             {/* 3 */}
-            <div class="addSectionText">
-              <img
-                src={checkinicon}
-                style={{
-                  height: "20px",
-                  marginRight: "10px",
-                }}
-                alt="logo"
-              />
-              <p
-                style={{
-                  // marginTop: "15px",
-                  height: "20px",
-                  // marginLeft: "0px",
-                  // border: "1px solid red",
-                }}
-              >
-                check-in time
-              </p>
-            </div>
             <div>
-              <input
-                required
-                type="text"
-                placeholder="01-05-2021"
-                value={checkIn}
-                onChange={(e) => {
-                  setCheckIn(e.target.value);
-                }}
-                className="DescriptionTextField"
-              ></input>
+              <div class="addSectionText">
+                <img
+                  src={checkinicon}
+                  style={{
+                    height: "20px",
+                    marginRight: "10px",
+                  }}
+                  alt="logo"
+                />
+                <p
+                  style={{
+                    // marginTop: "15px",
+                    height: "20px",
+                    // marginLeft: "0px",
+                    // border: "1px solid red",
+                  }}
+                >
+                  check-in time
+                </p>
+              </div>
+              <div>
+                <input
+                  required
+                  type="text"
+                  placeholder="01-05-2021"
+                  value={checkIn}
+                  onChange={(e) => {
+                    setCheckIn(e.target.value);
+                  }}
+                  className="DescriptionTextField"
+                ></input>
+              </div>
             </div>
           </div>
         </div>
@@ -290,6 +296,7 @@ const AddSection = (props) => {
             <p style={{ margin: "0px" }}>NEXT</p>
             <div style={{ width: "25px", height: "25px", marginLeft: "10px" }}>
               <img
+                alt=""
                 style={{ width: "100%", height: "100%" }}
                 src={doneAllIcon}
               ></img>

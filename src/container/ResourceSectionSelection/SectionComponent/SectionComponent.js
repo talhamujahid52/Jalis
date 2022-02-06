@@ -35,6 +35,7 @@ const SectionComponent = () => {
           <div style={{ display: "flex", alignItems: "center" }}>
             <div style={{ height: "55px", width: "55px", marginRight: "15px" }}>
               <img
+                alt=""
                 src={resortImage}
                 style={{ width: "100%", height: "100%" }}
               />
@@ -75,24 +76,28 @@ const SectionComponent = () => {
           <BottomLeftDiv>
             <ImageWrapper>
               <img
+                alt=""
                 style={{ height: "100%", width: "100%" }}
                 src={SectionImage}
               ></img>
             </ImageWrapper>
             <ImageWrapper>
               <img
+                alt=""
                 style={{ height: "100%", width: "100%" }}
                 src={SectionImage}
               ></img>
             </ImageWrapper>
             <ImageWrapper>
               <img
+                alt=""
                 style={{ height: "100%", width: "100%" }}
                 src={SectionImage}
               ></img>
             </ImageWrapper>
             <ImageWrapper>
               <img
+                alt=""
                 style={{ height: "100%", width: "100%" }}
                 src={SectionImage}
               ></img>
@@ -123,6 +128,7 @@ const SectionComponent = () => {
               <FeatureIconAndText>
                 <div style={{ width: "36px", height: "28px" }}>
                   <img
+                    alt=""
                     style={{ width: "100%", height: "100%" }}
                     src={bedIcon}
                   />
@@ -132,6 +138,7 @@ const SectionComponent = () => {
               <FeatureIconAndText>
                 <div style={{ width: "50px", height: "30px" }}>
                   <img
+                    alt=""
                     style={{ width: "100%", height: "100%" }}
                     src={LivingroomIcon}
                   />
@@ -141,6 +148,7 @@ const SectionComponent = () => {
               <FeatureIconAndText>
                 <div style={{ width: "38px", height: "25px" }}>
                   <img
+                    alt=""
                     style={{ width: "100%", height: "100%" }}
                     src={PeopleIcon}
                   />
@@ -150,6 +158,7 @@ const SectionComponent = () => {
               <FeatureIconAndText>
                 <div style={{ width: "28px", height: "28px" }}>
                   <img
+                    alt=""
                     style={{ width: "100%", height: "100%" }}
                     src={AreaIcon}
                   />
@@ -175,6 +184,7 @@ const SectionComponent = () => {
                 </p>
               </IndividualTimeWrapper>
               <img
+                alt=""
                 src={forwardArrow}
                 style={{ marginLeft: "20px", marginRight: "20px" }}
               ></img>
@@ -216,7 +226,11 @@ const SectionComponent = () => {
           Choose this resource
         </p>
         <div style={{ width: "41px", height: "24px" }}>
-          <img style={{ width: "100%", height: "100%" }} src={SelectedIcon} />
+          <img
+            alt=""
+            style={{ width: "100%", height: "100%" }}
+            src={SelectedIcon}
+          />
         </div>
       </ChooseTheResource>
     </ComponentOuterWrapper>

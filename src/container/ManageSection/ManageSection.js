@@ -1,26 +1,26 @@
 import React from "react";
 import ManageSectionComponent from "../../components/ManageSection/ManageSection";
 import AddIcon from "../../assets/AddIcon.svg";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
+// import Tabs from "@mui/material/Tabs";
+// import Tab from "@mui/material/Tab";
+// import Box from "@mui/material/Box";
 import { useHistory } from "react-router-dom";
 import { ADD_SECTION_PAGE } from "settings/constant";
 import staticAnimation from "../../assets/FileSearching.svg";
 import {
   ManageSectionWrapper,
   DisplayManageSectionCenterWrapper,
-  TabNavigationWrapper,
-  TabNavigationComponentWrapper,
+  // TabNavigationWrapper,
+  // TabNavigationComponentWrapper,
 } from "./ManageSection.style";
 
 const ManageSection = () => {
   const history = useHistory();
-  const [value, setValue] = React.useState("one");
+  // const [value, setValue] = React.useState("one");
   const [empty, setEmpty] = React.useState(true);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  // const handleChange = (event, newValue) => {
+  //   setValue(newValue);
+  // };
   return (
     <DisplayManageSectionCenterWrapper>
       <ManageSectionWrapper>
@@ -46,7 +46,11 @@ const ManageSection = () => {
         >
           Add New Section
           <div style={{ height: "12px", width: "12px", marginLeft: "20px" }}>
-            <img style={{ height: "100%", width: "100%" }} src={AddIcon}></img>
+            <img
+              alt=""
+              style={{ height: "100%", width: "100%" }}
+              src={AddIcon}
+            ></img>
           </div>
         </div>
         {empty && (
@@ -60,6 +64,7 @@ const ManageSection = () => {
         {!empty && (
           <div>
             <img
+              alt=""
               src={staticAnimation}
               style={{ height: "100%", width: "100%" }}
             ></img>

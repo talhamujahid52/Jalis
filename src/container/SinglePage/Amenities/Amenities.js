@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Heading from "components/UI/Heading/Heading";
-import TextLink from "components/UI/TextLink/TextLink";
-import { FaWifi, FaCarAlt, FaSwimmer, FaAirFreshener } from "react-icons/fa";
-import IconCard from "components/IconCard/IconCard";
+// import TextLink from "components/UI/TextLink/TextLink";
+// import { FaWifi, FaCarAlt, FaSwimmer, FaAirFreshener } from "react-icons/fa";
+// import IconCard from "components/IconCard/IconCard";
 import AmenitiesWrapper, { AmenitiesArea } from "./Amenities.style";
-import { TextButton } from "../SinglePageView.style";
-import { Element } from "react-scroll";
+// import { TextButton } from "../SinglePageView.style";
+// import { Element } from "react-scroll";
 import WifiIcon from "../../../assets/Wifi.svg";
 import SwimIcon from "../../../assets/Swim.svg";
 import GymIcon from "../../../assets/Gym.svg";
 import DiningIcon from "../../../assets/Dining.svg";
-import { fontSize } from "styled-system";
+// import { fontSize } from "styled-system";
 import AmenetiesComponent from "./AmenetiesComponent";
 const Amenities = ({ titleStyle, linkStyle }) => {
   return (

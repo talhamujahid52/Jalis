@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import SectionComponent from "./SectionComponent/SectionComponent";
 import {
   OuterWrapper,
   DateSelectionWwrapper,
   NextButton,
 } from "./ResourceSectionSelection.style";
-import Chip from "@mui/material/Chip";
+// import Chip from "@mui/material/Chip";
 import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
@@ -21,22 +21,22 @@ const ResourceSectionSelection = (props) => {
   const history = useHistory();
   const [value, setValue] = React.useState(new Date());
   const color = "#ffffff";
-  const [additionalFeatures, setAdditionalFeatures] = useState([
-    { price: "ريال10", name: "early Checkin", selected: false },
-    { price: "ريال10", name: "Heater", selected: false },
-    { price: "ريال10", name: "Full bathroom", selected: false },
-    { price: "ريال10", name: "Air conditioning", selected: false },
-    { price: "ريال10", name: "TV", selected: false },
-  ]);
+  // const [additionalFeatures, setAdditionalFeatures] = useState([
+  //   { price: "ريال10", name: "early Checkin", selected: false },
+  //   { price: "ريال10", name: "Heater", selected: false },
+  //   { price: "ريال10", name: "Full bathroom", selected: false },
+  //   { price: "ريال10", name: "Air conditioning", selected: false },
+  //   { price: "ريال10", name: "TV", selected: false },
+  // ]);
   useEffect(() => {
-    console.log(
-      "checkInDate in Resource Section Selection",
-      props.location.state.checkInDate
-    );
-    console.log(
-      "checkOutDate in Resource Section Selection",
-      props.location.state.checkOutDate
-    );
+    // console.log(
+    //   "checkInDate in Resource Section Selection",
+    //   props.location.state.checkInDate
+    // );
+    // console.log(
+    //   "checkOutDate in Resource Section Selection",
+    //   props.location.state.checkOutDate
+    // );
   }, []);
   return (
     <OuterWrapper>
@@ -218,6 +218,7 @@ const ResourceSectionSelection = (props) => {
             <p style={{ margin: "0px" }}>Next</p>
             <div style={{ height: "30px", width: "30px" }}>
               <img
+                alt=""
                 style={{ width: "100%", height: "100%" }}
                 src={nextArrow}
               ></img>

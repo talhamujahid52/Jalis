@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
-import { TopServicesGrid, LuxaryServicesGrid } from "./Grid";
-import SearchArea from "../Home/Search/Search";
+import React, { useState } from "react";
+import { TopServicesGrid } from "./Grid";
+// import SearchArea from "../Home/Search/Search";
 import AddsPlaceholder from "../Home/AddsPlaceholder/AddsPlaceholder";
 import LocationGrid from "../Home/Location/Location";
 import ServicesNearYourLocation from "./ServicesNearYourLocation/ServicesNearYourLocation";
@@ -11,12 +11,12 @@ import {
   ButtonWrapper,
   FilterImageWrapper,
 } from "./HomeServices.style";
-import { LayoutContext } from "context/LayoutProvider";
-import { Waypoint } from "react-waypoint";
+// import { LayoutContext } from "context/LayoutProvider";
+// import { Waypoint } from "react-waypoint";
 import Container from "components/UI/Container/Container";
 import FilterImage from "../../assets/Filter.svg";
 const HomeServices = () => {
-  const [, dispatch] = useContext(LayoutContext);
+  // const [, dispatch] = useContext(LayoutContext);
   const [cityFilter, setCityFilter] = useState("");
 
   return (
@@ -38,7 +38,7 @@ const HomeServices = () => {
             <SearchInput placeholder="Search for your Booked Resorts..."></SearchInput>
           </SearchBarWrapper>
           <FilterImageWrapper>
-            <img src={FilterImage} />
+            <img alt="" src={FilterImage} />
           </FilterImageWrapper>
         </div>
 

@@ -1,25 +1,25 @@
 import React, { Component } from "react";
 // import Avatar from "../chatList/Avatar";
 
-const Avatar = (props) => {
-  return (
-    <div
-      className="avatar"
-      style={{
-        height: "50px",
-        width: "50px",
-        borderRadius: "100px",
-        backgroundColor: "pink",
-        // marginRight: "20px",
-      }}
-    ></div>
-  );
-};
+// const Avatar = (props) => {
+//   return (
+//     <div
+//       className="avatar"
+//       style={{
+//         height: "50px",
+//         width: "50px",
+//         borderRadius: "100px",
+//         backgroundColor: "pink",
+//         // marginRight: "20px",
+//       }}
+//     ></div>
+//   );
+// };
 
 export default class ChatItem extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     return (
       <div

@@ -19,7 +19,11 @@ const AmenetiesComponent = (props) => {
           height: width > 600 ? "100px" : "30px",
         }}
       >
-        <img style={{ height: "100%", width: "100%" }} src={props.image} />
+        <img
+          alt=""
+          style={{ height: "100%", width: "100%" }}
+          src={props.image}
+        />
       </div>
       <p style={{ color: "#2D3447", fontSize: "14px", fontWeight: "bold" }}>
         {props.title}

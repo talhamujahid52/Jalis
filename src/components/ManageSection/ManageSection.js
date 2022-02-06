@@ -11,7 +11,7 @@ import editIcon from "../../assets/edit-resource-icon.svg";
 import BlockDates from "../../assets/BlockDatesIcon.svg";
 import publishIcon from "../../assets/publish-icon.svg";
 
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 // import { ADD_RESORT_PAGE, ADD_SECTION_PAGE } from "settings/constant";
 import useWindowSize from "../../library/hooks/useWindowSize";
 

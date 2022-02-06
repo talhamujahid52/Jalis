@@ -126,6 +126,7 @@ const PricingSection = (props) => {
             <p style={{ margin: "0px" }}>NEXT</p>
             <div style={{ width: "25px", height: "25px", marginLeft: "10px" }}>
               <img
+                alt=""
                 style={{ width: "100%", height: "100%" }}
                 src={doneAllIcon}
               ></img>

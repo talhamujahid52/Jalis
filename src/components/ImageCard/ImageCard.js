@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { Input, Button } from "antd";
-import { themeGet } from "@styled-system/theme-get";
+import { Button } from "antd";
+// import { themeGet } from "@styled-system/theme-get";
 
 import ImageCardWrapper, {
   TextAndButtonWrapper,

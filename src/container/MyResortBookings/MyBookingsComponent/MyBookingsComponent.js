@@ -29,7 +29,7 @@ import useGiveRatingModal from "../../Summary/SummaryModal/GiveRatingModal";
 // import { height } from "styled-system";
 const MyBookingsComponent = () => {
   const [value, setValue] = React.useState(new Date());
-  const [rateResort, setRateResort] = useState(false);
+  // const [rateResort, setRateResort] = useState(false);
   const [cancelBooking, setCancelBooking] = useState(false);
   const [expand, setExpand] = useState(false);
   const Modal = useGiveRatingModal();

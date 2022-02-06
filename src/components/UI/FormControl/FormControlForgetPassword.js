@@ -30,6 +30,7 @@ const FormControl = ({
       <IconandLabelWrapper>
         {
           <img
+            alt=""
             style={{
               marginRight: "5px",
             }}

@@ -7,17 +7,17 @@ import ManageSection from "../ManageSection/ManageSection";
 import MessagesScreen from "../../container/Messages/Messages";
 import MyResortBookingsScreen from "../../container/MyResortBookings/MyResortBookings";
 import ReportsScreen from "../../container/Reports/Reports";
-import ManageServices from "../ManageServices/ManageServices";
+// import ManageServices from "../ManageServices/ManageServices";
 import {
   TabNavigationWrapper,
   TabNavigationComponentWrapper,
 } from "./TabNavigation.style";
-import { useHistory } from "react-router-dom";
-import { Messages, Reports, My_Resort_Bookings } from "settings/constant";
+// import { useHistory } from "react-router-dom";
+// import { Messages, Reports, My_Resort_Bookings } from "settings/constant";
 const TabNavigation = () => {
   const [value, setValue] = React.useState("one");
   const [switchSections, setSwitchSections] = React.useState(true);
-  const history = useHistory();
+  // const history = useHistory();
   const changeSections = () => {
     setSwitchSections(!switchSections);
   };

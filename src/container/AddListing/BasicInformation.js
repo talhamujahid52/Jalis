@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useStateMachine } from "little-state-machine";
 import { useForm, Controller } from "react-hook-form";
-import { Row, Col, Input, InputNumber, Button } from "antd";
+import { Row, Col, Input, Button } from "antd";
 import InputIncDec from "components/UI/InputIncDec/InputIncDec";
 import FormControl from "components/UI/FormControl/FormControl";
 import AddListingAction from "./AddListingAction";

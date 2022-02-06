@@ -1,11 +1,11 @@
 import React from "react";
 import PriceCardWrapper, {
   Title,
-  Price,
+  // Price,
   PricingHeader,
-  PricingList,
-  PriceAction,
-  Button,
+  // PricingList,
+  // PriceAction,
+  // Button,
   PlanDescription,
   PlanPrice,
 } from "./PriceCard.style";

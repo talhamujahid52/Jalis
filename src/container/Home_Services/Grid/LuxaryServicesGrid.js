@@ -1,14 +1,14 @@
 import React from "react";
-import Heading from "components/UI/Heading/Heading";
-import TextLink from "components/UI/TextLink/TextLink";
+// import Heading from "components/UI/Heading/Heading";
+// import TextLink from "components/UI/TextLink/TextLink";
 import Container from "components/UI/Container/Container";
 import SectionGrid from "components/SectionGrid/SectionGrid";
 import { PostPlaceholder } from "components/UI/ContentLoader/ContentLoader";
 import useWindowSize from "library/hooks/useWindowSize";
 import useDataApi from "library/hooks/useDataApi";
-import SectionTitle from "components/SectionTitle/SectionTitle";
+// import SectionTitle from "components/SectionTitle/SectionTitle";
 import {
-  LISTING_POSTS_PAGE,
+  // LISTING_POSTS_PAGE,
   SINGLE_POST_PAGE,
 } from "../../../settings/constant";
 

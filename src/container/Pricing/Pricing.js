@@ -79,13 +79,25 @@ const Pricing = () => {
         </AllTransactionsText>
         <PaymentImagesWrapper>
           <div>
-            <img src={MadaIcon} style={{ height: "100%", width: "100%" }} />
+            <img
+              alt=""
+              src={MadaIcon}
+              style={{ height: "100%", width: "100%" }}
+            />
           </div>
           <div>
-            <img src={MadaIcon} style={{ height: "100%", width: "100%" }} />
+            <img
+              alt=""
+              src={MadaIcon}
+              style={{ height: "100%", width: "100%" }}
+            />
           </div>
           <div>
-            <img src={MadaIcon} style={{ height: "100%", width: "100%" }} />
+            <img
+              alt=""
+              src={MadaIcon}
+              style={{ height: "100%", width: "100%" }}
+            />
           </div>
         </PaymentImagesWrapper>
       </PaymentOptionWrapper>

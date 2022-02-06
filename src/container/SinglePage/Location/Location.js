@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Heading from "components/UI/Heading/Heading";
-import Text from "components/UI/Text/Text";
+// import Text from "components/UI/Text/Text";
 import LocationWrapper from "./Location.style";
 import Map from "components/Map/Map";
 import { Element } from "react-scroll";
@@ -14,7 +14,7 @@ const Location = ({
   linkStyle,
   location,
 }) => {
-  const formattedAddress = location.formattedAddress;
+  // const formattedAddress = location.formattedAddress;
   return (
     <Element name="location" className="location">
       <LocationWrapper>

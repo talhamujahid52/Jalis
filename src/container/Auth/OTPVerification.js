@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
-import { MdEmail } from "react-icons/md";
-import { Input, Button } from "antd";
+// import { useForm, Controller } from "react-hook-form";
+// import { MdEmail } from "react-icons/md";
+import { Button } from "antd";
 import { Modal } from "antd";
-import { Radio } from "antd";
-import Logo from "components/UI/Logo/Logo";
-import FormControl from "components/UI/FormControl/FormControl";
+// import { Radio } from "antd";
+// import Logo from "components/UI/Logo/Logo";
+// import FormControl from "components/UI/FormControl/FormControl";
 import { useHistory } from "react-router-dom";
-import { ENTER_NEW_PASSWORD, HOME_PAGE } from "settings/constant";
+import { HOME_PAGE } from "settings/constant";
 
 import Wrapper, {
   Title,
-  TitleInfo,
+  // TitleInfo,
   FormWrapper,
   BannerWrapper,
   ToChangePassword,
@@ -22,9 +22,9 @@ export default function OTPVerification() {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
+  // const showModal = () => {
+  //   setIsModalVisible(true);
+  // };
 
   const handleOk = () => {
     setIsModalVisible(false);

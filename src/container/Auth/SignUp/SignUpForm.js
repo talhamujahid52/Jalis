@@ -2,9 +2,9 @@ import React, { useContext, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 import { MdLockOpen } from "react-icons/md";
-import { Input, Switch, Button } from "antd";
+import { Input, Button } from "antd";
 import FormControl from "components/UI/FormControl/FormControl";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { OTP_VERIFICATION } from "settings/constant";
 import { useHistory } from "react-router-dom";
 // import emailIcon from "../../../../public/images/EmailIcon.svg";
@@ -13,9 +13,9 @@ import { useHistory } from "react-router-dom";
 
 import { AuthContext } from "context/AuthProvider";
 import {
-  FieldWrapper,
-  SwitchWrapper,
-  Label,
+  // FieldWrapper,
+  // SwitchWrapper,
+  // Label,
   RoleButtonWrapper,
   RoleButton,
   BankDetails,
@@ -24,7 +24,7 @@ import {
 const SignUpForm = () => {
   const history = useHistory();
   const [role, setRole] = useState("");
-  const { signUp, loggedIn } = useContext(AuthContext);
+  const { loggedIn } = useContext(AuthContext);
   const { control, watch, errors, handleSubmit } = useForm({
     mode: "onChange",
   });

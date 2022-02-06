@@ -41,6 +41,7 @@ const EidulAdha = () => {
                 style={{ width: "20px", height: "20px", marginRight: "10px" }}
               >
                 <img
+                  alt=""
                   style={{ width: "100%", height: "100%" }}
                   src={eidImage}
                 ></img>

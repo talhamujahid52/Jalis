@@ -54,7 +54,7 @@ const Profile = () => {
         <ImageAndNameWrapper>
           <div style={{ display: "flex", alignItems: "center" }}>
             <ImageWrapper>
-              <img src={avatarImg}></img>
+              <img alt="" src={avatarImg}></img>
             </ImageWrapper>
             <div>
               <div
@@ -128,6 +128,7 @@ const Profile = () => {
                   }}
                 >
                   <img
+                    alt=""
                     style={{ height: "100%", width: "100%" }}
                     src={whiteStar}
                   ></img>

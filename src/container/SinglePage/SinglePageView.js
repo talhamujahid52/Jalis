@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "library/hooks/useLocation";
+// import { useLocation } from "library/hooks/useLocation";
 import Loader from "components/Loader/Loader";
 import useWindowSize from "library/hooks/useWindowSize";
 import Amenities from "./Amenities/Amenities";
@@ -434,6 +434,7 @@ const SinglePage = ({ match }) => {
           <p style={{ margin: "0px" }}>Next</p>
           <div style={{ height: "30px", width: "30px" }}>
             <img
+              alt=""
               style={{ width: "100%", height: "100%" }}
               src={nextArrow}
             ></img>

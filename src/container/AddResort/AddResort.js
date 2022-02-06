@@ -18,7 +18,7 @@ import ImageUploading from "react-images-uploading";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import {
-  ADD_RESORT_PAGE,
+  // ADD_RESORT_PAGE,
   ADD_SECTION_PAGE,
   HOME_PAGE,
 } from "settings/constant";
@@ -34,7 +34,7 @@ import {
   AdditionalServicesWrapper,
   AdditionalServicesInput,
 } from "./AddResort.style";
-import { alignItems } from "styled-system";
+// import { alignItems } from "styled-system";
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const AddResort = () => {
@@ -100,7 +100,7 @@ const AddResort = () => {
     }));
   };
   const [images, setImages] = React.useState([]);
-  const [selectedFeatures, setSelectedFeatures] = useState("");
+  // const [selectedFeatures, setSelectedFeatures] = useState("");
   const [resortName, setReseortName] = useState("");
   const [description, setDescription] = useState("");
   const [type, setType] = useState("");
@@ -256,6 +256,7 @@ const AddResort = () => {
               avatar={
                 // <item.icon fill="blue" />
                 <img
+                  alt=""
                   src={item.icon}
                   style={{ height: "15px", width: "15px" }}
                 />

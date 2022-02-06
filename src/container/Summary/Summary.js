@@ -5,8 +5,8 @@ import {
   ResortNameImagePriceWrapper,
   ImageWrapper,
   ResortName,
-  LocationWrapper,
-  LocationName,
+  // LocationWrapper,
+  // LocationName,
   NameSectionAndPriceWrapper,
   FinalCalculationNameAndAmount,
   PaymentWrapper,
@@ -16,7 +16,7 @@ import {
 } from "./Summary.style";
 import ResortImage from "../../assets/addresort.jpg";
 import verifiedIcon from "../../assets/Verified.svg";
-import locationIcon from "../../assets/location-pin.svg";
+// import locationIcon from "../../assets/location-pin.svg";
 import VisaMcIcon from "../../assets/visaMC-icon.svg";
 import madaIcon from "../../assets/mada-icon.svg";
 import googlePay from "../../assets/GPay-icon.svg";
@@ -57,6 +57,7 @@ const Summary = (props) => {
           <div style={{ display: "flex" }}>
             <ImageWrapper>
               <img
+                alt=""
                 src={ResortImage}
                 style={{
                   height: "100%",
@@ -72,6 +73,7 @@ const Summary = (props) => {
                   style={{ height: "30px", width: "24px", marginRight: "20px" }}
                 >
                   <img
+                    alt=""
                     src={verifiedIcon}
                     style={{ height: "100%", width: "100%" }}
                   />
@@ -207,6 +209,7 @@ const Summary = (props) => {
         <div style={{ display: "flex", marginTop: "10px" }}>
           <div style={{ width: "30px", height: "30px", marginRight: "10px" }}>
             <img
+              alt=""
               style={{ width: "100%", height: "100%" }}
               src={BillingSummaryImage}
             ></img>
@@ -338,6 +341,7 @@ const Summary = (props) => {
             }}
           >
             <img
+              alt=""
               style={{ color: "#707070", height: "100%", width: "100%" }}
               src={VisaMcIcon}
             />
@@ -355,6 +359,7 @@ const Summary = (props) => {
             }}
           >
             <img
+              alt=""
               style={{ color: "#707070", height: "100%", width: "100%" }}
               src={madaIcon}
             />
@@ -372,6 +377,7 @@ const Summary = (props) => {
             }}
           >
             <img
+              alt=""
               style={{ color: "#707070", height: "100%", width: "100%" }}
               src={googlePay}
             />
@@ -400,6 +406,7 @@ const Summary = (props) => {
         <ProceedButton onClick={Modal.handleOpen}>
           <div style={{ width: "30px", height: "27px", marginRight: "10px" }}>
             <img
+              alt=""
               style={{ width: "100%", height: "100%" }}
               src={doneAllIcon}
             ></img>

@@ -173,6 +173,7 @@ const useSummaryModal = () => {
                   style={{ width: "30px", height: "27px", marginRight: "10px" }}
                 >
                   <img
+                    alt=""
                     style={{ width: "100%", height: "100%" }}
                     src={doneAllIcon}
                   ></img>

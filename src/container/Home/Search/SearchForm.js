@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import isEmpty from "lodash/isEmpty";
-import { FaMapMarkerAlt, FaRegCalendar, FaUserFriends } from "react-icons/fa";
+import { FaMapMarkerAlt, FaRegCalendar } from "react-icons/fa";
 import { Button } from "antd";
 import DateRangePickerBox from "components/UI/DatePicker/ReactDates";
 import MapAutoComplete from "components/Map/MapAutoComplete";
 import { mapDataHelper } from "components/Map/mapDataHelper";
-import ViewWithPopup from "components/UI/ViewWithPopup/ViewWithPopup";
-import InputIncDec from "components/UI/InputIncDec/InputIncDec";
+// import ViewWithPopup from "components/UI/ViewWithPopup/ViewWithPopup";
+// import InputIncDec from "components/UI/InputIncDec/InputIncDec";
 import { setStateToUrl } from "library/helpers/url_handler";
 import { LISTING_POSTS_PAGE } from "settings/constant";
 import {
   FormWrapper,
   ComponentWrapper,
-  RoomGuestWrapper,
-  ItemWrapper,
+  // RoomGuestWrapper,
+  // ItemWrapper,
 } from "./Search.style";
 
 const calendarItem = {
@@ -44,31 +44,31 @@ const SearchForm = ({ history }) => {
   };
 
   // Room Guest data handling
-  const handleIncrement = (type) => {
-    setRoomGuest({
-      ...roomGuest,
-      [type]: roomGuest[type] + 1,
-    });
-  };
+  // const handleIncrement = (type) => {
+  //   setRoomGuest({
+  //     ...roomGuest,
+  //     [type]: roomGuest[type] + 1,
+  //   });
+  // };
 
-  const handleDecrement = (type) => {
-    if (roomGuest[type] <= 0) {
-      return false;
-    }
-    setRoomGuest({
-      ...roomGuest,
-      [type]: roomGuest[type] - 1,
-    });
-  };
+  // const handleDecrement = (type) => {
+  //   if (roomGuest[type] <= 0) {
+  //     return false;
+  //   }
+  //   setRoomGuest({
+  //     ...roomGuest,
+  //     [type]: roomGuest[type] - 1,
+  //   });
+  // };
 
-  const handleIncDecOnChnage = (e, type) => {
-    let currentValue = e.target.value;
+  // const handleIncDecOnChnage = (e, type) => {
+  //   let currentValue = e.target.value;
 
-    setRoomGuest({
-      ...roomGuest,
-      [type]: currentValue,
-    });
-  };
+  //   setRoomGuest({
+  //     ...roomGuest,
+  //     [type]: currentValue,
+  //   });
+  // };
 
   const goToSearchPage = () => {
     let tempLocation = [];

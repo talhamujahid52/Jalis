@@ -9,7 +9,7 @@ import statsicon from "../../assets/StatsIcon.svg";
 import homeicon from "../../assets/HomeIcon.svg";
 import editIcon from "../../assets/edit-resource-icon.svg";
 // import BlockDates from "../../assets/BlockDatesIcon.svg";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 // import {
 //   ADD_RESORT_PAGE,
 //   ADD_SECTION_PAGE,
@@ -20,7 +20,7 @@ import useWindowSize from "../../library/hooks/useWindowSize";
 
 const ManageResort = (props) => {
   const { width } = useWindowSize();
-  const history = useHistory();
+  // const history = useHistory();
   const [paused, setPaused] = useState(false);
 
   return (

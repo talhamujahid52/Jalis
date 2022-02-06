@@ -1,36 +1,36 @@
-import React, { useContext, Fragment } from "react";
+import React, { useContext } from "react";
 import { Route, NavLink, Link } from "react-router-dom";
-import isEmpty from "lodash/isEmpty";
+// import isEmpty from "lodash/isEmpty";
 import {
-  IoLogoTwitter,
-  IoLogoFacebook,
-  IoLogoInstagram,
+  // IoLogoTwitter,
+  // IoLogoFacebook,
+  // IoLogoInstagram,
   IoIosAdd,
 } from "react-icons/io";
-import { Menu, Popover } from "antd";
+import { Menu } from "antd";
 import Container from "components/UI/Container/Container";
-import Image from "components/UI/Image/Image";
-import Heading from "components/UI/Heading/Heading";
-import Text from "components/UI/Text/Text";
-import { ProfilePicLoader } from "components/UI/ContentLoader/ContentLoader";
-import Loader from "components/Loader/Loader";
+// import Image from "components/UI/Image/Image";
+// import Heading from "components/UI/Heading/Heading";
+// import Text from "components/UI/Text/Text";
+// import { ProfilePicLoader } from "components/UI/ContentLoader/ContentLoader";
+// import Loader from "components/Loader/Loader";
 import AuthProvider, { AuthContext } from "context/AuthProvider";
 // import AgentItemLists from "./AgentItemLists";
 import AgentFavItemLists from "./AgentFavItemLists";
 import AgentContact from "./AgentContact";
-import useDataApi from "library/hooks/useDataApi";
+// import useDataApi from "library/hooks/useDataApi";
 import {
   ADD_HOTEL_PAGE,
   AGENT_PROFILE_FAVOURITE,
   AGENT_PROFILE_CONTACT,
 } from "settings/constant";
 import AgentDetailsPage, {
-  BannerSection,
-  UserInfoArea,
-  ProfileImage,
-  ProfileInformationArea,
-  ProfileInformation,
-  SocialAccount,
+  // BannerSection,
+  // UserInfoArea,
+  // ProfileImage,
+  // ProfileInformationArea,
+  // ProfileInformation,
+  // SocialAccount,
   NavigationArea,
 } from "./AgentDetails.style";
 

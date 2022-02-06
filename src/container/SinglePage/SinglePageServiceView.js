@@ -325,7 +325,11 @@ const SinglePage = ({ match }) => {
         >
           Chat with us
           <div style={{ height: "30px", width: "30px" }}>
-            <img src={ChatIcon} style={{ height: "100%", width: "100%" }}></img>
+            <img
+              alt=""
+              src={ChatIcon}
+              style={{ height: "100%", width: "100%" }}
+            ></img>
           </div>
         </NextButton>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PricingItems from "./PricingItems";
 import { annuallyPlans } from "./Pricing.data";
-import PriceCard from "../../components/PriceCard/PriceCard";
+// import PriceCard from "../../components/PriceCard/PriceCard";
 
 import {
   PricingWrapper,

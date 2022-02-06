@@ -1,7 +1,7 @@
 import React from "react";
 import { SingleChatWrapper, ImageWrapper } from "./SingleChat.style";
 import profileImg from "../../../assets/addresort.jpg";
-import colors from "react-multi-date-picker/plugins/colors";
+// import colors from "react-multi-date-picker/plugins/colors";
 import { useHistory } from "react-router-dom";
 import { DetailedChat } from "../../../settings/constant";
 const SingleChat = (props) => {
@@ -14,7 +14,7 @@ const SingleChat = (props) => {
     >
       <div style={{ display: "flex", alignItems: "center" }}>
         <ImageWrapper>
-          <img src={profileImg} />
+          <img alt="" src={profileImg} />
         </ImageWrapper>
         <div>
           <p

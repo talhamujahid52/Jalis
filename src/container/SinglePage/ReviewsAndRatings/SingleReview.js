@@ -24,6 +24,7 @@ const SingleReview = () => {
             }}
           >
             <img
+              alt=""
               style={{
                 height: "100%",
                 width: "100%",
@@ -54,6 +55,7 @@ const SingleReview = () => {
           {new Array(5).fill(0).map((item, index) => {
             return (
               <img
+                alt=""
                 key={index}
                 style={{
                   height: "20px",

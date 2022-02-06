@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from "react";
 import Sticky from "react-stickynode";
 import Toolbar from "components/UI/Toolbar/Toolbar";
-import { Checkbox } from "antd";
+// import { Checkbox } from "antd";
 import CategorySearch from "components/Search/CategorySearch/CategotySearch";
 import { PostPlaceholder } from "components/UI/ContentLoader/ContentLoader";
 import SectionGrid from "components/SectionGrid/SectionGrid";
@@ -10,7 +10,7 @@ import FilterDrawer from "components/Search/MobileSearchView";
 import useWindowSize from "library/hooks/useWindowSize";
 import useDataApi from "library/hooks/useDataApi";
 import { SINGLE_POST_PAGE } from "settings/constant";
-import ListingWrapper, { PostsWrapper, ShowMapCheckbox } from "./Listing.style";
+import ListingWrapper, { PostsWrapper } from "./Listing.style";
 
 export default function Listing({ location, history, title }) {
   let url = "/data/hotel.json";
@@ -35,9 +35,9 @@ export default function Listing({ location, history, title }) {
     // columnWidth = [1 / 1, 1 / 2, 1 / 2, 1 / 2, 1 / 3];
     columnWidth = [1 / 1, 1 / 2];
   }
-  const handleMapToggle = () => {
-    setShowMap((showMap) => !showMap);
-  };
+  // const handleMapToggle = () => {
+  //   setShowMap((showMap) => !showMap);
+  // };
 
   return (
     <ListingWrapper>
