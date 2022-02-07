@@ -64,20 +64,11 @@ const Profile = () => {
                   marginBottom: "10px",
                 }}
               >
-                {/* <h2
-                  style={{
-                    margin: "0px",
-                    fontWeight: "bold",
-                    marginRight: "10px",
-                  }}
-                >
-                  Mark Nicholas
-                </h2> */}
                 <input
                   style={{
                     borderRadius: "8px",
                     fontWeight: "bold",
-                    fontSize: "24px",
+                    fontSize: width > 800 ? "24px" : "16px",
                     marginRight: "10px",
                     border: "2px solid #F5F4F4 ",
                     padding: "0px 10px",
@@ -173,10 +164,16 @@ const Profile = () => {
             style={{
               display: "flex",
               alignItems: "center",
-              marginRight: "30px",
+              // marginRight: "10px",
+              marginRight: width > 900 ? "30px" : "10px",
             }}
           >
-            <div style={{ width: "90px", height: "60px" }}>
+            <div
+              style={{
+                width: width > 900 ? "90px" : "50px",
+                height: width > 900 ? "60px" : "40px",
+              }}
+            >
               <img
                 alt="WhatsApp"
                 src={WhatsApp}
@@ -188,7 +185,7 @@ const Profile = () => {
               style={{
                 borderRadius: "8px",
                 fontWeight: "bold",
-                fontSize: "22px",
+                fontSize: width > 800 ? "22px" : "14px",
                 color: "#3A3A3A",
                 border: "2px solid #F5F4F4 ",
                 padding: "0px 10px",
@@ -235,21 +232,27 @@ const Profile = () => {
               display: "flex",
               alignItems: "center",
               marginTop: width < 900 ? "20px" : "0px",
-              marginRight: "30px",
+              marginRight: width > 900 ? "30px" : "10px",
             }}
           >
-            {width > 900 && (
-              <div style={{ width: "90px", height: "60px" }}>
-                {/* <img src={WhatsApp} style={{ width: "100%", height: "100%" }} /> */}
-              </div>
-            )}
+            {/* {width > 900 && ( */}
+            <div
+              style={{
+                width: width > 900 ? "90px" : "50px",
+                height: width > 900 ? "60px" : "40px",
+              }}
+            >
+              {/* <img src={WhatsApp} style={{ width: "100%", height: "100%" }} /> */}
+            </div>
+            {/* )} */}
 
             <input
               type="password"
               style={{
                 borderRadius: "8px",
                 fontWeight: "bold",
-                fontSize: "22px",
+                // fontSize: "22px",
+                fontSize: width > 800 ? "22px" : "14px",
                 color: "#3A3A3A",
                 border: "2px solid #F5F4F4 ",
                 padding: "0px 10px",

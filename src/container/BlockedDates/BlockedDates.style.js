@@ -21,6 +21,7 @@ export const BlockDatesHeadingText = styled.p`
 `;
 
 export const BookSelectedDates = styled.div`
+  width: 200px;
   padding: 10px 20px;
   border-radius: 8px;
   text-align: center;

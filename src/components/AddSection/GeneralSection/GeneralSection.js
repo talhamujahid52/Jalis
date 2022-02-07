@@ -86,109 +86,93 @@ const AddSection = (props) => {
           Description
         </p>
         <div className="moreDescription">
-          <div className="moreDescription1">
-            <div class="addSectionText">
-              <img
-                src={noOfPeople}
-                style={{
-                  height: "20px",
-                  marginRight: "10px",
-                }}
-                alt="logo"
-              />
-              <p style={{ height: "20px" }}>Maximum people</p>
-            </div>
-            <div>
-              <input
-                required
-                type="number"
-                min={0}
-                // max={6}
-                placeholder="People count"
-                value={peopleCount}
-                onChange={(e) => {
-                  setPeopleCount(e.target.value);
-                }}
-                className="DescriptionTextField"
-              ></input>
-            </div>
-            {/* 2 */}
-            <div class="addSectionText">
-              <img
-                src={livingroomicon}
-                style={{
-                  height: "20px",
-                  marginRight: "10px",
-                }}
-                alt="logo"
-              />
-              <p style={{ height: "20px" }}>Living rooms</p>
-            </div>
-            <div>
-              <input
-                required
-                type="number"
-                min={0}
-                // max={6}
-                placeholder="01"
-                value={livingRooms}
-                onChange={(e) => {
-                  setLivingRooms(e.target.value);
-                }}
-                className="DescriptionTextField"
-              ></input>
-            </div>
-            {/* 3 */}
-            <div class="addSectionText">
-              <img
-                src={checkouticon}
-                style={{
-                  height: "20px",
-                  marginRight: "10px",
-                }}
-                alt="logo"
-              />
-              <p style={{ height: "20px" }}>Check-out time</p>
-            </div>
-            <div>
-              <input
-                type="text"
-                placeholder="01-05-2021"
-                value={checkOut}
-                onChange={(e) => {
-                  setCheckOut(e.target.value);
-                }}
-                className="DescriptionTextField"
-              ></input>
-            </div>
-          </div>
-          <div className="moreDescription2">
-            <div>
+          {/* Row 1 */}
+          <div className="rowDescription">
+            <div className="moreDescription1">
               <div class="addSectionText">
                 <img
-                  src={areaicon}
+                  src={noOfPeople}
                   style={{
                     height: "20px",
                     marginRight: "10px",
                   }}
                   alt="logo"
                 />
-                <p style={{ height: "20px" }}>Area</p>
+                <p style={{ height: "20px" }}>Maximum people</p>
               </div>
               <div>
                 <input
-                  type="text"
-                  placeholder="Area"
-                  value={area}
+                  required
+                  type="number"
+                  min={0}
+                  // max={6}
+                  placeholder="People count"
+                  value={peopleCount}
                   onChange={(e) => {
-                    setArea(e.target.value);
+                    setPeopleCount(e.target.value);
                   }}
                   className="DescriptionTextField"
                 ></input>
               </div>
             </div>
-            {/* 2 */}
-            <div>
+            <div className="moreDescription1">
+              <div>
+                <div class="addSectionText">
+                  <img
+                    src={areaicon}
+                    style={{
+                      height: "20px",
+                      marginRight: "10px",
+                    }}
+                    alt="logo"
+                  />
+                  <p style={{ height: "20px" }}>Area</p>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Area"
+                    value={area}
+                    onChange={(e) => {
+                      setArea(e.target.value);
+                    }}
+                    className="DescriptionTextField"
+                  ></input>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Row 2 */}
+
+          <div className="rowDescription">
+            <div className="moreDescription1">
+              <div class="addSectionText">
+                <img
+                  src={livingroomicon}
+                  style={{
+                    height: "20px",
+                    marginRight: "10px",
+                  }}
+                  alt="logo"
+                />
+                <p style={{ height: "20px" }}>Living rooms</p>
+              </div>
+              <div>
+                <input
+                  required
+                  type="number"
+                  min={0}
+                  // max={6}
+                  placeholder="01"
+                  value={livingRooms}
+                  onChange={(e) => {
+                    setLivingRooms(e.target.value);
+                  }}
+                  className="DescriptionTextField"
+                ></input>
+              </div>
+            </div>
+            <div className="moreDescription1">
               <div class="addSectionText">
                 <img
                   src={bedicon}
@@ -215,8 +199,12 @@ const AddSection = (props) => {
                 ></input>
               </div>
             </div>
-            {/* 3 */}
-            <div>
+          </div>
+
+          {/* Row 3 */}
+
+          <div className="rowDescription">
+            <div className="moreDescription1">
               <div class="addSectionText">
                 <img
                   src={checkinicon}
@@ -234,7 +222,7 @@ const AddSection = (props) => {
                     // border: "1px solid red",
                   }}
                 >
-                  check-in time
+                  checkin time
                 </p>
               </div>
               <div>
@@ -250,9 +238,32 @@ const AddSection = (props) => {
                 ></input>
               </div>
             </div>
+            <div className="moreDescription1">
+              <div class="addSectionText">
+                <img
+                  src={checkouticon}
+                  style={{
+                    height: "20px",
+                    marginRight: "10px",
+                  }}
+                  alt="logo"
+                />
+                <p style={{ height: "20px" }}>Checkout time</p>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="01-05-2021"
+                  value={checkOut}
+                  onChange={(e) => {
+                    setCheckOut(e.target.value);
+                  }}
+                  className="DescriptionTextField"
+                ></input>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="addSectionButon"></div>
       </div>
       <div
         style={{

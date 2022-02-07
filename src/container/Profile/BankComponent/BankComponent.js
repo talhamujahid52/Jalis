@@ -7,13 +7,14 @@ import {
 // import NotificatioinImage from "../../../assets/PushNotification.svg";
 // import DownArrow from "../../../assets/chevron-down.svg";
 import EditIcon from "../../../assets/EditUsername.svg";
-
+import useWindowSize from "library/hooks/useWindowSize";
 // const label = { inputProps: { "aria-label": "Switch demo" } };
 const BankComponent = (props) => {
+  const { width } = useWindowSize();
   return (
     <NotificationsComponentWrapper>
       <div
-        style={{ display: "flex", alignItems: "center", marginRight: "20px" }}
+        style={{ display: "flex", alignItems: "center", marginRight: "10px" }}
       >
         <ImageWrapper>
           <img alt="BankImage" src={props.image}></img>
@@ -43,7 +44,7 @@ const BankComponent = (props) => {
             style={{
               borderRadius: "8px",
               fontWeight: "bold",
-              fontSize: "16px",
+              fontSize: width > 900 ? "16px" : "12px",
               color: "#ED702D",
               border: "2px solid #F5F4F4 ",
               padding: "0px 10px",
@@ -55,7 +56,14 @@ const BankComponent = (props) => {
           ></input>
         </div>
       </div>
-      <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          cursor: "pointer",
+          marginTop: "10px",
+        }}
+      >
         <div
           style={{
             height: "20px",

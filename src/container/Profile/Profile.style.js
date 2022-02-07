@@ -22,6 +22,9 @@ export const ReviewsAndRatingWrapper = styled.div`
   padding: 20px 20px;
   background: white;
   border-radius: 20px;
+  @media (max-width: 900px) {
+    padding: 10px 10px;
+  }
 `;
 
 export const ImageAndNameWrapper = styled.div`
@@ -38,8 +41,8 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
   @media (max-width: 900px) {
     margin-right: 10px;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
 `;
 export const EmailWrapper = styled.div`
@@ -54,8 +57,8 @@ export const WhatsappWrapper = styled.div`
   /* justify-content: space-between; */
   @media (max-width: 900px) {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
 
     /* align-items: center; */
     /* justify-content: space-between; */

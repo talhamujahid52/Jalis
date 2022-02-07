@@ -28,6 +28,7 @@ import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import useSummaryModal from "./SummaryModal/SummaryModal";
 import useWindowSize from "../../library/hooks/useWindowSize";
 import BillingSummaryImage from "../../assets/BillingSummaryIcon.svg";
+import { useHistory } from "react-router-dom";
 const Summary = (props) => {
   const { width } = useWindowSize();
   const [value, setValue] = React.useState(new Date());
@@ -36,7 +37,7 @@ const Summary = (props) => {
   const [mada, setMada] = useState();
   const [google, setGoogle] = useState();
   const [paymentMethod, setPaymentMethod] = useState();
-
+  const history = useHistory();
   return (
     <MainSummaryWrapper>
       <Modal.Popup paymentMethod={paymentMethod} />
@@ -70,7 +71,7 @@ const Summary = (props) => {
               <div style={{ display: "flex" }}>
                 <ResortName>Rabbit Hill Inn</ResortName>
                 <div
-                  style={{ height: "30px", width: "24px", marginRight: "20px" }}
+                  style={{ height: "24px", width: "18px", marginTop: "5px" }}
                 >
                   <img
                     alt=""
@@ -130,6 +131,7 @@ const Summary = (props) => {
           <div
             style={{
               display: "flex",
+              flexDirection: width > 800 ? "row" : "column",
               // justifyContent: "center",
               alignItems: "center",
               //   borderRadius: "20px",
@@ -158,6 +160,7 @@ const Summary = (props) => {
                 margin: "0px",
                 marginRight: "20px",
                 marginLeft: "20px",
+                marginTop: width > 800 ? "0px" : "5px",
                 // color: "white",
               }}
             >
@@ -218,7 +221,7 @@ const Summary = (props) => {
             style={{
               margin: "0px",
               color: "#ED702D",
-              fontSize: "20px",
+              fontSize: width > 800 ? "20px" : "13px",
               fontWeight: "bold",
             }}
           >
@@ -413,7 +416,13 @@ const Summary = (props) => {
           </div>
           Proceed
         </ProceedButton>
-        <CancelButton>Cancel</CancelButton>
+        <CancelButton
+          onClick={() => {
+            history.goBack();
+          }}
+        >
+          Cancel
+        </CancelButton>
       </div>
     </MainSummaryWrapper>
   );

@@ -31,7 +31,7 @@ export const UserProfile = "/user-profile";
 export const Favourites = "/favourites";
 
 // Agent Profile Page Section
-export const AGENT_PROFILE_PAGE = "/profile";
+export const AGENT_PROFILE_PAGE = "/Contact-us";
 export const AGENT_ACCOUNT_SETTINGS_PAGE = "/account-settings";
 export const ACCOUNT_SETTINGS_PAGE = "/settings-page";
 export const AGENT_PROFILE_EDIT_PAGE = "/edit";

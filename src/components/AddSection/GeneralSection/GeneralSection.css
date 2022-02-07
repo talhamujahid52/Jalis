@@ -23,12 +23,16 @@
   background: white;
   padding-top: 20px;
   padding-bottom: 20px;
-  display: flex;
+  /* display: flex; */
   width: 100%;
   border-radius: 20px;
   margin: 0px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* border: 1px solid blue; */
+}
+.rowDescription {
+  display: flex;
+  justify-content: space-between;
 }
 .moreDescription1 {
   /* border: 1px solid red; */
@@ -40,17 +44,20 @@
 }
 @media screen and (max-width: 900px) {
   .moreDescription {
-    flex-direction: column;
-    align-content: center;
+    /* flex-direction: column;
+    align-content: center; */
     /* border: 1px solid red; */
   }
   .moreDescription1 {
     width: 100%;
   }
+  .rowDescription {
+    flex-direction: column;
+  }
   .moreDescription2 {
     /* border: 1px solid red; */
-    display: flex;
-    flex-direction: column-reverse;
+    /* display: flex;
+    flex-direction: column-reverse; */
     width: 100%;
   }
 }
@@ -58,7 +65,7 @@
 .addSectionText {
   display: flex;
   margin-left: 10px;
-  width: 30%;
+  width: 60%;
   height: 30px;
   margin-top: 20px;
   padding: 0px;

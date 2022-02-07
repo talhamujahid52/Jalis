@@ -108,7 +108,13 @@ const BlockedDates = () => {
         plugins={[<DatePanel />]}
       />
       {/* {width < 1100 && ( */}
-      <div style={{ marginTop: "40px", width: "200px" }}>
+      <div
+        style={{
+          marginTop: "40px",
+          display: "flex",
+          justifyContent: width > 900 ? "flex-start" : "center",
+        }}
+      >
         <BookSelectedDates>Block Selected </BookSelectedDates>
       </div>
       {/* )} */}

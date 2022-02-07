@@ -13,9 +13,9 @@ export const ImageWrapper = styled.div`
   /* background: #ed702d;
   border-radius: 100px; */
   margin-right: 20px;
-  /* @media (max-width: 900px) {
-    margin-right: 10px;
-    width: 70px;
-    height: 70px;
-  } */
+  @media (max-width: 900px) {
+    /* margin-right: 10px; */
+    width: 35px;
+    height: 35px;
+  }
 `;

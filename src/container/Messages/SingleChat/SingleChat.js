@@ -4,7 +4,9 @@ import profileImg from "../../../assets/addresort.jpg";
 // import colors from "react-multi-date-picker/plugins/colors";
 import { useHistory } from "react-router-dom";
 import { DetailedChat } from "../../../settings/constant";
+import useWindowSize from "library/hooks/useWindowSize";
 const SingleChat = (props) => {
+  const { width } = useWindowSize();
   const history = useHistory();
   return (
     <SingleChatWrapper
@@ -20,14 +22,20 @@ const SingleChat = (props) => {
           <p
             style={{
               margin: "0px",
-              fontSize: "16px",
+              fontSize: width > 900 ? "16px" : "14px",
               fontWeight: "bold",
               cursor: "pointer",
             }}
           >
             Abid Iqbal
           </p>
-          <p style={{ margin: "0px", fontSize: "14px", color: "#A5A5A5" }}>
+          <p
+            style={{
+              margin: "0px",
+              fontSize: width > 900 ? "14px" : "12px",
+              color: "#A5A5A5",
+            }}
+          >
             Lorem ipsum dolor sit amet, consetetur sa dips... dipscing elitr,
             sed diam nonumy eirmod tempor invidunt ut.
           </p>
@@ -40,7 +48,8 @@ const SingleChat = (props) => {
           flexDirection: "column",
           alignItems: "center",
           // border: "1px solid red",
-          marginRight: "40px",
+          marginRight: width > 900 ? "40px" : "10px",
+          marginLeft: "10px",
         }}
       >
         <p
@@ -50,7 +59,7 @@ const SingleChat = (props) => {
             fontWeight: "bold",
           }}
         >
-          2 min ago
+          2min ago
         </p>
         {props.show && (
           <div

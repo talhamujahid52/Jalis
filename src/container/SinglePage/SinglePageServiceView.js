@@ -93,7 +93,8 @@ const SinglePage = ({ match }) => {
                     <div
                       style={{
                         // backgroundColor: "green",
-                        height: "400px",
+                        height: width > 800 ? "400px" : "200px",
+
                         width: "100%",
                         borderRadius: "20px",
                         overflow: "hidden",

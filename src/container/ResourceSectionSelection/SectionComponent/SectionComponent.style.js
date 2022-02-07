@@ -47,7 +47,7 @@ export const ImageWrapper = styled.div`
   background: #ff51b5;
   overflow: hidden;
   @media (max-width: 600px) {
-    height: 80px;
+    height: 70px;
     width: 60px;
   }
 `;
@@ -94,11 +94,22 @@ export const FeatureIconAndText = styled.div`
   }
   @media (max-width: 600px) {
     padding: 10px 10px;
+    p {
+      margin: 0px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
   }
 `;
 export const ResortTimingWrapper = styled.div`
   display: flex;
   align-items: center;
+  /* @media (max-width: 800px) {
+    display: flex;
+    align-items: center;
+    justifycontent: center;
+  } */
 `;
 export const IndividualTimeWrapper = styled.div`
   border: 1px solid #ebedf1;
@@ -107,8 +118,9 @@ export const IndividualTimeWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 10px 30px;
-  @media (max-width: 00px) {
-    padding: 5px 5px;
+  @media (max-width: 800px) {
+    padding: 10px 20px;
+    border-radius: 10px;
   }
 `;
 export const ChooseTheResource = styled.div`

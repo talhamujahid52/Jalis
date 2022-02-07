@@ -6,9 +6,9 @@ export const NotificationsComponentWrapper = styled.div`
   align-items: center;
   /* justify-content: space-between; */
   @media (max-width: 900px) {
-    flex-direction: column;
+    /* flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-between; */
   }
 `;
 
@@ -18,9 +18,9 @@ export const ImageWrapper = styled.div`
   /* background: #ed702d;
   border-radius: 100px; */
   margin-right: 20px;
-  /* @media (max-width: 900px) {
+  @media (max-width: 900px) {
+    width: 35px;
+    height: 35px;
     margin-right: 10px;
-    width: 70px;
-    height: 70px;
-  } */
+  }
 `;

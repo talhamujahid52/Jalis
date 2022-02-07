@@ -1,8 +1,12 @@
 import React from "react";
 import starIcon from "../../../assets/star.svg";
 import reviewProfile from "../../../assets/reviewProfile.png";
+import useWindowSize from "../../../library/hooks/useWindowSize";
+
 import { TopDiv, MiddleDiv } from "./SingleReview.style";
 const SingleReview = () => {
+  const { width } = useWindowSize();
+
   return (
     <div
       style={{
@@ -90,7 +94,7 @@ const SingleReview = () => {
         <p
           style={{
             color: "black",
-            fontSize: "20px",
+            fontSize: width > 800 ? "20px" : "12px",
             fontWeight: "bolder",
             margin: "0px",
             marginTop: "10px",

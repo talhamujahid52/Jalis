@@ -3,11 +3,11 @@
   background-color: #f8f9fa;
   margin: 10px 20px;
   padding: 10px;
+  /* border: 1px solid red; */
 }
 @media screen and (min-width: 480px) {
   .outer-Wrapper {
     margin: 40px 50px;
-
     padding: 30px;
   }
 }
@@ -18,7 +18,13 @@
   background-color: white;
   max-width: 100%;
   border-radius: 20px;
+
   /* border-right: 1px solid #ebe7fb; */
+}
+@media screen and (max-width: 480px) {
+  .main__chatcontent {
+    padding: 20px 10px;
+  }
 }
 .content__header {
   padding-bottom: 15px;
@@ -83,13 +89,13 @@
   padding: 1px;
 }
 .chat__item .chat__item__content {
-  margin-right: 20px;
+  margin-right: 5px;
 }
 .chat__item__content {
   background-color: #ed702d;
   color: #fff;
   padding: 15px;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 15px 15px 0px 15px;
   max-width: 50%;
   min-width: 215px;
 }
@@ -110,6 +116,7 @@
 .chat__item.other {
   flex-direction: row-reverse;
   transform-origin: left;
+  margin-left: 5px;
 }
 .chat__item.other .chat__item__content {
   background-color: #f8f8f8;
@@ -148,7 +155,9 @@
 .sendNewMessage button {
   width: 36px;
   height: 36px;
-  background-color: #ecefff;
+  /* background-color: #ecefff; */
+  background-color: white;
+
   border: none;
   box-shadow: none;
   outline: none;
@@ -174,6 +183,6 @@
   outline: none;
 }
 #sendMsgBtn {
-  background-color: #ed702d;
+  /* background-color: #ed702d; */
   color: #fff;
 }

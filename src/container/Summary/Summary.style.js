@@ -47,9 +47,9 @@ export const ResortName = styled.div`
   margin: 0px;
   font-size: 24px;
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 10px;
   @media (max-width: 1100px) {
-    margin-right: 10px;
+    margin-right: 5px;
     font-size: 18px;
     white-space: nowrap;
     overflow: hidden;

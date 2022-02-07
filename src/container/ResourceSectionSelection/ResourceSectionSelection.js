@@ -13,11 +13,11 @@ import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import { useHistory } from "react-router-dom";
 import { Summary_Detail } from "settings/constant";
 import nextArrow from "../../assets/Path208.svg";
-
+import useWindowSize from "library/hooks/useWindowSize";
 const ResourceSectionSelection = (props) => {
   const checkInDate = props.location.state.checkInDate;
   const checkOutDate = props.location.state.checkOutDate;
-
+  const { width } = useWindowSize();
   const history = useHistory();
   const [value, setValue] = React.useState(new Date());
   const color = "#ffffff";
@@ -98,11 +98,11 @@ const ResourceSectionSelection = (props) => {
       <div
         style={{
           marginTop: "20px",
-          padding: "35px",
-          paddingTop: "20px",
-          paddingBottom: "20px",
+          padding: "20px 20px",
+          // paddingTop: "20px",
+          // paddingBottom: "20px",
           backgroundColor: "#2F3547",
-          width: "85%",
+          width: width > 800 ? "85%" : "100%",
           borderRadius: "20px",
         }}
       >
@@ -122,6 +122,8 @@ const ResourceSectionSelection = (props) => {
             <div
               style={{
                 display: "flex",
+                flexDirection: width > 800 ? "row" : "column",
+
                 // justifyContent: "center",
                 alignItems: "center",
                 borderRadius: "20px",
@@ -170,6 +172,7 @@ const ResourceSectionSelection = (props) => {
                   margin: "0px",
                   marginRight: "20px",
                   marginLeft: "20px",
+                  marginTop: width > 800 ? "0px" : "10px",
                   color: "white",
                 }}
               >

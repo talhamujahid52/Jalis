@@ -11,7 +11,7 @@ const NotificationsComponent = (props) => {
   return (
     <NotificationsComponentWrapper>
       <div
-        style={{ display: "flex", alignItems: "center", marginRight: "20px" }}
+        style={{ display: "flex", alignItems: "center", marginRight: "10px" }}
       >
         <ImageWrapper>
           <img

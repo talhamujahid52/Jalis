@@ -3,7 +3,7 @@ import React, { Component, createRef } from "react";
 import "./DetailedChat.css";
 // import Avatar from "../chatList/Avatar";
 import ChatItem from "./ChatItem";
-
+import sendIcon from "../../../assets/SendIcon.svg";
 export default class ChatContent extends Component {
   messagesEndRef = createRef(null);
   chatItms = [
@@ -183,7 +183,16 @@ export default class ChatContent extends Component {
                 className="btnSendMsg"
                 id="sendMsgBtn"
               >
-                <i className="fa fa-paper-plane"></i>
+                {/* <i className="fa fa-paper-plane"></i> */}
+
+                <div
+                  style={{ height: "30px", width: "30px", marginBottom: "5px" }}
+                >
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={sendIcon}
+                  ></img>
+                </div>
               </button>
             </div>
           </div>

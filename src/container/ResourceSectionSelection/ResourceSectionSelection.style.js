@@ -18,7 +18,7 @@ export const DateSelectionWwrapper = styled.div`
   justify-content: space-between;
   @media (max-width: 1100px) {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 `;
 
@@ -37,6 +37,7 @@ export const NextButton = styled.div`
   padding: 0px 30px;
   @media (max-width: 1100px) {
     margin-top: 20px;
+    width: 250px;
   }
   &:hover {
     cursor: pointer;

@@ -23,8 +23,11 @@ import {
   ChooseTheResource,
   ComponentOuterWrapper,
 } from "./SectionComponent.style";
+import useWindowSize from "../../../library/hooks/useWindowSize";
 const SectionComponent = () => {
   const [clicked, setClicked] = useState(false);
+  const { width } = useWindowSize();
+
   const handleClick = () => {
     setClicked(!clicked);
   };
@@ -136,7 +139,7 @@ const SectionComponent = () => {
                 <p>2 bedrooms</p>
               </FeatureIconAndText>
               <FeatureIconAndText>
-                <div style={{ width: "50px", height: "30px" }}>
+                <div style={{ width: "40px", height: "30px" }}>
                   <img
                     alt=""
                     style={{ width: "100%", height: "100%" }}
@@ -169,7 +172,12 @@ const SectionComponent = () => {
             <ResortTimingWrapper>
               <IndividualTimeWrapper>
                 <p
-                  style={{ margin: "0px", color: "#A5A7AF", fontSize: "16px" }}
+                  style={{
+                    margin: "0px",
+                    color: "#A5A7AF",
+                    fontSize: width > 800 ? "16px" : "12px",
+                    textAlign: "center",
+                  }}
                 >
                   Check out Time
                 </p>
@@ -177,7 +185,8 @@ const SectionComponent = () => {
                   style={{
                     margin: "0px",
                     fontWeight: "bold",
-                    fontSize: "16px",
+                    // fontSize: "16px",
+                    fontSize: width > 800 ? "16px" : "12px",
                   }}
                 >
                   4:00 AM
@@ -186,11 +195,19 @@ const SectionComponent = () => {
               <img
                 alt=""
                 src={forwardArrow}
-                style={{ marginLeft: "20px", marginRight: "20px" }}
+                style={{
+                  marginLeft: width > 800 ? "20px" : "10px",
+                  marginRight: width > 800 ? "20px" : "10px",
+                }}
               ></img>
               <IndividualTimeWrapper>
                 <p
-                  style={{ margin: "0px", color: "#A5A7AF", fontSize: "16px" }}
+                  style={{
+                    margin: "0px",
+                    color: "#A5A7AF",
+                    fontSize: width > 800 ? "16px" : "12px",
+                    textAlign: "center",
+                  }}
                 >
                   Check in Time
                 </p>
@@ -198,7 +215,8 @@ const SectionComponent = () => {
                   style={{
                     margin: "0px",
                     fontWeight: "bold",
-                    fontSize: "16px",
+                    // fontSize: "16px",
+                    fontSize: width > 800 ? "16px" : "12px",
                   }}
                 >
                   4:00 AM

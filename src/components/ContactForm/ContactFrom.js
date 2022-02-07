@@ -1,11 +1,11 @@
-import React from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import { Input, Checkbox, Button, Row, Col } from 'antd';
-import FormControl from '../UI/FormControl/FormControl';
+import React from "react";
+import { useForm, Controller } from "react-hook-form";
+import { Input, Checkbox, Button, Row, Col } from "antd";
+import FormControl from "../UI/FormControl/FormControlForgetPassword";
 
 const ContactForm = () => {
   const { control, errors, handleSubmit } = useForm({
-    mode: 'onChange',
+    mode: "onChange",
   });
   const onSubmit = (data) => console.log(data);
 
@@ -33,10 +33,10 @@ const ContactForm = () => {
             error={
               errors.email && (
                 <>
-                  {errors.email?.type === 'required' && (
+                  {errors.email?.type === "required" && (
                     <span>This field is required!</span>
                   )}
-                  {errors.email?.type === 'pattern' && (
+                  {errors.email?.type === "pattern" && (
                     <span>Please enter a valid email address!</span>
                   )}
                 </>
@@ -64,10 +64,10 @@ const ContactForm = () => {
             error={
               errors.phone && (
                 <>
-                  {errors.phone?.type === 'required' && (
+                  {errors.phone?.type === "required" && (
                     <span>This field is required!</span>
                   )}
-                  {errors.phone?.type === 'pattern' && (
+                  {errors.phone?.type === "pattern" && (
                     <span>Please enter your valid number!</span>
                   )}
                 </>
